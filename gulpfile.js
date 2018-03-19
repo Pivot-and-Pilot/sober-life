@@ -43,7 +43,7 @@ gulp.task('compile:sass', () =>
  */
 gulp.task('watch:sass', ['compile:sass'], () => {
   bs.init({
-    proxy: 'http://localhost:8888/sober-life', //change the name of the project here
+    proxy: 'http://localhost:8888/soberlife', //change the name of the project here
   });
 
   gulp.watch('sass/**/*.scss', ['compile:sass']);

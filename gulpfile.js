@@ -8,6 +8,7 @@ const bs = require('browser-sync');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const minify = require('gulp-minify-css');
+const imagemin = require('gulp-imagemin');
 
 /**
  * Compile Sass files
@@ -42,7 +43,7 @@ gulp.task('compile:sass', () =>
  */
 gulp.task('watch:sass', ['compile:sass'], () => {
   bs.init({
-    proxy: 'http://localhost:8888/soberlife', //change the name of the project here
+    proxy: 'http://localhost:8888/sober-life', //change the name of the project here
   });
 
   gulp.watch('sass/**/*.scss', ['compile:sass']);
@@ -62,10 +63,19 @@ gulp.task('css', function(){
    .pipe(gulp.dest('build/styles/')); // the final minified and concatted .css file will be found here
 });
 
+gulp.task('img', function() {
+  gulp.src('img/src/*.{png,jpg,gif}')
+  .pipe(imagemin({
+    optimizationLevel: 7,
+    progressive: true
+  }))
+  .pipe(gulp.dest('img'))
+});
+
 /**
  * Default task executed by running `gulp`
  */
-gulp.task('default', ['watch:sass', 'css', 'js'], function () {
+gulp.task('default', ['watch:sass', 'css', 'js', 'img'], function () {
   // watch for CSS changes
   gulp.watch('src/styles/css/*.css', function() {
     // run css upon changes
@@ -75,5 +85,9 @@ gulp.task('default', ['watch:sass', 'css', 'js'], function () {
   gulp.watch('src/scripts/*.js', function() {
     // run js upon changes
     gulp.run('js');
+  });
+  // watch for images changes
+  gulp.watch('img/src/*.{png,jpg,gif}', function() {
+    gulp.run('img');
   });
 });

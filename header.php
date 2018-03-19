@@ -22,37 +22,53 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'sober-life' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$sober_life_description = get_bloginfo( 'description', 'display' );
-			if ( $sober_life_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $sober_life_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<section class="site-branding">
+			<div class="header__top-bar">
+				<a href="tel:6041234567" class="header__nav-bar-tel">604.123.4567</a>
+				<a href="mailto:info@soberlifesd.com" class="header__nav-bar-email">info@soberlifesd.com</a>
+			</div>
+			<div class="header__bottom-bar">
+				<div class="header__logo">
+					<img class="header__logo-green-arrows" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-03.png" />
+					<img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />
+				</div>
+				<div id="header__hamburger" onclick="toggleMenu()">
+					<span class="header__hamburger-line"></span>
+					<span class="header__hamburger-line"></span>
+					<span class="header__hamburger-line"></span>
+					<span></span>
+				</div>
+				<div id="header__menu-nav-bar">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+					<a href="#" class="header__menu-nav-bar-get-started">Get Started</a>
+				</div>
+			</div>
+		</section><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sober-life' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+		<section id="header__menu-overlay" class="main-navigation">
+			<div id="header__menu-overlay-content">
+				<div id="header__menu-nav">
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+					?>
+				</div>
+				<div class="header__menu-buttons">
+					<a href="#" class="header__menu-button-get-started">Get Started</a>
+					<a href="tel:6041234567" class="header__menu-button-phone">604.123.4567</a>
+					<a href="mailto:info@soberlifesd.com" class="header__menu-button-email">info@soberlifesd.com</a>
+				</div>
+			</div>
+		</section><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

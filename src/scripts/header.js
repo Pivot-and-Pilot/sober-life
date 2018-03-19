@@ -1,0 +1,26 @@
+
+// Open/Close Nav Menu
+function toggleMenu() {
+  if (document.getElementById('header__hamburger').classList.contains('open')) {
+    document.getElementById('header__menu-overlay').style.width = '0%';
+    document.getElementById('header__hamburger').classList.remove('open');   
+  } else {
+    document.getElementById('header__menu-overlay').style.width = '100%';   
+    document.getElementById('header__hamburger').classList.add('open'); 
+    document.documentElement.style.overflow = 'hidden';    
+  }
+}
+
+jQuery(document).ready(function($) {
+  var windowSize = $(window).width();
+  // Show submenu of services
+    $('#header__menu-nav #primary-menu > li:eq(1)').click(function(e) {
+      e.preventDefault();
+      $('#header__menu-nav #primary-menu .sub-menu').css({'display': 'block', 'position': 'relative', 'height': '100%'});
+    });
+
+    $('#header__menu-nav-bar #primary-menu > li:eq(1)').click(function(e) {
+      e.preventDefault();
+    });
+
+});

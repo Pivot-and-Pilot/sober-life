@@ -145,7 +145,7 @@ header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #pr
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: "FFBauWeb", sans-serif;
   font-size: 28px;
   line-height: 38px;
   letter-spacing: 1.5px;
@@ -267,7 +267,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    font-family: sans-serif;
+    font-family: "FFBauWeb", sans-serif;
     font-size: 16px;
     letter-spacing: 1.5px;
     margin: 0;

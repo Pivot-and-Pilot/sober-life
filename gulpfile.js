@@ -82,10 +82,10 @@ gulp.task('default', ['watch:sass', 'css', 'js', 'img'], function () {
     gulp.run('css');
   });
   // watch for JS changes
-  gulp.watch('src/scripts/*.js', function() {
-    // run js upon changes
-    gulp.run('js');
-  });
+  // gulp.watch('src/scripts/*.js', function() {
+  //   // run js upon changes
+  //   gulp.run('js');
+  // });
   // watch for images changes
   gulp.watch('img/src/*.{png,jpg,gif}', function() {
     gulp.run('img');

@@ -120,6 +120,8 @@ add_action( 'widgets_init', 'sober_life_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sober_life_scripts() {
+	wp_enqueue_style( 'sober-life-fonts', get_template_directory_uri() . '/fonts/MyFontsWebfontsKit.css');	
+
 	wp_enqueue_style( 'sober-life-style', get_template_directory_uri() . '/build/styles/final-styles.css' );
 	wp_enqueue_script( 'sober-life-js', get_template_directory_uri() . '/build/scripts/final-script.js', array(), true );	
 

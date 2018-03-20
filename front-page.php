@@ -50,9 +50,9 @@ get_header();
 			<section class="front-page__moving-forward">
 				<div class="moving-forward__content">
 					<div class="moving-forward__content__arrows">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
 					</div>
 					<div class="moving-forward__content__header"><?php the_field('moving_forward_header')?></div>
 					<div class="moving-forward__content__detail"><?php the_field('moving_forward_content')?></div>

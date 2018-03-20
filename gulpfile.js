@@ -85,6 +85,6 @@ gulp.task('default', ['watch:sass', 'css', 'img'], function () {
   gulp.watch('img/src/*.{png,jpg,gif}', function() {
     gulp.run('img');
   });
-
-  gulp.task('build', ['js']);
 });
+
+gulp.task('build', ['js']);

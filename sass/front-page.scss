@@ -237,4 +237,31 @@ section.front-page__services {
     }
   }
 
+  section.front-page__services {
+    padding-top: 0;
+    .services__title {
+      font-size: 3em;
+    }
+    .services-wapper {
+      flex-direction: row;
+      .service {
+        width: calc(100% / 3);
+        margin-top: 50px;
+        padding: 70px 30px 50px;
+        position: relative;
+        &:first-child {
+          margin-top: 50px;
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        button {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
 }

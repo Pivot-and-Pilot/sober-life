@@ -301,4 +301,40 @@ section.front-page__services .services-wapper .service button {
     -o-object-fit: cover;
     object-fit: cover;
   }
+
+  section.front-page__services {
+    padding-top: 0;
+  }
+
+  section.front-page__services .services__title {
+    font-size: 3em;
+  }
+
+  section.front-page__services .services-wapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  section.front-page__services .services-wapper .service {
+    width: calc(100% / 3);
+    margin-top: 50px;
+    padding: 70px 30px 50px;
+    position: relative;
+  }
+
+  section.front-page__services .services-wapper .service:first-child {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+
+  section.front-page__services .services-wapper .service:last-child {
+    padding-right: 0;
+  }
+
+  section.front-page__services .services-wapper .service button {
+    position: absolute;
+    bottom: 0;
+  }
 }

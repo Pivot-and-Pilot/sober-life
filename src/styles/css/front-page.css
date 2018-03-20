@@ -67,3 +67,12 @@ section.front-page__header .front-page__header__slogans .front-page__header__cha
 section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail p {
   margin: 0;
 }
+
+section.front-page__header button {
+  position: absolute;
+  bottom: 25%;
+  left: 6vw;
+  border-radius: 25px;
+  font-size: 1.5em;
+  padding: 10px 25px;
+}

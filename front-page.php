@@ -44,6 +44,23 @@ get_header();
 					
 				</div>
 				<button>Get Started</button>
+				<a href="">Give Us a Call</a>
+			</section>
+
+			<section class="front-page__moving-forward">
+				<div class="moving-forward__content">
+					<div class="moving-forward__content__arrows">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
+					</div>
+					<div class="moving-forward__content__header"></div>
+					<div class="moving-forward__content__detail"></div>
+				</div>
+				<div class="moving-forward__image">
+					<img src="" alt="">
+				</div>
+				<div class="moving-forward__image"></div>
 			</section>
 
 		</main><!-- #main -->

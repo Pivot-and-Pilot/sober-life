@@ -26,10 +26,12 @@ section.front-page__header {
       margin: 0;
       margin-top: -120px;
       font-family: $font__main--med;
+      color: #000;
     }
     .front-page__header__changing-slogans-wrapper {
       position: relative;
       top: -10px;
+      color: #000;
       .front-page__header__changing-slogans {
         font-size: 2.7em;
         font-weight: 900;
@@ -64,4 +66,56 @@ section.front-page__header {
     background-color: #000;
     color: $color__white;
   }
+  a {
+    position: relative;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: $font__main--med;
+    font-size: 1.5em;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    height: 60px;
+    width: 100vw;
+    background-color: $color__green;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  section.front-page__header {
+    .front-page__header__image {
+      height: calc(100vh - 100px);
+    }
+    .front-page__header__slogans {
+      left: 4vw;
+      .front-page__header__slogans-reclaim {
+        font-size: 6em;
+        margin-top: -350px;
+      }
+      .front-page__header__changing-slogans-wrapper {
+        margin-top: -20px;
+        .front-page__header__changing-slogans {
+          font-size: 4em;
+        }
+        .front-page__header__changing-slogans-detail {
+          top: 100px;
+          font-size: 2em;
+        }
+      }
+    }
+    button {
+      bottom: 25%;
+      left: 4vw;
+      padding: 20px 50px;
+      border-radius: 50px;
+    }
+    a {
+      display: none;
+    }
+  }
+
 }

@@ -38,11 +38,13 @@ section.front-page__header .front-page__header__slogans .front-page__header__slo
   margin: 0;
   margin-top: -120px;
   font-family: "FFBauWebMedium";
+  color: #000;
 }
 
 section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
   position: relative;
   top: -10px;
+  color: #000;
 }
 
 section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
@@ -82,4 +84,60 @@ section.front-page__header button {
   padding: 10px 25px;
   background-color: #000;
   color: #f5f0e8;
+}
+
+section.front-page__header a {
+  position: relative;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "FFBauWebMedium";
+  font-size: 1.5em;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 60px;
+  width: 100vw;
+  background-color: #80ff73;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  section.front-page__header .front-page__header__image {
+    height: calc(100vh - 100px);
+  }
+
+  section.front-page__header .front-page__header__slogans {
+    left: 4vw;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
+    font-size: 6em;
+    margin-top: -350px;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
+    margin-top: -20px;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+    font-size: 4em;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail {
+    top: 100px;
+    font-size: 2em;
+  }
+
+  section.front-page__header button {
+    bottom: 25%;
+    left: 4vw;
+    padding: 20px 50px;
+    border-radius: 50px;
+  }
+
+  section.front-page__header a {
+    display: none;
+  }
 }

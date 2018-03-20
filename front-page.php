@@ -20,7 +20,7 @@ get_header();
 
       <section class="front-page__header">
 				<div class="front-page__header__image">
-					<img src="" alt="">
+					<img src="<?php the_field('header_image');?>" alt="">
 				</div>
 				<div class="front-page__header__slogans">
 					<p class="front-page__header__slogans-reclaim">Reclaim</p>

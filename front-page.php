@@ -93,6 +93,24 @@ get_header();
 				</div>
 			</section>
 
+			<section class="front-page__our-story">
+			<?php
+			$ourStory = get_field('our_story');	
+			if( $ourStory ): 
+			?>
+				<div class="our-story__image">
+					<img src="<?php echo $ourStory['our_story_image'];?>" alt="">
+				</div>
+				<div class="our-story__text">
+					<div class="our-story__header"><?php echo $ourStory['our_story_header'];?></div>
+					<div class="our-story__description"><?php echo $ourStory['our_story_description'];?></div>
+					<button>About Us</button>
+				</div>
+			<?php 
+			endif; 
+			?>
+			</section>
+
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

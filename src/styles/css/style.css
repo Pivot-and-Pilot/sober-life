@@ -434,7 +434,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "FFBauWeb", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -523,12 +523,12 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #f5f0e8;
   /* Fallback for when there is no custom background color defined. */
 }
 
 hr {
-  background-color: #ccc;
+  background-color: #f5f0e8;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em;
@@ -589,7 +589,7 @@ input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
   border-radius: 3px;
-  background: #e6e6e6;
+  background: #f5f0e8;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -805,7 +805,7 @@ a:active {
 }
 
 .screen-reader-text:focus {
-  background-color: #f1f1f1;
+  background-color: #f5f0e8;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);

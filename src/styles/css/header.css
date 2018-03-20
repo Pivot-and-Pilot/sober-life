@@ -1,0 +1,357 @@
+header .site-branding {
+  height: 80px;
+  border-bottom: 2px solid #c6c6c6;
+}
+
+header .site-branding .header__top-bar {
+  display: none;
+}
+
+header .site-branding .header__bottom-bar {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+header .site-branding .header__bottom-bar .header__logo {
+  position: relative;
+  width: 300px;
+}
+
+header .site-branding .header__bottom-bar .header__logo .header__logo-green-arrows {
+  position: absolute;
+  left: -20px;
+  top: -45px;
+  height: 150px;
+  width: 250px;
+  z-index: -1;
+}
+
+header .site-branding .header__bottom-bar .header__logo .header__logo-text {
+  width: 160px;
+  margin-left: 6%;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-right: 6%;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  left: 0;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger span:nth-child(2),
+header .site-branding .header__bottom-bar #header__hamburger span:nth-child(3) {
+  top: 12.5px;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger span:nth-child(4) {
+  top: 25px;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(1) {
+  top: 12.5px;
+  width: 0%;
+  left: 50%;
+}
+
+header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+header .site-branding .header__bottom-bar #header__menu-nav-bar {
+  display: none;
+}
+
+header #header__menu-overlay {
+  background: #f5f0e8;
+  position: fixed;
+  height: calc(100vh - 80px);
+  overflow-x: hidden;
+  top: 80px;
+  right: 0;
+  width: 0%;
+  z-index: 99;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+header #header__menu-overlay #header__menu-overlay-content {
+  position: absolute;
+  color: black;
+  width: 88%;
+  margin: 0 6% 0 6%;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "FFBauWeb", sans-serif;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1.5px;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a,
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:visited,
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:hover,
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:focus {
+  color: inherit;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu {
+  left: 0;
+  height: 0%;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #e9e2d6;
+  font-size: 14px;
+  margin: 0 -7% 0 -7%;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu li {
+  margin: 0 6% 0 6%;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu li a {
+  width: 100%;
+}
+
+header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons a {
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin: 10px 0;
+  line-height: 50px;
+}
+
+header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons .header__menu-button-get-started {
+  background-color: #80ff73;
+  color: black;
+}
+
+header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons .header__menu-button-phone,
+header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons .header__menu-button-email {
+  background-color: black;
+  color: #f5f0e8;
+}
+
+@media screen and (min-width: 1025px) {
+  header .site-branding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  header .site-branding .header__top-bar {
+    background-color: #80ff73;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  header .site-branding .header__top-bar a,
+  header .site-branding .header__top-bar a:visited,
+  header .site-branding .header__top-bar a:hover,
+  header .site-branding .header__top-bar a:focus {
+    color: black;
+    text-decoration: none;
+    border-left: 1px solid black;
+    height: 100%;
+    padding: 8px 30px;
+  }
+
+  header .site-branding .header__bottom-bar {
+    height: 60px;
+    overflow: initial;
+  }
+
+  header .site-branding .header__bottom-bar .header__logo .header__logo-green-arrows {
+    height: 100px;
+    top: -30px;
+  }
+
+  header .site-branding .header__bottom-bar #header__hamburger {
+    display: none;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    font-family: "FFBauWeb", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a:visited,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a:hover,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a:focus {
+    padding: 0 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu {
+    -webkit-transform: translateY(-2em);
+    transform: translateY(-2em);
+    visibility: hidden;
+    opacity: 0;
+    background-color: #e9e2d6;
+    position: absolute;
+    margin: 0;
+    padding: 15px 5px;
+    z-index: 5;
+    left: 35px;
+    top: 60px;
+    -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu:after,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu:after {
+    border-bottom-color: #e9e2d6;
+    border-width: 15px;
+    margin-left: -15px;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu:before {
+    border-bottom-color: #e9e2d6;
+    border-width: 21px;
+    margin-left: -21px;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2) .sub-menu li {
+    list-style: none;
+    padding: 3px 0;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(2):hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition-delay: 0s, 0s, 0.3s;
+    transition-delay: 0s, 0s, 0.3s;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started {
+    color: #f5f0e8;
+    background-color: black;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started:visited,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started:hover,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started:focus {
+    text-decoration: none;
+  }
+}

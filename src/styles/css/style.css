@@ -434,7 +434,6 @@ select,
 optgroup,
 textarea {
   color: #404040;
-
   font-family: "FFBauWeb", sans-serif;
   font-size: 16px;
   font-size: 1rem;
@@ -525,7 +524,6 @@ html {
 
 body {
   background: #f5f0e8;
-
   /* Fallback for when there is no custom background color defined. */
 }
 

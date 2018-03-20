@@ -123,7 +123,7 @@ function sober_life_scripts() {
 	wp_enqueue_style( 'sober-life-fonts', get_template_directory_uri() . '/fonts/MyFontsWebfontsKit.css');	
 
 	wp_enqueue_style( 'sober-life-style', get_template_directory_uri() . '/build/styles/final-styles.css' );
-	wp_enqueue_script( 'sober-life-js', get_template_directory_uri() . '/build/scripts/final-script.js', array(), true );	
+	// wp_enqueue_script( 'sober-life-js', get_template_directory_uri() . '/build/scripts/final-script.js', array(), true );	
 
 	wp_enqueue_script( 'sober-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -6,7 +6,7 @@ const autoprefixer = require('autoprefixer');
 const groupmq = require('gulp-group-css-media-queries');
 const bs = require('browser-sync');
 const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 const minify = require('gulp-minify-css');
 const imagemin = require('gulp-imagemin');
 
@@ -75,19 +75,16 @@ gulp.task('img', function() {
 /**
  * Default task executed by running `gulp`
  */
-gulp.task('default', ['watch:sass', 'css', 'js', 'img'], function () {
+gulp.task('default', ['watch:sass', 'css', 'img'], function () {
   // watch for CSS changes
   gulp.watch('src/styles/css/*.css', function() {
     // run css upon changes
     gulp.run('css');
   });
-  // watch for JS changes
-  gulp.watch('src/scripts/*.js', function() {
-    // run js upon changes
-    gulp.run('js');
-  });
   // watch for images changes
   gulp.watch('img/src/*.{png,jpg,gif}', function() {
     gulp.run('img');
   });
+
+  gulp.task('build', ['js']);
 });

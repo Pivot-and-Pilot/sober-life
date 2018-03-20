@@ -145,7 +145,6 @@ footer {
         .footer__social-media-instagram, .footer__social-media-facebook {
           svg {
             width: 50px;
-            transition: all 0.3s ease-in-out;
             border-radius: 10px;
             // border: 1.2px solid black;            
             &:hover {
@@ -183,9 +182,6 @@ footer {
         width: 33.33%;        
         margin: 0;
         .footer__newsletter-signup-submit {
-          input{
-            transition: 0.3s ease-in-out;
-          }
           &:hover {
             input {
               border: 1px solid black;

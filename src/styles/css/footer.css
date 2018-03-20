@@ -189,8 +189,6 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg,
   footer .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
     width: 50px;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     border-radius: 10px;
   }
 
@@ -239,11 +237,6 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__desktop-wrap .footer__newsletter-signup {
     width: 33.33%;
     margin: 0;
-  }
-
-  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
   }
 
   footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit:hover input {

@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3544355, 2018-03-19T18:18:31-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: FF Bau Web Medium by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/bau-pro/ot-medium/
+ * 
+ * Webfont: FF Bau Web by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/bau-pro/ot-regular/
+ * 
+ * Webfont: FF Bau Web Bold by FontFont
+ * URL: https://www.myfonts.com/fonts/fontfont/bau-pro/ot-bold/
+ * 
+ * 
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3544355
+ * Licensed pageviews: 50,000
+ * Webfonts copyright: 2010 published by FontShop International GmbH
+ * 
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("/count/361523");
+
+   
+@font-face {font-family: 'FFBauWebMedium';src: url('webfonts/361523_0_0.eot');src: url('webfonts/361523_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/361523_0_0.woff2') format('woff2'),url('webfonts/361523_0_0.woff') format('woff'),url('webfonts/361523_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FFBauWeb';src: url('webfonts/361523_1_0.eot');src: url('webfonts/361523_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/361523_1_0.woff2') format('woff2'),url('webfonts/361523_1_0.woff') format('woff'),url('webfonts/361523_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'FFBauWebBold';src: url('webfonts/361523_2_0.eot');src: url('webfonts/361523_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/361523_2_0.woff2') format('woff2'),url('webfonts/361523_2_0.woff') format('woff'),url('webfonts/361523_2_0.ttf') format('truetype');}
+ 

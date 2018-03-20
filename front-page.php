@@ -54,13 +54,43 @@ get_header();
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
 					</div>
-					<div class="moving-forward__content__header"></div>
-					<div class="moving-forward__content__detail"></div>
+					<div class="moving-forward__content__header"><?php the_field('moving_forward_header')?></div>
+					<div class="moving-forward__content__detail"><?php the_field('moving_forward_content')?></div>
 				</div>
 				<div class="moving-forward__image">
-					<img src="" alt="">
+					<img src="<?php the_field('moving_forward_image')?>" alt="">
 				</div>
-				<div class="moving-forward__image"></div>
+			</section>
+
+			<section class="front-page__services">
+				<div class="services__title">Services</div>
+				<div class="services-wapper">
+				<?php
+				$services = get_field('services');	
+				if( $services ): 
+				?>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/php.svg" alt="" />
+						<div class="service__title"><?php echo $services['php_title']?></div>
+						<div class="service__description"><?php echo $services['php_description']?></div>
+						<button>Learn More</button>
+					</div>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/iop.svg" alt="" />
+						<div class="service__title"><?php echo $services['iop_title']?></div>
+						<div class="service__description"><?php echo $services['iop_description']?></div>
+						<button>Learn More</button>
+					</div>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/op.svg" alt="" />
+						<div class="service__title"><?php echo $services['op_title']?></div>
+						<div class="service__description"><?php echo $services['op_description']?></div>
+						<button>Learn More</button>
+					</div>
+				<?php 
+				endif; 
+				?>
+				</div>
 			</section>
 
 		</main><!-- #main -->

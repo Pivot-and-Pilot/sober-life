@@ -17,7 +17,7 @@ section.front-page__header {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 6vw;
+    padding-left: 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,7 +59,7 @@ section.front-page__header {
   button {
     position: absolute;
     bottom: 20%;
-    left: 6vw;
+    margin-left: 6vw;
     border-radius: 25px;
     font-size: 1.5em;
     padding: 10px 25px;
@@ -84,6 +84,90 @@ section.front-page__header {
   }
 }
 
+section.front-page__moving-forward {
+  padding: 40px 6vw 0;
+  color: #000;
+  .moving-forward__content {
+    display: flex;
+    flex-direction: column;
+    .moving-forward__content__arrows {
+      display: flex;
+      flex-direction: row;
+      width: 50vw;
+      height: 50px;
+      img {
+        width: calc(100% / 3);
+        padding-right: 30px;
+      }
+    }
+    .moving-forward__content__header {
+      font-family: $font__main__bold;
+      font-size: 2em;
+    }
+    .moving-forward__content__detail {
+      font-family: $font__main;
+      font-size: 1.3em;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .moving-forward__image {
+    display: none;
+  }
+}
+
+section.front-page__services {
+  padding: 40px 6vw 0;
+  color: #000;
+  .services__title {
+    font-size: 2em;
+    font-family: $font__main__bold;
+  }
+  .services-wapper {
+    display: flex;
+    flex-direction: column;
+    .service {
+      margin-top: 70px;
+      padding-top: 70px;
+      position: relative;
+      &:first-child {
+        margin-top: 20px;
+      }
+      img {
+        position: absolute;
+        top: 0;
+        height: 150px;
+        z-index: -1;
+      }
+      .service__title {
+        font-family: $font__main__bold;
+        font-size: 1.5em;
+      }
+      .service__description {
+        font-family: $font__main;
+        font-size: 1.1em;
+        p {
+          margin: 20px 0;
+        }
+      }
+      button {
+        height: 50px;
+        width: 200px;
+        border-radius: 25px;
+        background-color: #000;
+        color: $color__white;
+        font-size: 1.3em;
+        padding: 0;
+      }
+    }
+  }
+}
+
+/* ====================================================== */
+/* ======================= DESKTOP ====================== */
+/* ====================================================== */
+
 @media only screen and (min-width: 768px) {
 
   section.front-page__header {
@@ -91,7 +175,7 @@ section.front-page__header {
       height: calc(100vh - 100px);
     }
     .front-page__header__slogans {
-      left: 4vw;
+      padding-left: 4vw;
       .front-page__header__slogans-reclaim {
         font-size: 6em;
         margin-top: -350px;
@@ -109,12 +193,47 @@ section.front-page__header {
     }
     button {
       bottom: 25%;
-      left: 4vw;
+      margin-left: 4vw;
       padding: 20px 50px;
       border-radius: 50px;
     }
     a {
       display: none;
+    }
+  }
+
+  section.front-page__moving-forward {
+    display: flex;
+    padding: 120px 4vw 0;
+    position: relative;
+    .moving-forward__content {
+      width: 50%;
+      .moving-forward__content__arrows {
+        width: 50%;
+        height: 30px;
+        margin-left: -20px;
+      }
+      .moving-forward__content__header {
+        margin-top: 50px;
+        font-size: 3em;
+      }
+      .moving-forward__content__detail {
+        margin-top: 40px;
+        padding-right: 4vw;
+        font-size: 2em;
+      }
+    }
+    .moving-forward__image {
+      display: block;
+      width: 50%;
+      height: 100vh;
+      top: -180px;
+      position: relative;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 

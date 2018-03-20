@@ -20,4 +20,6 @@ jQuery(document).ready(function($){
     }, ($('.front-page__header__changing-slogans-wrapper')[0].children.length - 3) * 2500 + 1000 )
   })();
 
+
+
 })

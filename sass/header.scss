@@ -4,6 +4,11 @@ header {
   .site-branding {
     height: 80px;
     border-bottom: 2px solid #c6c6c6;
+    background-color: $color__white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     // overflow: hidden;
     .header__top-bar {
       display: none;
@@ -14,20 +19,23 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      overflow: hidden;
+      .header__logo-green-arrows-wrapper {
+        position: absolute;
+        left: -20px;
+        top: -38px;
+        z-index: -1;
+        overflow: hidden;
+        height: 150%;
+        .header__logo-green-arrows {
+          height: 150px;
+          width: 250px;
+          position: relative;
+        }
+      }
       .header__logo {
         position: relative;
         // overflow: hidden;
-        // height: 80px;
         width: 300px;
-        .header__logo-green-arrows {
-          position: absolute;
-          left: -20px;
-          top: -45px;
-          height: 150px;
-          width: 250px;
-          z-index: -1;
-        }
         .header__logo-text {
           width: 160px;
           margin-left: 6%;
@@ -92,10 +100,13 @@ header {
   #header__menu-overlay {
     background: $color__white;
     position: fixed;
-    height: calc(100vh - 80px);
+    // height: calc(100vh - 80px);
     overflow-x: hidden;
+    overflow-y: scroll;
     top: 80px;
     right: 0;
+    // left: 0;
+    bottom: 0;
     width: 0%;
     z-index: 99;
     transition: 0.5s ease-in-out;
@@ -104,31 +115,35 @@ header {
       color: black;
       width: 88%;
       margin: $margin__mobile;
+      right: -1000px;
+      transition: right .8s ease-in-out;
       #header__menu-nav {
+        margin-top: 50px;
         #primary-menu {
           list-style: none;
           display: flex;
           flex-direction: column;
-          font-family: $font__main;
-          font-size: 28px;
-          line-height: 38px;
-          letter-spacing: 1.5px;
+          font-family: $font__main--bold;
+          font-size: 35px;
+          line-height: 45px;
           a,
           a:visited,
           a:hover,
           a:focus {
             color: inherit;
+            padding: 5px 0;
           }
           .sub-menu {
             // display: block;
             left: 0;
-            // position: relative;
-            height: 0%;
-            transition: 0.3s ease-in-out;
+            position: relative;
+            // transition: 0.3s ease-in-out;
             box-shadow: none;
             background-color: #e9e2d6;
-            font-size: 14px;
+            font-size: 20px;
+            line-height: 35px;
             margin: 0 -7% 0 -7%;
+            padding: 15px 0;
             li {
               margin: $margin__mobile;
               a {
@@ -139,22 +154,32 @@ header {
         }
       }
       .header__menu-buttons {
+        margin-top: 30px;
+        margin-bottom: 50px;
         a {
           text-align: center;
           border: 1px solid black;
-          border-radius: 25px;
+          border-radius: 22px;
           // width: 100%;
           margin: 10px 0;
           line-height: 50px;
+          padding-top: 2px;          
         }
         .header__menu-button-get-started {
+          font-family: $font__main--bold;          
           background-color: $color__green;
           color: black;
+          font-size: 20px;
         }
         .header__menu-button-phone,
         .header__menu-button-email {
+          font-family: $font__main--med;    
+          font-size: 18px;      
           background-color: black;
           color: $color__white;
+        }
+        .header__menu-button-email {
+          font-size: 20px;
         }
       }
     }
@@ -172,6 +197,7 @@ header {
       display: flex;
       height: 100px;
       flex-direction: column;
+      width: 100%;
       .header__top-bar {
         background-color: $color__green;
         display: flex;
@@ -179,6 +205,9 @@ header {
         width: 100%;
         border-bottom: 1px solid black;
         justify-content: flex-end;
+        // padding: 0 4%;
+        font-family: $font__main--med;
+        font-size: 14px;
         a,
         a:visited,
         a:hover,
@@ -187,17 +216,31 @@ header {
           text-decoration: none;
           border-left: 1px solid black;
           height: 100%;
-          padding: 8px 30px;
+          padding: 10px 4%;
+        }
+        a:hover {
+          color: $color__white;
+          background-color: black;
+        }
+        a:nth-child(1) {
+          padding: 10px 4%;
         }
       }
       .header__bottom-bar {
         height: 60px;
         overflow: initial;
-        .header__logo {
+        width: 100%;
+        padding: 0 4%;
+        .header__logo-green-arrows-wrapper {
+          height: 165%;
           .header__logo-green-arrows {
-            // width: 200px;
-            height: 100px;
-            top: -30px;
+            width: 300px;
+            // height: 180px;
+          }
+        }
+        .header__logo {
+          .header__logo-text {
+            margin: 0;
           }
         }
         #header__hamburger {
@@ -208,14 +251,14 @@ header {
           position: relative;
           height: 100%;
           align-items: center;
-
+          justify-content: flex-end;
+          width: 60%;
           #primary-menu {
             list-style: none;
             display: flex;
             flex-direction: row;
-            font-family: $font__main;
+            font-family: $font__main--med;
             font-size: 16px;
-            letter-spacing: 1.5px;
             margin: 0;
             a,
             a:visited,
@@ -225,7 +268,10 @@ header {
               text-decoration: none;
               color: inherit;
             }
-            li:nth-child(2) {
+            a:hover {
+              text-decoration: underline;
+            }
+            li:nth-child(3) {
               .sub-menu {
                 // display: none;
                 transform: translateY(-2em);
@@ -236,7 +282,7 @@ header {
                 margin: 0;
                 padding: 15px 5px;
                 z-index: 5;
-                left: 35px;
+                right: 76px;
                 top: 60px;
                 transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
                 &:after,
@@ -282,16 +328,22 @@ header {
             color: $color__white;
             background-color: black;
             font-size: 16px;
-            letter-spacing: 1.5px;
-            padding: 5px 15px;
-            border-radius: 15px;
+            font-family: $font__main--med;
+            padding: 5px 20px;
+            border: 1px solid black;            
+            border-radius: 22px;
             text-align: center;
             text-decoration: none;
             margin-left: 30px;
+            height: 35px;
             &:visited,
             &:hover,
             &:focus {
               text-decoration: none;
+            }
+            &:hover {
+              background-color: $color__green;
+              color: black;
             }
           }
         }

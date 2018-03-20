@@ -116,6 +116,12 @@ function sober_life_widgets_init() {
 }
 add_action( 'widgets_init', 'sober_life_widgets_init' );
 
+// Google Maps ACF 
+function my_acf_init() {
+	acf_update_setting('google_api_key', 'AIzaSyCVSwSIPSQM_lhAjS0n3IcMCXr5rvFrn9E');
+}
+add_action('acf/init', 'my_acf_init');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -124,6 +130,9 @@ function sober_life_scripts() {
 
 	wp_enqueue_style( 'sober-life-style', get_template_directory_uri() . '/build/styles/final-styles.css' );
 	// wp_enqueue_script( 'sober-life-js', get_template_directory_uri() . '/build/scripts/final-script.js', array(), true );	
+	wp_enqueue_script( 'sober-life-googlemaps-js', get_template_directory_uri() . '/src/scripts/googlemaps.js', array(), true );					
+	wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );		
+	wp_enqueue_script( 'sober-life-header-js', get_template_directory_uri() . '/src/scripts/header.js', array(), true );
 
 	wp_enqueue_script( 'sober-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -133,10 +133,17 @@ function sober_life_scripts() {
 	wp_enqueue_script( 'sober-life-googlemaps-js', get_template_directory_uri() . '/src/scripts/googlemaps.js', array(), true );					
 	wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );		
 	wp_enqueue_script( 'sober-life-header-js', get_template_directory_uri() . '/src/scripts/header.js', array(), true );
+	wp_enqueue_script( 'sober-life-about-js', get_template_directory_uri() . '/src/scripts/about.js', array(), true );
+	
 
 	wp_enqueue_script( 'sober-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'sober-life-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	
+	// Slick
+	wp_enqueue_style( 'sober-life-slick-css', get_template_directory_uri() . '/js/slick/slick/slick.css');
+	wp_enqueue_style( 'sober-life-slick-css-theme', get_template_directory_uri() . '/js/slick/slick/slick-theme.css');
+	wp_enqueue_script( 'sober-life-slick-js', get_template_directory_uri() . '/js/slick/slick/slick.min.js', '2017', true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

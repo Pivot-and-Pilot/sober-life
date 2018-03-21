@@ -65,6 +65,11 @@ section.front-page__header {
     padding: 10px 25px;
     background-color: #000;
     color: $color__white;
+    &:hover {
+      color: #000;
+      background-color: $color__green;
+      border: 1px solid #000;
+    }
   }
   a {
     position: relative;
@@ -159,6 +164,11 @@ section.front-page__services {
         color: $color__white;
         font-size: 1.3em;
         padding: 0;
+        &:hover {
+          color: #000;
+          background-color: $color__green;
+          border: 1px solid #000;
+        }
       }
     }
   }
@@ -199,6 +209,11 @@ section.front-page__our-story {
       font-size: 1.5em;
       padding: 0;
       margin-top: 20px;
+      &:hover {
+        color: #000;
+        background-color: $color__green;
+        border: 1px solid #000;
+      }
     }
   }
 }

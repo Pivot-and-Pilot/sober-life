@@ -8,7 +8,7 @@ jQuery(document).ready(function($){
         $($('.front-page__header__changing-slogans-wrapper')[0].children[1 + i]).css('opacity', '1');
       }, 1500 * i);
     }
-    setInterval( () => {
+    setInterval(() => {
       for (let i = 0; i < $('.front-page__header__changing-slogans-wrapper')[0].children.length - 1; i = i + 2) {
         setTimeout(() => {
           $($('.front-page__header__changing-slogans-wrapper')[0].children).css('opacity','0');

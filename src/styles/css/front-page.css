@@ -86,6 +86,12 @@ section.front-page__header button {
   color: #f5f0e8;
 }
 
+section.front-page__header button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
+}
+
 section.front-page__header a {
   position: relative;
   display: block;
@@ -214,6 +220,12 @@ section.front-page__services .services-wapper .service button {
   padding: 0;
 }
 
+section.front-page__services .services-wapper .service button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
+}
+
 section.front-page__our-story {
   padding-top: 100px;
   position: relative;
@@ -257,6 +269,12 @@ section.front-page__our-story .our-story__text button {
   font-size: 1.5em;
   padding: 0;
   margin-top: 20px;
+}
+
+section.front-page__our-story .our-story__text button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
 }
 
 /* ====================================================== */

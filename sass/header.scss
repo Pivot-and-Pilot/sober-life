@@ -10,6 +10,7 @@ header {
     left: 0;
     right: 0;
     // overflow: hidden;
+    z-index: 5;
     .header__top-bar {
       display: none;
     }
@@ -227,12 +228,12 @@ header {
         }
       }
       .header__bottom-bar {
-        height: 60px;
+        height: 80px;
         overflow: initial;
         width: 100%;
         padding: 0 4%;
         .header__logo-green-arrows-wrapper {
-          height: 165%;
+          height: 158%;
           .header__logo-green-arrows {
             width: 300px;
             // height: 180px;

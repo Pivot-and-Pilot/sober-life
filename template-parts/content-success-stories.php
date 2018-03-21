@@ -11,6 +11,7 @@
 
 <section id="success-stories">
   <div class="success-stories-header">Success Stories</div>
+
   <div class="success-stories__latest">
   <?php
     $latestPodcast = new WP_Query(array(
@@ -43,14 +44,69 @@
           endforeach;
         ?>
 
-        <div class="latest-story-track-number"><?php echo $latestPodcast->posts[0]->post_title; ?></div>
+        <div class="latest-story-track-number"><?php the_title(); ?></div>
       </div>
       
-      <div class="latest-story-track-title"><?php echo $latestPodcast->posts[0]->post_title; ?></div>
-      <div class="latest-story-track-date"><?php echo $latestPodcast->posts[0]->post_date; ?></div>
+      <div class="latest-story-track-title"><?php the_title(); ?></div>
+      <div class="latest-story-track-date"><?php the_date(); ?></div>
     </a>
   <?php
     }
+    wp_reset_query();
+  ?>
+  </div>
+
+  <div class="other-success-stories">
+  <?php
+    $podcasts = new WP_Query(array(
+      'post_type' => 'post',
+      // 'category' => 'podcast',
+      // 'offset'=> 1,
+      'post_status' => 'publish',
+      'posts_per_page' => 10,
+    ));
+    // foreach ($podcasts->posts as $podcast) :
+    while ($podcasts->have_posts()) {
+      $podcasts->the_post();
+      
+        // echo '<pre>' . var_export($podcast, true) . '</pre>';
+  ?>
+    <div class="single-success-story">
+      <a href="<?php the_permalink(); ?>">
+
+        <div class="single-story-player-wapper">
+          <div class="single-story-thumbnail-wrapper">
+            <?php the_post_thumbnail(); ?>
+          </div>   
+          <?php
+            $latestStoryCategories = get_the_category();
+            foreach ($latestStoryCategories as $latestStoryCategorie) :
+              if ($latestStoryCategorie->slug == 'podcast') :
+          ?>
+          <div class="single-story-play-button-wapper">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+          </div>
+          <?php
+              endif;
+            endforeach;
+          ?>
+
+          <div class="single-story-track-number"><?php the_title(); ?></div>
+        </div>
+
+        <div class="single-story-track-title">
+          <?php the_title(); ?>
+        </div> 
+
+        <div class="single-story-track-date">
+          <?php the_date() ?>
+        </div> 
+      </a>
+    </div>
+
+  <?php
+    }
+  // endforeach;
     wp_reset_query();
   ?>
   </div>

@@ -65,4 +65,73 @@
       }
     }
   }
+
+  .other-success-stories {
+    color: red;
+    .slick-list {
+      .slick-track {
+        .single-success-story {
+          padding: 0 30px;
+          a {
+            text-decoration: none;
+            .single-story-player-wapper {
+              position: relative;
+              .single-story-thumbnail-wrapper {
+                width: 100%;
+                height: 200px;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+              .single-story-play-button-wapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 80px;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                opacity: 0.6;
+                img {
+                  height: 50px;
+                  width: auto;
+                }
+              }
+              .single-story-track-number {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+                background-color: $color__green;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                font-family: $font__main--bold;
+                color: #000;
+                font-size: 0.7em;
+              }
+            }
+            .single-story-track-title {
+              color: #000;
+              font-family: $font__main--med;
+              margin-top: 7px;
+            }
+            .single-story-track-date {
+              color: #000;
+              font-family: $font__main--med;
+              font-size: 0.6em;
+            }
+          }
+        }
+      }
+    }
+    
+  }
 }
+

@@ -125,6 +125,7 @@ function sober_life_scripts() {
 	wp_enqueue_style( 'sober-life-css', get_template_directory_uri() . '/build/styles/final-styles.css', true );
 	// js files
 	wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );
+	wp_enqueue_script( 'sober-life-success-stories-js', get_template_directory_uri() . '/src/scripts/success-stories.js', array(), true );
 
 	wp_enqueue_style( 'sober-life-style', get_stylesheet_uri() );
 

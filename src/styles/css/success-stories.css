@@ -1,0 +1,86 @@
+#success-stories .success-stories-header {
+  font-family: "FFBauWebBold";
+  padding: 0 6vw;
+  font-size: 2em;
+}
+
+#success-stories .success-stories__latest {
+  padding: 0 6vw;
+}
+
+#success-stories .success-stories__latest a {
+  text-decoration: none;
+}
+
+#success-stories .success-stories__latest a .player-wapper {
+  position: relative;
+}
+
+#success-stories .success-stories__latest a .player-wapper .latest-podcast-thumbnail-wrapper {
+  width: 100%;
+  height: 200px;
+}
+
+#success-stories .success-stories__latest a .player-wapper .latest-podcast-thumbnail-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#success-stories .success-stories__latest a .player-wapper .play-button-wapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 0.6;
+}
+
+#success-stories .success-stories__latest a .player-wapper .play-button-wapper img {
+  height: 50px;
+  width: auto;
+}
+
+#success-stories .success-stories__latest a .player-wapper .latest-story-track-number {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: #80ff73;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 10px;
+  font-family: "FFBauWebBold";
+  color: #000;
+  font-size: 0.7em;
+}
+
+#success-stories .success-stories__latest a .latest-story-track-title {
+  color: #000;
+  font-family: "FFBauWebMedium";
+  margin-top: 7px;
+}
+
+#success-stories .success-stories__latest a .latest-story-track-date {
+  color: #000;
+  font-family: "FFBauWebMedium";
+  font-size: 0.6em;
+}

@@ -110,7 +110,13 @@ get_header();
 			endif; 
 			?>
 			</section>
-
+			
+			<section class="front-page__success-stories">
+			<?php  
+				get_template_part( 'template-parts/content', 'success-stories' );
+			?>
+			</section>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

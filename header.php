@@ -26,14 +26,16 @@
 	<header id="masthead" class="site-header">
 		<section class="site-branding">
 			<div class="header__top-bar">
-				<a href="tel:6041234567" class="header__nav-bar-tel">604.123.4567</a>
+				<a href="tel:18003230585" class="header__nav-bar-tel">1-800-323-0585</a>
 				<a href="mailto:info@soberlifesd.com" class="header__nav-bar-email">info@soberlifesd.com</a>
 			</div>
 			<div class="header__bottom-bar">
-				<div class="header__logo">
+				<div class="header__logo-green-arrows-wrapper">
 					<img class="header__logo-green-arrows" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-03.png" />
-					<img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />
 				</div>
+				<a href="/" class="header__logo">
+					<img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />	
+				</a>
 				<div id="header__hamburger" onclick="toggleMenu()">
 					<span class="header__hamburger-line"></span>
 					<span class="header__hamburger-line"></span>
@@ -41,7 +43,7 @@
 					<span></span>
 				</div>
 				<div id="header__menu-nav-bar">
-					<?php
+					<?php 
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
 							'menu_id'        => 'primary-menu',

@@ -1,0 +1,172 @@
+#services-child {
+  color: black;
+  margin-top: 80px;
+}
+
+#services-child .services-child__service .services-child__service-initial {
+  font-family: "FFBauWebBold";
+  font-size: 50px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__service .services-child__service-name {
+  font-family: "FFBauWebBold";
+  font-size: 20px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__service .services-child__service-description {
+  font-family: "FFBauWebMedium";
+  font-size: 22px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__service .services-child__opening-get-started {
+  background-color: black;
+  border-radius: 22px;
+  color: #f5f0e8;
+  display: inline-block;
+  height: 50px;
+  font-size: 20px;
+  font-family: "FFBauWebMedium";
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__service .services-child__opening-get-started:visited,
+#services-child .services-child__service .services-child__opening-get-started:hover,
+#services-child .services-child__service .services-child__opening-get-started:focus {
+  color: #f5f0e8;
+  text-decoration: none;
+}
+
+#services-child .services-child__call-button {
+  color: black;
+  background-color: #80ff73;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "FFBauWebMedium";
+  font-size: 24px;
+  line-height: 70px;
+  text-align: center;
+  width: 100%;
+}
+
+#services-child .services-child__call-button:visited,
+#services-child .services-child__call-button:hover,
+#services-child .services-child__call-button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+#services-child .services-child__whos-it-for {
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__whos-it-for .services-child__whos-it-for-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+}
+
+#services-child .services-child__whos-it-for ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#services-child .services-child__whos-it-for ul li {
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+}
+
+#services-child .services-child__whos-it-for .services-child__whos-it-for-learn-more {
+  background-color: black;
+  border-radius: 22px;
+  color: #f5f0e8;
+  display: inline-block;
+  height: 50px;
+  font-size: 20px;
+  font-family: "FFBauWebMedium";
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 55%;
+}
+
+#services-child .services-child__whos-it-for .services-child__whos-it-for-learn-more:visited,
+#services-child .services-child__whos-it-for .services-child__whos-it-for-learn-more:hover,
+#services-child .services-child__whos-it-for .services-child__whos-it-for-learn-more:focus {
+  color: #f5f0e8;
+  text-decoration: none;
+}
+
+#services-child .services-child__whos-it-for .services-child__whos-it-for-image {
+  display: none;
+}
+
+#services-child .services-child__our-approach {
+  background-color: #80ff73;
+}
+
+#services-child .services-child__our-approach .services-child__our-approach-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__our-approach ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#services-child .services-child__our-approach ul li {
+  position: relative;
+}
+
+#services-child .services-child__our-approach ul li .services-child__our-approach-list-title {
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  margin: 0 6% 0 6%;
+  padding-right: 30px;
+}
+
+#services-child .services-child__our-approach ul li .services-child__our-approach-list-icon-wrapper {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  margin: 0 6% 0 6%;
+  cursor: pointer;
+}
+
+#services-child .services-child__our-approach ul li .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+#services-child .services-child__our-approach ul li .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  width: 100%;
+}
+
+#services-child .services-child__our-approach ul li .services-child__our-approach-list-description {
+  font-size: 18px;
+  margin: 0 6% 0 6%;
+  display: none;
+}
+
+#services-child .services-child__our-approach ul li:first-of-type .services-child__our-approach-list-description {
+  display: block;
+}

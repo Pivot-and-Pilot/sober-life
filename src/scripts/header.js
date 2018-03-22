@@ -19,13 +19,13 @@ function toggleMenu() {
 
 jQuery(document).ready(function($) {
   // Show submenu of services
-  $('#header__menu-nav #primary-menu > li:eq(2)').click(function(e) {
+  $('#header__menu-nav #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
     // $('#header__menu-nav #primary-menu .sub-menu').css({'display': 'block', 'position': 'relative', 'height': '100%'});
     $('#header__menu-nav #primary-menu .sub-menu').slideToggle();      
   });
 
-  $('#header__menu-nav-bar #primary-menu > li:eq(2)').click(function(e) {
+  $('#header__menu-nav-bar #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
   });
 

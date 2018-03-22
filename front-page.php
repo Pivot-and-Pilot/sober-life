@@ -20,7 +20,7 @@ get_header();
 
       <section class="front-page__header">
 				<div class="front-page__header__image">
-					<img src="" alt="">
+					<img src="<?php the_field('header_image');?>" alt="">
 				</div>
 				<div class="front-page__header__slogans">
 					<p class="front-page__header__slogans-reclaim">Reclaim</p>
@@ -44,8 +44,79 @@ get_header();
 					
 				</div>
 				<button>Get Started</button>
+				<a href="">Give Us a Call</a>
 			</section>
 
+			<section class="front-page__moving-forward">
+				<div class="moving-forward__content">
+					<div class="moving-forward__content__arrows">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg" alt="">
+					</div>
+					<div class="moving-forward__content__header"><?php the_field('moving_forward_header')?></div>
+					<div class="moving-forward__content__detail"><?php the_field('moving_forward_content')?></div>
+				</div>
+				<div class="moving-forward__image">
+					<img src="<?php the_field('moving_forward_image')?>" alt="">
+				</div>
+			</section>
+
+			<section class="front-page__services">
+				<div class="services__title">Services</div>
+				<div class="services-wapper">
+				<?php
+				$services = get_field('services');	
+				if( $services ): 
+				?>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/php.svg" alt="" />
+						<div class="service__title"><?php echo $services['php_title']?></div>
+						<div class="service__description"><?php echo $services['php_description']?></div>
+						<button>Learn More</button>
+					</div>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/iop.svg" alt="" />
+						<div class="service__title"><?php echo $services['iop_title']?></div>
+						<div class="service__description"><?php echo $services['iop_description']?></div>
+						<button>Learn More</button>
+					</div>
+					<div class="service">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/op.svg" alt="" />
+						<div class="service__title"><?php echo $services['op_title']?></div>
+						<div class="service__description"><?php echo $services['op_description']?></div>
+						<button>Learn More</button>
+					</div>
+				<?php 
+				endif; 
+				?>
+				</div>
+			</section>
+
+			<section class="front-page__our-story">
+			<?php
+			$ourStory = get_field('our_story');	
+			if( $ourStory ): 
+			?>
+				<div class="our-story__image">
+					<img src="<?php echo $ourStory['our_story_image'];?>" alt="">
+				</div>
+				<div class="our-story__text">
+					<div class="our-story__header"><?php echo $ourStory['our_story_header'];?></div>
+					<div class="our-story__description"><?php echo $ourStory['our_story_description'];?></div>
+					<button>About Us</button>
+				</div>
+			<?php 
+			endif; 
+			?>
+			</section>
+			
+			<section class="front-page__success-stories">
+			<?php  
+				get_template_part( 'template-parts/content', 'success-stories' );
+			?>
+			</section>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

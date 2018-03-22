@@ -1,0 +1,237 @@
+@import 'variables-site/variables-site';
+
+#success-stories {
+  .success-stories-header {
+    font-family: $font__main--bold;
+    padding: 0 6vw;
+    font-size: 2em;
+    color: #000;
+  }
+  .success-stories__latest {
+    padding: 0 6vw;
+    a {
+      text-decoration: none;
+      .player-wapper {
+        position: relative;
+        .latest-podcast-thumbnail-wrapper {
+          width: 100%;
+          height: 200px;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .play-button-wapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 80px;
+          width: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          opacity: 0.6;
+          img {
+            height: 50px;
+            width: auto;
+          }
+        }
+        .latest-story-track-number {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 30px;
+          background-color: $color__green;
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          font-family: $font__main--bold;
+          color: #000;
+          font-size: 0.7em;
+        }
+      }
+      .latest-story-track-title {
+        color: #000;
+        font-family: $font__main--med;
+        margin-top: 7px;
+      }
+      .latest-story-track-date {
+        color: #000;
+        font-family: $font__main--med;
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  .other-success-stories {
+    overflow: hidden;
+    padding-top: 30px;
+    .slick-list {
+      .slick-track {
+        .single-success-story {
+          padding: 0 5px;
+          a {
+            text-decoration: none;
+            .single-story-player-wapper {
+              position: relative;
+              height: 150px;
+              .single-story-thumbnail-wrapper {
+                width: 100%;
+                height: 100%;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+              .single-story-play-button-wapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 80px;
+                width: 80px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                opacity: 0.6;
+                img {
+                  height: 50px;
+                  width: auto;
+                }
+              }
+              .single-story-track-number {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+                background-color: $color__green;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                font-family: $font__main--bold;
+                color: #000;
+                font-size: 0.7em;
+              }
+            }
+            .single-story-track-title {
+              color: #000;
+              font-family: $font__main--med;
+              margin-top: 7px;
+            }
+            .single-story-track-date {
+              color: #000;
+              font-family: $font__main--med;
+              font-size: 0.6em;
+            }
+          }
+        }
+      }
+    }
+  }
+  a.go-to-sober-collective {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color__white;
+    background-color: #000;
+    border-radius: 25px;
+    font-size: 1em;
+    font-family: $font__main;
+    span {
+      font-family: $font__main--bold;
+    }
+  }
+}
+
+/* ====================================================== */
+/* ======================= DESKTOP ====================== */
+/* ====================================================== */
+
+@media only screen and (min-width: 768px) {
+
+  #success-stories {
+    .success-stories-header {
+      padding: 0 4vw 20px;
+      font-size: 3em;
+    }
+    .success-stories__latest {
+      padding: 0 4vw;
+      a {
+        .player-wapper {
+          .latest-podcast-thumbnail-wrapper {
+            height: 600px;
+          }
+          .play-button-wapper {
+            height: 150px;
+            width: 150px;
+            img {
+              height: 80px;
+              width: auto;
+            }
+          }
+          .latest-story-track-number {
+            height: 50px;
+            font-size: 1.2em;
+            padding-left: 20px;
+          }
+        }
+        .latest-story-track-title {
+          font-size: 2em;
+        }
+        .latest-story-track-date {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .other-success-stories {
+      .slick-list {
+        .slick-track { 
+          .single-success-story { 
+            padding: 0 20px;
+            a {
+              .single-story-player-wapper {
+                height: calc((92vw - 120px) / 3);
+                .single-story-track-number {
+                  height: 50px;
+                  font-size: 1.1em;
+                  padding-left: 20px;
+                }
+              }
+              .single-story-track-title {
+                font-size: 1.7em;
+              }
+              .single-story-track-date {
+                font-size: 1.1em;
+              }
+            }
+          }
+        }
+      }
+    }
+    a.go-to-sober-collective {
+      margin-top: 80px;
+      width: 40vw;
+      height: 70px;
+      border-radius: 35px;
+      line-height: 70px;
+      font-size: 1.5em;
+    }
+  }
+
+
+}

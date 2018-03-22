@@ -1,0 +1,460 @@
+body {
+  background: #f5f0e8 !important;
+}
+
+section.front-page__header {
+  position: relative;
+  font-family: "FFBauWeb", sans-serif;
+}
+
+section.front-page__header .front-page__header__image {
+  height: calc(90vh - 80px);
+  width: 100vw;
+}
+
+section.front-page__header .front-page__header__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+section.front-page__header .front-page__header__slogans {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  padding-left: 6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
+  font-size: 3em;
+  margin: 0;
+  margin-top: -120px;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
+  position: relative;
+  top: -10px;
+  color: #000;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+  font-size: 2.7em;
+  font-weight: 900;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  font-family: "FFBauWebBold";
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
+  margin: 0;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail {
+  font-size: 1.5em;
+  position: absolute;
+  top: 60px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  font-family: "FFBauWebMedium";
+}
+
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail p {
+  margin: 0;
+}
+
+section.front-page__header button {
+  position: absolute;
+  bottom: 20%;
+  margin-left: 6vw;
+  border-radius: 25px;
+  font-size: 1.5em;
+  padding: 10px 25px;
+  background-color: #000;
+  color: #f5f0e8;
+}
+
+section.front-page__header button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
+}
+
+section.front-page__header a {
+  position: relative;
+  display: block;
+  line-height: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "FFBauWebMedium";
+  font-size: 1.5em;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  height: 60px;
+  width: 100vw;
+  background-color: #80ff73;
+  cursor: pointer;
+}
+
+section.front-page__moving-forward {
+  padding: 40px 6vw 0;
+  color: #000;
+  background-color: #f5f0e8;
+}
+
+section.front-page__moving-forward .moving-forward__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 50vw;
+  height: 50px;
+}
+
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows img {
+  width: calc(100% / 3);
+  padding-right: 30px;
+}
+
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {
+  font-family: "FFBauWebBold";
+  font-size: 2em;
+}
+
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__detail {
+  font-family: "FFBauWeb", sans-serif;
+  font-size: 1.3em;
+}
+
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__detail p {
+  margin: 0;
+}
+
+section.front-page__moving-forward .moving-forward__image {
+  display: none;
+}
+
+section.front-page__services {
+  padding: 70px 6vw 0;
+  color: #000;
+  background-color: #f5f0e8;
+}
+
+section.front-page__services .services__title {
+  font-size: 2em;
+  font-family: "FFBauWebBold";
+}
+
+section.front-page__services .services-wapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+section.front-page__services .services-wapper .service {
+  margin-top: 70px;
+  padding-top: 70px;
+  position: relative;
+}
+
+section.front-page__services .services-wapper .service:first-child {
+  margin-top: 20px;
+}
+
+section.front-page__services .services-wapper .service img {
+  position: absolute;
+  top: 0;
+  height: 150px;
+}
+
+section.front-page__services .services-wapper .service .service__title {
+  position: relative;
+  font-family: "FFBauWebBold";
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+section.front-page__services .services-wapper .service .service__description {
+  position: relative;
+  font-family: "FFBauWeb", sans-serif;
+  font-size: 1.1em;
+  z-index: 1;
+}
+
+section.front-page__services .services-wapper .service .service__description p {
+  margin: 20px 0;
+}
+
+section.front-page__services .services-wapper .service button {
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  background-color: #000;
+  color: #f5f0e8;
+  font-size: 1.3em;
+  padding: 0;
+}
+
+section.front-page__services .services-wapper .service button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
+}
+
+section.front-page__our-story {
+  padding-top: 100px;
+  position: relative;
+  color: #000;
+  background-color: #f5f0e8;
+}
+
+section.front-page__our-story .our-story__image {
+  width: 100%;
+  height: auto;
+}
+
+section.front-page__our-story .our-story__text {
+  padding: 6vw;
+  position: relative;
+  top: -100px;
+  background-color: rgba(245, 240, 232, 0.7);
+}
+
+section.front-page__our-story .our-story__text .our-story__header {
+  opacity: 1;
+  font-family: "FFBauWebBold";
+  font-size: 2em;
+}
+
+section.front-page__our-story .our-story__text .our-story__description {
+  opacity: 1;
+  font-size: 1.1em;
+}
+
+section.front-page__our-story .our-story__text .our-story__description p {
+  font-family: "FFBauWeb", sans-serif;
+  margin: 0;
+}
+
+section.front-page__our-story .our-story__text button {
+  height: 50px;
+  width: 200px;
+  border-radius: 25px;
+  background-color: #000;
+  color: #f5f0e8;
+  font-size: 1.5em;
+  padding: 0;
+  margin-top: 20px;
+}
+
+section.front-page__our-story .our-story__text button:hover {
+  color: #000;
+  background-color: #80ff73;
+  border: 1px solid #000;
+}
+
+section.front-page__success-stories {
+  background-color: #f5f0e8;
+}
+
+/* ====================================================== */
+
+/* ======================= DESKTOP ====================== */
+
+/* ====================================================== */
+
+@media only screen and (min-width: 768px) {
+  section.front-page__header .front-page__header__image {
+    height: calc(100vh - 100px);
+  }
+
+  section.front-page__header .front-page__header__slogans {
+    padding-left: 4vw;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
+    font-size: 6em;
+    margin-top: -350px;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
+    margin-top: -20px;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+    font-size: 4em;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail {
+    top: 100px;
+    font-size: 2em;
+  }
+
+  section.front-page__header button {
+    bottom: 25%;
+    margin-left: 4vw;
+    padding: 20px 50px;
+    border-radius: 50px;
+  }
+
+  section.front-page__header a {
+    display: none;
+  }
+
+  section.front-page__moving-forward {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 120px 4vw 0;
+    position: relative;
+  }
+
+  section.front-page__moving-forward .moving-forward__content {
+    width: 50%;
+  }
+
+  section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows {
+    width: 50%;
+    height: 30px;
+    margin-left: -20px;
+  }
+
+  section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {
+    margin-top: 50px;
+    font-size: 3em;
+  }
+
+  section.front-page__moving-forward .moving-forward__content .moving-forward__content__detail {
+    margin-top: 40px;
+    padding-right: 4vw;
+    font-size: 2em;
+  }
+
+  section.front-page__moving-forward .moving-forward__image {
+    display: block;
+    width: 50%;
+    height: 100vh;
+    top: -180px;
+    position: relative;
+  }
+
+  section.front-page__moving-forward .moving-forward__image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  section.front-page__services {
+    padding: 0 4vw 0;
+  }
+
+  section.front-page__services .services__title {
+    font-size: 3em;
+  }
+
+  section.front-page__services .services-wapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  section.front-page__services .services-wapper .service {
+    width: calc(100% / 3);
+    margin-top: 50px;
+    padding: 70px 30px 50px;
+    position: relative;
+  }
+
+  section.front-page__services .services-wapper .service:first-child {
+    margin-top: 50px;
+    padding-left: 0;
+  }
+
+  section.front-page__services .services-wapper .service:last-child {
+    padding-right: 0;
+  }
+
+  section.front-page__services .services-wapper .service button {
+    position: absolute;
+    bottom: 0;
+  }
+
+  section.front-page__our-story {
+    position: relative;
+    margin-top: 50px;
+  }
+
+  section.front-page__our-story .our-story__image {
+    height: 80vh;
+  }
+
+  section.front-page__our-story .our-story__image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  section.front-page__our-story .our-story__text {
+    position: absolute;
+    top: 100px;
+    height: 80vh;
+    left: 0;
+    width: 50%;
+    padding: 4vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  section.front-page__our-story .our-story__text .our-story__description {
+    font-size: 1.4em;
+  }
+
+  section.front-page__success-stories {
+    padding-top: 100px;
+  }
+}

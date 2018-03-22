@@ -67,18 +67,20 @@
   }
 
   .other-success-stories {
-    color: red;
+    overflow: hidden;
+    padding-top: 30px;
     .slick-list {
       .slick-track {
         .single-success-story {
-          padding: 0 30px;
+          padding: 0 5px;
           a {
             text-decoration: none;
             .single-story-player-wapper {
               position: relative;
+              height: 150px;
               .single-story-thumbnail-wrapper {
                 width: 100%;
-                height: 200px;
+                height: 100%;
                 img {
                   height: 100%;
                   width: 100%;
@@ -131,7 +133,22 @@
         }
       }
     }
-    
+  }
+  button {
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $color__white;
+    background-color: #000;
+    border-radius: 25px;
+    font-size: 1em;
+    font-family: $font__main;
+    span {
+      font-family: $font__main--bold;
+    }
   }
 }
 

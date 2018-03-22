@@ -112,6 +112,7 @@ section.front-page__header a {
 section.front-page__moving-forward {
   padding: 40px 6vw 0;
   color: #000;
+  background-color: #f5f0e8;
 }
 
 section.front-page__moving-forward .moving-forward__content {
@@ -162,6 +163,7 @@ section.front-page__moving-forward .moving-forward__image {
 section.front-page__services {
   padding: 70px 6vw 0;
   color: #000;
+  background-color: #f5f0e8;
 }
 
 section.front-page__services .services__title {
@@ -230,6 +232,7 @@ section.front-page__our-story {
   padding-top: 100px;
   position: relative;
   color: #000;
+  background-color: #f5f0e8;
 }
 
 section.front-page__our-story .our-story__image {
@@ -275,6 +278,10 @@ section.front-page__our-story .our-story__text button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;
+}
+
+section.front-page__success-stories {
+  background-color: #f5f0e8;
 }
 
 /* ====================================================== */

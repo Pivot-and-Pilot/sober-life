@@ -78,20 +78,27 @@
           <div class="single-story-thumbnail-wrapper">
             <?php the_post_thumbnail(); ?>
           </div>   
+
           <?php
             $latestStoryCategories = get_the_category();
             foreach ($latestStoryCategories as $latestStoryCategorie) :
               if ($latestStoryCategorie->slug == 'podcast') :
           ?>
+
           <div class="single-story-play-button-wapper">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
           </div>
+          <div class="single-story-track-number single-story-podcast-track-number"><?php the_title(); ?></div>
+
+          <?php else :?>
+
+          <div class="single-story-track-number">Article</div>
+
           <?php
               endif;
             endforeach;
           ?>
 
-          <div class="single-story-track-number"><?php the_title(); ?></div>
         </div>
 
         <div class="single-story-track-title">
@@ -110,5 +117,7 @@
     wp_reset_query();
   ?>
   </div>
+
+  <button>Go to <span>Sober Collective</span></button>
   
 </section>

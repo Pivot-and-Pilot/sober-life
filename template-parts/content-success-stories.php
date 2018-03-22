@@ -80,6 +80,7 @@
           </div>   
 
           <?php
+            // check if the post is podcast 
             $latestStoryCategories = get_the_category();
             foreach ($latestStoryCategories as $latestStoryCategorie) :
               if ($latestStoryCategorie->slug == 'podcast') :

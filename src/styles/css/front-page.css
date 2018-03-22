@@ -1,3 +1,7 @@
+body {
+  background: #f5f0e8 !important;
+}
+
 section.front-page__header {
   position: relative;
   font-family: "FFBauWeb", sans-serif;
@@ -195,17 +199,20 @@ section.front-page__services .services-wapper .service img {
   position: absolute;
   top: 0;
   height: 150px;
-  z-index: -1;
 }
 
 section.front-page__services .services-wapper .service .service__title {
+  position: relative;
   font-family: "FFBauWebBold";
   font-size: 1.5em;
+  z-index: 1;
 }
 
 section.front-page__services .services-wapper .service .service__description {
+  position: relative;
   font-family: "FFBauWeb", sans-serif;
   font-size: 1.1em;
+  z-index: 1;
 }
 
 section.front-page__services .services-wapper .service .service__description p {
@@ -445,5 +452,9 @@ section.front-page__success-stories {
 
   section.front-page__our-story .our-story__text .our-story__description {
     font-size: 1.4em;
+  }
+
+  section.front-page__success-stories {
+    padding-top: 100px;
   }
 }

@@ -136,6 +136,7 @@
   }
   a.go-to-sober-collective {
     display: block;
+    text-decoration: none;
     text-align: center;
     line-height: 50px;
     height: 50px;
@@ -155,3 +156,80 @@
   }
 }
 
+/* ====================================================== */
+/* ======================= DESKTOP ====================== */
+/* ====================================================== */
+
+@media only screen and (min-width: 768px) {
+
+  #success-stories {
+    .success-stories-header {
+      padding: 0 4vw 20px;
+    }
+    .success-stories__latest {
+      padding: 0 4vw;
+      a {
+        .player-wapper {
+          .latest-podcast-thumbnail-wrapper {
+            height: 600px;
+          }
+          .play-button-wapper {
+            height: 150px;
+            width: 150px;
+            img {
+              height: 80px;
+              width: auto;
+            }
+          }
+          .latest-story-track-number {
+            height: 50px;
+            font-size: 1.2em;
+            padding-left: 20px;
+          }
+        }
+        .latest-story-track-title {
+          font-size: 2em;
+        }
+        .latest-story-track-date {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .other-success-stories {
+      .slick-list {
+        .slick-track { 
+          .single-success-story { 
+            padding: 0 20px;
+            a {
+              .single-story-player-wapper {
+                height: calc((92vw - 120px) / 3);
+                .single-story-track-number {
+                  height: 50px;
+                  font-size: 1.1em;
+                  padding-left: 20px;
+                }
+              }
+              .single-story-track-title {
+                font-size: 1.7em;
+              }
+              .single-story-track-date {
+                font-size: 1.1em;
+              }
+            }
+          }
+        }
+      }
+    }
+    a.go-to-sober-collective {
+      margin-top: 80px;
+      width: 40vw;
+      height: 70px;
+      border-radius: 35px;
+      line-height: 70px;
+      font-size: 1.5em;
+    }
+  }
+
+
+}

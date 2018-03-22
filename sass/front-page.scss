@@ -1,5 +1,9 @@
 @import 'variables-site/variables-site';
 
+body {
+  background: $color__white !important;
+}
+
 section.front-page__header {
   position: relative;
   font-family: $font__main;
@@ -145,15 +149,18 @@ section.front-page__services {
         position: absolute;
         top: 0;
         height: 150px;
-        z-index: -1;
       }
       .service__title {
+        position: relative;
         font-family: $font__main__bold;
         font-size: 1.5em;
+        z-index: 1;
       }
       .service__description {
+        position: relative;
         font-family: $font__main;
         font-size: 1.1em;
+        z-index: 1;        
         p {
           margin: 20px 0;
         }
@@ -350,5 +357,9 @@ section.front-page__success-stories {
         font-size: 1.4em;
       }
     }
+  }
+
+  section.front-page__success-stories {
+    padding-top: 100px;
   }
 }

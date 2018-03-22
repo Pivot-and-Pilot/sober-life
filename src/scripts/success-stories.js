@@ -35,12 +35,22 @@ jQuery(document).ready(function($){
   })();
 
   (function slick () {
+    if ($(window).width() < 768) {
+      $('.other-success-stories').slick({
+        centerMode: true,
+        centerPadding: '6%',
+        slidesToShow: 2,
+        arrows: false,
+      })
+    }
+
     $('.other-success-stories').slick({
       centerMode: true,
-      centerPadding: '6%',
-      slidesToShow: 2,
+      centerPadding: '4%',
+      slidesToShow: 3,
       arrows: false,
     })
+   
   })();
 
 })

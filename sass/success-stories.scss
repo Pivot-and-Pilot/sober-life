@@ -5,6 +5,7 @@
     font-family: $font__main--bold;
     padding: 0 6vw;
     font-size: 2em;
+    color: #000;
   }
   .success-stories__latest {
     padding: 0 6vw;
@@ -165,6 +166,7 @@
   #success-stories {
     .success-stories-header {
       padding: 0 4vw 20px;
+      font-size: 3em;
     }
     .success-stories__latest {
       padding: 0 4vw;

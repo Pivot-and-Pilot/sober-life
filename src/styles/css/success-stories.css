@@ -172,7 +172,10 @@
   font-size: 0.6em;
 }
 
-#success-stories button {
+#success-stories a.go-to-sober-collective {
+  display: block;
+  text-align: center;
+  line-height: 50px;
   height: 50px;
   width: 300px;
   margin-top: 20px;
@@ -187,6 +190,6 @@
   font-family: "FFBauWeb", sans-serif;
 }
 
-#success-stories button span {
+#success-stories a.go-to-sober-collective span {
   font-family: "FFBauWebBold";
 }

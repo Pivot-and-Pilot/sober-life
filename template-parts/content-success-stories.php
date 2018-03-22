@@ -118,6 +118,6 @@
   ?>
   </div>
 
-  <button>Go to <span>Sober Collective</span></button>
+  <a href="" class="go-to-sober-collective">Go to <span>Sober Collective</span></a>
   
 </section>

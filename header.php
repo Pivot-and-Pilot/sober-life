@@ -34,7 +34,8 @@
 					<img class="header__logo-green-arrows" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-03.png" />
 				</div>
 				<a href="/" class="header__logo">
-					<img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />	
+					<!-- <img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />	 -->
+					<div>Sober</div><div>Life</div>
 				</a>
 				<div id="header__hamburger" onclick="toggleMenu()">
 					<span class="header__hamburger-line"></span>
@@ -52,6 +53,8 @@
 					<a href="#" class="header__menu-nav-bar-get-started">Get Started</a>
 				</div>
 			</div>
+  		<a href="#" class="header__fixed-call-button">Give Us a Call</a>
+			
 		</section><!-- .site-branding -->
 
 		<section id="header__menu-overlay" class="main-navigation">

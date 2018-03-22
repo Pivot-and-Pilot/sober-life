@@ -4,6 +4,7 @@ footer {
   margin: $margin__mobile;
   margin-top: 80px;
   margin-bottom: 30px;
+  color: black;
   .footer__desktop-wrap {
     .footer__social-media {
       .footer__social-media-title {
@@ -144,7 +145,7 @@ footer {
         width: 33.33%;
         .footer__social-media-instagram, .footer__social-media-facebook {
           svg {
-            width: 50px;
+            width: 60px;
             border-radius: 10px;
             // border: 1.2px solid black;            
             &:hover {
@@ -181,7 +182,17 @@ footer {
       .footer__newsletter-signup {
         width: 33.33%;        
         margin: 0;
+        .footer__newsletter-signup-email {
+          input {
+            height: 60px;
+            border-radius: 35px;
+          }
+        }
         .footer__newsletter-signup-submit {
+          input {
+            height: 60px;
+            border-radius: 35px;
+          }
           &:hover {
             input {
               border: 1px solid black;

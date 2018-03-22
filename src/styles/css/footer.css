@@ -2,6 +2,7 @@ footer {
   margin: 0 6% 0 6%;
   margin-top: 80px;
   margin-bottom: 30px;
+  color: black;
 }
 
 footer .footer__desktop-wrap .footer__social-media .footer__social-media-title {
@@ -188,7 +189,7 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
 
   footer .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg,
   footer .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
-    width: 50px;
+    width: 60px;
     border-radius: 10px;
   }
 
@@ -237,6 +238,16 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__desktop-wrap .footer__newsletter-signup {
     width: 33.33%;
     margin: 0;
+  }
+
+  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
+    height: 60px;
+    border-radius: 35px;
+  }
+
+  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
+    height: 60px;
+    border-radius: 35px;
   }
 
   footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit:hover input {

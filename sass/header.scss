@@ -10,7 +10,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 5;
     .header__top-bar {
       display: none;
@@ -21,6 +21,7 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      overflow: hidden;
       .header__logo-green-arrows-wrapper {
         position: absolute;
         left: -20px;
@@ -121,27 +122,27 @@ header {
         display: none;
       }
     }
-    .header__fixed-call-button {
-      position: fixed;
-      bottom: 0;
+  }
+  .header__fixed-call-button {
+    position: fixed;
+    bottom: 0;
+    color: black;
+    background-color: $color__green;
+    border-top: 1px solid black;
+    // border-bottom: 1px solid black;
+    text-decoration: none;
+    // display: inline-block;
+    font-family: $font__main--med;
+    font-size: 24px;
+    line-height: 70px;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+    &:visited,
+    &:hover,
+    &:focus {
       color: black;
-      background-color: $color__green;
-      border-top: 1px solid black;
-      // border-bottom: 1px solid black;
       text-decoration: none;
-      // display: inline-block;
-      font-family: $font__main--med;
-      font-size: 24px;
-      line-height: 70px;
-      text-align: center;
-      width: 100%;
-      z-index: 5;
-      &:visited,
-      &:hover,
-      &:focus {
-        color: black;
-        text-decoration: none;
-      }
     }
   }
   #header__menu-overlay {

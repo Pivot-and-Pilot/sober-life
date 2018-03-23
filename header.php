@@ -41,7 +41,7 @@
 					<span class="header__hamburger-line"></span>
 					<span class="header__hamburger-line"></span>
 					<span class="header__hamburger-line"></span>
-					<span></span>
+					<span></span> 
 				</div>
 				<div id="header__menu-nav-bar">
 					<?php 
@@ -53,9 +53,8 @@
 					<a href="#" class="header__menu-nav-bar-get-started">Get Started</a>
 				</div>
 			</div>
-  		<a href="#" class="header__fixed-call-button">Give Us a Call</a>
-			
 		</section><!-- .site-branding -->
+		<a href="#" class="header__fixed-call-button">Give Us a Call</a>
 
 		<section id="header__menu-overlay" class="main-navigation">
 			<div id="header__menu-overlay-content">

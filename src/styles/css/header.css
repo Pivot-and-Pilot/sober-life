@@ -6,7 +6,6 @@ header .site-branding {
   top: 0;
   left: 0;
   right: 0;
-  overflow: hidden;
   z-index: 5;
 }
 
@@ -26,6 +25,7 @@ header .site-branding .header__bottom-bar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  overflow: hidden;
 }
 
 header .site-branding .header__bottom-bar .header__logo-green-arrows-wrapper {
@@ -153,7 +153,7 @@ header .site-branding .header__bottom-bar #header__menu-nav-bar {
   display: none;
 }
 
-header .site-branding .header__fixed-call-button {
+header .header__fixed-call-button {
   position: fixed;
   bottom: 0;
   color: black;
@@ -168,9 +168,9 @@ header .site-branding .header__fixed-call-button {
   z-index: 5;
 }
 
-header .site-branding .header__fixed-call-button:visited,
-header .site-branding .header__fixed-call-button:hover,
-header .site-branding .header__fixed-call-button:focus {
+header .header__fixed-call-button:visited,
+header .header__fixed-call-button:hover,
+header .header__fixed-call-button:focus {
   color: black;
   text-decoration: none;
 }

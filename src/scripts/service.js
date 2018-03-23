@@ -1,41 +1,25 @@
 jQuery(document).ready(function($) {
 
-  
+  // Set initial setting of first li item open
   (function setInitialApproachIcons() {
-    // $('#services-child > .services-child__our-approach > ul > li').each(function() {
-    //   let approachIconLine = $(this).children().children().children().children()[1];   
-    //   let approachDescription = $(this).children()[1];
-    //   $(approachIconLine).removeClass('closed');     
-    //   if ($(approachDescription).css('display') == 'none') {
-    //     $(approachIconLine).addClass('closed');
-    //   } 
-    // })
     $('#services-child > .services-child__our-approach > ul > li:eq(0)').addClass('open');
-    
   })();
 
-  // *************** LEFT OFF HERE ****************************************************************
+  // On click, only one li open at one time
   (function clickApproachIcons() {
     $('#services-child > .services-child__our-approach > ul > li > .services-child__our-approach-list-title-wrapper').click(function() {
+      // Remove all other '+' signs and close description
       let siblings = $(this).parent().siblings();
-      console.log(siblings);
-      if ($(siblings).hasClass('open')) {
-        console.log('Open');
-        $(siblings).removeClass('open');
-        let description = $(siblings).children()[1];
-        $(description).slideUp();
-      } else {
-        console.log('closed');
-      }
+      $(siblings).each(function() {
+        let siblingsDescription =  $(this).children()[1];
+        $(siblingsDescription).slideUp()
+      });
+      $(siblings).removeClass('open');
 
-      $(this).parent().siblings().removeClass('open');
-
+      // Add '+' sign and open description
       $(this).parent().addClass('open');
       let description = $(this).parent().children()[1];
-      $(description).slideToggle();
-      // let secondSpan = $(this).children().children().children()[1];
-      // $(secondSpan).toggleClass('closed');
-    
+      $(description).slideDown();
     });
   })();
 });

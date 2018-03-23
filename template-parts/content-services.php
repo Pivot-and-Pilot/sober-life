@@ -43,7 +43,7 @@
   <section class="services-child__our-approach">
     <?php if( have_rows('our_approach_section') ): 
       while( have_rows('our_approach_section') ): the_row(); ?>
-        <img src="" alt="" class="services-child__our-approach-logo"/>
+        <img src="<?php echo get_sub_field('approach_background_image') ?>" alt="" class="services-child__our-approach-logo"/>
         <div class="services-child__our-approach-title">Our Approach</div>
         <ul>
           <?php if( have_rows('approach_list') ): 

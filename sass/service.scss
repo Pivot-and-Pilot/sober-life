@@ -2,7 +2,7 @@
 
 #services-child {
   color: black;
-  margin-top: 80px;
+  margin-top: 80px; 
 
   .services-child__service {
     position: relative;
@@ -102,15 +102,23 @@
     }
   }
   .services-child__our-approach {
+    position: relative;
     background-color: $color__green;
     padding-top: 20px;
     padding-bottom: 50px;
     .services-child__our-approach-logo {
+      position: absolute;
+      top: 0;
+      width: 110%;
+      max-width: 110%;
+      left: -5%;
     }
     .services-child__our-approach-title {
       font-family: $font__main--bold;
       font-size: 30px;
       margin: $margin__mobile;
+      z-index: 2;
+      position: relative;
     }
 
     ul {
@@ -141,7 +149,6 @@
               position: relative;
               width: 30px;
               height: 30px;
-              // transform: rotate(0deg);
               span {
                 display: block;
                 position: absolute;
@@ -159,10 +166,6 @@
               span:nth-child(2) {
                 opacity: 0;
               }
-              span.closed {
-                transform: rotate(-90deg) translate(-14px, 0);
-                opacity: 1;                
-              }
             }
           }
         }
@@ -175,6 +178,18 @@
         &:first-of-type {
           .services-child__our-approach-list-description {
             display: block;
+          }
+        }
+      }
+      li.open {
+        .services-child__our-approach-list-title-wrapper {
+          .services-child__our-approach-list-icon-wrapper {
+            .services-child__our-approach-list-icon {
+              span:nth-child(2) {
+                transform: rotate(-90deg) translate(-14px, 0);
+                opacity: 1;
+              }
+            }
           }
         }
       }

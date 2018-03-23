@@ -115,15 +115,26 @@
 }
 
 #services-child .services-child__our-approach {
+  position: relative;
   background-color: #80ff73;
   padding-top: 20px;
   padding-bottom: 50px;
+}
+
+#services-child .services-child__our-approach .services-child__our-approach-logo {
+  position: absolute;
+  top: 0;
+  width: 110%;
+  max-width: 110%;
+  left: -5%;
 }
 
 #services-child .services-child__our-approach .services-child__our-approach-title {
   font-family: "FFBauWebBold";
   font-size: 30px;
   margin: 0 6% 0 6%;
+  z-index: 2;
+  position: relative;
 }
 
 #services-child .services-child__our-approach ul {
@@ -198,12 +209,6 @@
   opacity: 0;
 }
 
-#services-child .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span.closed {
-  -webkit-transform: rotate(-90deg) translate(-14px, 0);
-  transform: rotate(-90deg) translate(-14px, 0);
-  opacity: 1;
-}
-
 #services-child .services-child__our-approach ul li .services-child__our-approach-list-description {
   font-size: 18px;
   margin: 0 6% 0 6%;
@@ -213,6 +218,12 @@
 
 #services-child .services-child__our-approach ul li:first-of-type .services-child__our-approach-list-description {
   display: block;
+}
+
+#services-child .services-child__our-approach ul li.open .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
+  -webkit-transform: rotate(-90deg) translate(-14px, 0);
+  transform: rotate(-90deg) translate(-14px, 0);
+  opacity: 1;
 }
 
 #services-child .services-child__our-team {

@@ -10,10 +10,12 @@
     margin: 0 -7%;
     // margin-bottom: 250px;
     .about__opening-image-wrapper {
+      position: fixed;
+
       overflow: hidden;
       z-index: -1;
       height: 60vh;
-      margin-bottom: 280px;
+      top: 80px;
       .about__opening-image {
         width: 100%;
         height: 100%;
@@ -21,10 +23,10 @@
       }
     }
     .about__opening-text-wrapper {
-      position: absolute;
-      top: 230px;
-      background: rgba(245, 240, 232, 0.75);    
-      padding: 30px 0;    
+      position: relative;
+      margin-top: 250px;
+      background: rgba(245, 240, 232, 0.75);
+      padding: 30px 0;
       .about__opening-title {
         margin: $margin__mobile;
         font-family: $font__main--bold;
@@ -42,110 +44,112 @@
       }
     }
   }
-  .about__our-philosophy {
-    position: relative;
-    .about__philosophy-title {
-      font-family: $font__main--bold;
-      font-size: 30px;
-      line-height: 35px;
+  .about__content-wrap {
+    .about__our-philosophy {
+      background-color: $color__white;
+      position: relative;
+      .about__philosophy-title {
+        font-family: $font__main--bold;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      .about__philosophy-arrows {
+        position: absolute;
+        left: -21%;
+        top: 100px;
+        max-width: 140%;
+        z-index: -1;
+      }
+      .about__philosophy-text1 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .about__philosophy-image1 {
+      }
+      .about__philosophy-text2 {
+        font-size: 18px;
+      }
+      .about__philosophy-image2 {
+        display: none;
+      }
     }
-    .about__philosophy-arrows {
-      position: absolute;
-      left: -21%;
-      top: 100px;
-      max-width: 140%;
-      z-index: -1;
-    }  
-    .about__philosophy-text1 {
-      font-size: 18px;
-      line-height: 22px;      
-    }
-    .about__philosophy-image1 {
-
-    }
-    .about__philosophy-text2 {
-      font-size: 18px;
-    }
-    .about__philosophy-image2 {
-      display: none;
-    }
-  }
-  .about__our-team {
-    margin: 60px -7% 0 -7%;
-    .about__our-team-title {
-      font-family: $font__main--bold;
-      font-size: 30px;
-      line-height: 35px;
-      margin-left: 6%;
-    }
-    #about__our-team-wrapper {
-      margin-top: 20px;
-      .slick-list {
-        .slick-track {
-          .about__our-team-member {
-            padding: 0 5px;
-            outline: none;
-            img {
-              height: 300px;
-              width: 100%;
-              object-fit: cover;
-              object-position: top;
-            }
-            .about__our-team-member-name {
-              font-family: $font__main--bold;
-              font-size: 26px;
-              line-height: 26px;
-              padding-top: 15px;
-            }
-            .about__our-team-member-title {
-              font-family: $font__main--med;
-              font-size: 18px;
-              line-height: 26px;
-            }
-            .about__our-team-member-about {
-              font-family: $font__main--med;
-              font-size: 18px;
-              line-height: 22px;
-              padding-top: 5px;
-              padding-right: 20px;
+    .about__our-team {
+      margin: 60px -7% 0 -7%;
+      .about__our-team-title {
+        font-family: $font__main--bold;
+        font-size: 30px;
+        line-height: 35px;
+        margin-left: 6%;
+      }
+      #about__our-team-wrapper {
+        margin-top: 20px;
+        .slick-list {
+          .slick-track {
+            .about__our-team-member {
+              padding: 0 5px;
+              outline: none;
+              img {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+              }
+              .about__our-team-member-name {
+                font-family: $font__main--bold;
+                font-size: 26px;
+                line-height: 26px;
+                padding-top: 15px;
+              }
+              .about__our-team-member-title {
+                font-family: $font__main--med;
+                font-size: 18px;
+                line-height: 26px;
+              }
+              .about__our-team-member-about {
+                font-family: $font__main--med;
+                font-size: 18px;
+                line-height: 22px;
+                padding-top: 5px;
+                padding-right: 20px;
+              }
             }
           }
         }
       }
     }
-  }
-  .about__get-in-touch-wrapper {
-    .about__get-in-touch {
-      background-color: black;
-      border-radius: 22px;
-      color: $color__white;
-      font-family: $font__main--med;
-      font-size: 20px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      width: 100%;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 60px;
+    .about__get-in-touch-wrapper {
+      .about__get-in-touch {
+        background-color: black;
+        border-radius: 22px;
+        color: $color__white;
+        font-family: $font__main--med;
+        font-size: 20px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        width: 100%;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 60px;
+      }
     }
-  }
-  .about__certifications {
-    margin: 80px -7% 0 -7%;    
-    .about__certifications-title {
-      font-family: $font__main--bold;
-      font-size: 30px;
-      line-height: 35px;
-      margin-left: 6%;
-    }
-    #about__certification-logo-wrapper {
-      margin-top: 20px;
-      .slick-list {
-        .slick-track {
-          img {
-            width: 90%;
-            padding: 0 10px;
-            outline: none;
+    .about__certifications {
+      margin: 80px -7% 0 -7%;
+      .about__certifications-title {
+        font-family: $font__main--bold;
+        font-size: 30px;
+        line-height: 35px;
+        margin-left: 6%;
+      }
+      #about__certification-logo-wrapper {
+        margin-top: 20px;
+        .slick-list {
+          .slick-track {
+            img {
+              width: 90%;
+              padding: 0 10px;
+              outline: none;
+            }
           }
         }
       }
@@ -163,10 +167,10 @@
     margin: $margin__desktop;
     width: 92%;
     .about__opening {
-      margin: 100px -5% 60px -5%;;      
+      margin: 100px -5% 60px -5%;
       height: 80vh;
       .about__opening-image-wrapper {
-        height: 80vh;        
+        height: 80vh;
         .about__opening-image {
           max-width: 100%;
           width: 100%;
@@ -202,7 +206,7 @@
       .about__philosophy-text1 {
         font-size: 24px;
         line-height: 30px;
-        width: 45%;        
+        width: 45%;
       }
       .about__philosophy-image1 {
         width: 55%;
@@ -213,14 +217,14 @@
       .about__philosophy-text2 {
         font-size: 24px;
         line-height: 30px;
-        width: 40%;        
+        width: 40%;
         position: absolute;
         right: 0;
         bottom: 0;
       }
       .about__philosophy-image2 {
         display: block;
-        position: absolute;        
+        position: absolute;
         width: 40%;
         height: 500px;
         object-fit: cover;
@@ -232,7 +236,7 @@
       margin: 60px 0 0 0;
       .about__our-team-title {
         margin-left: 0;
-        font-size: 35px;        
+        font-size: 35px;
       }
       #about__our-team-wrapper {
         display: flex;
@@ -297,10 +301,9 @@
           width: 33.33%;
           object-fit: contain;
           height: 150px;
-          padding: 0 20px;          
+          padding: 0 20px;
         }
       }
     }
   }
 }
-

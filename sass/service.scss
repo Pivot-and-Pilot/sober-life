@@ -2,18 +2,18 @@
 
 #services-child {
   color: black;
-  margin-top: 80px; 
+  margin-top: 80px;
 
   .services-child__service {
     position: relative;
     height: 60vh;
     .services-child__service-image {
-      position: absolute;
+      position: fixed;
       z-index: -1;
       height: 60vh;
       width: 100%;
       object-fit: cover;
-      top: 0;
+      top: 80px;
     }
     .services-child__service-initial {
       font-family: $font__main--bold;
@@ -57,168 +57,29 @@
       }
     }
   }
-
-  .services-child__whos-it-for {
-    margin: $margin__mobile;
-    margin-top: 50px;
-    margin-bottom: 60px;
-    .services-child__whos-it-for-title {
-      font-family: $font__main--bold;
-      font-size: 30px;
-    }
-    ul {
-      margin: 0;
-      padding-left: 18px;
-      padding-top: 10px;
-      li {
-        font-family: $font__main--med;
-        font-size: 20px;
-        line-height: 26px;
-        padding: 5px 0;
-      }
-    }
-    .services-child__whos-it-for-learn-more {
-      background-color: black;
-      border-radius: 22px;
-      color: $color__white;
-      display: inline-block;
-      height: 50px;
-      font-size: 20px;
-      font-family: $font__main--med;
-      line-height: 50px;
-      margin-top: 20px;
-      text-align: center;
-      text-decoration: none;
-      width: 55%;
-      &:visited,
-      &:hover,
-      &:focus {
-        color: $color__white;
-        text-decoration: none;
-      }
-    }
-    .services-child__whos-it-for-image {
-      display: none;
-    }
-  }
-  .services-child__our-approach {
-    position: relative;
-    background-color: $color__green;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    .services-child__our-approach-logo {
-      position: absolute;
-      top: 0;
-      width: 110%;
-      max-width: 110%;
-      left: -5%;
-    }
-    .services-child__our-approach-title {
-      font-family: $font__main--bold;
-      font-size: 30px;
+  .services-child__content-wrap {
+    background-color: $color__white;
+    // margin-top: 50px;
+    .services-child__whos-it-for {
       margin: $margin__mobile;
-      z-index: 2;
-      position: relative;
-    }
-
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      padding-top: 10px;
-      li {
-        position: relative;
-        .services-child__our-approach-list-title-wrapper {
-          display: flex;
-          flex-direction: row;
-            margin: $margin__mobile;  
-            justify-content: space-between;        
-            padding-top: 10px;
-          .services-child__our-approach-list-title {
-            font-family: $font__main--med;
-            font-size: 20px;
-            line-height: 26px;
-            padding: 5px 0 5px 0;
-          }
-          .services-child__our-approach-list-icon-wrapper {
-            padding: 0;
-            display: flex;
-            align-self: center;
-            cursor: pointer;
-            .services-child__our-approach-list-icon {
-              position: relative;
-              width: 30px;
-              height: 30px;
-              span {
-                display: block;
-                position: absolute;
-                height: 1px;
-                background-color: black;
-                transform: rotate(0deg);
-                width: 100%;
-                transform: translate(0, 14px);
-                transition: 0.2s ease-in-out;              
-                
-              }
-              span:nth-child(1) {
-                transform: translate(0, 14px);
-              }
-              span:nth-child(2) {
-                opacity: 0;
-              }
-            }
-          }
-        }
-        .services-child__our-approach-list-description {
-          font-size: 18px;
-          margin: $margin__mobile;
-          display: none;
-          padding-bottom: 15px;
-        }
-        &:first-of-type {
-          .services-child__our-approach-list-description {
-            display: block;
-          }
-        }
-      }
-      li.open {
-        .services-child__our-approach-list-title-wrapper {
-          .services-child__our-approach-list-icon-wrapper {
-            .services-child__our-approach-list-icon {
-              span:nth-child(2) {
-                transform: rotate(-90deg) translate(-14px, 0);
-                opacity: 1;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .services-child__our-team {
-    position: relative;
-    margin-top: 50px;
-    .services-child__our-team-image {
-      z-index: -1;
-      margin-bottom: 150px;
-    }
-    .services-child__our-team-wrapper {
-      background: rgba(245, 240, 232, 0.75);
-      position: absolute;
-      top: 150px;
-      padding: 20px 0;
-      .services-child__our-team-title {
+      margin-bottom: 60px;
+      padding-top: 50px;
+      .services-child__whos-it-for-title {
         font-family: $font__main--bold;
         font-size: 30px;
-        margin: $margin__mobile;
       }
-      .services-child__our-team-description {
+      ul {
+        margin: 0;
+        padding-left: 18px;
         padding-top: 10px;
-        font-size: 18px;
-        line-height: 22px;
-        margin: $margin__mobile;
+        li {
+          font-family: $font__main--med;
+          font-size: 20px;
+          line-height: 26px;
+          padding: 5px 0;
+        }
       }
-      .services-child__our-team-learn-more {
+      .services-child__whos-it-for-learn-more {
         background-color: black;
         border-radius: 22px;
         color: $color__white;
@@ -227,7 +88,6 @@
         font-size: 20px;
         font-family: $font__main--med;
         line-height: 50px;
-        margin: $margin__mobile;
         margin-top: 20px;
         text-align: center;
         text-decoration: none;
@@ -237,6 +97,149 @@
         &:focus {
           color: $color__white;
           text-decoration: none;
+        }
+      }
+      .services-child__whos-it-for-image {
+        display: none;
+      }
+    }
+    .services-child__our-approach {
+      position: relative;
+      background-color: $color__green;
+      padding-top: 20px;
+      padding-bottom: 50px;
+      .services-child__our-approach-logo {
+        position: absolute;
+        top: 0;
+        width: 110%;
+        max-width: 110%;
+        left: -5%;
+        opacity: 0.8;
+      }
+      .services-child__our-approach-title {
+        font-family: $font__main--bold;
+        font-size: 30px;
+        margin: $margin__mobile;
+        z-index: 2;
+        position: relative;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        li {
+          position: relative;
+          .services-child__our-approach-list-title-wrapper {
+            display: flex;
+            flex-direction: row;
+            margin: $margin__mobile;
+            justify-content: space-between;
+            padding-top: 10px;
+            .services-child__our-approach-list-title {
+              font-family: $font__main--med;
+              font-size: 20px;
+              line-height: 26px;
+              padding: 5px 0 5px 0;
+            }
+            .services-child__our-approach-list-icon-wrapper {
+              padding: 0;
+              display: flex;
+              align-self: center;
+              cursor: pointer;
+              .services-child__our-approach-list-icon {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                span {
+                  display: block;
+                  position: absolute;
+                  height: 1px;
+                  background-color: black;
+                  transform: rotate(0deg);
+                  width: 100%;
+                  transform: translate(0, 14px);
+                  transition: 0.2s ease-in-out;
+                }
+                span:nth-child(1) {
+                  transform: translate(0, 14px);
+                }
+                span:nth-child(2) {
+                  opacity: 0;
+                }
+              }
+            }
+          }
+          .services-child__our-approach-list-description {
+            font-size: 18px;
+            margin: $margin__mobile;
+            display: none;
+            padding-bottom: 15px;
+          }
+          &:first-of-type {
+            .services-child__our-approach-list-description {
+              display: block;
+            }
+          }
+        }
+        li.open {
+          .services-child__our-approach-list-title-wrapper {
+            .services-child__our-approach-list-icon-wrapper {
+              .services-child__our-approach-list-icon {
+                span:nth-child(2) {
+                  transform: rotate(-90deg) translate(-14px, 0);
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .services-child__our-team {
+      position: relative;
+      margin-top: 50px;
+      .services-child__our-team-image {
+        z-index: -1;
+        margin-bottom: 150px;
+      }
+      .services-child__our-team-wrapper {
+        background: rgba(245, 240, 232, 0.75);
+        position: absolute;
+        top: 150px;
+        padding: 20px 0;
+        .services-child__our-team-title {
+          font-family: $font__main--bold;
+          font-size: 30px;
+          margin: $margin__mobile;
+        }
+        .services-child__our-team-description {
+          padding-top: 10px;
+          font-size: 18px;
+          line-height: 22px;
+          margin: $margin__mobile;
+        }
+        .services-child__our-team-learn-more {
+          background-color: black;
+          border-radius: 22px;
+          color: $color__white;
+          display: inline-block;
+          height: 50px;
+          font-size: 20px;
+          font-family: $font__main--med;
+          line-height: 50px;
+          margin: $margin__mobile;
+          margin-top: 20px;
+          text-align: center;
+          text-decoration: none;
+          width: 55%;
+          &:visited,
+          &:hover,
+          &:focus {
+            color: $color__white;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -285,98 +288,20 @@
         }
       }
     }
-    .services-child__whos-it-for {
-      position: relative;
-      .services-child__whos-it-for-title {
-        font-size: 35px;
-      }
-      ul {
-        li {
-          font-size: 30px;
-          line-height: 38px;
-        }
-      }
-      .services-child__whos-it-for-learn-more {
-        margin-bottom: 300px;
-        width: 300px;
-        height: 60px;
-        line-height: 60px;
-        border-radius: 35px;
-        border: 1px solid black;
-        &:hover {
-          background-color: $color__green;
-          color: black;
-        }
-      }
-      .services-child__whos-it-for-image {
-        display: block;
-        position: absolute;
-        bottom: -100px;
-        right: 0;
-        height: 400px;
-      }
-    }
-    .services-child__our-approach {
-      .services-child__our-approach-logo {
-      }
-      .services-child__our-approach-title {
-        font-size: 35px;
-        margin: $margin__desktop;
-      }
-      ul {
-        li {
-          .services-child__our-approach-list-title-wrapper {
-            display: flex;
-            margin: $margin__desktop;
-            .services-child__our-approach-list-title {
-              font-size: 30px;
-              line-height: 38px;
-              padding-right: 0;
-              margin: 0;
-            }
-            .services-child__our-approach-list-icon-wrapper {
-              position: relative;
-              margin: 0 25px;
-              .services-child__our-approach-list-icon {
-                span {
-                  position: relative;
-                }
-                span.closed {
-                  transform: rotate(-90deg) translate(-13px, 0);
-                }
-              }
-            }
-          }
-          .services-child__our-approach-list-description {
-            font-size: 26px;
-            line-height: 32px;
-            margin: $margin__desktop;
-          }
-        }
-      }
-    }
-    .services-child__our-team {
-      .services-child__our-team-image {
-      }
-      .services-child__our-team-wrapper {
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 50%;
-        .services-child__our-team-title {
+    .services-child__content-wrap {
+      .services-child__whos-it-for {
+        position: relative;
+        .services-child__whos-it-for-title {
           font-size: 35px;
-          margin-left: calc(100vw * 0.04);
-          margin-right: calc(100vw * 0.04);
-          padding-top: 40%;
         }
-        .services-child__our-team-description {
-          font-size: 28px;
-          line-height: 34px;
-          margin-left: calc(100vw * 0.04);
-          margin-right: calc(100vw * 0.04);
+        ul {
+          li {
+            font-size: 30px;
+            line-height: 38px;
+          }
         }
-        .services-child__our-team-learn-more {
-          margin-left: calc(100vw * 0.04);
+        .services-child__whos-it-for-learn-more {
+          margin-bottom: 300px;
           width: 300px;
           height: 60px;
           line-height: 60px;
@@ -385,6 +310,93 @@
           &:hover {
             background-color: $color__green;
             color: black;
+          }
+        }
+        .services-child__whos-it-for-image {
+          display: block;
+          position: absolute;
+          bottom: -100px;
+          right: 0;
+          height: 400px;
+          z-index: 1;
+        }
+      }
+      .services-child__our-approach {
+        overflow: hidden;
+        padding-top: 50px;
+        .services-child__our-approach-logo {
+          top: 120px;
+          width: 100%;
+          left: 0;
+          opacity: 0.6;
+        }
+        .services-child__our-approach-title {
+          font-size: 35px;
+          margin: $margin__desktop;
+        }
+        ul {
+          li {
+            .services-child__our-approach-list-title-wrapper {
+              display: flex;
+              margin: $margin__desktop;
+              .services-child__our-approach-list-title {
+                font-size: 30px;
+                line-height: 38px;
+                padding-right: 0;
+                margin: 0;
+              }
+              .services-child__our-approach-list-icon-wrapper {
+                position: relative;
+                margin: 0 25px;
+                .services-child__our-approach-list-icon {
+                  span {
+                    position: relative;
+                  }
+                  span.closed {
+                    transform: rotate(-90deg) translate(-13px, 0);
+                  }
+                }
+              }
+            }
+            .services-child__our-approach-list-description {
+              font-size: 26px;
+              line-height: 32px;
+              margin: $margin__desktop;
+            }
+          }
+        }
+      }
+      .services-child__our-team {
+        .services-child__our-team-image {
+        }
+        .services-child__our-team-wrapper {
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 50%;
+          .services-child__our-team-title {
+            font-size: 35px;
+            margin-left: calc(100vw * 0.04);
+            margin-right: calc(100vw * 0.04);
+            padding-top: 40%;
+          }
+          .services-child__our-team-description {
+            font-size: 28px;
+            line-height: 34px;
+            margin-left: calc(100vw * 0.04);
+            margin-right: calc(100vw * 0.04);
+          }
+          .services-child__our-team-learn-more {
+            margin-left: calc(100vw * 0.04);
+            width: 300px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 35px;
+            border: 1px solid black;
+            &:hover {
+              background-color: $color__green;
+              color: black;
+            }
           }
         }
       }

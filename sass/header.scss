@@ -40,7 +40,7 @@ header {
         display: flex;
         // overflow: hidden;
         margin-left: 6%;        
-        width: 300px;
+        width: 250px;
         padding-right: 50px;
         // .header__logo-text {
         //   width: 160px;
@@ -399,6 +399,9 @@ header {
         }
       }
     }
+    .header__fixed-call-button {
+      display: none;
+    }      
   }
 }
 

@@ -1,48 +1,52 @@
 footer {
-  margin: 0 6% 0 6%;
-  margin-top: 80px;
-  margin-bottom: 30px;
   color: black;
+  background-color: #f5f0e8;
 }
 
-footer .footer__desktop-wrap .footer__social-media .footer__social-media-title {
+footer .footer__wrap {
+  padding-top: 100px;
+  padding-bottom: 30px;
+  margin: 0 6% 0 6%;
+}
+
+footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-title {
   font-family: "FFBauWebMedium";
   padding-bottom: 10px;
 }
 
-footer .footer__desktop-wrap .footer__social-media a,
-footer .footer__desktop-wrap .footer__social-media a:visited,
-footer .footer__desktop-wrap .footer__social-media a:focus,
-footer .footer__desktop-wrap .footer__social-media a:hover {
+footer .footer__wrap .footer__desktop-wrap .footer__social-media a,
+footer .footer__wrap .footer__desktop-wrap .footer__social-media a:visited,
+footer .footer__wrap .footer__desktop-wrap .footer__social-media a:focus,
+footer .footer__wrap .footer__desktop-wrap .footer__social-media a:hover {
   outline: none;
 }
 
-footer .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg {
+footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg {
   width: 70px;
   margin-right: 10px;
 }
 
-footer .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
+footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
   width: 70px;
 }
 
-footer .footer__desktop-wrap .footer__contact-desktop {
+footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop {
   display: none;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup {
   margin-top: 30px;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-title {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-title {
   font-family: "FFBauWebMedium";
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email {
   padding: 10px 0 15px 0;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
   background-color: #e9e2d6;
   border: none;
   border-radius: 22px;
@@ -53,31 +57,31 @@ footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-sign
   width: 100%;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::-webkit-input-placeholder {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::-webkit-input-placeholder {
   color: black;
   font-size: 20px;
   line-height: 30px;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input:-ms-input-placeholder {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input:-ms-input-placeholder {
   color: black;
   font-size: 20px;
   line-height: 30px;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::-ms-input-placeholder {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::-ms-input-placeholder {
   color: black;
   font-size: 20px;
   line-height: 30px;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::placeholder {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input::placeholder {
   color: black;
   font-size: 20px;
   line-height: 30px;
 }
 
-footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
+footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
   background-color: black;
   border: none;
   border-radius: 22px;
@@ -89,7 +93,7 @@ footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-sign
   cursor: pointer;
 }
 
-footer .footer__desktop-wrap .footer__contact {
+footer .footer__wrap .footer__desktop-wrap .footer__contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,14 +104,14 @@ footer .footer__desktop-wrap .footer__contact {
   margin-top: 30px;
 }
 
-footer .footer__desktop-wrap .footer__contact .footer__contact-title {
+footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-title {
   font-family: "FFBauWebMedium";
 }
 
-footer .footer__desktop-wrap .footer__contact a,
-footer .footer__desktop-wrap .footer__contact a:focus,
-footer .footer__desktop-wrap .footer__contact a:visited,
-footer .footer__desktop-wrap .footer__contact a:hover {
+footer .footer__wrap .footer__desktop-wrap .footer__contact a,
+footer .footer__wrap .footer__desktop-wrap .footer__contact a:focus,
+footer .footer__wrap .footer__desktop-wrap .footer__contact a:visited,
+footer .footer__wrap .footer__desktop-wrap .footer__contact a:hover {
   color: #f5f0e8;
   font-family: "FFBauWebMedium";
   text-decoration: none;
@@ -119,20 +123,20 @@ footer .footer__desktop-wrap .footer__contact a:hover {
   padding-top: 2px;
 }
 
-footer .footer__desktop-wrap .footer__contact .footer__contact-phone {
+footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-phone {
   font-size: 18px;
   margin: 10px 0 15px 0;
 }
 
-footer .footer__desktop-wrap .footer__contact .footer__contact-email {
+footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-email {
   font-size: 20px;
 }
 
-footer .footer__map {
+footer .footer__wrap .footer__map {
   margin-top: 15px;
 }
 
-footer .footer__map .footer__map-address {
+footer .footer__wrap .footer__map .footer__map-address {
   color: black;
   background-color: #80ff73;
   font-family: "FFBauWebMedium";
@@ -143,63 +147,63 @@ footer .footer__map .footer__map-address {
   padding-top: 2px;
 }
 
-footer .footer__map .acf-map {
+footer .footer__wrap .footer__map .acf-map {
   width: 100%;
   height: 200px;
 }
 
-footer .footer__map .acf-map img {
+footer .footer__wrap .footer__map .acf-map img {
   max-width: inherit !important;
 }
 
-footer .footer__copyright {
+footer .footer__wrap .footer__copyright {
   margin-top: 30px;
   color: black;
 }
 
-footer .footer__copyright .footer__copyright-soberlife {
+footer .footer__wrap .footer__copyright .footer__copyright-soberlife {
   font-size: 16px;
   line-height: 18px;
 }
 
-footer .footer__copyright .footer__copyright-pnp a,
-footer .footer__copyright .footer__copyright-pnp a:visited,
-footer .footer__copyright .footer__copyright-pnp a:focus,
-footer .footer__copyright .footer__copyright-pnp a:hover {
+footer .footer__wrap .footer__copyright .footer__copyright-pnp a,
+footer .footer__wrap .footer__copyright .footer__copyright-pnp a:visited,
+footer .footer__wrap .footer__copyright .footer__copyright-pnp a:focus,
+footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
 
 @media screen and (min-width: 1025px) {
-  footer {
+  footer .footer__wrap {
     margin: 0 4% 0 4%;
-    margin-top: 80px;
+    padding-top: 80px;
   }
 
-  footer .footer__desktop-wrap {
+  footer .footer__wrap .footer__desktop-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 
-  footer .footer__desktop-wrap .footer__social-media {
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media {
     width: 33.33%;
   }
 
-  footer .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg,
-  footer .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg,
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
     width: 60px;
     border-radius: 10px;
   }
 
-  footer .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg:hover,
-  footer .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg:hover {
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg:hover,
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg:hover {
     fill: #80ff73;
     background-color: black;
   }
 
-  footer .footer__desktop-wrap .footer__contact-desktop {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -210,69 +214,69 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
     width: 33.33%;
   }
 
-  footer .footer__desktop-wrap .footer__contact-desktop .footer__contact-desktop-title {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop .footer__contact-desktop-title {
     font-family: "FFBauWebMedium";
     padding-bottom: 10px;
   }
 
-  footer .footer__desktop-wrap .footer__contact-desktop a,
-  footer .footer__desktop-wrap .footer__contact-desktop a:focus,
-  footer .footer__desktop-wrap .footer__contact-desktop a:visited {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop a,
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop a:focus,
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop a:visited {
     color: black;
     text-decoration: none;
     font-size: 18px;
     font-family: "FFBauWebMedium";
   }
 
-  footer .footer__desktop-wrap .footer__contact-desktop a:hover {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop a:hover {
     text-decoration: underline;
   }
 
-  footer .footer__desktop-wrap .footer__contact-desktop .footer__contact-desktop-address {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop .footer__contact-desktop-address {
     font-size: 18px;
     font-family: "FFBauWebMedium";
     padding-top: 15px;
     width: 40%;
   }
 
-  footer .footer__desktop-wrap .footer__newsletter-signup {
+  footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup {
     width: 33.33%;
     margin: 0;
   }
 
-  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
+  footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
     height: 60px;
     border-radius: 35px;
   }
 
-  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
+  footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
     height: 60px;
     border-radius: 35px;
   }
 
-  footer .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit:hover input {
+  footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit:hover input {
     border: 1px solid black;
     color: black;
     background-color: #80ff73;
   }
 
-  footer .footer__desktop-wrap .footer__contact {
+  footer .footer__wrap .footer__desktop-wrap .footer__contact {
     display: none;
   }
 
-  footer .footer__map {
+  footer .footer__wrap .footer__map {
     margin: 20px -4% 0 -4%;
   }
 
-  footer .footer__map .footer__map-address {
+  footer .footer__wrap .footer__map .footer__map-address {
     display: none;
   }
 
-  footer .footer__map .acf-map {
+  footer .footer__wrap .footer__map .acf-map {
     height: 300px;
   }
 
-  footer .footer__copyright {
+  footer .footer__wrap .footer__copyright {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -282,7 +286,7 @@ footer .footer__copyright .footer__copyright-pnp a:hover {
     margin-bottom: 30px;
   }
 
-  footer .footer__copyright .footer__copyright-pnp:hover a {
+  footer .footer__wrap .footer__copyright .footer__copyright-pnp:hover a {
     text-decoration: underline;
   }
 }

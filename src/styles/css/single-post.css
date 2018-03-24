@@ -31,6 +31,10 @@
   object-fit: cover;
 }
 
+.single-post__wrapper .single-post__player-wrapper .single-post__podcast-player div.mejs-container {
+  width: 100%;
+}
+
 .single-post__wrapper .single-post__player-wrapper .single-post__podcast-player > p {
   display: none;
 }
@@ -124,4 +128,107 @@
   font-family: "FFBauWebMedium";
   font-size: 1.2em;
   color: #000;
+}
+
+.single-post__wrapper .single-post__related-posts .related-post__header {
+  padding: 0 6vw 15px;
+  font-family: "FFBauWebBold";
+  font-size: 1.5em;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post {
+  padding: 0 5px;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a {
+  text-decoration: none;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper {
+  height: 150px;
+  position: relative;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper .related-post__thumbnail-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper .related-post__thumbnail-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper .related-post-play-button-wapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  background-color: #fff;
+  opacity: 0.6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper .related-post-play-button-wapper img {
+  height: 30px;
+  width: 30px;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper .related-post-track-number {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background-color: #80ff73;
+  padding-left: 10px;
+  line-height: 30px;
+  font-family: "FFBauWebMedium";
+  font-size: 0.8em;
+  color: #000;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-track-title {
+  font-family: "FFBauWebMedium";
+  font-size: 1em;
+  color: #000;
+  padding-top: 10px;
+  line-height: 20px;
+}
+
+.single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-track-date {
+  font-family: "FFBauWebMedium";
+  font-size: 0.7em;
+  color: #000;
+}
+
+@media only screen and (min-width: 768px) {
+  .single-post__wrapper .single-post__title {
+    padding: 0 4vw;
+  }
+
+  .single-post__wrapper .single-post__date {
+    padding: 0 4vw;
+  }
+
+  .single-post__wrapper .single-post__player-wrapper {
+    padding: 0 4vw;
+  }
+
+  .single-post__wrapper .single-post__player-wrapper .single-post__thumbnail {
+    height: 600px;
+  }
 }

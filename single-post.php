@@ -84,6 +84,84 @@ get_header();
 					<div class="quote-content"><?php the_field('content_quote') ?></div>
 				</div>
 
+				<div class="single-post__related-posts">
+				<?php
+				//for use in the loop, list 5 post titles related to first tag on current post
+				$tags = wp_get_post_tags($post->ID);
+				if ($tags) {
+				?>
+					<div class="related-post__header">Related Posts</div>
+					<div class="related-posts">
+
+					<?php
+					$first_tag = $tags[0]->term_id;
+					$args=array(
+					'tag__in' => array($first_tag),
+					'post__not_in' => array($post->ID),
+					'posts_per_page'=>5,
+					'caller_get_posts'=>1
+					);
+					$my_query = new WP_Query($args);
+					if( $my_query->have_posts() ) {
+					while ($my_query->have_posts()) : $my_query->the_post();
+					?>
+
+						<div class="related-post">
+							<a href="<?php the_permalink();?>">
+
+								<div class="related-post-player-wrapper">
+									<div class="related-post__thumbnail-wrapper">
+										<?php the_post_thumbnail(); ?>
+									</div>
+
+									<?php
+										// check if the post is podcast 
+										$relatedPostCategories = get_the_category();
+										foreach ($relatedPostCategories as $relatedPostCategory) :
+											if ($relatedPostCategory->slug == 'podcast') :
+									?>
+
+									<div class="related-post-play-button-wapper">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+									</div>
+									<div class="related-post-track-number related-post-podcast-track-number"><?php the_title(); ?></div>
+
+									<?php else :?>
+
+									<div class="related-post-track-number">Article</div>
+
+									<?php
+											endif;
+										endforeach;
+									?>
+
+								</div>
+
+								<div class="related-post-track-title">
+									<?php the_title(); ?>
+								</div>
+
+								<div class="related-post-track-date">
+									<?php the_date() ?>
+								</div> 
+							</a>
+						</div>
+
+					<?php
+					endwhile;
+					?>
+
+					</div>
+					
+				<?php
+				}
+				wp_reset_query();
+				}
+				?>
+				</div>
+
+				
+
 
 
 

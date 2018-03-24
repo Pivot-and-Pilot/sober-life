@@ -25,6 +25,9 @@
       }
     }
     .single-post__podcast-player {
+      div.mejs-container {
+        width: 100%;
+      }
       > p {
         display: none;
       }
@@ -102,6 +105,94 @@
       font-family: $font__main--med;
       font-size: 1.2em;
       color: #000;
+    }
+  }
+  .single-post__related-posts {
+    .related-post__header {
+      padding: 0 6vw 15px;
+      font-family: $font__main--bold;
+      font-size: 1.5em;
+    }
+    .related-posts {
+      .related-post {
+        padding: 0 5px;
+        a {
+          text-decoration: none;
+          .related-post-player-wrapper {
+            height: 150px;
+            position: relative;
+            .related-post__thumbnail-wrapper {
+              height: 100%;
+              width: 100%;
+              img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover
+              }
+            }
+            .related-post-play-button-wapper {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              height: 70px;
+              width: 70px;
+              background-color: #fff;
+              opacity: 0.6;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              img {
+                height: 30px;
+                width: 30px;
+              }
+            }
+            .related-post-track-number {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 30px;
+              width: 100%;
+              background-color: $color__green;
+              padding-left: 10px;
+              line-height: 30px;
+              font-family: $font__main--med;
+              font-size: 0.8em;
+              color: #000;
+            }
+          }
+          .related-post-track-title {
+            font-family: $font__main--med;
+            font-size: 1em;
+            color: #000;
+            padding-top: 10px;
+            line-height: 20px;
+          }
+          .related-post-track-date {
+            font-family: $font__main--med;
+            font-size: 0.7em;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .single-post__wrapper {
+    .single-post__title {
+      padding: 0 4vw;
+    }
+    .single-post__date {
+      padding: 0 4vw;
+    }
+    .single-post__player-wrapper {
+      padding: 0 4vw;
+      .single-post__thumbnail {
+        height: 600px;
+      }
     }
   }
 

@@ -37,7 +37,7 @@
     }
     .services-child__opening-get-started {
       background-color: black;
-      border-radius: 22px;
+      border-radius: 25px;
       color: $color__white;
       display: inline-block;
       height: 50px;
@@ -60,10 +60,57 @@
   .services-child__content-wrap {
     background-color: $color__white;
     // margin-top: 50px;
+    .services-child__our-services {
+      margin: $margin__mobile;
+      padding-top: 30px;
+      .services-child__our-services-title {
+        font-family: $font__main--bold;
+        font-size: 30px;
+      }
+      .services-child__our-services-text {
+        font-size: 18px;
+        padding: 10px 0;
+        p {
+          margin: 10px 0;
+          strong {
+            font-family: $font__main--med;
+          }
+          a,
+          a:visited,
+          a:focus,
+          a:hover {
+            color: black;
+            outline: none;
+          }
+        }
+      }
+      .services-child__our-services-image-desktop {
+        display: none;
+      }
+      .services-child__our-services-mobile-image-wrap {
+        position: relative;
+        .services-child__our-services-image-background {
+          width: 120%;
+          margin: 0 -7%;
+          height: 240px;
+          // z-index: -1;
+          right: 0;
+          left: 0;
+          bottom: 102px;
+          position: absolute;
+          background-color: $color__green;
+          opacity: 0.2;
+        }
+        .services-child__our-services-image-mobile {
+          z-index: 1;
+          position: relative;
+        }
+      }
+    }
     .services-child__whos-it-for {
       margin: $margin__mobile;
       margin-bottom: 60px;
-      padding-top: 50px;
+      padding-top: 30px;
       .services-child__whos-it-for-title {
         font-family: $font__main--bold;
         font-size: 30px;
@@ -77,26 +124,6 @@
           font-size: 20px;
           line-height: 26px;
           padding: 5px 0;
-        }
-      }
-      .services-child__whos-it-for-learn-more {
-        background-color: black;
-        border-radius: 22px;
-        color: $color__white;
-        display: inline-block;
-        height: 50px;
-        font-size: 20px;
-        font-family: $font__main--med;
-        line-height: 50px;
-        margin-top: 20px;
-        text-align: center;
-        text-decoration: none;
-        width: 55%;
-        &:visited,
-        &:hover,
-        &:focus {
-          color: $color__white;
-          text-decoration: none;
         }
       }
       .services-child__whos-it-for-image {
@@ -222,7 +249,7 @@
         }
         .services-child__our-team-learn-more {
           background-color: black;
-          border-radius: 22px;
+          border-radius: 25px;
           color: $color__white;
           display: inline-block;
           height: 50px;
@@ -289,8 +316,37 @@
       }
     }
     .services-child__content-wrap {
+      padding-top: 30px;
+      .services-child__our-services {
+        margin: $margin__desktop;
+        .services-child__our-services-title {
+          font-size: 35px;
+        }
+        .services-child__our-services-text {
+          width: 85%;
+          font-size: 26px;
+          line-height: 32px;
+          a,
+          a:visited,
+          a:focus {
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .services-child__our-services-image-desktop {
+          display: block;
+          padding: 15px 0 30px 0;
+        }
+        .services-child__our-services-mobile-image-wrap {
+          display: none;
+        }
+      }
       .services-child__whos-it-for {
+        margin: $margin__desktop;
         position: relative;
+        margin-bottom: 400px;
         .services-child__whos-it-for-title {
           font-size: 35px;
         }
@@ -300,24 +356,14 @@
             line-height: 38px;
           }
         }
-        .services-child__whos-it-for-learn-more {
-          margin-bottom: 300px;
-          width: 300px;
-          height: 60px;
-          line-height: 60px;
-          border-radius: 35px;
-          border: 1px solid black;
-          &:hover {
-            background-color: $color__green;
-            color: black;
-          }
-        }
         .services-child__whos-it-for-image {
           display: block;
           position: absolute;
-          bottom: -100px;
+          bottom: -450px;
           right: 0;
           height: 400px;
+          width: 55%;
+          object-fit: cover;
           z-index: 1;
         }
       }
@@ -326,8 +372,11 @@
         padding-top: 50px;
         .services-child__our-approach-logo {
           top: 120px;
-          width: 100%;
+          width: 90%;
+          right: 0;
           left: 0;
+          margin-left: auto;
+          margin-right: auto;
           opacity: 0.6;
         }
         .services-child__our-approach-title {

@@ -43,7 +43,7 @@
 
 #services-child .services-child__service .services-child__opening-get-started {
   background-color: black;
-  border-radius: 22px;
+  border-radius: 25px;
   color: #f5f0e8;
   display: inline-block;
   height: 50px;
@@ -68,10 +68,66 @@
   background-color: #f5f0e8;
 }
 
+#services-child .services-child__content-wrap .services-child__our-services {
+  margin: 0 6% 0 6%;
+  padding-top: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p {
+  margin: 10px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p strong {
+  font-family: "FFBauWebMedium";
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:visited,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:focus,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:hover {
+  color: black;
+  outline: none;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+  display: none;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+  position: relative;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap .services-child__our-services-image-background {
+  width: 120%;
+  margin: 0 -7%;
+  height: 240px;
+  right: 0;
+  left: 0;
+  bottom: 102px;
+  position: absolute;
+  background-color: #80ff73;
+  opacity: 0.2;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap .services-child__our-services-image-mobile {
+  z-index: 1;
+  position: relative;
+}
+
 #services-child .services-child__content-wrap .services-child__whos-it-for {
   margin: 0 6% 0 6%;
   margin-bottom: 60px;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-title {
@@ -90,28 +146,6 @@
   font-size: 20px;
   line-height: 26px;
   padding: 5px 0;
-}
-
-#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more {
-  background-color: black;
-  border-radius: 22px;
-  color: #f5f0e8;
-  display: inline-block;
-  height: 50px;
-  font-size: 20px;
-  font-family: "FFBauWebMedium";
-  line-height: 50px;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none;
-  width: 55%;
-}
-
-#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more:visited,
-#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more:hover,
-#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more:focus {
-  color: #f5f0e8;
-  text-decoration: none;
 }
 
 #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-image {
@@ -263,7 +297,7 @@
 
 #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more {
   background-color: black;
-  border-radius: 22px;
+  border-radius: 25px;
   color: #f5f0e8;
   display: inline-block;
   height: 50px;
@@ -327,8 +361,49 @@
     color: black;
   }
 
+  #services-child .services-child__content-wrap {
+    padding-top: 30px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services {
+    margin: 0 4% 0 4%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-title {
+    font-size: 35px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text {
+    width: 85%;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:visited,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:focus {
+    text-decoration: none;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:hover,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:visited:hover,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:focus:hover {
+    text-decoration: underline;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+    display: block;
+    padding: 15px 0 30px 0;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+    display: none;
+  }
+
   #services-child .services-child__content-wrap .services-child__whos-it-for {
+    margin: 0 4% 0 4%;
     position: relative;
+    margin-bottom: 400px;
   }
 
   #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-title {
@@ -340,26 +415,15 @@
     line-height: 38px;
   }
 
-  #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more {
-    margin-bottom: 300px;
-    width: 300px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 35px;
-    border: 1px solid black;
-  }
-
-  #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-learn-more:hover {
-    background-color: #80ff73;
-    color: black;
-  }
-
   #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-image {
     display: block;
     position: absolute;
-    bottom: -100px;
+    bottom: -450px;
     right: 0;
     height: 400px;
+    width: 55%;
+    -o-object-fit: cover;
+    object-fit: cover;
     z-index: 1;
   }
 
@@ -370,8 +434,11 @@
 
   #services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-logo {
     top: 120px;
-    width: 100%;
+    width: 90%;
+    right: 0;
     left: 0;
+    margin-left: auto;
+    margin-right: auto;
     opacity: 0.6;
   }
 

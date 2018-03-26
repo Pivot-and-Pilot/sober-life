@@ -2,12 +2,12 @@ jQuery(document).ready(function($) {
 
   // Set initial setting of first li item open
   (function setInitialApproachIcons() {
-    $('#services-child > .services-child__our-approach > ul > li:eq(0)').addClass('open');
+    $('#services-child > .services-child__content-wrap > .services-child__our-approach > ul > li:eq(0)').addClass('open');
   })();
 
   // On click, only one li open at one time
   (function clickApproachIcons() {
-    $('#services-child > .services-child__our-approach > ul > li > .services-child__our-approach-list-title-wrapper').click(function() {
+    $('#services-child > .services-child__content-wrap > .services-child__our-approach > ul > li > .services-child__our-approach-list-title-wrapper').click(function() {
       // Remove all other '+' signs and close description
       let siblings = $(this).parent().siblings();
       $(siblings).each(function() {

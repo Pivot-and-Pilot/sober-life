@@ -110,7 +110,7 @@
 #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap .services-child__our-services-image-background {
   width: 120%;
   margin: 0 -7%;
-  height: 240px;
+  height: 238px;
   right: 0;
   left: 0;
   bottom: 102px;
@@ -280,6 +280,7 @@
   position: absolute;
   top: 150px;
   padding: 20px 0;
+  bottom: 0;
 }
 
 #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-title {
@@ -514,5 +515,15 @@
   #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more:hover {
     background-color: #80ff73;
     color: black;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+    display: block;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+    display: none;
   }
 }

@@ -8,6 +8,7 @@ function toggleMenu() {
     document.getElementById('header__menu-overlay-content').style.right = '-1000px';
     document.getElementById('header__menu-overlay-content').style.opacity = '0';           
     document.documentElement.style.overflow = ''; 
+    document.getElementById('header__menu-nav').childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display = 'none';
     // document.documentElement.style.position = 'initial';        
   } else {
     document.getElementById('header__menu-overlay').style.width = '100%';   
@@ -21,11 +22,14 @@ function toggleMenu() {
 };
 
 jQuery(document).ready(function($) {
-  // Show submenu of services
+
+  // Show submenu of services on MOBILE
   $('#header__menu-nav #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
     $('#header__menu-nav #primary-menu .sub-menu').slideToggle();      
   });
+
+  // Show submenu of services on DESKTOP
   $('#header__menu-nav-bar #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
   });

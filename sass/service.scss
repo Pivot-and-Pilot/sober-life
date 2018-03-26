@@ -92,7 +92,7 @@
         .services-child__our-services-image-background {
           width: 120%;
           margin: 0 -7%;
-          height: 240px;
+          height: 238px;
           // z-index: -1;
           right: 0;
           left: 0;
@@ -236,6 +236,7 @@
         position: absolute;
         top: 150px;
         padding: 20px 0;
+        bottom: 0;        
         .services-child__our-team-title {
           font-family: $font__main--bold;
           font-size: 30px;
@@ -267,6 +268,22 @@
             color: $color__white;
             text-decoration: none;
           }
+        }
+      }
+    }
+  }
+}
+
+// IPAD
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #services-child {
+    .services-child__content-wrap {
+      .services-child__our-services {
+        .services-child__our-services-image-desktop {
+          display: block;
+        }
+        .services-child__our-services-mobile-image-wrap {
+          display: none;
         }
       }
     }

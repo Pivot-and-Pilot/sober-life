@@ -175,8 +175,8 @@ header #header__menu-overlay #header__menu-overlay-content {
   width: 88%;
   margin: 0 6% 0 6%;
   right: -1000px;
-  -webkit-transition: right .5s ease-in-out;
-  transition: right .5s ease-in-out;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
 }
 
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav {
@@ -463,5 +463,19 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
 
   header .header__fixed-call-button {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header .site-branding .header__bottom-bar .header__logo {
+    margin-left: -11.5%;
+  }
+
+  header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu {
+    width: 100vw;
+  }
+
+  header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu li {
+    width: 100%;
   }
 }

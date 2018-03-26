@@ -169,6 +169,38 @@
   }
 }
 
+// IPAD
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #about-page {
+    .about__our-team {
+      #about__our-team-wrapper {
+        .slick-list {
+          .slick-track {
+            .about__our-team-member {
+              img {
+                height: 500px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about__certifications {
+      #about__certification-logo-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $margin__mobile;
+        justify-content: space-between;
+        img {
+          width: 48%;
+          height: 150px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
 // IPAD PRO 10.5"
 @media only screen and (min-width: 1024px) and (max-width: 1024px) {
 }

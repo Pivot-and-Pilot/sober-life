@@ -30,17 +30,15 @@
 				<a href="mailto:info@soberlifesd.com" class="header__nav-bar-email">info@soberlifesd.com</a>
 			</div>
 			<div class="header__bottom-bar">
-				<div class="header__logo-green-arrows-wrapper">
-					<img class="header__logo-green-arrows" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-03.png" />
-				</div>
-				<a href="/" class="header__logo">
-					<img class="header__logo-text" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-05.png" />	
+				<a href="<?php echo get_site_url() . '/' ?>" class="header__logo">
+					<img class="header__logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/Website_Logo-01.svg" />									
+					<!-- <div>Sober</div><div>Life</div> -->
 				</a>
 				<div id="header__hamburger" onclick="toggleMenu()">
 					<span class="header__hamburger-line"></span>
 					<span class="header__hamburger-line"></span>
 					<span class="header__hamburger-line"></span>
-					<span></span>
+					<span></span> 
 				</div>
 				<div id="header__menu-nav-bar">
 					<?php 
@@ -53,6 +51,7 @@
 				</div>
 			</div>
 		</section><!-- .site-branding -->
+		<a href="tel:18003230585" class="header__fixed-call-button">Give Us a Call</a>
 
 		<section id="header__menu-overlay" class="main-navigation">
 			<div id="header__menu-overlay-content">
@@ -66,7 +65,7 @@
 				</div>
 				<div class="header__menu-buttons">
 					<a href="#" class="header__menu-button-get-started">Get Started</a>
-					<a href="tel:6041234567" class="header__menu-button-phone">604.123.4567</a>
+					<a href="tel:18003230585" class="header__menu-button-phone">1.800.323.0585</a>
 					<a href="mailto:info@soberlifesd.com" class="header__menu-button-email">info@soberlifesd.com</a>
 				</div>
 			</div>

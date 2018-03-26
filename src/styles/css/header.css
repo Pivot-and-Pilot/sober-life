@@ -1,6 +1,6 @@
 header .site-branding {
   height: 80px;
-  border-bottom: 2px solid #c6c6c6;
+  border-bottom: 1px solid black;
   background-color: #f5f0e8;
   position: fixed;
   top: 0;
@@ -25,31 +25,32 @@ header .site-branding .header__bottom-bar {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-header .site-branding .header__bottom-bar .header__logo-green-arrows-wrapper {
-  position: absolute;
-  left: -20px;
-  top: -38px;
-  z-index: -1;
   overflow: hidden;
-  height: 150%;
-}
-
-header .site-branding .header__bottom-bar .header__logo-green-arrows-wrapper .header__logo-green-arrows {
-  height: 150px;
-  width: 250px;
-  position: relative;
 }
 
 header .site-branding .header__bottom-bar .header__logo {
   position: relative;
-  width: 300px;
+  margin-left: -4%;
+  width: 70%;
+  height: 80px;
+  color: black;
+  outline: none;
 }
 
-header .site-branding .header__bottom-bar .header__logo .header__logo-text {
-  width: 160px;
-  margin-left: 6%;
+header .site-branding .header__bottom-bar .header__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+header .site-branding .header__bottom-bar .header__logo:visited,
+header .site-branding .header__bottom-bar .header__logo:focus,
+header .site-branding .header__bottom-bar .header__logo:hover {
+  color: black;
+  text-decoration: none;
+  outline: none;
 }
 
 header .site-branding .header__bottom-bar #header__hamburger {
@@ -92,9 +93,13 @@ header .site-branding .header__bottom-bar #header__hamburger span:nth-child(1) {
   top: 0px;
 }
 
-header .site-branding .header__bottom-bar #header__hamburger span:nth-child(2),
+header .site-branding .header__bottom-bar #header__hamburger span:nth-child(2) {
+  top: 12.5px;
+}
+
 header .site-branding .header__bottom-bar #header__hamburger span:nth-child(3) {
   top: 12.5px;
+  opacity: 0;
 }
 
 header .site-branding .header__bottom-bar #header__hamburger span:nth-child(4) {
@@ -115,6 +120,7 @@ header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child
 header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  opacity: 1;
 }
 
 header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child(4) {
@@ -125,6 +131,28 @@ header .site-branding .header__bottom-bar #header__hamburger.open span:nth-child
 
 header .site-branding .header__bottom-bar #header__menu-nav-bar {
   display: none;
+}
+
+header .header__fixed-call-button {
+  position: fixed;
+  bottom: 0;
+  color: black;
+  background-color: #80ff73;
+  border-top: 1px solid black;
+  text-decoration: none;
+  font-family: "FFBauWebMedium";
+  font-size: 24px;
+  line-height: 70px;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+header .header__fixed-call-button:visited,
+header .header__fixed-call-button:hover,
+header .header__fixed-call-button:focus {
+  color: black;
+  text-decoration: none;
 }
 
 header #header__menu-overlay {
@@ -147,8 +175,8 @@ header #header__menu-overlay #header__menu-overlay-content {
   width: 88%;
   margin: 0 6% 0 6%;
   right: -1000px;
-  -webkit-transition: right .8s ease-in-out;
-  transition: right .8s ease-in-out;
+  -webkit-transition: right 0.5s ease-in-out;
+  transition: right 0.5s ease-in-out;
 }
 
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav {
@@ -205,7 +233,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
 header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons a {
   text-align: center;
   border: 1px solid black;
-  border-radius: 22px;
+  border-radius: 25px;
   margin: 10px 0;
   line-height: 50px;
   padding-top: 2px;
@@ -241,6 +269,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+    overflow: initial;
   }
 
   header .site-branding .header__top-bar {
@@ -285,16 +314,17 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     padding: 0 4%;
   }
 
-  header .site-branding .header__bottom-bar .header__logo-green-arrows-wrapper {
-    height: 158%;
-  }
-
-  header .site-branding .header__bottom-bar .header__logo-green-arrows-wrapper .header__logo-green-arrows {
-    width: 300px;
-  }
-
-  header .site-branding .header__bottom-bar .header__logo .header__logo-text {
+  header .site-branding .header__bottom-bar .header__logo {
     margin: 0;
+    width: 20%;
+    margin-left: -3%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  header .site-branding .header__bottom-bar .header__logo img {
+    height: 130%;
+    top: -10px;
   }
 
   header .site-branding .header__bottom-bar #header__hamburger {
@@ -343,6 +373,10 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     text-decoration: underline;
   }
 
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) a {
+    cursor: default;
+  }
+
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu {
     -webkit-transform: translateY(-2em);
     transform: translateY(-2em);
@@ -388,6 +422,10 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     padding: 3px 0;
   }
 
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu li a {
+    cursor: pointer;
+  }
+
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu {
     visibility: visible;
     opacity: 1;
@@ -421,5 +459,23 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
   header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started:hover {
     background-color: #80ff73;
     color: black;
+  }
+
+  header .header__fixed-call-button {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header .site-branding .header__bottom-bar .header__logo {
+    margin-left: -11.5%;
+  }
+
+  header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu {
+    width: 100vw;
+  }
+
+  header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu li {
+    width: 100%;
   }
 }

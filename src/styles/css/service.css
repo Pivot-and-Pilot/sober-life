@@ -1,0 +1,529 @@
+#services-child {
+  color: black;
+  margin-top: 80px;
+}
+
+#services-child .services-child__service {
+  position: relative;
+  height: 60vh;
+}
+
+#services-child .services-child__service .services-child__service-image {
+  position: fixed;
+  z-index: -1;
+  height: 60vh;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  top: 80px;
+}
+
+#services-child .services-child__service .services-child__service-initial {
+  font-family: "FFBauWebBold";
+  font-size: 60px;
+  margin: 0 6% 0 6%;
+  line-height: 48px;
+  padding-top: 20%;
+}
+
+#services-child .services-child__service .services-child__service-name {
+  font-family: "FFBauWebBold";
+  font-size: 25px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__service .services-child__service-description {
+  font-family: "FFBauWebMedium";
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 15px;
+  margin: 0 6% 0 6%;
+  width: 80%;
+}
+
+#services-child .services-child__service .services-child__opening-get-started {
+  background-color: black;
+  border-radius: 25px;
+  color: #f5f0e8;
+  display: inline-block;
+  height: 50px;
+  font-size: 20px;
+  font-family: "FFBauWebMedium";
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  width: 50%;
+  margin: 0 6% 0 6%;
+  margin-top: 25px;
+}
+
+#services-child .services-child__service .services-child__opening-get-started:visited,
+#services-child .services-child__service .services-child__opening-get-started:hover,
+#services-child .services-child__service .services-child__opening-get-started:focus {
+  color: #f5f0e8;
+  text-decoration: none;
+}
+
+#services-child .services-child__content-wrap {
+  background-color: #f5f0e8;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services {
+  margin: 0 6% 0 6%;
+  padding-top: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p {
+  margin: 10px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p strong {
+  font-family: "FFBauWebMedium";
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:visited,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:focus,
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text p a:hover {
+  color: black;
+  outline: none;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+  display: none;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+  position: relative;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap .services-child__our-services-image-background {
+  width: 120%;
+  margin: 0 -7%;
+  height: 238px;
+  right: 0;
+  left: 0;
+  bottom: 102px;
+  position: absolute;
+  background-color: #80ff73;
+  opacity: 0.2;
+}
+
+#services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap .services-child__our-services-image-mobile {
+  z-index: 1;
+  position: relative;
+}
+
+#services-child .services-child__content-wrap .services-child__whos-it-for {
+  margin: 0 6% 0 6%;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__whos-it-for ul {
+  margin: 0;
+  padding-left: 18px;
+  padding-top: 10px;
+}
+
+#services-child .services-child__content-wrap .services-child__whos-it-for ul li {
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  line-height: 26px;
+  padding: 5px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-image {
+  display: none;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach {
+  position: relative;
+  background-color: #80ff73;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-logo {
+  position: absolute;
+  top: 0;
+  width: 110%;
+  max-width: 110%;
+  left: -5%;
+  opacity: 0.8;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+  margin: 0 6% 0 6%;
+  z-index: 2;
+  position: relative;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li {
+  position: relative;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 6% 0 6%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-title {
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  line-height: 26px;
+  padding: 5px 0 5px 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center;
+  cursor: pointer;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span {
+  display: block;
+  position: absolute;
+  height: 1px;
+  background-color: black;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  width: 100%;
+  -webkit-transform: translate(0, 14px);
+  transform: translate(0, 14px);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(1) {
+  -webkit-transform: translate(0, 14px);
+  transform: translate(0, 14px);
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-description {
+  font-size: 18px;
+  margin: 0 6% 0 6%;
+  display: none;
+  padding-bottom: 15px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li:first-of-type .services-child__our-approach-list-description {
+  display: block;
+}
+
+#services-child .services-child__content-wrap .services-child__our-approach ul li.open .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
+  -webkit-transform: rotate(-90deg) translate(-14px, 0);
+  transform: rotate(-90deg) translate(-14px, 0);
+  opacity: 1;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team {
+  position: relative;
+  margin-top: 50px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-image {
+  z-index: -1;
+  margin-bottom: 150px;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper {
+  background: rgba(245, 240, 232, 0.75);
+  position: absolute;
+  top: 150px;
+  padding: 20px 0;
+  bottom: 0;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-description {
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0 6% 0 6%;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more {
+  background-color: black;
+  border-radius: 25px;
+  color: #f5f0e8;
+  display: inline-block;
+  height: 50px;
+  font-size: 20px;
+  font-family: "FFBauWebMedium";
+  line-height: 50px;
+  margin: 0 6% 0 6%;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  width: 55%;
+}
+
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more:visited,
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more:hover,
+#services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more:focus {
+  color: #f5f0e8;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1025px) {
+  #services-child .services-child__service {
+    height: 80vh;
+  }
+
+  #services-child .services-child__service .services-child__service-image {
+    height: 80vh;
+  }
+
+  #services-child .services-child__service .services-child__service-initial {
+    margin: 0 4% 0 4%;
+    padding-top: 20vh;
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  #services-child .services-child__service .services-child__service-name {
+    margin: 0 4% 0 4%;
+    font-size: 35px;
+  }
+
+  #services-child .services-child__service .services-child__service-description {
+    margin: 0 4% 0 4%;
+    font-size: 30px;
+    width: 60%;
+    line-height: 34px;
+  }
+
+  #services-child .services-child__service .services-child__opening-get-started {
+    margin: 0 4% 0 4%;
+    margin-top: 25px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 35px;
+    border: 1px solid black;
+  }
+
+  #services-child .services-child__service .services-child__opening-get-started:hover {
+    background-color: #80ff73;
+    color: black;
+  }
+
+  #services-child .services-child__content-wrap {
+    padding-top: 30px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services {
+    margin: 0 4% 0 4%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-title {
+    font-size: 35px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text {
+    width: 85%;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:visited,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:focus {
+    text-decoration: none;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:hover,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:visited:hover,
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-text a:focus:hover {
+    text-decoration: underline;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+    display: block;
+    padding: 15px 0 30px 0;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+    display: none;
+  }
+
+  #services-child .services-child__content-wrap .services-child__whos-it-for {
+    margin: 0 4% 0 4%;
+    position: relative;
+    margin-bottom: 400px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-title {
+    font-size: 35px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__whos-it-for ul li {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__whos-it-for .services-child__whos-it-for-image {
+    display: block;
+    position: absolute;
+    bottom: -450px;
+    right: 0;
+    height: 400px;
+    width: 55%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach {
+    overflow: hidden;
+    padding-top: 50px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-logo {
+    top: 120px;
+    width: 90%;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.6;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-title {
+    font-size: 35px;
+    margin: 0 4% 0 4%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 4% 0 4%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-title {
+    font-size: 30px;
+    line-height: 38px;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper {
+    position: relative;
+    margin: 0 25px;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span {
+    position: relative;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span.closed {
+    -webkit-transform: rotate(-90deg) translate(-13px, 0);
+    transform: rotate(-90deg) translate(-13px, 0);
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-description {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 4% 0 4%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-title {
+    font-size: 35px;
+    margin-left: calc(100vw * 0.04);
+    margin-right: calc(100vw * 0.04);
+    padding-top: 40%;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-description {
+    font-size: 28px;
+    line-height: 34px;
+    margin-left: calc(100vw * 0.04);
+    margin-right: calc(100vw * 0.04);
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more {
+    margin-left: calc(100vw * 0.04);
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 35px;
+    border: 1px solid black;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-wrapper .services-child__our-team-learn-more:hover {
+    background-color: #80ff73;
+    color: black;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-image-desktop {
+    display: block;
+  }
+
+  #services-child .services-child__content-wrap .services-child__our-services .services-child__our-services-mobile-image-wrap {
+    display: none;
+  }
+}

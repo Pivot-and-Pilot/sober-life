@@ -1,30 +1,34 @@
 #about-page {
-  margin: 0 6% 0 6%;
   margin-top: 80px;
-  width: 88%;
+  width: 100%;
   color: black;
 }
 
 #about-page .about__opening {
   position: relative;
-  margin: 0 -7%;
-  margin-bottom: 230px;
 }
 
 #about-page .about__opening .about__opening-image-wrapper {
+  position: fixed;
+  margin: 0 -7%;
   overflow: hidden;
   z-index: -1;
+  height: 60vh;
+  top: 80px;
 }
 
 #about-page .about__opening .about__opening-image-wrapper .about__opening-image {
-  max-width: 190%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 #about-page .about__opening .about__opening-text-wrapper {
-  position: absolute;
-  top: 230px;
+  position: relative;
+  margin-top: 250px;
   background: rgba(245, 240, 232, 0.75);
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 #about-page .about__opening .about__opening-text-wrapper .about__opening-title {
@@ -45,14 +49,14 @@
   margin: 15px 0;
 }
 
-#about-page .about__our-philosophy {
-  position: relative;
+#about-page .about__opening .about__opening-text-wrapper .about__opening-text p:nth-child(2) {
+  margin: 15px 0 0 0;
 }
 
-#about-page .about__our-philosophy .about__philosophy-title {
-  font-family: "FFBauWebBold";
-  font-size: 30px;
-  line-height: 35px;
+#about-page .about__our-philosophy {
+  background-color: #f5f0e8;
+  position: relative;
+  padding: 30px 0;
 }
 
 #about-page .about__our-philosophy .about__philosophy-arrows {
@@ -60,24 +64,36 @@
   left: -21%;
   top: 100px;
   max-width: 140%;
-  z-index: -1;
 }
 
-#about-page .about__our-philosophy .about__philosophy-text1 {
+#about-page .about__our-philosophy .about__philosophy-text-wrap {
+  position: relative;
+  z-index: 1;
+  margin: 0 6% 0 6%;
+}
+
+#about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-title {
+  font-family: "FFBauWebBold";
+  font-size: 30px;
+  line-height: 35px;
+}
+
+#about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-text1 {
   font-size: 18px;
   line-height: 22px;
 }
 
-#about-page .about__our-philosophy .about__philosophy-text2 {
+#about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-text2 {
   font-size: 18px;
 }
 
-#about-page .about__our-philosophy .about__philosophy-image2 {
+#about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-image2 {
   display: none;
 }
 
 #about-page .about__our-team {
-  margin: 60px -7% 0 -7%;
+  padding: 10px 0 0 0;
+  background-color: #f5f0e8;
 }
 
 #about-page .about__our-team .about__our-team-title {
@@ -126,6 +142,11 @@
   padding-right: 20px;
 }
 
+#about-page .about__get-in-touch-wrapper {
+  background-color: #f5f0e8;
+  padding: 0 6% 30px 6%;
+}
+
 #about-page .about__get-in-touch-wrapper .about__get-in-touch {
   background-color: black;
   border-radius: 22px;
@@ -142,10 +163,12 @@
 }
 
 #about-page .about__certifications {
-  margin: 80px -7% 0 -7%;
+  background-color: #f5f0e8;
+  padding: 60px 0 20px 0;
 }
 
 #about-page .about__certifications .about__certifications-title {
+  margin: 0 6% 0 6%;
   font-family: "FFBauWebBold";
   font-size: 30px;
   line-height: 35px;
@@ -163,26 +186,31 @@
 }
 
 @media screen and (min-width: 1025px) {
-  #about-page {
-    margin: 0 4% 0 4%;
-    width: 92%;
+  #about-page .about__opening {
+    height: 80vh;
   }
 
-  #about-page .about__opening {
-    margin: 0 -5%;
-    margin-bottom: 60px;
+  #about-page .about__opening .about__opening-image-wrapper {
+    height: 80vh;
+    margin: 0;
   }
 
   #about-page .about__opening .about__opening-image-wrapper .about__opening-image {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   #about-page .about__opening .about__opening-text-wrapper {
+    position: absolute;
     top: 0;
     width: 55%;
     bottom: 0;
-    padding-top: 250px;
+    padding-top: 8%;
     padding-left: 1%;
+    margin-top: 0;
   }
 
   #about-page .about__opening .about__opening-text-wrapper .about__opening-title {
@@ -195,23 +223,24 @@
     line-height: 30px;
   }
 
-  #about-page .about__our-philosophy .about__philosophy-title {
-    font-size: 35px;
-    padding-top: 60px;
-  }
-
   #about-page .about__our-philosophy .about__philosophy-arrows {
-    height: 500px;
+    height: 700px;
     width: 140%;
+    opacity: 0.8;
   }
 
-  #about-page .about__our-philosophy .about__philosophy-text1 {
+  #about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-title {
+    font-size: 35px;
+    padding-top: 100px;
+  }
+
+  #about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-text1 {
     font-size: 24px;
     line-height: 30px;
     width: 45%;
   }
 
-  #about-page .about__our-philosophy .about__philosophy-image1 {
+  #about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-image1 {
     width: 55%;
     height: 350px;
     -o-object-fit: cover;
@@ -219,7 +248,7 @@
     margin-bottom: 100px;
   }
 
-  #about-page .about__our-philosophy .about__philosophy-text2 {
+  #about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-text2 {
     font-size: 24px;
     line-height: 30px;
     width: 40%;
@@ -228,7 +257,7 @@
     bottom: 0;
   }
 
-  #about-page .about__our-philosophy .about__philosophy-image2 {
+  #about-page .about__our-philosophy .about__philosophy-text-wrap .about__philosophy-image2 {
     display: block;
     position: absolute;
     width: 40%;
@@ -236,15 +265,15 @@
     -o-object-fit: cover;
     object-fit: cover;
     right: 0;
-    top: 0;
+    top: 30px;
   }
 
   #about-page .about__our-team {
-    margin: 60px 0 0 0;
+    padding: 60px 0 0 0;
   }
 
   #about-page .about__our-team .about__our-team-title {
-    margin-left: 0;
+    margin: 0 4% 0 4%;
     font-size: 35px;
   }
 
@@ -257,6 +286,8 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin: 0 4% 0 4%;
+    padding-top: 25px;
   }
 
   #about-page .about__our-team #about__our-team-wrapper .about__our-team-member {
@@ -306,14 +337,23 @@
 
   #about-page .about__get-in-touch-wrapper .about__get-in-touch {
     width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 35px;
+    border: 1px solid black;
+  }
+
+  #about-page .about__get-in-touch-wrapper .about__get-in-touch:hover {
+    background-color: #80ff73;
+    color: black;
   }
 
   #about-page .about__certifications {
-    margin: 80px 0 0 0;
+    padding: 80px 0 0 0;
   }
 
   #about-page .about__certifications .about__certifications-title {
-    margin: 0;
+    margin: 0 4% 0 4%;
   }
 
   #about-page .about__certifications #about__certification-logo-wrapper {
@@ -322,7 +362,7 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin: 0;
+    margin: 0 4% 0 4%;
   }
 
   #about-page .about__certifications #about__certification-logo-wrapper img {
@@ -331,5 +371,30 @@
     object-fit: contain;
     height: 150px;
     padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #about-page .about__our-team #about__our-team-wrapper .slick-list .slick-track .about__our-team-member img {
+    height: 500px;
+  }
+
+  #about-page .about__certifications #about__certification-logo-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 6% 0 6%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #about-page .about__certifications #about__certification-logo-wrapper img {
+    width: 48%;
+    height: 150px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 }

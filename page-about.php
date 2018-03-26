@@ -33,12 +33,14 @@ get_header();
 			<div class="about__our-philosophy">
 				<?php if( have_rows('our_philosophy_section') ):
 					while( have_rows('our_philosophy_section') ): the_row(); ?>
-						<div class="about__philosophy-title"><?php echo get_sub_field('section_title'); ?></div>
 						<img class="about__philosophy-arrows" src="<?php echo get_stylesheet_directory_uri(); ?>/img/SBL_Logo_final-1-03.png"/>
-						<div class="about__philosophy-text1"><?php echo get_sub_field('text_1'); ?></div>		
-						<img src="<?php echo get_sub_field('image_1'); ?>" alt="philosophy_image1" class="about__philosophy-image1"/>
-						<div class="about__philosophy-text2"><?php echo get_sub_field('text_2'); ?></div>		
-						<img src="<?php echo get_sub_field('image_2'); ?>" alt="philosophy_image2" class="about__philosophy-image2"/>
+						<div class="about__philosophy-text-wrap">
+							<div class="about__philosophy-title"><?php echo get_sub_field('section_title'); ?></div>
+							<div class="about__philosophy-text1"><?php echo get_sub_field('text_1'); ?></div>		
+							<img src="<?php echo get_sub_field('image_1'); ?>" alt="philosophy_image1" class="about__philosophy-image1"/>
+							<div class="about__philosophy-text2"><?php echo get_sub_field('text_2'); ?></div>		
+							<img src="<?php echo get_sub_field('image_2'); ?>" alt="philosophy_image2" class="about__philosophy-image2"/>
+						</div>
 					<?php endwhile;
 				endif; ?>
 			</div><!-- Our Philosophy Section -->
@@ -78,6 +80,9 @@ get_header();
 				<?php endwhile;
 				endif; ?>
 			</div><!-- Certifications Section -->
+
+			<!-- ADD SOBER COLLECTIVE HERE -->			
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

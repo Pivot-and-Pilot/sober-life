@@ -29,11 +29,69 @@ get_header();
 						<?php	the_content(); ?>
 					</div>
 				</div>
+				<div class="single-post__flex-box-wrapper">
+					<div class="single-post__first-paragraph">
+						<div class="first-paragraph__title"><?php the_field('content_title') ?></div>
+						<div class="first-paragraph__content"><?php the_field('content_1')?></div>
+					</div>
 
-				<div class="single-post__first-paragraph">
-					<div class="first-paragraph__title"><?php the_field('content_title') ?></div>
-					<div class="first-paragraph__content"><?php the_field('content_1')?></div>
+					<!-- you might also like part -->
+					<?php
+				//for use in the loop, list 5 post titles related to first tag on current post
+				$tagNames = wp_get_post_tags($post->ID);
+				if ($tagNames) {
+				?>
+					<div class="related-posts">
+
+					<?php
+					$first_tagName = $tagNames[0]->term_id;
+					$feturedPosts=array(
+					'tag__in' => array($first_tagName),
+					'post__not_in' => array($post->ID),
+					'posts_per_page'=>1,
+					'caller_get_posts'=>1
+					);
+					$my_feturedPosts = new WP_Query($feturedPosts);
+					if( $my_feturedPosts->have_posts() ) {
+					while ($my_feturedPosts->have_posts()) : $my_feturedPosts->the_post();
+					?>
+
+						<div class="featured-post">
+							<a href="<?php the_permalink();?>">
+
+								<div class="featured-post-player-wrapper">
+									<div class="featured-post__thumbnail-wrapper">
+										<?php the_post_thumbnail(); ?>
+									</div>
+								</div>
+
+								<div class="featured-post__title-date-wrapper">
+									<div class="featured-post-track-title">
+										<?php the_title(); ?>
+									</div>
+
+									<div class="featured-post-track-date">
+										<?php the_date() ?>
+									</div> 
+								</div>
+								
+							</a>
+						</div>
+
+					<?php
+					endwhile;
+					?>
+
+					</div>
+					
+				<?php
+				}
+				wp_reset_query();
+				}
+				?>
+
 				</div>
+				
 
 				<div class="single-post__first-gallery">
 				<?php 

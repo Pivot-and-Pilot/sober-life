@@ -12,6 +12,7 @@ header {
     right: 0;
     // overflow: hidden;
     z-index: 5;
+    transform : translate3d(0, 0, 0);
     .header__top-bar {
       display: none;
     }

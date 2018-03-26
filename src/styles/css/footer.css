@@ -198,12 +198,6 @@ footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
     border-radius: 10px;
   }
 
-  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg:hover,
-  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg:hover {
-    fill: #80ff73;
-    background-color: black;
-  }
-
   footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop {
     display: -webkit-box;
     display: -ms-flexbox;

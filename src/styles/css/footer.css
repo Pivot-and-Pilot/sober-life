@@ -5,7 +5,7 @@ footer {
 
 footer .footer__wrap {
   padding-top: 100px;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   margin: 0 6% 0 6%;
 }
 
@@ -22,12 +22,12 @@ footer .footer__wrap .footer__desktop-wrap .footer__social-media a:hover {
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg {
-  width: 70px;
-  margin-right: 10px;
+  width: 65px;
+  margin-right: 5px;
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
-  width: 70px;
+  width: 65px;
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop {
@@ -43,13 +43,13 @@ footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__n
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email {
-  padding: 10px 0 15px 0;
+  padding: 10px 0 10px 0;
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-email input {
   background-color: #e9e2d6;
   border: none;
-  border-radius: 22px;
+  border-radius: 25px;
   font-size: 20px;
   height: 50px;
   outline: none;
@@ -84,7 +84,7 @@ footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__n
 footer .footer__wrap .footer__desktop-wrap .footer__newsletter-signup .footer__newsletter-signup-submit input {
   background-color: black;
   border: none;
-  border-radius: 22px;
+  border-radius: 25px;
   color: #f5f0e8;
   font-family: "FFBauWebMedium";
   font-size: 20px;
@@ -117,7 +117,7 @@ footer .footer__wrap .footer__desktop-wrap .footer__contact a:hover {
   text-decoration: none;
   height: 50px;
   background-color: black;
-  border-radius: 22px;
+  border-radius: 25px;
   text-align: center;
   line-height: 50px;
   padding-top: 2px;
@@ -125,7 +125,7 @@ footer .footer__wrap .footer__desktop-wrap .footer__contact a:hover {
 
 footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-phone {
   font-size: 18px;
-  margin: 10px 0 15px 0;
+  margin: 10px 0 10px 0;
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-email {
@@ -179,6 +179,7 @@ footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__wrap {
     margin: 0 4% 0 4%;
     padding-top: 80px;
+    padding-bottom: 30px;
   }
 
   footer .footer__wrap .footer__desktop-wrap {

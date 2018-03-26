@@ -5,7 +5,7 @@ footer {
   background-color: $color__white;
   .footer__wrap {
     padding-top: 100px;
-    padding-bottom: 30px;
+    padding-bottom: 100px;
     margin: $margin__mobile;
     .footer__desktop-wrap {
       .footer__social-media {
@@ -21,13 +21,13 @@ footer {
         }
         .footer__social-media-instagram {
           svg {
-            width: 70px;
-            margin-right: 10px;
+            width: 65px;
+            margin-right: 5px;
           }
         }
         .footer__social-media-facebook {
           svg {
-            width: 70px;
+            width: 65px;
           }
         }
       }
@@ -40,11 +40,11 @@ footer {
           font-family: $font__main--med;
         }
         .footer__newsletter-signup-email {
-          padding: 10px 0 15px 0;
+          padding: 10px 0 10px 0;
           input {
             background-color: #e9e2d6;
             border: none;
-            border-radius: 22px;
+            border-radius: 25px;
             font-size: 20px;
             height: 50px;
             outline: none;
@@ -61,7 +61,7 @@ footer {
           input {
             background-color: black;
             border: none;
-            border-radius: 22px;
+            border-radius: 25px;
             color: $color__white;
             font-family: $font__main--med;
             font-size: 20px;
@@ -87,14 +87,14 @@ footer {
           text-decoration: none;
           height: 50px;
           background-color: black;
-          border-radius: 22px;
+          border-radius: 25px;
           text-align: center;
           line-height: 50px;
           padding-top: 2px;
         }
         .footer__contact-phone {
           font-size: 18px;
-          margin: 10px 0 15px 0;
+          margin: 10px 0 10px 0;
         }
         .footer__contact-email {
           font-size: 20px;
@@ -152,6 +152,7 @@ footer {
     .footer__wrap {
       margin: $margin__desktop;
       padding-top: 80px;
+      padding-bottom: 30px;
       .footer__desktop-wrap {
         display: flex;
         .footer__social-media {

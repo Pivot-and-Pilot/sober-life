@@ -81,7 +81,12 @@
     </section>
 
     <!-- ADD SOBER COLLECTIVE HERE -->
-
+    <section class="services-child__success-stories">
+			<?php  
+				get_template_part( 'template-parts/content', 'success-stories' );
+			?>
+    </section>
+      
     <section class="services-child__our-team">
       <?php if( have_rows('our_team_section') ): 
         while( have_rows('our_team_section') ): the_row(); ?>

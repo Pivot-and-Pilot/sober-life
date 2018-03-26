@@ -80,8 +80,11 @@ get_header();
 				<?php endwhile;
 				endif; ?>
 			</div><!-- Certifications Section -->
-
-			<!-- ADD SOBER COLLECTIVE HERE -->			
+			<div class="about__success-stories">
+			<?php  
+				get_template_part( 'template-parts/content', 'success-stories' );
+			?>
+			</div><!-- Success Stories Section -->
 			
 		</main><!-- #main -->
 	</div><!-- #primary -->

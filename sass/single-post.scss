@@ -33,21 +33,27 @@
       }
     }
   }
-  .single-post__first-paragraph {
-    padding: 30px 6vw 0;
-    color: #000;
-    .first-paragraph__title {
-      font-family: $font__main--bold;
-      font-size: 1.3em;
-    }
-    .first-paragraph__content {
-      font-family: $font__main;
-      font-size: 1.1em;
-      p {
-        margin: 0;
+  .single-post__flex-box-wrapper {
+    .single-post__first-paragraph {
+      padding: 30px 6vw 0;
+      color: #000;
+      .first-paragraph__title {
+        font-family: $font__main--bold;
+        font-size: 1.3em;
+      }
+      .first-paragraph__content {
+        font-family: $font__main;
+        font-size: 1.1em;
+        p {
+          margin: 0;
+        }
       }
     }
+    .featured-post {
+      display: none;
+    }
   }
+
   .single-post__first-gallery {
     padding-top: 20px;
     .first-gallery__image-wrapper {
@@ -193,6 +199,70 @@
       .single-post__thumbnail {
         height: 600px;
       }
+    }
+    .single-post__flex-box-wrapper {
+      display: flex;
+      .single-post__first-paragraph {
+        width: 60%;
+        padding: 60px 4vw 0;
+      }
+      .featured-post {
+        display: block;
+        width: 40%;
+        height: 18vw;
+        padding: 60px 4vw 0 0;
+        .featured-post__title {
+          font-family: $font__main--bold;
+        }
+        a {
+          display: flex;
+          height: 100%;
+          color: #000;
+          text-decoration: none;
+          .featured-post__thumbnail-wrapper {
+            width: 45%;
+            height: 100%;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+          .featured-post__title-date-wrapper {
+            height: 100%;
+            width: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color__green;
+            font-family: $font__main--med;
+            padding: 0 30px;
+            font-size: 1.2em;
+            .featured-post-track-date {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+    .single-post__first-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 100px 4vw 0;
+      .first-gallery__image-wrapper {
+        width: 50%;
+        height: 400px;
+        &:nth-child(odd) {
+          padding: 1vw 1vw 1vw 0;
+        }
+        &:nth-child(even) {
+          padding: 1vw 0 1vw 1vw;
+        }
+      }
+    }
+    .single-post__second-paragraph {
+      padding: 0 40vw 0 4vw;
     }
   }
 

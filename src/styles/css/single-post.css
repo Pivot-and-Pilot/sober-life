@@ -39,23 +39,27 @@
   display: none;
 }
 
-.single-post__wrapper .single-post__first-paragraph {
+.single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph {
   padding: 30px 6vw 0;
   color: #000;
 }
 
-.single-post__wrapper .single-post__first-paragraph .first-paragraph__title {
+.single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph .first-paragraph__title {
   font-family: "FFBauWebBold";
   font-size: 1.3em;
 }
 
-.single-post__wrapper .single-post__first-paragraph .first-paragraph__content {
+.single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph .first-paragraph__content {
   font-family: "FFBauWeb", sans-serif;
   font-size: 1.1em;
 }
 
-.single-post__wrapper .single-post__first-paragraph .first-paragraph__content p {
+.single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph .first-paragraph__content p {
   margin: 0;
+}
+
+.single-post__wrapper .single-post__flex-box-wrapper .featured-post {
+  display: none;
 }
 
 .single-post__wrapper .single-post__first-gallery {
@@ -230,5 +234,97 @@
 
   .single-post__wrapper .single-post__player-wrapper .single-post__thumbnail {
     height: 600px;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph {
+    width: 60%;
+    padding: 60px 4vw 0;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post {
+    display: block;
+    width: 40%;
+    height: 18vw;
+    padding: 60px 4vw 0 0;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post .featured-post__title {
+    font-family: "FFBauWebBold";
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post a .featured-post__thumbnail-wrapper {
+    width: 45%;
+    height: 100%;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post a .featured-post__thumbnail-wrapper img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post a .featured-post__title-date-wrapper {
+    height: 100%;
+    width: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #80ff73;
+    font-family: "FFBauWebMedium";
+    padding: 0 30px;
+    font-size: 1.2em;
+  }
+
+  .single-post__wrapper .single-post__flex-box-wrapper .featured-post a .featured-post__title-date-wrapper .featured-post-track-date {
+    font-size: 0.7em;
+  }
+
+  .single-post__wrapper .single-post__first-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 100px 4vw 0;
+  }
+
+  .single-post__wrapper .single-post__first-gallery .first-gallery__image-wrapper {
+    width: 50%;
+    height: 400px;
+  }
+
+  .single-post__wrapper .single-post__first-gallery .first-gallery__image-wrapper:nth-child(odd) {
+    padding: 1vw 1vw 1vw 0;
+  }
+
+  .single-post__wrapper .single-post__first-gallery .first-gallery__image-wrapper:nth-child(even) {
+    padding: 1vw 0 1vw 1vw;
+  }
+
+  .single-post__wrapper .single-post__second-paragraph {
+    padding: 0 40vw 0 4vw;
   }
 }

@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
   (function singlePostSlick () {
-    if ($(window).width() < 768) {
+    if ($(window).width() <= 768) {
       $('.single-post__first-gallery').slick({
         centerMode: true,
         centerPadding: '6%',
@@ -22,17 +22,11 @@ jQuery(document).ready(function($){
       })
     }
 
-    // $('.other-success-stories').slick({
-    //   centerMode: true,
-    //   centerPadding: '4%',
-    //   slidesToShow: 3,
-    //   arrows: false,
-    // })
    
   })();
 
   (function renameRelatedPosts() {
-    console.log($('.related-post-podcast-track-number'));
+
     $('.related-post-podcast-track-number').each(function () {
       let relatedPostTitle = $(this)[0].innerHTML;
       let colonPosition = relatedPostTitle.indexOf(':');

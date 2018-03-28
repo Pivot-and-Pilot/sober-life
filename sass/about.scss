@@ -225,13 +225,14 @@
       }
       .about__opening-text-wrapper {
         position: absolute;
-        top: 0;
+        top: -5%;
         width: 55%;
         bottom: 0;
-        padding-top: 8%;
+        // padding-top: 8%;
         padding-left: 1%;
         margin-top: 0;
         .about__opening-title {
+          padding-top: 8%;          
           font-size: 35px;
           width: 100%;
         }

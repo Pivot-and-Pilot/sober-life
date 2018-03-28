@@ -1,0 +1,57 @@
+#sobercollective-page {
+  position: relative;
+  margin-top: 80px;
+  width: 100%;
+}
+
+#sobercollective-page .sobercollective__top-bar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#sobercollective-page .sobercollective__top-bar ul li a {
+  font-family: "FFBauWebMedium";
+  color: black;
+  text-decoration: none;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input {
+  border: none;
+  border-radius: 35px;
+  height: 60px;
+  width: 100%;
+}
+
+@media screen and (min-width: 1025px) {
+  #sobercollective-page .sobercollective__top-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #sobercollective-page .sobercollective__top-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #sobercollective-page .sobercollective__top-bar ul li a {
+    font-family: "FFBauWebMedium";
+    color: black;
+    text-decoration: none;
+  }
+}

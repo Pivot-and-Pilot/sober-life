@@ -1,6 +1,8 @@
 @import 'variables-site/variables-site';
 
 #success-stories {
+  background-color: $color__white;
+  padding: 25px 0;
   .success-stories-header {
     font-family: $font__main--bold;
     padding: 0 6vw;

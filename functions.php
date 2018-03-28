@@ -130,7 +130,6 @@ function sober_life_scripts() {
 	wp_enqueue_style( 'sober-life-fonts', get_template_directory_uri() . '/fonts/MyFontsWebfontsKit.css');	
 	wp_enqueue_style( 'sober-life-style', get_stylesheet_uri() );
 
-
 	// final css
 	wp_enqueue_style( 'sober-life-css', get_template_directory_uri() . '/build/styles/final-styles.css', true );
 	wp_enqueue_style( 'sober-life-slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', true );
@@ -147,8 +146,6 @@ function sober_life_scripts() {
 	wp_enqueue_script( 'sober-life-header-js', get_template_directory_uri() . '/src/scripts/header.js', array(), true );
 	wp_enqueue_script( 'sober-life-about-js', get_template_directory_uri() . '/src/scripts/about.js', array(), true );
 	wp_enqueue_script( 'sober-life-service-js', get_template_directory_uri() . '/src/scripts/service.js', array(), true );
-	
-
 
 	wp_enqueue_script( 'sober-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

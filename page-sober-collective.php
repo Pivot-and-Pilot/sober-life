@@ -72,13 +72,12 @@ get_header();
 				<?php endwhile; ?>
 				</div>
 
-			<!-- PAGINATION -->
-      <?php if (function_exists("pagination")) {
-          pagination($wp_get_posts->max_num_pages);
-      } ?>
-			<?php wp_reset_postdata(); ?>
-			<?php endif; ?>
-	
+				<!-- PAGINATION -->
+				<?php if (function_exists("pagination")) {
+					pagination($wp_get_posts->max_num_pages);
+				} 
+				wp_reset_postdata(); 
+				endif; ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

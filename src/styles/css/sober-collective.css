@@ -23,31 +23,52 @@
   padding-bottom: 20px;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input {
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 {
+  background-image: none;
+  background: none;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox {
   background-color: #e9e2d6;
+  background-image: none;
   border: none;
-  border-radius: 25px;
-  font-size: 18px;
   height: 50px;
-  outline: none;
-  padding-left: 20px;
-  width: 100%;
+  border-radius: 25px;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input::-webkit-input-placeholder {
-  color: black;
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .promagnifier {
+  display: none;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input:-ms-input-placeholder {
-  color: black;
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input {
+  font-family: "FFBauWeb", sans-serif;
+  color: black !important;
+  font-size: 18px !important;
+  height: 50px;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input::-ms-input-placeholder {
-  color: black;
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::-webkit-input-placeholder {
+  font-family: "FFBauWeb", sans-serif;
+  color: black !important;
+  font-size: 18px !important;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar input::placeholder {
-  color: black;
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input:-ms-input-placeholder {
+  font-family: "FFBauWeb", sans-serif;
+  color: black !important;
+  font-size: 18px !important;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::-ms-input-placeholder {
+  font-family: "FFBauWeb", sans-serif;
+  color: black !important;
+  font-size: 18px !important;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::placeholder {
+  font-family: "FFBauWeb", sans-serif;
+  color: black !important;
+  font-size: 18px !important;
 }
 
 #sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile {

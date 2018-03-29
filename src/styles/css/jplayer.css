@@ -1,0 +1,99 @@
+#soberlife__jplayer {
+  position: fixed;
+  bottom: 71px;
+  border-top: 1px solid black;
+  background-color: #f5f0e8;
+  width: 100%;
+  z-index: 5;
+}
+
+#soberlife__jplayer .jp-audio *:focus,
+#soberlife__jplayer .jp-audio-stream *:focus,
+#soberlife__jplayer .jp-video *:focus {
+  /* Disable the browser focus highlighting. */
+  outline: none;
+}
+
+#soberlife__jplayer .jp-audio button::-moz-focus-inner,
+#soberlife__jplayer .jp-audio-stream button::-moz-focus-inner,
+#soberlife__jplayer .jp-video button::-moz-focus-inner {
+  /* Disable the browser CSS3 focus highlighting. */
+  border: 0;
+}
+
+#soberlife__jplayer .jp-audio,
+#soberlife__jplayer .jp-audio-stream,
+#soberlife__jplayer .jp-video {
+  font-size: 16px;
+  line-height: 1.6;
+  color: black;
+}
+
+#soberlife__jplayer .jp-type-single {
+  margin: 0 6% 0 6%;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder {
+  clear: both;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-play {
+  border: none;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-play img {
+  width: 20px;
+  height: 20px;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-pause {
+  border: none;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-stop {
+  border: none;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress {
+  height: 5px;
+  background-color: #80ff73;
+  border-radius: 3px;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress .jp-seek-bar {
+  height: 100%;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress .jp-seek-bar .jp-play-bar {
+  height: 100%;
+  background-color: black;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-time-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}

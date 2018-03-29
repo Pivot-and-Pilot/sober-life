@@ -43,7 +43,8 @@ get_header();
 					'include' 		=> array(13, 10, 11, 12));
 			?>	
 				<div class="sobercollective__top-bar">
-					<div class="sobercollective__searchbar"><input id="sobercollective__search-input" placeholder="Search"/></div>
+					<div class="sobercollective__searchbar"><?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?></div>
+					<!-- <div class="sobercollective__searchbar"><input id="sobercollective__search-input" placeholder="Search"/></div> -->
 					<div class="sobercollective__cats-mobile"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
 					<ul class="sobercollective__cats-desktop"><?php wp_list_categories($argsCatsDesktop); ?></ul>
 					<div class="sobercollective__tags-mobile">

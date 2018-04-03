@@ -17,7 +17,7 @@
 		<div class="entry-meta">
 			<?php
 			sober_life_posted_on();
-			sober_life_posted_by();
+			sober_life_posted_by(); 
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>

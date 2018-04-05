@@ -19,6 +19,13 @@ get_header();
 		<main id="main" class="site-main">
 			<div id="sobercollective-page">
 			<?php if ( $wp_query->have_posts() ) : 
+			  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$wp_query = new WP_Query(array(
+					'post_type' 			=> 'post', 
+					'post_status'			=> 'publish', 
+					'posts_per_page'	=> 11,
+					'paged'						=> $paged
+				)); 
 				$argsCatsMobile = array(
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
@@ -58,34 +65,29 @@ get_header();
 					</div>
 				</div>
 				<div class="sobercollective__posts-wrapper">
-					<!-- <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
+					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
 						get_template_part( 'template-parts/content', 'sober-collective' ); 
-					endwhile; ?> -->
+					endwhile; ?>
 				</div>
 
 				<!-- PAGINATION -->
-				<!-- <?php if (function_exists("pagination")) {
-					pagination($wp_query->max_num_pages);
-				} 
-				wp_reset_postdata(); 
-				endif; ?> -->
-				<div class="pagecount" style="visibility: hidden;">
-					<var id="curpage"></var>
-					<span>...</span>
-					<var id="maxpage"></var>
+					<!-- <?php if (function_exists("pagination")) {
+						pagination($wp_query->max_num_pages);
+					}
+					// wp_reset_postdata(); 
+					endif; ?> -->
+				<button id="prev">PREV</button>					
+				<div class="pagecount" style="">
+					<var id="curpage">1</var>
+					<var id="maxpage"><?php echo $wp_query->max_num_pages; ?></var>
 				</div>
-					<!-- <?php
-						the_posts_pagination(array(
-							'mid_size'	=> -1,
-							'prev_text'	=> '',
-							'next_text'	=> '',
-						));
-					// wp_reset_postdata(); 						
-					?> -->
+				<button id="next">NEXT</button>
+				<div id="sobercollective__pagination">
+					<?php echo paginate_links(); ?>
+				</div>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 	<?php
-// get_sidebar();
 get_footer();

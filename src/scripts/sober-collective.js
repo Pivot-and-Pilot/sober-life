@@ -18,17 +18,54 @@ jQuery(document).ready(function($) {
   // })();
 
   // Get next posts (if !currPage == 1 and offset < 11)
-  function ajax_get_next_posts(currPage, catId) {
+  function ajax_get_next_posts(currPage, postId) {
     ajaxLock = true;
     // let offset = 21;
-    let offset = $('.sobercollective__post').length + 11 * (currPage - 1) - 1;
+    let offset = $('.sobercollective__post').length + (11 * (currPage - 1) - 1);
     console.log(offset);
     $.ajax({
       type: 'get',
       url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
       data:
         '&category=' +
-        catId +
+        postId +
+        '&curr_page=' +
+        currPage +
+        '&post_offset=' +
+        offset +
+        '&action=ajax_get_next_posts',
+      dataType: 'json',
+      success: function(response) {
+        //
+        $('.sobercollective__posts-wrapper').empty();
+        $(response[0])
+          .hide()
+          .appendTo('.sobercollective__posts-wrapper')
+          .fadeIn(500);
+        console.log('success');
+        console.log(response);
+        // $('html, body').scrollTop(0);
+        // smooth scroll to top of page????        
+        ajaxLock = false;
+      },
+      error: function() {
+        ajaxLock = false;
+        console.log('error');
+      }
+    });
+  }
+
+  function ajax_get_prev_posts(currPage, postId) {
+    ajaxLock = true;
+    let currentPageTotal = $('.sobercollective__post').length;
+    let offset = ($('.sobercollective__post').length + (11 * (currPage - 2) - 1));        
+    console.log(offset);
+    $.ajax({
+      type: 'get',
+      url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
+      data:
+        '&category=' +
+        postId +
         '&curr_page=' +
         currPage +
         '&post_offset=' +
@@ -59,10 +96,19 @@ jQuery(document).ready(function($) {
   $('#next').click(function() {
     let current = Number($('#curpage').text());
     let max = Number($('#maxpage').text());
+    let postId;
+    $('.sobercollective__cats-mobile > select').children().each(function () {
+      let that = $(this);
+      if ($(that).hasClass('current')) {
+        console.log(that);
+      }
+    });
+    console.log('this is a post id', postId);
     console.log(max);
     if (current < max) {
       let newPageNum = current + 1;
       $('#curpage').text(newPageNum);
+      // ajax_get_next_posts(current, tag or cat id);
       ajax_get_next_posts(current, 13);
     }
   });
@@ -73,6 +119,8 @@ jQuery(document).ready(function($) {
     if (current > 1) {
       let newPageNum = current - 1;
       $('#curpage').text(newPageNum);
+      // ajax_get_prev_posts(current, tag or cat id);
+      ajax_get_prev_posts(newPageNum, 13);      
     }
   });
 
@@ -165,13 +213,19 @@ jQuery(document).ready(function($) {
   // Filter function
   $('.sobercollective__cats-mobile > select').on('change', function() {
     let catID = $(this).val();
-    console.log(catID);
+    $(this).children().each(function() {
+      if ($(this).val() == catID) {
+        $(this).siblings().removeClass('current');
+        $(this).addClass('current');
+      }
+    });
+    console.log('catId is', catID);
     ajax_filter_category(catID);
   });
 
   $('.sobercollective__tags-mobile-dropdown > select').on('change', function() {
     let tagID = $(this).val();
-    console.log(tagID);
+    console.log('tagId is', tagID);
     ajax_filter_tag(tagID);
   });
 

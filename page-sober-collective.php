@@ -30,7 +30,7 @@ get_header();
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
 					'option_none_value'	=> 13,
-					'show_option_none'	=> 'Media',
+					'show_option_none'	=> 'All Media',
 					'orderby' 		=> 'include', 
 					'include' 		=> array(10, 11, 12));
 				$argsCatsDesktop = array(
@@ -53,7 +53,7 @@ get_header();
 								));
 								if ($tags) { ?>
 									<select name="tag" id="tag">
-										<option value="14">Topics</option>
+										<option value="14" class="current">All Topics</option>
 										<?php foreach($tags as $tag) {
 											echo '<option value="'. $tag->term_id .'">' . $tag->name ;
 										} ?>
@@ -81,7 +81,7 @@ get_header();
 					<var id="curpage">1</var>
 					<var id="maxpage"><?php echo $wp_query->max_num_pages; ?></var>
 				</div>
-				<button id="next">NEXT</button>
+				<button action="#" id="next">NEXT</button>
 				<div id="sobercollective__pagination">
 					<?php echo paginate_links(); ?>
 				</div>

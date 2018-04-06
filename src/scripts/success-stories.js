@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 
   })();
 
-  (function slick () {
+  (function successStoriesSlick () {
     if ($(window).width() < 768) {
       $('.other-success-stories').slick({
         centerMode: true,

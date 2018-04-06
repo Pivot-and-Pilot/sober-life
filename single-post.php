@@ -129,7 +129,9 @@ get_header();
 				</div>
 
 				<div class="single-post__quote">
-					<div class="quotation-mark">"</div>
+					<div class="quotation-mark">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/quotemarks.svg" alt="" />
+					</div>
 					<div class="quote-content"><?php the_field('content_quote') ?></div>
 				</div>
 

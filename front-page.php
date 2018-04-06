@@ -44,7 +44,6 @@ get_header();
 					
 				</div>
 				<button>Get Started</button>
-				<a href="">Give Us a Call</a>
 			</section>
 
 			<section class="front-page__moving-forward">

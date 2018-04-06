@@ -122,15 +122,23 @@
 }
 
 .single-post__wrapper .single-post__quote .quotation-mark {
-  font-family: "FFBauWebBold";
-  color: #80ff73;
-  font-size: 4em;
   height: 30px;
+}
+
+.single-post__wrapper .single-post__quote .quotation-mark img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .single-post__wrapper .single-post__quote .quote-content {
   font-family: "FFBauWebMedium";
   font-size: 1.2em;
+  color: #000;
+}
+
+.single-post__wrapper .single-post__related-posts {
   color: #000;
 }
 
@@ -245,6 +253,7 @@
   .single-post__wrapper .single-post__flex-box-wrapper .single-post__first-paragraph {
     width: 60%;
     padding: 60px 4vw 0;
+    font-size: 1.3em;
   }
 
   .single-post__wrapper .single-post__flex-box-wrapper .featured-post {
@@ -325,6 +334,58 @@
   }
 
   .single-post__wrapper .single-post__second-paragraph {
-    padding: 0 40vw 0 4vw;
+    padding: 0 44vw 0 4vw;
+    font-size: 1.3em;
+  }
+
+  .single-post__wrapper a.link-out-blog {
+    margin: 50px 0 0 4vw;
+  }
+
+  .single-post__wrapper .single-post__second-gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 4vw 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .single-post__wrapper .single-post__second-gallery .second-gallery-image-wrapper {
+    width: 50%;
+    height: 120vh;
+  }
+
+  .single-post__wrapper .single-post__second-gallery .second-gallery-image-wrapper:nth-child(odd) {
+    padding: 1vw 1vw 1vw 0;
+  }
+
+  .single-post__wrapper .single-post__second-gallery .second-gallery-image-wrapper:nth-child(even) {
+    padding: 1vw 0 1vw 1vw;
+  }
+
+  .single-post__wrapper .single-post__quote {
+    padding: 40px 44vw 0 4vw;
+  }
+
+  .single-post__wrapper .single-post__quote .quotation-mark {
+    height: 50px;
+  }
+
+  .single-post__wrapper .single-post__quote .quote-content {
+    font-size: 2em;
+  }
+
+  .single-post__wrapper .single-post__related-posts .related-post__header {
+    padding: 0 4vw 30px;
+    font-size: 2em;
+  }
+
+  .single-post__wrapper .single-post__related-posts .related-posts .related-post {
+    padding: 0 15px;
+  }
+
+  .single-post__wrapper .single-post__related-posts .related-posts .related-post a .related-post-player-wrapper {
+    height: calc((92vw - 90px) / 3);
   }
 }

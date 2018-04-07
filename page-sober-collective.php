@@ -42,9 +42,9 @@ get_header();
 				<div class="sobercollective__top-bar">
 					<div class="sobercollective__searchbar"><?php echo do_shortcode('[searchandfilter fields="search"]'); ?></div>
 					<!-- <div class="sobercollective__searchbar"><input id="sobercollective__search-input" placeholder="Search" value=""/></div> -->
-					<div class="sobercollective__cats-mobile"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
+					<div class="sobercollective__cats-mobile dropdown"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
 					<ul class="sobercollective__cats-desktop"><?php wp_list_categories($argsCatsDesktop); ?></ul>
-					<div class="sobercollective__tags-mobile">
+					<div class="sobercollective__tags-mobile dropdown">
 						<div class="sobercollective__tags-mobile-dropdown">
 							<?php 
 								$tags = get_tags(array(
@@ -71,11 +71,8 @@ get_header();
 				</div>
 
 				<!-- PAGINATION -->
-					<!-- <?php if (function_exists("pagination")) {
-						pagination($wp_query->max_num_pages);
-					}
-					// wp_reset_postdata(); 
-					endif; ?> -->
+			
+				<?php	endif; ?>
 				<button id="prev">PREV</button>					
 				<div class="pagecount" style="">
 					<var id="curpage">1</var>
@@ -83,7 +80,6 @@ get_header();
 				</div>
 				<button action="#" id="next">NEXT</button>
 				<div id="sobercollective__pagination">
-					<?php echo paginate_links(); ?>
 				</div>
 			</div>
 		</main><!-- #main -->

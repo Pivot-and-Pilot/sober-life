@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3213 8942 228 228">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #000;
+        stroke-width: 12px;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+    </style>
+  </defs>
+  <g id="Group_290" data-name="Group 290" transform="translate(2908 8320)">
+    <g id="Group_178" data-name="Group 178" transform="translate(380.534 704.472)">
+      <g id="Group_176" data-name="Group 176" transform="translate(60.103)">
+        <circle id="Ellipse_12" data-name="Ellipse 12" cx="8.014" cy="8.014" r="8.014" transform="translate(0.401 0.401)"/>
+        <path id="Path_70" data-name="Path 70" d="M181.414,127.229a8.414,8.414,0,1,1,8.414-8.414A8.413,8.413,0,0,1,181.414,127.229Zm0-16.027a7.613,7.613,0,1,0,7.613,7.613A7.661,7.661,0,0,0,181.414,111.2Z" transform="translate(-173 -110.4)"/>
+      </g>
+      <g id="Group_177" data-name="Group 177">
+        <circle id="Ellipse_13" data-name="Ellipse 13" cx="8.014" cy="8.014" r="8.014" transform="translate(0.401 0.401)"/>
+        <path id="Path_71" data-name="Path 71" d="M106.414,127.229a8.414,8.414,0,1,1,8.414-8.414A8.413,8.413,0,0,1,106.414,127.229Zm0-16.027a7.613,7.613,0,1,0,7.613,7.613A7.661,7.661,0,0,0,106.414,111.2Z" transform="translate(-98 -110.4)"/>
+      </g>
+    </g>
+    <path id="Path_72" data-name="Path 72" d="M186.723,185.478c-2.645,8.334-9.616,21.477-26.686,22.358-13.543.721-22.759-5.529-27.567-12.261-4.808,6.732-14.024,12.982-27.567,12.261-16.909-.882-23.961-14.024-26.686-22.358-.16-.721-1.282-4.087,1.763-2.324.321.16.721.561,1.042.721h0a16.379,16.379,0,0,0,7.292,2.164c9.216.561,17.229-15.306,30.051-14.745,3.366.16,7.853.882,14.024,7.132,6.251-6.01,10.658-6.892,14.024-7.132,12.822-.721,21,15.146,30.051,14.745a14.56,14.56,0,0,0,7.292-2.164h0c.321-.16.721-.561,1.042-.721C187.765,181.391,186.883,184.757,186.723,185.478Z" transform="translate(286.53 581.98)"/>
+    <g id="Ellipse_18" data-name="Ellipse 18" class="cls-1" transform="translate(305 622)">
+      <circle class="cls-2" cx="114" cy="114" r="114"/>
+      <circle class="cls-3" cx="114" cy="114" r="108"/>
+    </g>
+  </g>
+</svg>

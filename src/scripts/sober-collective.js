@@ -1,101 +1,72 @@
 jQuery(document).ready(function($) {
-  // VARIABLES
+  // ************************************************** AJAX FUNCTIONS **************************************************** //
+  let windowSize = $(window).width();
+  // Prevent multiple clicks
   let ajaxLock = false;
+  const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
-  $('.sobercollective__cats-mobile select option')
-    .eq(0)
-    .addClass('current');
 
-  // Get next posts (if !currPage == 1 and offset < 11)
-  // function ajax_get_next_posts(currPage, catID, tagID) {
-  //   ajaxLock = true;
-  //   // let offset = 21;
-  //   let offset = $('.sobercollective__post').length + (11 * (currPage - 1) - 1);
-  //   console.log(offset);
-  //   $.ajax({
-  //     type: 'get',
-  //     url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
-  //     data:
-  //       '&category=' +
-  //       postId +
-  //       '&curr_page=' +
-  //       currPage +
-  //       '&post_offset=' +
-  //       offset +
-  //       '&action=ajax_get_next_posts',
-  //     dataType: 'json',
-  //     success: function(response) {
-  //       //
-  //       $('.sobercollective__posts-wrapper').empty();
-  //       $(response[0])
-  //         .hide()
-  //         .appendTo('.sobercollective__posts-wrapper')
-  //         .fadeIn(500);
-  //       console.log('success');
-  //       console.log(response);
-  //       // $('html, body').scrollTop(0);
-  //       // smooth scroll to top of page????
-  //       ajaxLock = false;
-  //     },
-  //     error: function() {
-  //       ajaxLock = false;
-  //       console.log('error');
-  //     }
-  //   });
-  // }
+  // Add Initial Settings (classnames/values)
+  if (windowSize > 1025) {
+    // Add value attribute to each category li on DESKTOP
+    $('.sobercollective__cats-desktop li').each(function() {
+      let catId = $(this).attr('class').match(/\d+/)[0];
+      $(this).attr('value', catId);
+    });
+    // Set first category li to current on DESKTOP
+    $('.sobercollective__cats-desktop li').eq(0).addClass('current');
+    // Set first tag li to current on DESKTOP
+    $('.sobercollective__tags-desktop li').eq(0).addClass('current');
+  } else {
+    // Set first category option to current on MOBILE
+    $('.sobercollective__cats-mobile select option').eq(0).addClass('current');
+  }
 
-  // function ajax_get_prev_posts( currPage, catID, tagID) {
-  //   ajaxLock = true;
-  //   let currentPageTotal = $('.sobercollective__post').length;
-  //   let offset = $('.sobercollective__post').length + (11 * (currPage - 2) - 1);
-  //   console.log(offset);
-  //   $.ajax({
-  //     type: 'get',
-  //     url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
-  //     data:
-  //       '&category=' +
-  //       postId +
-  //       '&curr_page=' +
-  //       currPage +
-  //       '&post_offset=' +
-  //       offset +
-  //       '&action=ajax_get_next_posts',
-  //     dataType: 'json',
-  //     success: function(response) {
-  //       //
-  //       $('.sobercollective__posts-wrapper').empty();
-  //       $(response[0])
-  //         .hide()
-  //         .appendTo('.sobercollective__posts-wrapper')
-  //         .fadeIn(500);
-  //       console.log('success');
-  //       console.log(response);
-  //       // $('html, body').scrollTop(0);
-  //       // smooth scroll to top of page????
-  //       ajaxLock = false;
-  //     },
-  //     error: function() {
-  //       ajaxLock = false;
-  //       console.log('error');
-  //     }
-  //   });
-  // }
-
-  function ajax_get_posts(direction, currPage, catID, tagID) {
-    ajaxLock = true;
-    let offset;
-    let currentPageTotal = $('.sobercollective__post').length;
-    if (direction == 'next') {
-      offset = currentPageTotal + (11 * (currPage - 1) - 1);
-    } else if (direction == 'prev') {
-      offset = currentPageTotal + 11 * (currPage - 2) - 1;
+  function updatePagination() {
+    let maxPages = $('#maxpage').text();
+    $('#sobercollective__pages').empty();
+    for (let i = 1; i <= maxPages; i++) {
+      if (i == 1) {
+        $('#sobercollective__pages').append(`<button class="current" value=${i}>${i}</button>`)
+      } else {
+        $('#sobercollective__pages').append(`<button value=${i}>${i}</button>`);
+      }
     }
-    console.log(direction + ' is ' + offset);
+  }
+  updatePagination();
 
+  // ********************************************** //
+  //  AJAX_GET_POSTS for initial, next, prev pages
+  // ********************************************** // 
+  function ajax_get_posts(direction, currPage, catID, tagID, maxPage) {
+    ajaxLock = true;
+    let offset, postsPerPage;
+    let currentPageTotal = $('.sobercollective__post').length;
+
+    if (windowSize > 1025) {
+      postsPerPage = 12;
+      // console.log(postsPerPage);
+    } else {
+      postsPerPage = 11;
+      // console.log(postsPerPage);
+    }
+      
+    if (direction == 'next') {
+      offset = currentPageTotal + (postsPerPage * (currPage - 1));
+      console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
+    } else if (direction == 'prev') {
+      if (maxPage - currPage == 1) {
+        offset = (postsPerPage * (currPage - 1));        
+        console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
+      } else {
+        offset = currentPageTotal + postsPerPage * (currPage - 2);
+        console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 2`);
+      }
+    }
     $.ajax({
       type: 'get',
-      url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
-      data: `&category=${catID}&tag=${tagID}&curr_page=${currPage}&offset=${offset}&action=ajax_get_posts`,
+      url: ajaxUrl,
+      data: `&category=${catID}&tag=${tagID}&curr_page=${currPage}&offset=${offset}&posts_per_page=${postsPerPage}&action=ajax_get_posts`,
       dataType: 'json',
       success: function(res) {
         ajaxLock = false;
@@ -104,7 +75,7 @@ jQuery(document).ready(function($) {
           .hide()
           .appendTo('.sobercollective__posts-wrapper')
           .fadeIn(500);
-        console.log('success');
+        $('html, body').animate({scrollTop: 0}, 'slow');
       },
       error: function() {
         ajaxLock = false;
@@ -113,21 +84,28 @@ jQuery(document).ready(function($) {
     });
   }
 
-  // FILTER HANDLER
+  // ************************************************* //
+  //  AJAX_FILTER_POSTS for filtering by category/tag
+  // ************************************************* // 
   function ajax_filter_posts(catID, tagID) {
     catID = catID ? catID : 13;
     tagID = tagID ? tagID : 14;
-    console.log(`this is the catid ${catID} and this is the tagID ${tagID}`);
-
     ajaxLock = true;
+    let postsPerPage;
+    if (windowSize > 1025) {
+      postsPerPage = 12;
+      console.log(postsPerPage);
+    } else {
+      postsPerPage = 11;
+      console.log(postsPerPage);
+    }
     $.ajax({
       type: 'get',
-      url: 'http://localhost:8888/soberlife/wp-admin/admin-ajax.php',
-      data: `&category=${catID}&tag=${tagID}&action=ajax_filter_posts`,
+      url: ajaxUrl,
+      data: `&category=${catID}&tag=${tagID}&posts_per_page=${postsPerPage}&action=ajax_filter_posts`,
       dataType: 'json',
       success: function(res) {
         ajaxLock = false;
-        console.log('success', res);
         // empty the current posts / clear last search results
         $('.sobercollective__posts-wrapper').empty();
         // update max number of pages
@@ -137,6 +115,7 @@ jQuery(document).ready(function($) {
           .hide()
           .appendTo('.sobercollective__posts-wrapper')
           .fadeIn(500);
+        updatePagination();
         // AJAX pushstate??
         // window.history.pushState('object','Category ' + catID, rootUrl + 'category-' + catID)
       },
@@ -146,32 +125,41 @@ jQuery(document).ready(function($) {
       }
     });
   }
-  // ajax_filter_posts('', '');
 
-  // *************************************** //
-  //  Event Handlers
-  // *************************************** //
+  // *************************************************** EVENT HANDLERS ****************************************************** //
 
+  // ************** //
+  //  PAGINATION
+  // ************** // 
   (function pagination() {
     // On Next Click
     $('#next').click(function() {
       let currentPage = Number($('#curpage').text());
-      let currCat = $('.sobercollective__cats-mobile select option.current').val();
-      let currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      let currCat, currTag;
+      if (windowSize > 1025) {
+        currCat = $('.sobercollective__cats-desktop li.current').val();
+        currTag = $('.sobercollective__tags-desktop li.current').val();
+      } else {
+        currCat = $('.sobercollective__cats-mobile select option.current').val();
+        currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      }
       let max = Number($('#maxpage').text());
       $('.sobercollective__cats-mobile > select')
         .children()
         .each(function() {
           let that = $(this);
           if ($(that).hasClass('current')) {
-            console.log(that);
           }
         });
       if (currentPage < max) {
         let newPageNum = currentPage + 1;
         $('#curpage').text(newPageNum);
-        // ajax_get_next_posts(currentPage, tag or cat id);
-        console.log(`currPage: ${currentPage}, currCat: ${currCat}, currTag: ${currTag}`);
+        $('#sobercollective__pages button').each(function() {
+          if ($(this).val() == newPageNum) {
+            $(this).siblings().removeClass('current');
+            $(this).addClass('current');
+          }
+        });
         ajax_get_posts('next', currentPage, currCat, currTag);
       }
     });
@@ -179,55 +167,121 @@ jQuery(document).ready(function($) {
     // On Prev Click
     $('#prev').click(function() {
       let currentPage = Number($('#curpage').text());
-      let currCat = $('.sobercollective__cats-mobile select option.current').val();
-      let currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      let currCat, currTag;
+      if (windowSize > 1025) {
+        currCat = $('.sobercollective__cats-desktop li.current').val();
+        currTag = $('.sobercollective__tags-desktop li.current').val();
+      } else {     
+        currCat = $('.sobercollective__cats-mobile select option.current').val();
+        currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      }
+      let max = Number($('#maxpage').text());      
       if (currentPage > 1) {
         let newPageNum = currentPage - 1;
         $('#curpage').text(newPageNum);
-        // ajax_get_prev_posts(current, tag or cat id);
-        ajax_get_posts('prev', newPageNum, currCat, currTag);
+        $('#sobercollective__pages button').each(function() {
+          if ($(this).val() == newPageNum) {
+            $(this).siblings().removeClass('current');
+            $(this).addClass('current');
+          }
+        });
+        ajax_get_posts('prev', newPageNum, currCat, currTag, max);
       }
     });
+
+    // On Page Number Button Click ******************
+    $(document).on('click', '#sobercollective__pages button', function() {
+      let pageNum = Number($(this).val());
+      let currentPage = Number($('#curpage').text());            
+      let currCat, currTag;
+      if (windowSize > 1025) {
+        currCat = $('.sobercollective__cats-desktop li.current').val();
+        currTag = $('.sobercollective__tags-desktop li.current').val();
+      } else {     
+        currCat = $('.sobercollective__cats-mobile select option.current').val();
+        currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      }
+      $(this).siblings().removeClass('current');
+      $(this).addClass('current');
+      $('#curpage').text(pageNum);
+      let maxPage = Number($('#maxpage').text());
+      let isNext = ((pageNum - currentPage) >= 0 ); 
+      console.log(isNext);
+      if (isNext) {
+        ajax_get_posts('next', pageNum - 1, currCat, currTag);
+      } else {
+        ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
+      }
+      
+    });
+
   })();
 
-  // ***************************************** START CATEGORY / TAG FILTER HANDLERS ****************************************** //
+
+  // ********************** //
+  //  CATEGORY/TAG FILTERS
+  // ********************** // 
   (function currentFilters() {
-    let currCat = $('.sobercollective__cats-mobile select option.current').val();
-    let currTag = $('.sobercollective__tags-mobile div select option.current').val();
-    console.log(`currCat is ${currCat} and currTag is ${currTag}`);
-
-    $('.sobercollective__cats-mobile > select').on('change', function() {
-      let newCat = $(this).val();
-      $(this)
-        .children()
-        .each(function() {
-          $(this).removeClass('current');
-          if ($(this).val() == newCat) {
-            $(this).addClass('current');
-          }
-        });
-      currCat = newCat;
-      console.log(`NEW currCat is ${currCat} and currTag is ${currTag}`);
-      ajax_filter_posts(currCat, currTag);
-    });
-
-    $('.sobercollective__tags-mobile-dropdown > select').on('change', function() {
-      let newTag = $(this).val();
-      $(this)
-        .children()
-        .each(function() {
-          $(this).removeClass('current');
-          if ($(this).val() == newTag) {
-            $(this).addClass('current');
-          }
-        });
-      currTag = newTag;
-      console.log(`currCat is ${currCat} and NEW currTag is ${currTag}`);
-      ajax_filter_posts(currCat, currTag);
-    });
+    if (windowSize > 1025) {
+      let currCat = $('.sobercollective__cats-desktop li.current').val();
+      let currTag = $('.sobercollective__tags-desktop li.current').val();
+      // On Category Click
+      $('.sobercollective__cats-desktop li a').click(function(e) {
+        e.preventDefault();
+        $('#curpage').text('1');
+        let newCat = $(this).parent().val();
+        $(this).parent().siblings().removeClass('current');
+        $(this).parent().addClass('current');
+        currCat = newCat;
+        ajax_filter_posts(currCat, currTag);
+      });
+      // On Tag Click
+      $('.sobercollective__tags-desktop li a').click(function(e) {
+        e.preventDefault();        
+        $('#curpage').text('1');
+        let newTag = $(this).parent().val();
+        $(this).parent().siblings().removeClass('current');
+        $(this).parent().addClass('current');
+        currTag = newTag;
+        ajax_filter_posts(currCat, currTag);
+      });
+    } else {
+      let currCat = $('.sobercollective__cats-mobile select option.current').val();
+      let currTag = $('.sobercollective__tags-mobile div select option.current').val();
+      // On Category Change
+      $('.sobercollective__cats-mobile > select').on('change', function() {
+        $('#curpage').text('1');      
+        let newCat = $(this).val();
+        $(this)
+          .children()
+          .each(function() {
+            $(this).removeClass('current');
+            if ($(this).val() == newCat) {
+              $(this).addClass('current');
+            }
+          });
+        currCat = newCat;
+        ajax_filter_posts(currCat, currTag);
+      });
+      // On Tag Change
+      $('.sobercollective__tags-mobile-dropdown > select').on('change', function() {
+        $('#curpage').text('1');            
+        let newTag = $(this).val();
+        $(this)
+          .children()
+          .each(function() {
+            $(this).removeClass('current');
+            if ($(this).val() == newTag) {
+              $(this).addClass('current');
+            }
+          });
+        currTag = newTag;
+        ajax_filter_posts(currCat, currTag);
+      });
+    }
   })();
-  // ***************************************** END CATEGORY / TAG FILTER HANDLERS ****************************************** //
 
+  // ************************************************** JPLAYER ***************************************************** //
   // JPlayer
   // display play(add?) button on every podcast category post
   (function podcastPlayButton() {

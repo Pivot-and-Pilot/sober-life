@@ -38,8 +38,8 @@
         background: none;
         .probox {
           background-color: #e9e2d6;
-          background-image: none;     
-          border: none;                  
+          background-image: none;
+          border: none;
           height: 50px;
           border-radius: 25px;
           .promagnifier {
@@ -60,8 +60,8 @@
                 height: 50px;
                 &::placeholder {
                   font-family: $font__main;
-                  color: black !important;     
-                  font-size: 18px !important;                             
+                  color: black !important;
+                  font-size: 18px !important;
                 }
               }
             }
@@ -72,7 +72,7 @@
     .sobercollective__cats-mobile {
       padding: 10px 0;
       select {
-        appearance:none;
+        appearance: none;
         background-color: #e9e2d6;
         border-radius: 0;
         border: none;
@@ -91,7 +91,7 @@
       position: relative;
       .sobercollective__tags-mobile-dropdown {
         select {
-          appearance:none;          
+          appearance: none;
           background-color: #e9e2d6;
           border-radius: 0;
           border: none;
@@ -104,7 +104,11 @@
         }
       }
     }
+    .sobercollective__tags-desktop {
+      display: none;
+    }
   }
+
   .sobercollective__posts-wrapper {
     padding-top: 20px;
     width: 100%;
@@ -176,41 +180,17 @@
       }
     }
   }
-  .pagination {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    letter-spacing: 2px;
-    padding-top: 20px;
-    font-family: $font__main--med;
-    span {
-      color: black;
+  #sobercollective__pagination {
+    #prev {
     }
-    a,
-    a:visited,
-    a:focus,
-    a:hover {
-      color: #9a968f;
-      text-decoration: none;
-    }
-    .sobercollective__ellipses {
-      color: #9a968f;      
-    }
-    .pagination-prev {
-      height: 20px;
-      width: 20px;
-      margin-right: 10px;
-      img {
-        filter: brightness(.7);
-        transform: rotate(180deg);        
+    .pagecount {
+      #curpage,
+      #maxpage {
       }
-    }
-    .pagination-next {
-      height: 20px;
-      width: 20px;
-      margin-left: 10px;
-      img {
-        filter: brightness(.7);
+      #sobercollective__pages {
+        button.current {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -228,7 +208,9 @@
 @media screen and (min-width: 1025px) {
   #sobercollective-page {
     .sobercollective__top-bar {
+      position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: space-between;
       ul {
         display: flex;
@@ -240,6 +222,61 @@
             font-family: $font__main--med;
             color: black;
             text-decoration: none;
+          }
+        }
+      }
+      .sobercollective__searchbar {
+        position: absolute;
+        right: 0;
+        width: 30%;
+      }
+      .sobercollective__cats-mobile {
+        display: none;
+      }
+      .sobercollective__cats-desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        li {
+          // width: 30%;
+        }
+      }
+      .sobercollective__tags-mobile {
+        display: none;
+      }
+      .sobercollective__tags-desktop {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        li {
+        }
+      }
+    }
+    .sobercollective__posts-wrapper {
+      .sobercollective__post {
+        width: 32%;
+        // padding: 0;
+        &:nth-child(1) {
+          .sobercollective__play-btn {
+          }
+          .sobercollective__post--image {
+            height: 450px;
+          }
+        }
+        &:nth-child(8),
+        &:nth-child(9) {
+          width: 49%;
+          .sobercollective__play-btn {
+          }
+          .sobercollective__post--image {
+            height: 450px;
+          }
+        }
+        .sobercollective__play-btn {
+        }
+        .sobercollective__post--image {
+          height: 300px;
+          img {
           }
         }
       }

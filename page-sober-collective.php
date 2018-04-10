@@ -23,7 +23,7 @@ get_header();
 				$wp_query = new WP_Query(array(
 					'post_type' 			=> 'post', 
 					'post_status'			=> 'publish', 
-					'posts_per_page'	=> 11,
+					'posts_per_page'	=> 11, // MAKE THIS CONDITIONAL..........
 					'paged'						=> $paged
 				)); 
 				$argsCatsMobile = array(
@@ -37,7 +37,9 @@ get_header();
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
 					'orderby' 		=> 'include', 
-					'include' 		=> array(13, 10, 11, 12));
+					'include' 		=> array(13, 10, 11, 12),
+				);
+					//'feed_image' => svg images
 			?>	
 				<div class="sobercollective__top-bar">
 					<div class="sobercollective__searchbar"><?php echo do_shortcode('[searchandfilter fields="search"]'); ?></div>
@@ -47,14 +49,14 @@ get_header();
 					<div class="sobercollective__tags-mobile dropdown">
 						<div class="sobercollective__tags-mobile-dropdown">
 							<?php 
-								$tags = get_tags(array(
+								$tagsMobile = get_tags(array(
 									'hide_empty' 	=> 0,
 									'exclude'			=> 14
 								));
-								if ($tags) { ?>
+								if ($tagsMobile) { ?>
 									<select name="tag" id="tag">
 										<option value="14" class="current">All Topics</option>
-										<?php foreach($tags as $tag) {
+										<?php foreach($tagsMobile as $tag) {
 											echo '<option value="'. $tag->term_id .'">' . $tag->name ;
 										} ?>
 									</select>
@@ -63,6 +65,18 @@ get_header();
 							?>
 						</div>
 					</div>
+					<ul class="sobercollective__tags-desktop">
+						<?php 
+							$tagsDesktop = get_tags(array(
+								'hide_empty'	=> 0,
+								// 'orderby' 		=> 'include', 
+								// 'include' 		=> array(13, 10, 11, 12))
+							));
+							foreach($tagsDesktop as $tag) :
+								echo '<li value="'. $tag->term_id .'"><a href="'. get_term_link($tag) .'"> '.$tag->name.'</a></li>';
+							endforeach;
+						?>
+					</ul>					
 				</div>
 				<div class="sobercollective__posts-wrapper">
 					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
@@ -73,13 +87,14 @@ get_header();
 				<!-- PAGINATION -->
 			
 				<?php	endif; ?>
-				<button id="prev">PREV</button>					
-				<div class="pagecount" style="">
-					<var id="curpage">1</var>
-					<var id="maxpage"><?php echo $wp_query->max_num_pages; ?></var>
-				</div>
-				<button action="#" id="next">NEXT</button>
 				<div id="sobercollective__pagination">
+					<button id="prev">PREV</button>					
+					<div class="pagecount" style="">
+						<var id="curpage">1</var>
+						<var id="maxpage"><?php echo $wp_query->max_num_pages; ?></var>
+						<div id="sobercollective__pages"></div>
+					</div>
+					<button id="next">NEXT</button>
 				</div>
 			</div>
 		</main><!-- #main -->

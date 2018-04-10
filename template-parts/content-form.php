@@ -93,23 +93,23 @@
 
     <section class="submit">
       <div>
-        <input type="number" placeHolder="Phone Number">
-        <input type="text" placeHolder="City">
+        <input name="personal info" class="form__phone-number" type="number" placeHolder="Phone Number">
+        <input name="personal info" class="form__city" type="text" placeHolder="City">
       </div>
 
       <div>
-        <input type="email" placeHolder="Email">
-        <input type="text" placeHolder="State">
-        <input type="date" placeHolder="Date of Birth">
+        <input name="personal info" class="form__email" type="email" placeHolder="Email">
+        <input name="personal info" class="form__state" type="text" placeHolder="State">
+        <input name="personal info" class="form__date" type="date" placeHolder="Date of Birth">
       </div>
 
       <div>
         <p>Do you have insurance?</p>
         <div>
           <label for="yes">Yes</label>
-          <input type="radio" id="yes">
+          <input type="radio" id="yes" name="insurance" value="yes">
           <label for="no">No</label>
-          <input type="radio" id="no">
+          <input type="radio" id="no" name="insurance" value="no">
         </div>
       </div>
 
@@ -182,5 +182,12 @@
     <input type="radio" data-name="substances-used-hidden" value="ketamine">
     <input type="radio" data-name="substances-used-hidden" value="unsure">
     <input class="other-substances-used-hidden" type="text" data-name="substances-used-hidden">
+
+    <!-- personal info -->
+    <input class="form__phone-number--hidden" type="number" placeHolder="Phone Number">
+    <input class="form__city--hidden" type="text" placeHolder="City">
+    <input class="form__email--hidden" type="email" placeHolder="Email">
+    <input class="form__state--hidden" type="text" placeHolder="State">
+    <input class="form__date--hidden" type="date" placeHolder="Date of Birth">
   </form>
 </section>

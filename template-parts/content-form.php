@@ -78,8 +78,22 @@
         }
       }
     ?>
+    <section class="form__contact-info">
+      <div class="email">
+        <a href="">info@soberlifesd.com</a>
+      </div>
+      <div class="phone-number">
+        <a href="">604.123.4567</a>  
+      </div>
+    </section>
 
-    <div class="form__x-button">X</div>
+    <section class="form__progress-bar">
+      <div class="process"></div>
+    </section>
+
+    <div class="form__x-button">
+      <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/x--black.svg" alt="">
+    </div>
 
     <section class="loading-screen">
       <div></div>
@@ -90,7 +104,9 @@
         <h1>What is your name?</h1>
         <div class="inputWrapper">
           <input id="client-name" type="text" placeholder="First & Last Name">
-          <div class="nextButton">-></div>
+          <div class="your-name__next-button">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
+          </div>
         </div>
       </div>
     </section>
@@ -102,23 +118,45 @@
           <div name="client-target" data-value="myself">Myself</div>
           <div name="client-target" data-value="a loved one">A Loved One</div>
         </div> 
-        <div>Back</div>
+      </div>
+      <div class="client-target__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
       </div>
     </section>
 
     <section class="question__loved-one-name">
-      <h1>What is your loved ones name?</h1>
-      <div class="inputWrapper">
-        <input id="loved-one-name" type="text" placeholder="First & Last Name">
-        <div class="nextButton">-></div>
+      <div class="content-wrapper">
+        <h1>What is your loved ones name?</h1>
+        <div class="inputWrapper">
+          <input id="loved-one-name" type="text" placeholder="First & Last Name">
+          <div class="loved-one-name__next-button">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="loved-one-name__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
       </div>
     </section>
 
     <section class="question__client-gender">
-      <h1></h1>
-      <div name="client-gender" data-value="male">Male</div>
-      <div name="client-gender" data-value="female">Female</div>
-      <div name="client-gender" data-value="other">Other</div>
+      <div class="content-wrapper">
+        <h1></h1>
+        <div name="client-gender" data-value="male">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/mustache-face--black.svg" alt="">
+          Male
+        </div>
+        <div name="client-gender" data-value="female">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/kissing-face--black.svg" alt="">
+          Female
+        </div>
+        <div name="client-gender" data-value="other">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/unicorn--black.svg" alt="">
+          Other
+        </div>
+      </div>
     </section>
 
     <section class="question__client-feeling">

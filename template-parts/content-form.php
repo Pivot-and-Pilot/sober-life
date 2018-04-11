@@ -70,14 +70,24 @@
 
         if ( wp_mail($to, $subject, $message, $headers) ) {
           echo '<section class="thank-you">
-                  <p>Thank you for submittin your form, one of us will give you a call soon!</p>
-                  <a href="">Return Home</a>
+                  <div class="content-wrapper">
+                    <p>Thank you for submittin your form, one of us will give you a call soon!</p>
+                    <a href="">Return Home</a>
+                  </div>
                 </section>';
         } else {
-          echo '<div class="thank-you"> Request sent unsuccessfully </div>';
+          echo '<section class="not-sent"> 
+                  <div class="content-wrapper">
+                    Request sent unsuccessfully, please try again!
+                  </div>
+                </section>';
         }
       }
     ?>
+
+    
+
+    <!-- visible form start -->
     <section class="form__contact-info">
       <div class="email">
         <a href="">info@soberlifesd.com</a>
@@ -96,7 +106,7 @@
     </div>
 
     <section class="loading-screen">
-      <div></div>
+      <div class="content-wrapper"></div>
     </section>
 
     <section class="question__your-name">
@@ -143,8 +153,8 @@
 
     <section class="question__client-gender">
       <div class="content-wrapper">
-        <h1>Who are you</h1>
-        <div class="genders-wapper">
+        <h1></h1>
+        <div class="genders-wrapper">
           <div name="client-gender" data-value="male" class="gender-choice">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/mustache-face--black.svg" alt="">
             Male
@@ -166,95 +176,197 @@
     </section>
 
     <section class="question__client-feeling">
-      <h1>How do you feel about recovery?</h1>
-      <div name="client-feeling" data-value="hesitant">Hesitant</div>
-      <div name="client-feeling" data-value="moderate">Moderate</div>
-      <div name="client-feeling" data-value="i am ready for change">I am ready for change</div>
+      <div class="content-wrapper">
+        <h1>How do you feel about recovery?</h1>
+        <div class="feelings-wrapper">
+          <div class="feeling-choice" name="client-feeling" data-value="hesitant">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/hesitant-face--black.svg" alt="">
+            Hesitant
+          </div>
+          <div class="feeling-choice" name="client-feeling" data-value="moderate">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/moderate-face--black.svg" alt="">
+            Moderate
+          </div>
+          <div class="feeling-choice" name="client-feeling" data-value="i am ready for change">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/smiley-face--black.svg" alt="">
+            I am ready for change
+          </div>
+        </div>
+      </div>
+      <div class="client-feeling__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
+      </div>
     </section>
     <section class="question__loved-one-feeling">
-      <h1>How do they feel about recovery?</h1>
-      <div name="loved-one-feeling" data-value="hesitant">Hesitant</div>
-      <div name="loved-one-feeling" data-value="moderate">Moderate</div>
-      <div name="loved-one-feeling" data-value="it is time for change">It is time for change</div>
-      <div name="loved-one-feeling" data-value="dont know">Don't know</div>
+      <div class="content-wrapper">
+        <h1>How do they feel about recovery?</h1>
+        <div class="loved-one-feelings-wrapper">
+          <div class="loved-one-feeling-choice" name="loved-one-feeling" data-value="hesitant">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/hesitant-face--black.svg" alt="">
+            Hesitant
+          </div>
+          <div class="loved-one-feeling-choice" name="loved-one-feeling" data-value="moderate">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/moderate-face--black.svg" alt="">
+            Moderate
+          </div>
+          <div class="loved-one-feeling-choice" name="loved-one-feeling" data-value="it is time for change">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/smiley-face--black.svg" alt="">
+            It is time for change
+          </div>
+          <div class="loved-one-feeling-choice" name="loved-one-feeling" data-value="dont know">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/question-mark--black.svg" alt="">
+            Don't know
+          </div>
+        </div>
+      </div>
+      <div class="loved-one-feeling__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
+      </div>
     </section>
 
     <section class="question__client-substances-used">
-      <h1>Substances used</h1>
-      <div name="substances-used" data-value="alcohol">Alcohol</div>
-      <div name="substances-used" data-value="cocaine">Cocaine</div>
-      <div name="substances-used" data-value="meth">Meth</div>
-      <div name="substances-used" data-value="weed">Weed</div>
-      <div name="substances-used" data-value="heroine">Heroine</div>
-      <div name="substances-used" data-value="crack">Crack</div>
-      <div name="substances-used" data-value="ecstasy">Ecstasy</div>
-      <div name="substances-used" data-value="ketamine">Ketamine</div>
-      <input class="other-substances-used" type="text" placeHolder="Other" name="substances-used">
+      <div class="content-wrapper">
+        <h1>Substances used</h1>
+        <div class="substances-wrapper">
+          <div class="substance-choice" name="substances-used" data-value="alcohol">Alcohol</div>
+          <div class="substance-choice" name="substances-used" data-value="cocaine">Cocaine</div>
+          <div class="substance-choice" name="substances-used" data-value="meth">Meth</div>
+          <div class="substance-choice" name="substances-used" data-value="weed">Weed</div>
+          <div class="substance-choice" name="substances-used" data-value="heroine">Heroine</div>
+          <div class="substance-choice" name="substances-used" data-value="crack">Crack</div>
+          <div class="substance-choice" name="substances-used" data-value="ecstasy">Ecstasy</div>
+          <div class="substance-choice" name="substances-used" data-value="ketamine">Ketamine</div>
+        </div>
+        <input class="other-substances-used" type="text" placeHolder="Other" name="substances-used">
+      </div>
+      <div class="substances-used__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
+      </div>
+      <div class="substances-used__skip">
+        Skip
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+      </div>
+      <div class="substances-used__next">
+        Next
+      </div>
     </section>
     <section class="question__loved-one-substances-used">
+      <div class="content-wrapper">
       <h1>Substances used</h1>
-      <div name="substances-used" data-value="alcohol">Alcohol</div>
-      <div name="substances-used" data-value="cocaine">Cocaine</div>
-      <div name="substances-used" data-value="meth">Meth</div>
-      <div name="substances-used" data-value="weed">Weed</div>
-      <div name="substances-used" data-value="heroine">Heroine</div>
-      <div name="substances-used" data-value="crack">Crack</div>
-      <div name="substances-used" data-value="ecstasy">Ecstasy</div>
-      <div name="substances-used" data-value="ketamine">Ketamine</div>
-      <input class="other-substances-used" type="text" placeHolder="Other" name="substances-used">
-      <div name="substances-used" data-value="unsure">Unsure</div>
+        <div class="substances-wrapper">
+          <div class="substance-choice" name="substances-used" data-value="alcohol">Alcohol</div>
+          <div class="substance-choice" name="substances-used" data-value="cocaine">Cocaine</div>
+          <div class="substance-choice" name="substances-used" data-value="meth">Meth</div>
+          <div class="substance-choice" name="substances-used" data-value="weed">Weed</div>
+          <div class="substance-choice" name="substances-used" data-value="heroine">Heroine</div>
+          <div class="substance-choice" name="substances-used" data-value="crack">Crack</div>
+          <div class="substance-choice" name="substances-used" data-value="ecstasy">Ecstasy</div>
+          <div class="substance-choice" name="substances-used" data-value="ketamine">Ketamine</div>
+        </div>
+        <div class="substances-wrapper-1">
+          <div class="hidden"></div>
+          <input class="other-substances-used" type="text" placeHolder="Other" name="substances-used">
+          <div class="substances-used-unsure" name="substances-used" data-value="unsure">Unsure</div>
+        </div>
+      </div>
+      <div class="loved-one-substances-used__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
+      </div>
+      <div class="substances-used__skip">
+        Skip
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+      </div>
+      <div class="substances-used__next">
+        Next
+      </div>
     </section>
 
     <section class="question__drug-effects-life">
-      <h1></h1>
-      <div name="effect-life" data-value="career and personal life">
-        <h3>Career & Personal Life</h3>
-        <p>Lost your job, a special someone, your hame, etc.</p>
+      <div class="content-wrapper">
+        <h1></h1>
+        <div class="effects-wrapper">
+          <div class="effect-choice" name="effect-life" data-value="career and personal life">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/house--black.svg" alt=""> 
+            <h3>Career & Personal Life</h3>
+            <p>Lost your job, a special someone, your hame, etc.</p>
+          </div>
+          <div class="effect-choice" name="effect-life" data-value="physical health">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/heart-bandaid--black.svg" alt=""> 
+            <h3>Physical Health</h3>
+            <p>Weak body, organ failure, unhealthy eating habits, etc.</p>
+          </div>
+          <div class="effect-choice" name="effect-life" data-value="mental health">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/human-head--black.svg" alt=""> 
+            <h3>Mental Health</h3>
+            <p>Feeling hopeless and depressed, dealing with anxiety, etc.</p>
+          </div>
+        </div>
       </div>
-      <div name="effect-life" data-value="physical health">
-        <h3>Physical Health</h3>
-        <p>Weak body, organ failure, unhealthy eating habits, etc.</p>
+      <div class="effects__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
       </div>
-      <div name="effect-life" data-value="mental health">
-        <h3>Mental Health</h3>
-        <p>Feeling hopeless and depressed, dealing with anxiety, etc.</p>
+      <div class="effects__skip">
+        Skip
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+      </div>
+      <div class="effects__next">
+        Next
       </div>
     </section>
 
-    <section class="submit">
-      <div>
-        <input name="personal info" class="form__phone-number" type="tel" placeHolder="Phone Number">
-        <input name="personal info" class="form__city" type="text" placeHolder="City">
-      </div>
+    <section class="form__personal-info">
+      <div class="content-wrapper">
+        <div class="personal-info-0">
+          <input name="personal info" class="form__phone-number personal-infor-input" type="tel" placeHolder="Phone Number">
+          <input name="personal info" class="form__city personal-infor-input" type="text" placeHolder="City">
+        </div>
 
-      <div>
-        <input name="personal-info" class="form__email" type="email" placeHolder="Email">
-        <input name="personal-info" class="form__state" type="text" placeHolder="State">
-        <input name="personal-info" class="form__dob" type="date" placeHolder="Date of Birth">
-      </div>
+        <div class="personal-info-1">
+          <input name="personal-info" class="form__email personal-infor-input" type="email" placeHolder="Email">
+          <input name="personal-info" class="form__state personal-infor-input" type="text" placeHolder="State">
+          <input name="personal-info" class="form__dob personal-infor-input" type="date" placeHolder="Date of Birth">
+        </div>
+        
+        <div class="insurance-wrapper">
+          <div class="insurance-yes-no-wrapper">
+            <p></p>
+            <div>
+              <div class="insurance-check-box">Yes
+                <input type="radio" id="yes" name="insurance" value="yes">
+                <span class="check-box"></span>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/tick--black.svg" alt="">
+              </div>
+              <div class="insurance-check-box">No
+                <input type="radio" id="no" name="insurance" value="no">
+                <span class="check-box"></span>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/tick--black.svg" alt="">
+              </div>
+            </div>
+          </div>
 
-      <div>
-        <p>Do you have insurance?</p>
-        <div>
-          <label for="yes">Yes</label>
-          <input type="radio" id="yes" name="insurance" value="yes">
-          <label for="no">No</label>
-          <input type="radio" id="no" name="insurance" value="no">
+          <div class="insurance-company-wrapper">
+            <p>If unsure please wirte 'unsure'</p>
+            <input class="personal-infor-input" type="text" name="insurance-company" placeHolder="Insurance Company">
+          </div>
+        </div>
+
+        <div class="comments-and-submit">
+          <textarea name="comments" id="" cols="30" rows="5" placeHolder="Comments"></textarea>
+          <div id="form__submit">Submit</div>
         </div>
       </div>
 
-      <div>
-        <p>If unsure please wirte 'unsure'</p>
-        <input type="text" name="insurance-company" placeHolder="Insurance Company">
+      <div class="personal-info__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
       </div>
-
-      <div>
-        <textarea name="comments" id="" cols="30" rows="10" placeHolder="Comments"></textarea>
-        <div id="form__submit">Submit</div>
-      </div>
-
-      <div><- Back</div>
     </section>
+
   </div>
 
 
@@ -268,6 +380,8 @@
 
 
 
+
+  <!-- hidden form start -->
   <form action="" id="sober-life-hidden-form" method="POST" enctype="multipart/form-data">
     <!-- client's name -->
     <div>name</div>

@@ -5,6 +5,7 @@
 #soberlife-form-wrapper {
   height: 100vh;
   width: 100vw;
+  overflow: scroll;
   position: fixed;
   display: block;
   top: 0;
@@ -115,8 +116,21 @@
   transform: translate(-50%, -50%);
 }
 
+#soberlife-form-wrapper .form__relative-layer .loading-screen {
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .loading-screen .content-wrapper {
+  color: #000;
+  font-family: "FFBauWebMedium";
+  font-size: 4em;
+}
+
 #soberlife-form-wrapper .form__relative-layer .question__your-name {
-  left: 100%;
+  left: 0;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__your-name h1 {
@@ -181,6 +195,8 @@
 
 #soberlife-form-wrapper .form__relative-layer .question__client-target {
   left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__client-target .content-wrapper {
@@ -250,6 +266,8 @@
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-name {
   left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-name h1 {
@@ -339,7 +357,9 @@
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__client-gender {
-  left: 0;
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper {
@@ -355,7 +375,7 @@
   font-family: "FFBauWebMedium";
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wapper {
+#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,7 +390,7 @@
   margin-top: 20px;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wapper .gender-choice {
+#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice {
   width: 20%;
   height: 370px;
   border: 5px solid #aca8a2;
@@ -393,12 +413,12 @@
   color: #000;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wapper .gender-choice img {
+#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice img {
   height: 35%;
   margin-bottom: 40px;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wapper .gender-choice:hover {
+#soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice:hover {
   border: 5px solid #80ff73;
   cursor: pointer;
 }
@@ -427,4 +447,996 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
   margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper {
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper .feeling-choice {
+  width: 20%;
+  height: 370px;
+  border: 5px solid #aca8a2;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "FFBauWebMedium";
+  font-size: 2em;
+  color: #000;
+  text-align: center;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper .feeling-choice img {
+  height: 35%;
+  margin-bottom: 40px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper .feeling-choice:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .client-feeling__back {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .client-feeling__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-feeling .client-feeling__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper {
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice {
+  width: 20%;
+  height: 370px;
+  border: 5px solid #aca8a2;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "FFBauWebMedium";
+  font-size: 2em;
+  color: #000;
+  text-align: center;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice img {
+  height: 35%;
+  margin-bottom: 40px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .loved-one-feeling__back {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .loved-one-feeling__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .loved-one-feeling__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper {
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-choice {
+  width: 300px;
+  height: 70px;
+  border: 5px solid #000;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 70px;
+  margin: 20px;
+  font-family: "FFBauWebMedium";
+  font-size: 1.7em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-choice:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used {
+  margin: 0 auto;
+  height: 70px;
+  border: 5px solid #e1dad2;
+  border-radius: 35px;
+  width: 40%;
+  display: block;
+  background-color: #f5f0e8;
+  color: #000;
+  font-size: 1.5em;
+  padding-left: 25px;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used::-webkit-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used:-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used::-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used::placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used:focus {
+  outline: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__back {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__skip {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__skip:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__skip img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__next {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  height: 50px;
+  width: 150px;
+  border: 5px solid #000;
+  text-align: center;
+  line-height: 45px;
+  font-family: "FFBauWebMedium";
+  color: #000;
+  border-radius: 25px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__next:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper {
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper .substance-choice {
+  width: 20%;
+  height: 70px;
+  border: 5px solid #000;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 70px;
+  margin: 20px;
+  font-family: "FFBauWebMedium";
+  font-size: 1.7em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper .substance-choice:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .hidden {
+  opacity: 0;
+  width: 20%;
+  margin: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used {
+  margin: 0 auto;
+  height: 70px;
+  border: 5px solid #e1dad2;
+  border-radius: 35px;
+  width: 45%;
+  display: block;
+  background-color: #f5f0e8;
+  color: #000;
+  font-size: 1.5em;
+  padding-left: 25px;
+  font-family: "FFBauWebMedium";
+  margin: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used::-webkit-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used:-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used::-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used::placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used:focus {
+  outline: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .substances-used-unsure {
+  margin: 20px;
+  height: 70px;
+  width: 20%;
+  border: 5px solid #000;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 70px;
+  font-family: "FFBauWebMedium";
+  font-size: 1.7em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .substances-used-unsure:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__back {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__next {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  height: 50px;
+  width: 150px;
+  border: 5px solid #000;
+  text-align: center;
+  line-height: 45px;
+  font-family: "FFBauWebMedium";
+  color: #000;
+  border-radius: 25px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__next:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper {
+  width: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper h1 {
+  font-size: 4em;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice {
+  padding: 30px;
+  width: 25%;
+  height: 400px;
+  border: 5px solid #aca8a2;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: "FFBauWebMedium";
+  font-size: 2em;
+  color: #000;
+  text-align: center;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice img {
+  height: 35%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice h3 {
+  font-family: "FFBauWebMedium";
+  font-size: 1em;
+  margin: 0;
+  margin-top: 30px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice p {
+  margin: 0;
+  font-size: 0.7em;
+  font-family: "FFBauWeb", sans-serif;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__back {
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__skip {
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__skip:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__skip img {
+  height: 30px;
+  margin-left: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__next {
+  display: none;
+  position: absolute;
+  bottom: 80px;
+  right: 50px;
+  height: 50px;
+  width: 150px;
+  border: 5px solid #000;
+  text-align: center;
+  line-height: 45px;
+  font-family: "FFBauWebMedium";
+  color: #000;
+  border-radius: 25px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__next:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info {
+  left: 100%;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper {
+  width: 100%;
+  padding: 0 4vw;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input {
+  width: 30%;
+  height: 50px;
+  border: 5px solid #e1dad2;
+  border-radius: 25px;
+  background-color: #f5f0e8;
+  padding-left: 25px;
+  color: #000;
+  font-size: 1.2em;
+  margin-right: 20px;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input::-webkit-input-placeholder,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input::-webkit-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input:-ms-input-placeholder,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input:-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input::-ms-input-placeholder,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input::-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input::placeholder,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input::placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-0 .personal-infor-input:focus,
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .personal-info-1 .personal-infor-input:focus {
+  outline: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper {
+  width: 30%;
+  margin-right: 20px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper p {
+  font-family: "FFBauWebMedium";
+  margin: 40px 0 15px 0;
+  font-size: 1.2em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box {
+  font-family: "FFBauWebMedium";
+  font-size: 1.2em;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 80px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box input {
+  display: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box .check-box {
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  position: relative;
+  bottom: -3px;
+  border: 3px solid #e1dad2;
+  background-color: #f5f0e8;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box .checked-box {
+  border: 3px solid #80ff73 !important;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box img {
+  display: none;
+  position: absolute;
+  right: -10px;
+  height: 30px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper div .insurance-check-box .ticked {
+  display: unset !important;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper {
+  width: 30%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper p {
+  font-family: "FFBauWebMedium";
+  margin: 40px 0 15px 0;
+  font-size: 1.2em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input {
+  width: 100%;
+  height: 50px;
+  border: 5px solid #e1dad2;
+  border-radius: 25px;
+  background-color: #f5f0e8;
+  padding-left: 25px;
+  color: #000;
+  font-size: 1.2em;
+  margin-right: 20px;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input::-webkit-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input:-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input::-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input::placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-company-wrapper .personal-infor-input:focus {
+  outline: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea {
+  width: 70%;
+  border: 5px solid #e1dad2;
+  border-radius: 40px;
+  color: #000;
+  font-size: 1.2em;
+  font-family: "FFBauWebMedium";
+  padding: 20px;
+  background-color: #f5f0e8;
+  resize: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea:focus {
+  outline: none;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea::-ms-input-placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit textarea::placeholder {
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit #form__submit {
+  width: 25%;
+  height: 70px;
+  border: 5px solid #000;
+  color: #000;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 65px;
+  font-size: 1.5em;
+  font-family: "FFBauWebMedium";
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit #form__submit:hover {
+  cursor: pointer;
+  border: 5px solid #80ff73;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back {
+  position: absolute;
+  bottom: 80px;
+  left: 4vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: "FFBauWebMedium";
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back:hover {
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back img {
+  height: 30px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
+
+#soberlife-form-wrapper .form__relative-layer .thank-you {
+  left: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .thank-you .content-wrapper {
+  width: 80%;
+  text-align: center;
+}
+
+#soberlife-form-wrapper .form__relative-layer .thank-you .content-wrapper p {
+  font-family: "FFBauWebMedium";
+  font-size: 3em;
+  color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .thank-you .content-wrapper a {
+  height: 70px;
+  width: 300px;
+  border: 5px solid #000;
+  display: block;
+  margin: 0 auto;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 65px;
+  font-family: "FFBauWebMedium";
+  color: #000;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+#soberlife-form-wrapper .form__relative-layer .thank-you .content-wrapper a:hover {
+  border: 5px solid #80ff73;
+  cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .not-sent {
+  left: 100%;
+}
+
+#soberlife-form-wrapper .form__relative-layer .not-sent .content-wrapper {
+  font-size: 2em;
+  font-family: "FFBauWebMedium";
 }

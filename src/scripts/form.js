@@ -1,17 +1,33 @@
 jQuery(document).ready(function($){
   
-  (function loadingGreating1 () {
+  (function genderQuestion () {
     let fullName, firstName, spacePosition;
-    $('#client-name').on('change keyup paste', function () {
+    $('#loved-one-name').on('change keyup paste', function () {
       fullName = $(this).val();
       spacePosition = fullName.indexOf(' ');
       firstName = fullName.slice(0, spacePosition);
-      $('.loading-screen > div').html(`Hi ${firstName}, tell us more about your situation.`)
+    })
+    $('div[name="client-target"]').on('click', function () {
+      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+        $('.question__client-gender h1').html('What do you identify as?')
+      }
+      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
+        $('.question__client-gender h1').html(`What does ${firstName} identify as?`)
+      }
     })
   })();
 
-  (function loadingScreen3 () {
-
+  (function customizedText () {
+    $('div[name="client-target"]').on('click', function () {
+      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+        $('.question__drug-effects-life h1').html('How is drug usage effecting your life?')
+        $('.insurance-yes-no-wrapper > p').html('Do you have insurance?');
+      }
+      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
+        $('.question__drug-effects-life h1').html('How is drug usage effecting their life?');
+        $('.insurance-yes-no-wrapper > p').html('Do they have insurance?');
+      }
+    })
   })();
   
   (function getInfo () {
@@ -86,8 +102,14 @@ jQuery(document).ready(function($){
     $('.form__dob').on('change keyup paste', function () {
       $('.form__dob--hidden').val($(this).val());
     })
-    $('input[name="insurance"]').on('click', function () {
-      let answer = $(this).val();
+    $('.insurance-check-box').on('click', function (e) {
+      $('.insurance-check-box').each( function () {
+        $($(this)[0].children[1]).removeClass('checked-box');
+        $($(this)[0].children[2]).removeClass('ticked');
+      })
+      $($(e.currentTarget)[0].children[1]).toggleClass('checked-box');
+      $($(e.currentTarget)[0].children[2]).toggleClass('ticked');
+      let answer = $($(e.currentTarget)[0].children[0]).val();
       $(`input[name="insurance-hidden"][value="${answer}"]`).prop('checked', true);
     })
     $('input[name="insurance-company"]').on('change keyup paste', function () {
@@ -104,5 +126,26 @@ jQuery(document).ready(function($){
       $('#form__submit--hidden').click();
     })
   })();
+
+  function loadingGreating1 () {
+    let fullName, firstName, spacePosition;
+    fullName = $('#client-name-hidden').val();
+    spacePosition = fullName.indexOf(' ');
+    firstName = fullName.slice(0, spacePosition);
+    $('.loading-screen > div').html(`Hi ${firstName}, tell us more about your situation.`);
+  }
+
+  (function navigation () {
+    $('.your-name__next-button').on('click', function () {
+      loadingGreating1();
+      $('.loading-screen').css('opacity', '1');
+      $('.question__your-name').css('left', '100%');
+      setTimeout( function () {
+        $('.loading-screen').css('opacity', '0');
+        $('.question__client-target').css('left', '0');
+      }, 2000 )
+    })
+  })();
+
   
 })

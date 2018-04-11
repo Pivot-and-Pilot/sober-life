@@ -265,6 +265,63 @@
 
     .question__client-gender {
       left: 0;
+      .content-wrapper {
+        width: 100%;
+        h1 {
+          font-size: 4em;
+          margin: 0;
+          width: 100%;
+          text-align: center;
+          color: #000;
+          font-family: $font__main--med;
+        }
+        .genders-wapper {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-evenly;
+          margin-top: 20px;
+          .gender-choice {
+            width: 20%;
+            height: 370px;
+            border: 5px solid rgb(172, 168, 162);
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: $font__main--med;
+            font-size: 2em;
+            color: #000;
+            img {
+              height: 35%;
+              margin-bottom: 40px;
+            }
+            &:hover {
+              border: 5px solid $color__green;
+              cursor: pointer;
+            } 
+          }
+        }
+      }
+      .client-gender__back {
+        position: absolute;
+        bottom: 80px;
+        left: 50px;
+        display: flex;
+        font-size: 20px;
+        align-items: center;
+        font-family: $font__main--med;
+        color: #000;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          height: 30px;
+          transform: rotate(180deg);
+          margin-right: 10px;
+        }
+      }
     }
 
 

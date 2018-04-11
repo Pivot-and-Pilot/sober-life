@@ -143,19 +143,25 @@
 
     <section class="question__client-gender">
       <div class="content-wrapper">
-        <h1></h1>
-        <div name="client-gender" data-value="male">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/mustache-face--black.svg" alt="">
-          Male
+        <h1>Who are you</h1>
+        <div class="genders-wapper">
+          <div name="client-gender" data-value="male" class="gender-choice">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/mustache-face--black.svg" alt="">
+            Male
+          </div>
+          <div name="client-gender" data-value="female" class="gender-choice">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/kissing-face--black.svg" alt="">
+            Female
+          </div>
+          <div name="client-gender" data-value="other" class="gender-choice">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/unicorn--black.svg" alt="">
+            Other
+          </div>
         </div>
-        <div name="client-gender" data-value="female">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/kissing-face--black.svg" alt="">
-          Female
-        </div>
-        <div name="client-gender" data-value="other">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/unicorn--black.svg" alt="">
-          Other
-        </div>
+      </div>
+      <div class="client-gender__back">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
+        Back
       </div>
     </section>
 

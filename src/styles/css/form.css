@@ -73,8 +73,10 @@
 
 #soberlife-form-wrapper .form__relative-layer section.form__progress-bar .process {
   height: 100%;
-  width: 50%;
+  width: 0;
   background-color: #80ff73;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 #soberlife-form-wrapper .form__relative-layer .form__x-button {
@@ -131,6 +133,8 @@
 
 #soberlife-form-wrapper .form__relative-layer .question__your-name {
   left: 0;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__your-name h1 {
@@ -226,7 +230,7 @@
   justify-content: center;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-target .content-wrapper .target-wrapper div {
+#soberlife-form-wrapper .form__relative-layer .question__client-target .content-wrapper .target-wrapper .client-target {
   border: 5px solid #000;
   height: 80px;
   width: 300px;
@@ -236,6 +240,10 @@
   font-size: 2em;
   margin: 50px 30px 0;
   color: #000;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-target .content-wrapper .target-wrapper .client-target:hover {
+  cursor: pointer;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__client-target .client-target__back {

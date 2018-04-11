@@ -6,13 +6,11 @@ jQuery(document).ready(function($){
       fullName = $(this).val();
       spacePosition = fullName.indexOf(' ');
       firstName = fullName.slice(0, spacePosition);
+      $('.question__client-gender h1').html(`What does ${firstName} identify as?`);
     })
-    $('div[name="client-target"]').on('click', function () {
-      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+    $('div.client-target').on('click', function () {
+      if ( $(this).data('value') === 'myself' ) {
         $('.question__client-gender h1').html('What do you identify as?')
-      }
-      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
-        $('.question__client-gender h1').html(`What does ${firstName} identify as?`)
       }
     })
   })();
@@ -136,15 +134,72 @@ jQuery(document).ready(function($){
   }
 
   (function navigation () {
+    // client name
     $('.your-name__next-button').on('click', function () {
       loadingGreating1();
       $('.loading-screen').css('opacity', '1');
       $('.question__your-name').css('left', '100%');
       setTimeout( function () {
         $('.loading-screen').css('opacity', '0');
+      }, 3000 )
+      setTimeout( function () {
         $('.question__client-target').css('left', '0');
-      }, 2000 )
+      }, 4000 )
+      // process bar
+      $('.process').css('width', '12.5%')
     })
+
+    // client target
+    $('div.client-target').on('click', function () {
+      if ($(this).data('value') === 'myself') {
+        $('.loading-screen > div').html("That's awesome! You're already taking a step in the right direction.");
+        $('.loading-screen').css('opacity', '1');
+        $('.question__client-target').css('left', '100%');
+        setTimeout( function () {
+          $('.loading-screen').css('opacity', '0');
+        }, 3000);
+        setTimeout( function () {
+          $('.question__client-gender').css('left', '0');
+        }, 4000 )
+        // process bar
+        $('.process').css('width', '25%')
+      }
+      if ($(this).data('value') === 'a loved one') {
+        $('.question__client-target').css('left', '100%');
+        setTimeout( function () {
+          $('.question__loved-one-name').css('left', '0');
+        },1000)
+        // process bar
+        $('.process').css('width', '12.5%')
+      }
+    })
+    $('.client-target__back').on('click', function () {
+      $('.question__client-target').css('left', '100%');
+      setTimeout( function () {
+        $('.question__your-name').css('left', '0');
+      },1000)
+      // process bar
+      $('.process').css('width', '0')
+    })
+
+    // loved one's name
+    $('.loved-one-name__next-button').on('click', function () {
+      $('.question__loved-one-name').css('left', '100%');
+      setTimeout( function () {
+        $('.question__client-gender').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '25%')
+    })
+    $('.loved-one-name__back').on('click', function () {
+      $('.question__loved-one-name').css('left', '100%');
+      setTimeout( function () {
+        $('.question__client-target').css('left', '0');
+      }, 1000)
+    })
+
+
+
   })();
 
   

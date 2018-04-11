@@ -125,8 +125,8 @@
       <div class="content-wrapper">
         <h1>Who are you looking to help?</h1>
         <div class="target-wrapper">
-          <div name="client-target" data-value="myself">Myself</div>
-          <div name="client-target" data-value="a loved one">A Loved One</div>
+          <div class="client-target" name="client-target" data-value="myself">Myself</div>
+          <div class="client-target"  name="client-target" data-value="a loved one">A Loved One</div>
         </div> 
       </div>
       <div class="client-target__back">
@@ -137,7 +137,7 @@
 
     <section class="question__loved-one-name">
       <div class="content-wrapper">
-        <h1>What is your loved ones name?</h1>
+        <h1>What is your loved one's name?</h1>
         <div class="inputWrapper">
           <input id="loved-one-name" type="text" placeholder="First & Last Name">
           <div class="loved-one-name__next-button">

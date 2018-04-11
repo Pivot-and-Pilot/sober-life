@@ -58,8 +58,9 @@
       width: 100%;
       .process {
         height: 100%;
-        width: 50%;
+        width: 0;
         background-color: $color__green;
+        transition: width 0.5s ease-in-out;
       }
     }
     .form__x-button {
@@ -107,6 +108,7 @@
 
     .question__your-name {
       left: 0;
+      transition: left 0.5s ease-in-out;
       h1 {
         font-size: 4em;
         margin: 0;
@@ -174,7 +176,7 @@
           display: flex;
           flex-direction: row;
           justify-content: center;
-          div {
+          .client-target {
             border: 5px solid #000;
             height: 80px;
             width: 300px;
@@ -184,6 +186,9 @@
             font-size: 2em;
             margin: 50px 30px 0;
             color: #000;
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }

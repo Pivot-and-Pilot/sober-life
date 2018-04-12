@@ -101,6 +101,10 @@
   display: none;
 }
 
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons {
+  display: none;
+}
+
 #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
   position: relative;
 }
@@ -168,25 +172,6 @@
   height: 160px;
 }
 
-#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__play-btn {
-  position: absolute;
-  z-index: 1;
-  top: 15%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__play-btn img {
-  width: 40%;
-  height: 40%;
-  margin: 30% auto;
-  display: block;
-}
-
 #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image {
   height: 130px;
 }
@@ -214,12 +199,64 @@
   line-height: 16px;
 }
 
-#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button.current {
+#sobercollective-page #sobercollective__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#sobercollective-page #sobercollective__pagination #prev {
+  border: none;
+  outline: none;
+}
+
+#sobercollective-page #sobercollective__pagination #prev img {
+  width: 20px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages {
+  padding-top: 5px;
+  margin: 0 10px;
+  color: #aca79f;
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button {
+  border: none;
+  color: #aca79f;
+  font-family: "FFBauWebMedium";
   font-size: 16px;
+  outline: none;
+  padding: 0 2px;
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button.current {
+  color: black;
+}
+
+#sobercollective-page #sobercollective__pagination #next {
+  border: none;
+  outline: none;
+}
+
+#sobercollective-page #sobercollective__pagination #next img {
+  width: 20px;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
 }
 
 @media screen and (min-width: 1025px) {
   #sobercollective-page .sobercollective__top-bar {
+    margin-top: 50px;
+    margin-bottom: 50px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -266,6 +303,46 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 50%;
+    z-index: 1;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.cat-item {
+    position: relative;
+    font-size: 22px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.current {
+    text-decoration: underline;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 55%;
+    top: 50px;
+    left: -40px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img {
+    width: 115px;
+    opacity: 0.4;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:nth-child(1) {
+    opacity: 1;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:nth-child(2) {
+    margin-right: 25px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:hover {
+    opacity: 1;
   }
 
   #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
@@ -280,14 +357,53 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 50%;
+    padding-top: 100px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li.current {
+    text-decoration: underline;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li:not(.current):hover {
+    text-decoration: underline;
   }
 
   #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post {
     width: 32%;
   }
 
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image {
+    height: 300px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image img {
+    width: 100%;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--cat-name {
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+    padding: 3px 0 0 15px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--title {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--date {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__post--image {
     height: 450px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__post--image img {
+    width: 100%;
   }
 
   #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(8),
@@ -300,7 +416,39 @@
     height: 450px;
   }
 
-  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image {
-    height: 300px;
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(8) .sobercollective__post--image img,
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(9) .sobercollective__post--image img {
+    width: 100%;
+  }
+
+  #sobercollective-page #sobercollective__pagination #prev img {
+    width: 25px;
+  }
+
+  #sobercollective-page #sobercollective__pagination #prev img.active:hover {
+    -webkit-filter: brightness(65%);
+    filter: brightness(65%);
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages {
+    margin: 0 30px;
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button {
+    font-size: 20px;
+    padding: 2px 4px;
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button:not(.current):hover {
+    color: #79756f;
+  }
+
+  #sobercollective-page #sobercollective__pagination #next img {
+    width: 25px;
+  }
+
+  #sobercollective-page #sobercollective__pagination #next img.active:hover {
+    -webkit-filter: brightness(65%);
+    filter: brightness(65%);
   }
 }

@@ -19,13 +19,13 @@ get_header();
 		<main id="main" class="site-main">
 			<div id="sobercollective-page">
 			<?php if ( $wp_query->have_posts() ) : 
-			  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-				$wp_query = new WP_Query(array(
-					'post_type' 			=> 'post', 
-					'post_status'			=> 'publish', 
-					'posts_per_page'	=> 11, // MAKE THIS CONDITIONAL..........
-					'paged'						=> $paged
-				)); 
+			  // $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				// $wp_query = new WP_Query(array(
+				// 	'post_type' 			=> 'post', 
+				// 	'post_status'			=> 'publish', 
+				// 	'posts_per_page'	=> 11, // MAKE THIS CONDITIONAL..........
+				// 	'paged'						=> $paged
+				// )); 
 				$argsCatsMobile = array(
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
@@ -39,13 +39,18 @@ get_header();
 					'orderby' 		=> 'include', 
 					'include' 		=> array(13, 10, 11, 12),
 				);
-					//'feed_image' => svg images
 			?>	
 				<div class="sobercollective__top-bar">
-					<div class="sobercollective__searchbar"><?php echo do_shortcode('[searchandfilter fields="search"]'); ?></div>
-					<!-- <div class="sobercollective__searchbar"><input id="sobercollective__search-input" placeholder="Search" value=""/></div> -->
+					<!-- <div class="sobercollective__searchbar"><?php echo do_shortcode('[searchandfilter fields="search" search_placeholder="Search" submit_label=" "]'); ?></div> -->
+					<div class="sobercollective__searchbar"><?php get_search_form(); ?></div>
 					<div class="sobercollective__cats-mobile dropdown"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
 					<ul class="sobercollective__cats-desktop"><?php wp_list_categories($argsCatsDesktop); ?></ul>
+					<div class="sobercollective__cats-desktop-icons">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-01.svg">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-02.svg">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-03.svg">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-04.svg">						
+					</div>
 					<div class="sobercollective__tags-mobile dropdown">
 						<div class="sobercollective__tags-mobile-dropdown">
 							<?php 
@@ -79,22 +84,22 @@ get_header();
 					</ul>					
 				</div>
 				<div class="sobercollective__posts-wrapper">
-					<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
+					<!-- <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
 						get_template_part( 'template-parts/content', 'sober-collective' ); 
-					endwhile; ?>
+					endwhile; ?> -->
 				</div>
 
 				<!-- PAGINATION -->
 			
 				<?php	endif; ?>
 				<div id="sobercollective__pagination">
-					<button id="prev">PREV</button>					
+					<button id="prev"><img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg"></button>					
 					<div class="pagecount" style="">
-						<var id="curpage">1</var>
-						<var id="maxpage"><?php echo $wp_query->max_num_pages; ?></var>
+						<var id="curpage" style="display:none;">1</var>
+						<var id="maxpage" style="display:none;"><?php echo $wp_query->max_num_pages; ?></var>
 						<div id="sobercollective__pages"></div>
 					</div>
-					<button id="next">NEXT</button>
+					<button id="next"><img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg"></button>
 				</div>
 			</div>
 		</main><!-- #main -->

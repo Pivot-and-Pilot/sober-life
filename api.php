@@ -1,7 +1,36 @@
 <?php
 // ******************** //
-//  Get Initial Posts??????????????
+//  Get Initial Posts
 // ******************** //
+function ajax_get_initial_posts() {
+  $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+  $wp_query = new WP_Query(array(
+    'post_type'     => 'post',
+    'post_status'   => 'publish',
+    'posts_per_page'=> $_GET['posts_per_page'],
+    'paged'         => $paged
+  ));
+
+  if( $wp_query->have_posts() ) {
+    $results_html = '';
+    ob_start();
+    while ( $wp_query->have_posts() ) {
+      $wp_query->the_post();
+      get_template_part( 'template-parts/content-sober-collective', get_post_format() );
+    }
+    $results_html = ob_get_clean();  
+  }
+
+  // Build Response
+  $response = array();
+  array_push( $response, $results_html );
+  array_push( $response, $wp_query->max_num_pages );  
+  echo json_encode( $response );
+  die();
+}
+add_action('wp_ajax_ajax_get_initial_posts', 'ajax_get_initial_posts');
+add_action('wp_ajax_nopriv_ajax_get_initial_posts', 'ajax_get_initial_posts');
+
 
 // ***************** //
 //     Get Posts

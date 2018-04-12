@@ -264,6 +264,9 @@ section.front-page__success-stories {
       margin-left: 4vw;
       padding: 20px 50px;
       border-radius: 50px;
+      &:hover {
+        cursor: pointer;
+      }
     }
     a {
       display: none;

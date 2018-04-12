@@ -137,8 +137,15 @@ jQuery(document).ready(function($){
     // client name
     $('.your-name__next-button').on('click', function () {
       loadingGreating1();
-      $('.loading-screen').css('opacity', '1');
-      $('.question__your-name').css('left', '100%');
+      // loading screen
+      setTimeout( function () {
+        $('.loading-screen').css({
+          'opacity': '1',
+          'background-image': "url('wp-content/themes/sober-life/img/src/hand--green.svg')"
+        });
+      }, 1000)
+
+      $('.question__your-name').css('left', '-100%');
       setTimeout( function () {
         $('.loading-screen').css('opacity', '0');
       }, 3000 )
@@ -153,8 +160,14 @@ jQuery(document).ready(function($){
     $('div.client-target').on('click', function () {
       if ($(this).data('value') === 'myself') {
         $('.loading-screen > div').html("That's awesome! You're already taking a step in the right direction.");
-        $('.loading-screen').css('opacity', '1');
-        $('.question__client-target').css('left', '100%');
+        // loading screen
+        setTimeout( function(){
+          $('.loading-screen').css({
+            'opacity': '1',
+            'background-image': "url('wp-content/themes/sober-life/img/src/sun-symbol--green.svg')"
+          });
+        }, 1000)
+        $('.question__client-target').css('left', '-100%');
         setTimeout( function () {
           $('.loading-screen').css('opacity', '0');
         }, 3000);
@@ -165,7 +178,7 @@ jQuery(document).ready(function($){
         $('.process').css('width', '25%')
       }
       if ($(this).data('value') === 'a loved one') {
-        $('.question__client-target').css('left', '100%');
+        $('.question__client-target').css('left', '-100%');
         setTimeout( function () {
           $('.question__loved-one-name').css('left', '0');
         },1000)
@@ -184,10 +197,25 @@ jQuery(document).ready(function($){
 
     // loved one's name
     $('.loved-one-name__next-button').on('click', function () {
-      $('.question__loved-one-name').css('left', '100%');
+      $('.question__loved-one-name').css('left', '-100%');
+      // loading screen
+      let fullName, firstName, spacePosition;
+      fullName = $('#loved-one-name-hidden').val();
+      spacePosition = fullName.indexOf(' ');
+      firstName = fullName.slice(0, spacePosition);
+      $('.loading-screen > div').html(`With the right support ${firstName} will be well equipt to get on the right track`);
+      setTimeout( function(){
+        $('.loading-screen').css({
+          'opacity': '1',
+          'background-image': "url('wp-content/themes/sober-life/img/src/sun-symbol--green.svg')"
+        });
+      }, 1000)
+      setTimeout( function () {
+        $('.loading-screen').css('opacity', '0');
+      }, 3000)
       setTimeout( function () {
         $('.question__client-gender').css('left', '0');
-      }, 1000)
+      }, 4000)
       // process bar
       $('.process').css('width', '25%')
     })
@@ -198,9 +226,143 @@ jQuery(document).ready(function($){
       }, 1000)
     })
 
+    // gender
+    $('.gender-choice').on('click', function () {
+      $('.question__client-gender').css('left', '-100%');
+      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+        setTimeout( function () {
+          $('.question__client-feeling').css('left', '0');
+        }, 1000)
+      }
+      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
+        setTimeout( function () {
+          $('.question__loved-one-feeling').css('left', '0');
+        }, 1000)
+      }
+      // process bar
+      $('.process').css('width', '37.5%')
+    })
+    $('.client-gender__back').on('click', function () {
+      $('.question__client-gender').css('left', '100%');
+      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+        setTimeout( function () {
+          $('.question__client-target').css('left', '0');
+        }, 1000)
+      }
+      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
+        setTimeout( function () {
+          $('.question__loved-one-name').css('left', '0');
+        }, 1000)
+      }
+      // process bar
+      $('.process').css('width', '12.5%')
+    })
+
+    // feeling
+    // client feeling
+    $('.feeling-choice').on('click', function () {
+      let fullName, firstName, spacePosition;
+      fullName = $('#client-name-hidden').val();
+      spacePosition = fullName.indexOf(' ');
+      firstName = fullName.slice(0, spacePosition);
+      $('.question__client-feeling').css('left', '-100%');
+      // loading screen
+      if ( $(this).data('value') === 'hesitant') {
+        $('.loading-screen > div').html(`We understand your hesitation, ${firstName}. Rest assured, you will have all the necessary resources avaiable you on this journey.`);
+      }
+      if ( $(this).data('value') === 'moderate') {
+        $('.loading-screen > div').html(`No worries, we have every resource avaiable and will answer all the questions you might have`);
+      }
+      if ( $(this).data('value') === 'i am ready for change') {
+        $('.loading-screen > div').html(`Amazing! Just a few more questions and we'll get you started on this new chapter of life!`);
+      }
+      setTimeout ( function () {
+        $('.loading-screen').css({
+          'opacity': '1',
+          'background-image': "unset"
+        });
+      }, 1000)
+      setTimeout ( function () {
+        $('.loading-screen').css({
+          'opacity': '0',
+        });
+      }, 3000)
+      setTimeout ( function () {
+        $('.question__client-substances-used').css('left', '0');
+      }, 4000)
+      // process bar
+      $('.process').css('width', '50%')
+    })
+    $('.client-feeling__back').on('click', function () {
+      $('.question__client-feeling').css('left', '100%');
+      setTimeout( function(){
+        $('.question__client-gender').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '25%')
+    })
+
+    // loved one's feeling
+    $('.loved-one-feeling-choice').on('click', function () {
+      let fullName, firstName, spacePosition;
+      fullName = $('#loved-one-name-hidden').val();
+      spacePosition = fullName.indexOf(' ');
+      firstName = fullName.slice(0, spacePosition);
+      $('.question__loved-one-feeling').css('left', '-100%');
+      // loading screen
+      if ( $(this).data('value') === 'hesitant') {
+        $('.loading-screen > div').html(`Hesitation is totally normal. We're here to help ${firstName} discover the different possibilities that change can bring.`);
+      }
+      if ( $(this).data('value') === 'moderate') {
+        $('.loading-screen > div').html(`No worries, we have every resource avaiable so that ${firstName} can make an informed decision.`);
+      }
+      if ( $(this).data('value') === 'it is time for change') {
+        $('.loading-screen > div').html(`That's great! Just a few more questions and we can get ${firstName} started on this new chapter.`);
+      }
+      if ( $(this).data('value') === 'dont know') {
+        $('.loading-screen > div').html(`No worries, just a few more questions and we can talk about starting ${firstName} on the journey to recovery!`);
+      }
+      setTimeout ( function () {
+        $('.loading-screen').css({
+          'opacity': '1',
+          'background-image': "unset"
+        });
+      }, 1000)
+      setTimeout ( function () {
+        $('.loading-screen').css({
+          'opacity': '0',
+        });
+      }, 3000)
+      setTimeout ( function () {
+        $('.question__loved-one-substances-used').css('left', '0');
+      }, 4000)
+      // process bar
+      $('.process').css('width', '50%')
+    })
+    $('.loved-one-feeling__back').on('click', function () {
+      $('.question__loved-one-feeling').css('left', '100%');
+      setTimeout( function(){
+        $('.question__client-gender').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '25%')
+    })
+  
+    // substances used
+    $('.substance-choice').on('click', function(){
+      $(this).toggleClass('substance-chosen');
+      $('.substances-used__skip').css('display', 'none');
+      $('.substances-used__next').css('display', 'block');
+    })
+
+
+
+
 
 
   })();
+
+
 
   
 })

@@ -121,6 +121,9 @@
 #soberlife-form-wrapper .form__relative-layer .loading-screen {
   left: 0;
   opacity: 0;
+  background-repeat: no-repeat;
+  background-size: 80% 80%;
+  background-position: center;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -129,6 +132,7 @@
   color: #000;
   font-family: "FFBauWebMedium";
   font-size: 4em;
+  text-align: center;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__your-name {
@@ -696,6 +700,10 @@
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-choice:hover {
   border: 5px solid #80ff73;
   cursor: pointer;
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-chosen {
+  border: 5px solid #80ff73 !important;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used {

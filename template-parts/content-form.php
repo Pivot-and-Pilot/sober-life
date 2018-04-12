@@ -108,7 +108,8 @@
     <section class="loading-screen">
       <div class="content-wrapper"></div>
     </section>
-
+    
+    <!-- your name -->
     <section class="question__your-name">
       <div class="content-wrapper">
         <h1>What is your name?</h1>
@@ -121,6 +122,7 @@
       </div>
     </section>
 
+    <!-- client target -->
     <section class="question__client-target">
       <div class="content-wrapper">
         <h1>Who are you looking to help?</h1>
@@ -135,6 +137,7 @@
       </div>
     </section>
 
+    <!-- loved one's name -->
     <section class="question__loved-one-name">
       <div class="content-wrapper">
         <h1>What is your loved one's name?</h1>
@@ -151,6 +154,7 @@
       </div>
     </section>
 
+    <!-- client gender -->
     <section class="question__client-gender">
       <div class="content-wrapper">
         <h1></h1>
@@ -175,6 +179,7 @@
       </div>
     </section>
 
+    <!-- client's feeling -->
     <section class="question__client-feeling">
       <div class="content-wrapper">
         <h1>How do you feel about recovery?</h1>
@@ -198,6 +203,7 @@
         Back
       </div>
     </section>
+    <!-- loved one's feeling -->
     <section class="question__loved-one-feeling">
       <div class="content-wrapper">
         <h1>How do they feel about recovery?</h1>
@@ -225,7 +231,8 @@
         Back
       </div>
     </section>
-
+    
+    <!-- substances used -->
     <section class="question__client-substances-used">
       <div class="content-wrapper">
         <h1>Substances used</h1>
@@ -253,6 +260,7 @@
         Next
       </div>
     </section>
+    <!-- loved one substances used -->
     <section class="question__loved-one-substances-used">
       <div class="content-wrapper">
       <h1>Substances used</h1>
@@ -285,6 +293,8 @@
       </div>
     </section>
 
+
+    <!-- effects -->
     <section class="question__drug-effects-life">
       <div class="content-wrapper">
         <h1></h1>
@@ -319,6 +329,7 @@
       </div>
     </section>
 
+    <!-- personal info -->
     <section class="form__personal-info">
       <div class="content-wrapper">
         <div class="personal-info-0">

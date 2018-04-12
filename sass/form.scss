@@ -98,11 +98,15 @@
     .loading-screen {
       left: 0;
       opacity: 0;
+      background-repeat: no-repeat;
+      background-size: 80% 80%;
+      background-position: center;
       transition: all 0.5s ease-in-out;
       .content-wrapper {
         color: #000;
         font-family: $font__main--med;
         font-size: 4em;
+        text-align: center;
       }
     }
 
@@ -504,6 +508,9 @@
               border: 5px solid $color__green;
               cursor: pointer;
             }
+          }
+          .substance-chosen {
+            border: 5px solid $color__green !important;
           }
         }
         .other-substances-used {

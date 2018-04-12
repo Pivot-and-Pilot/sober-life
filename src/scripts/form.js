@@ -16,12 +16,12 @@ jQuery(document).ready(function($){
   })();
 
   (function customizedText () {
-    $('div[name="client-target"]').on('click', function () {
-      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
+    $('div.client-target').on('click', function () {
+      if ( $(this).data('value') === 'myself' ) {
         $('.question__drug-effects-life h1').html('How is drug usage effecting your life?')
         $('.insurance-yes-no-wrapper > p').html('Do you have insurance?');
       }
-      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
+      if ( $(this).data('value') === 'a loved one' ) {
         $('.question__drug-effects-life h1').html('How is drug usage effecting their life?');
         $('.insurance-yes-no-wrapper > p').html('Do they have insurance?');
       }
@@ -153,7 +153,7 @@ jQuery(document).ready(function($){
         $('.question__client-target').css('left', '0');
       }, 4000 )
       // process bar
-      $('.process').css('width', '12.5%')
+      $('.process').css('width', '25%')
     })
 
     // client target
@@ -175,7 +175,7 @@ jQuery(document).ready(function($){
           $('.question__client-gender').css('left', '0');
         }, 4000 )
         // process bar
-        $('.process').css('width', '25%')
+        $('.process').css('width', '37.5%')
       }
       if ($(this).data('value') === 'a loved one') {
         $('.question__client-target').css('left', '-100%');
@@ -217,7 +217,7 @@ jQuery(document).ready(function($){
         $('.question__client-gender').css('left', '0');
       }, 4000)
       // process bar
-      $('.process').css('width', '25%')
+      $('.process').css('width', '37.5%')
     })
     $('.loved-one-name__back').on('click', function () {
       $('.question__loved-one-name').css('left', '100%');
@@ -240,7 +240,7 @@ jQuery(document).ready(function($){
         }, 1000)
       }
       // process bar
-      $('.process').css('width', '37.5%')
+      $('.process').css('width', '50%')
     })
     $('.client-gender__back').on('click', function () {
       $('.question__client-gender').css('left', '100%');
@@ -255,7 +255,7 @@ jQuery(document).ready(function($){
         }, 1000)
       }
       // process bar
-      $('.process').css('width', '12.5%')
+      $('.process').css('width', '25%')
     })
 
     // feeling
@@ -291,7 +291,7 @@ jQuery(document).ready(function($){
         $('.question__client-substances-used').css('left', '0');
       }, 4000)
       // process bar
-      $('.process').css('width', '50%')
+      $('.process').css('width', '62.5%')
     })
     $('.client-feeling__back').on('click', function () {
       $('.question__client-feeling').css('left', '100%');
@@ -299,7 +299,7 @@ jQuery(document).ready(function($){
         $('.question__client-gender').css('left', '0');
       }, 1000)
       // process bar
-      $('.process').css('width', '25%')
+      $('.process').css('width', '37.5%')
     })
 
     // loved one's feeling
@@ -337,7 +337,7 @@ jQuery(document).ready(function($){
         $('.question__loved-one-substances-used').css('left', '0');
       }, 4000)
       // process bar
-      $('.process').css('width', '50%')
+      $('.process').css('width', '62.5%')
     })
     $('.loved-one-feeling__back').on('click', function () {
       $('.question__loved-one-feeling').css('left', '100%');
@@ -345,21 +345,127 @@ jQuery(document).ready(function($){
         $('.question__client-gender').css('left', '0');
       }, 1000)
       // process bar
-      $('.process').css('width', '25%')
+      $('.process').css('width', '37.5%')
     })
   
     // substances used
+      // yourself
     $('.substance-choice').on('click', function(){
-      $(this).toggleClass('substance-chosen');
       $('.substances-used__skip').css('display', 'none');
       $('.substances-used__next').css('display', 'block');
+      $('.loved-one-substances-used__skip').css('display', 'none');
+      $('.loved-one-substances-used__next').css('display', 'block');
+    })
+    $('.other-substances-used').on('change', function(){
+      $('.substances-used__skip').css('display', 'none');
+      $('.substances-used__next').css('display', 'block');
+      $('.loved-one-substances-used__skip').css('display', 'none');
+      $('.loved-one-substances-used__next').css('display', 'block');
     })
 
+    $('.substances-used__next').on('click', function(){
+      $('.question__client-substances-used').css('left', '-100%');
+      setTimeout( function(){
+        $('.question__drug-effects-life').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '75%')
+    })
 
+    $('.substances-used__skip').on('click', function(){
+      $('.question__client-substances-used').css('left', '-100%');
+      setTimeout( function(){
+        $('.question__drug-effects-life').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '75%')
+    })
 
+    $('.substances-used__back').on('click', function(){
+      $('.question__client-substances-used').css('left', '100%');
+      setTimeout( function(){
+        $('.question__client-feeling').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '50%')
+    })
 
+      // loved one
+    $('.loved-one-substances-used__back').on('click', function(){
+      $('.question__loved-one-substances-used').css('left', '100%');
+      setTimeout( function(){
+        $('.question__loved-one-feeling').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '50%')
+    })
 
+    $('.loved-one-substances-used__next').on('click', function(){
+      $('.question__loved-one-substances-used').css('left', '-100%');
+      setTimeout( function(){
+        $('.question__drug-effects-life').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '75%')
+    })
 
+    $('.loved-one-substances-used__skip').on('click', function(){
+      $('.question__loved-one-substances-used').css('left', '-100%');
+      setTimeout( function(){
+        $('.question__drug-effects-life').css('left', '0');
+      }, 1000)
+      // process bar
+      $('.process').css('width', '75%')
+    })
+
+    // effects in life
+    $('.effect-choice').on('click', function () {
+      $('.effects__skip').hide();
+      $('.effects__next').show();
+    })
+
+    $('.effects__next').on('click', function () {
+      $('.question__drug-effects-life').css('left', '-100%');
+      $('.form__personal-info').css('left', '0');
+      // process bar
+      $('.process').css('width', '87.5%')
+    })
+
+    $('.effects__skip').on('click', function () {
+      $('.question__drug-effects-life').css('left', '-100%');
+      $('.form__personal-info').css('left', '0');
+      // process bar
+      $('.process').css('width', '87.5%')
+    })
+
+    $('.effects__back').on('click', function () {
+      $('.question__drug-effects-life').css('left', '100%');
+      if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked')) {
+        $('.question__client-substances-used').css('left', '0');
+      }
+      if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked')) {
+        $('.question__loved-one-substances-used').css('left', '0');
+      }
+      // process bar
+      $('.process').css('width', '62.5%')
+    })
+
+    // personal info
+    $('.personal-info__back').on('click', function(){
+      $('.form__personal-info').css('left', '100%');
+      $('.question__drug-effects-life').css('left', 0);
+      // process bar
+      $('.process').css('width', '75%')
+    })
+    $('#form__submit').on('click', function(){
+      // process bar
+      $('.process').css('width', '100%')
+    })
+
+    // x button
+    $('.form__x-button').on('click', function () {
+      $('#soberlife-form-wrapper').css('left', '100%');
+    })
   })();
 
 

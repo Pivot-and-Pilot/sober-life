@@ -1,3 +1,7 @@
+.choice-chosen {
+  border: 5px solid #80ff73 !important;
+}
+
 #sober-life-hidden-form {
   display: none;
 }
@@ -9,8 +13,10 @@
   position: fixed;
   display: block;
   top: 0;
-  left: 0;
+  left: 100%;
   z-index: 10;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
   background-color: #f5f0e8;
 }
 
@@ -73,7 +79,7 @@
 
 #soberlife-form-wrapper .form__relative-layer section.form__progress-bar .process {
   height: 100%;
-  width: 0;
+  width: 12.5%;
   background-color: #80ff73;
   -webkit-transition: width 0.5s ease-in-out;
   transition: width 0.5s ease-in-out;
@@ -702,10 +708,6 @@
   cursor: pointer;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-chosen {
-  border: 5px solid #80ff73 !important;
-}
-
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used {
   margin: 0 auto;
   height: 70px;
@@ -962,7 +964,7 @@
   margin-right: 10px;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip {
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__skip {
   position: absolute;
   bottom: 80px;
   right: 50px;
@@ -977,16 +979,16 @@
   color: #000;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip:hover {
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__skip:hover {
   cursor: pointer;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__skip img {
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__skip img {
   height: 30px;
   margin-left: 10px;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__next {
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__next {
   display: none;
   position: absolute;
   bottom: 80px;
@@ -1001,7 +1003,7 @@
   border-radius: 25px;
 }
 
-#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .substances-used__next:hover {
+#soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__next:hover {
   border: 5px solid #80ff73;
   cursor: pointer;
 }
@@ -1414,7 +1416,18 @@
 }
 
 #soberlife-form-wrapper .form__relative-layer .thank-you {
-  left: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #f5f0e8;
+  background-image: url("../../img/src/smiley-face--green.svg");
+  background-position: center;
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
 }
 
 #soberlife-form-wrapper .form__relative-layer .thank-you .content-wrapper {
@@ -1449,7 +1462,14 @@
 }
 
 #soberlife-form-wrapper .form__relative-layer .not-sent {
-  left: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #f5f0e8;
 }
 
 #soberlife-form-wrapper .form__relative-layer .not-sent .content-wrapper {

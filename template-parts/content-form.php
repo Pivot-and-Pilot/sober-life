@@ -277,18 +277,18 @@
         <div class="substances-wrapper-1">
           <div class="hidden"></div>
           <input class="other-substances-used" type="text" placeHolder="Other" name="substances-used">
-          <div class="substances-used-unsure" name="substances-used" data-value="unsure">Unsure</div>
+          <div class="substance-choice substances-used-unsure" name="substances-used" data-value="unsure">Unsure</div>
         </div>
       </div>
       <div class="loved-one-substances-used__back">
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
         Back
       </div>
-      <div class="substances-used__skip">
+      <div class="loved-one-substances-used__skip">
         Skip
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">  
       </div>
-      <div class="substances-used__next">
+      <div class="loved-one-substances-used__next">
         Next
       </div>
     </section>

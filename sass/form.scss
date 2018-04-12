@@ -1,5 +1,8 @@
 @import 'variables-site/variables-site';
 
+.choice-chosen {
+  border: 5px solid $color__green !important;
+}
 #sober-life-hidden-form {
   display: none;
 }
@@ -10,8 +13,9 @@
   position: fixed;
   display: block;
   top: 0;
-  left: 0;
+  left: 100%;
   z-index: 10;
+  transition: left 0.5s ease-in-out;
   background-color: #f5f0e8;
   .form__relative-layer {
     position: relative;
@@ -50,6 +54,7 @@
         }
       }
     }
+
     section.form__progress-bar {
       position: absolute;
       top: calc(100% - 50px);
@@ -58,11 +63,12 @@
       width: 100%;
       .process {
         height: 100%;
-        width: 0;
+        width: 12.5%;
         background-color: $color__green;
         transition: width 0.5s ease-in-out;
       }
     }
+
     .form__x-button {
       position: absolute;
       display: block;
@@ -81,6 +87,7 @@
         }
       }
     }
+
     section {
       position: absolute;
       top: 0;
@@ -509,9 +516,6 @@
               cursor: pointer;
             }
           }
-          .substance-chosen {
-            border: 5px solid $color__green !important;
-          }
         }
         .other-substances-used {
           margin: 0 auto;
@@ -690,7 +694,7 @@
           margin-right: 10px;
         }
       }
-      .substances-used__skip {
+      .loved-one-substances-used__skip {
         position: absolute;
         bottom: 80px;
         right: 50px;
@@ -707,7 +711,7 @@
           margin-left: 10px;
         }
       }
-      .substances-used__next {
+      .loved-one-substances-used__next {
         display: none;
         position: absolute;
         bottom: 80px;
@@ -1001,7 +1005,18 @@
     }
 
     .thank-you {
-      left: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background-color: $color__white;
+      background-image: url('../../img/src/smiley-face--green.svg');
+      background-position: center;
+      background-size: 70% 70%;
+      background-repeat: no-repeat;
       .content-wrapper {
         width: 80%;
         text-align: center;
@@ -1032,7 +1047,14 @@
     }
 
     .not-sent {
-      left: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background-color: $color__white;
       .content-wrapper {
         font-size: 2em;
         font-family: $font__main--med;

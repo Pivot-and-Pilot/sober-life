@@ -170,7 +170,7 @@ jQuery(document).ready(function($){
           $('.question__loved-one-name').css('left', '0');
         },1000)
         // process bar
-        $('.process').css('width', '12.5%')
+        $('.process').css('width', '25%')
       }
     })
     $('.client-target__back').on('click', function () {

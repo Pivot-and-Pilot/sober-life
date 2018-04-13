@@ -361,6 +361,9 @@ header {
                     display: block;
                   }
                 }
+                img.active {
+                  display: block;
+                }
               }
             }
             li:nth-child(3) {
@@ -411,18 +414,38 @@ header {
                   a {
                     cursor: pointer;
                     img {
-                      display: none;
+                      // display: none;
                     }
                   }
                 }
               }
               &:hover {
+                img:nth-child(1) {
+                  display: block;
+                }
                 .sub-menu {
                   visibility: visible;
                   opacity: 1;
                   z-index: 1;
                   transform: translateY(0);
                   transition-delay: 0s, 0s, 0.3s;
+                  li {
+                    a {
+                      img {
+                        display: none;
+                      }
+                      img.active {
+                        display: block;
+                      }
+                    }
+                    &:hover {
+                      a {
+                        img{ 
+                          display: block;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

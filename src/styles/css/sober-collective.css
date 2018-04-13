@@ -284,30 +284,37 @@
     font-size: 22px;
   }
 
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons {
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.cat-item:nth-child(2) {
+    padding-left: 10px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper {
+    width: 50%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    width: 55%;
-    top: 50px;
+    margin-left: -40px;
+    margin-right: -30px;
+    right: 50%;
     left: -40px;
   }
 
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img {
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons img {
     width: 115px;
     opacity: 0.4;
   }
 
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:nth-child(1) {
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons img:nth-child(1) {
     opacity: 1;
-  }
-
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:nth-child(2) {
-    margin-right: 25px;
   }
 
   #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {

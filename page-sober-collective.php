@@ -37,12 +37,14 @@ get_header();
 					<div class="sobercollective__searchbar"><?php get_search_form(); ?></div>
 					<div class="sobercollective__cats-mobile dropdown"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
 					<ul class="sobercollective__cats-desktop"><?php wp_list_categories($argsCatsDesktop); ?></ul>
-					<div class="sobercollective__cats-desktop-icons">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-01.svg">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-02.svg">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-03.svg">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-04.svg">						
-					</div>
+					<div class="sobercollective__cats-desktop-icons-wrapper">
+						<div class="sobercollective__cats-desktop-icons">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-01.svg">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-02.svg">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-03.svg">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-04.svg">						
+						</div>
+					</div>					
 					<div class="sobercollective__tags-mobile dropdown">
 						<div class="sobercollective__tags-mobile-dropdown">
 							<?php 

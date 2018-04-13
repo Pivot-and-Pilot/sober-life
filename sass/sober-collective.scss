@@ -20,84 +20,10 @@
     }
     .sobercollective__searchbar {
       padding-bottom: 20px;
-      // form {
-      //   div {
-      //     ul {
-      //       width: 100%;
-      //       li {
-      //         width: 100%;
-      //         input {
-      //           background-color: #e9e2d6;
-      //           border: none;
-      //           border-radius: 25px;
-      //           font-size: 18px;
-      //           height: 50px;
-      //           outline: none;
-      //           padding-left: 20px;
-      //           padding-top: 5px;
-      //           width: 100%;
-      //           &::placeholder {
-      //             color: black;
-      //           }
-      //         }
-      //       }
-      //       li:nth-child(2) {
-      //         display: none;
-      //       }
-      //     }
-      //   }
-
-      // input {
-      //   background-color: #e9e2d6;
-      //   border: none;
-      //   border-radius: 25px;
-      //   font-size: 18px;
-      //   height: 50px;
-      //   outline: none;
-      //   padding-left: 20px;
-      //   width: 100%;
-      //   &::placeholder {
-      //     color: black;
-      //   }
-      // }
-      #ajaxsearchlite1 {
-        background-image: none;
-        background: none;
-        .probox {
-          background-color: #e9e2d6;
-          background-image: none;
-          border: none;
-          height: 50px;
-          border-radius: 25px;
-          .promagnifier {
-            display: none;
-          }
-          .prosettings {
-            height: 100%;
-            background-color: $color__green;
-            background-image: none;
-            border: none;
-          }
-          .proinput {
-            form {
-              input {
-                font-family: $font__main;
-                color: black !important;
-                font-size: 18px !important;
-                height: 50px;
-                &::placeholder {
-                  font-family: $font__main;
-                  color: black !important;
-                  font-size: 18px !important;
-                }
-              }
-            }
-          }
-        }
-      }
     }
     .sobercollective__cats-mobile {
       padding: 10px 0;
+      position: relative;
       select {
         appearance: none;
         background-color: #e9e2d6;
@@ -110,6 +36,16 @@
         padding-left: 15px;
         width: 100%;
       }
+      &:after {
+        content: '>';
+        font-family: $font__main;
+        transform: rotate(90deg);
+        position: absolute;
+        font-size: 35px;
+        color: #aca79f;
+        right: 15px;
+        top: 10px;
+      }
     }
     .sobercollective__cats-desktop {
       display: none;
@@ -120,6 +56,7 @@
     .sobercollective__tags-mobile {
       position: relative;
       .sobercollective__tags-mobile-dropdown {
+        position: relative;
         select {
           appearance: none;
           background-color: #e9e2d6;
@@ -131,6 +68,17 @@
           outline: none;
           padding-left: 15px;
           width: 100%;
+        }
+        &:after {
+          content: '>';
+          font-family: $font__main;
+          transform: rotate(90deg);
+          position: absolute;
+          font-size: 35px;
+          color: #aca79f;
+          right: 15px;
+          top: 0px;
+          
         }
       }
     }
@@ -266,7 +214,6 @@
   #sobercollective-page {
     .sobercollective__top-bar {
       margin-top: 50px;
-      margin-bottom: 50px;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -301,10 +248,6 @@
           // width: 30%;
           position: relative;
           font-size: 22px;
-
-        }
-        li.current {
-          text-decoration: underline;
         }
       }
       .sobercollective__cats-desktop-icons {
@@ -325,9 +268,9 @@
           &:nth-child(2) {
             margin-right: 25px;
           }
-          &:hover {
-            opacity: 1;
-          }
+          // &:hover {
+          //   opacity: 1;
+          // }
         }
       }
       .sobercollective__tags-mobile {
@@ -337,7 +280,7 @@
         display: flex;
         justify-content: space-between;
         width: 50%;
-        padding-top: 100px;
+        padding-top: 60px;
         li {
           a {
             // font-family: $font__main;

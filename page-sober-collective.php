@@ -19,13 +19,6 @@ get_header();
 		<main id="main" class="site-main">
 			<div id="sobercollective-page">
 			<?php if ( $wp_query->have_posts() ) : 
-			  // $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-				// $wp_query = new WP_Query(array(
-				// 	'post_type' 			=> 'post', 
-				// 	'post_status'			=> 'publish', 
-				// 	'posts_per_page'	=> 11, // MAKE THIS CONDITIONAL..........
-				// 	'paged'						=> $paged
-				// )); 
 				$argsCatsMobile = array(
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
@@ -41,7 +34,6 @@ get_header();
 				);
 			?>	
 				<div class="sobercollective__top-bar">
-					<!-- <div class="sobercollective__searchbar"><?php echo do_shortcode('[searchandfilter fields="search" search_placeholder="Search" submit_label=" "]'); ?></div> -->
 					<div class="sobercollective__searchbar"><?php get_search_form(); ?></div>
 					<div class="sobercollective__cats-mobile dropdown"><?php wp_dropdown_categories($argsCatsMobile); ?></div>
 					<ul class="sobercollective__cats-desktop"><?php wp_list_categories($argsCatsDesktop); ?></ul>
@@ -83,10 +75,49 @@ get_header();
 						?>
 					</ul>					
 				</div>
+
+				<?php
+					if( isset( $_GET['search']) ) {
+						// if (have_posts()) : 
+							
+							printf( esc_html__( 'Search Results for: '. $_GET['search'] , 'sober-life' ), '<span>' . get_search_query() . '</span>' );
+
+							// while (have_posts()):
+							// 	get_template_part('template-parts/content', 'sober-collective');
+							// endwhile;
+						// endif;
+							if ( have_posts() ) : while ( have_posts() ) : the_post();
+							the_permalink();
+							endwhile;endif;
+							
+					}
+				?>
+			<!-- <div id="search">
+				<?php if ( have_posts() ) : 
+					/* Start the Loop */
+					while ( have_posts() ) : 
+						the_post();
+
+						/**
+						 * Run the loop for the search to output the results.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-search.php and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content', 'sober-collective' );
+
+					endwhile;
+
+
+				else :
+
+					get_template_part( 'template-parts/content', 'none' );
+
+				endif;
+				?>
+			</div> -->
+
 				<div class="sobercollective__posts-wrapper">
-					<!-- <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 
-						get_template_part( 'template-parts/content', 'sober-collective' ); 
-					endwhile; ?> -->
+
 				</div>
 
 				<!-- PAGINATION -->

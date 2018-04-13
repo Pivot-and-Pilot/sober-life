@@ -23,63 +23,9 @@
   padding-bottom: 20px;
 }
 
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 {
-  background-image: none;
-  background: none;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox {
-  background-color: #e9e2d6;
-  background-image: none;
-  border: none;
-  height: 50px;
-  border-radius: 25px;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .promagnifier {
-  display: none;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .prosettings {
-  height: 100%;
-  background-color: #80ff73;
-  background-image: none;
-  border: none;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input {
-  font-family: "FFBauWeb", sans-serif;
-  color: black !important;
-  font-size: 18px !important;
-  height: 50px;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::-webkit-input-placeholder {
-  font-family: "FFBauWeb", sans-serif;
-  color: black !important;
-  font-size: 18px !important;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input:-ms-input-placeholder {
-  font-family: "FFBauWeb", sans-serif;
-  color: black !important;
-  font-size: 18px !important;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::-ms-input-placeholder {
-  font-family: "FFBauWeb", sans-serif;
-  color: black !important;
-  font-size: 18px !important;
-}
-
-#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar #ajaxsearchlite1 .probox .proinput form input::placeholder {
-  font-family: "FFBauWeb", sans-serif;
-  color: black !important;
-  font-size: 18px !important;
-}
-
 #sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile {
   padding: 10px 0;
+  position: relative;
 }
 
 #sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile select {
@@ -97,6 +43,18 @@
   width: 100%;
 }
 
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile:after {
+  content: '>';
+  font-family: "FFBauWeb", sans-serif;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 35px;
+  color: #aca79f;
+  right: 15px;
+  top: 10px;
+}
+
 #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop {
   display: none;
 }
@@ -106,6 +64,10 @@
 }
 
 #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
+  position: relative;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile .sobercollective__tags-mobile-dropdown {
   position: relative;
 }
 
@@ -122,6 +84,18 @@
   outline: none;
   padding-left: 15px;
   width: 100%;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile .sobercollective__tags-mobile-dropdown:after {
+  content: '>';
+  font-family: "FFBauWeb", sans-serif;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 35px;
+  color: #aca79f;
+  right: 15px;
+  top: 0px;
 }
 
 #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop {
@@ -256,7 +230,6 @@
 @media screen and (min-width: 1025px) {
   #sobercollective-page .sobercollective__top-bar {
     margin-top: 50px;
-    margin-bottom: 50px;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -311,10 +284,6 @@
     font-size: 22px;
   }
 
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.current {
-    text-decoration: underline;
-  }
-
   #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -341,10 +310,6 @@
     margin-right: 25px;
   }
 
-  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons img:hover {
-    opacity: 1;
-  }
-
   #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
     display: none;
   }
@@ -357,7 +322,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     width: 50%;
-    padding-top: 100px;
+    padding-top: 60px;
   }
 
   #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li.current {

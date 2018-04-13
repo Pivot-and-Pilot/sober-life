@@ -33,4 +33,8 @@ jQuery(document).ready(function($) {
   $('#header__menu-nav-bar #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
   });
+
+  $('#primary-menu li a').each(function() {
+    $(this).append(`<img src="http://localhost:3000/soberlife/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`);
+  });
 });

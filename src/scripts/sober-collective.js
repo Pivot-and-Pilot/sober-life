@@ -302,6 +302,7 @@ jQuery(document).ready(function($) {
         $(this).parent().addClass('current');
         currCat = newCat;
         ajax_filter_posts(currCat, currTag);
+        updateActiveCatIcon($(this).parent().index());
       });
 
       // On Tag Click
@@ -366,6 +367,31 @@ jQuery(document).ready(function($) {
         $(this).prepend(
           `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
         );
+      }
+    });
+  })();
+
+  // OTHER
+
+  // Connect desktop nav bar li.current to corresponding icon
+  function updateActiveCatIcon(pos) {
+    // let pos = $('.sobercollective__cats-desktop li.current').index();
+    console.log(pos);
+    $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
+    $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
+  }
+
+  // Desktop nav bar hover over effect
+  (function hoverCatIcon() {
+    $('.sobercollective__cats-desktop li').hover(function() {
+      if (!$(this).hasClass('current')) {
+        let position = $(this).index();
+        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 1);
+      }
+    }, function() {
+      if (!$(this).hasClass('current')) {      
+        let position = $(this).index();    
+        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 0.4);    
       }
     });
   })();

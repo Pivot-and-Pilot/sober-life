@@ -45,7 +45,7 @@ get_header();
 							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/SBL_blog-04.svg">						
 						</div>
 					</div>					
-					<div class="sobercollective__tags-mobile dropdown">
+					<div class="sobercollective__tags-mobile dropdown"> 
 						<div class="sobercollective__tags-mobile-dropdown">
 							<?php 
 								$tagsMobile = get_tags(array(
@@ -77,46 +77,7 @@ get_header();
 						?>
 					</ul>					
 				</div>
-
-				<?php
-					if( isset( $_GET['search']) ) {
-						// if (have_posts()) : 
-							
-							printf( esc_html__( 'Search Results for: '. $_GET['search'] , 'sober-life' ), '<span>' . get_search_query() . '</span>' );
-
-							// while (have_posts()):
-							// 	get_template_part('template-parts/content', 'sober-collective');
-							// endwhile;
-						// endif;
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
-							the_permalink();
-							endwhile;endif;
-							
-					}
-				?>
-			<!-- <div id="search">
-				<?php if ( have_posts() ) : 
-					/* Start the Loop */
-					while ( have_posts() ) : 
-						the_post();
-
-						/**
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', 'sober-collective' );
-
-					endwhile;
-
-
-				else :
-
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif;
-				?>
-			</div> -->
+				<div id="sobercollective__query"></div>
 
 				<div class="sobercollective__posts-wrapper">
 

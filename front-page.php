@@ -43,8 +43,7 @@ get_header();
 					</div>
 					
 				</div>
-				<button>Get Started</button>
-				<a href="">Give Us a Call</a>
+				<button class="get-started">Get Started</button>
 			</section>
 
 			<section class="front-page__moving-forward">

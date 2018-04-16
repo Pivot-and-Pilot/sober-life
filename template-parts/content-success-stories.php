@@ -80,9 +80,10 @@
           </div>   
 
           <?php
+            // check if the post is podcast 
             $latestStoryCategories = get_the_category();
-            foreach ($latestStoryCategories as $latestStoryCategorie) :
-              if ($latestStoryCategorie->slug == 'podcast') :
+            foreach ($latestStoryCategories as $latestStoryCategory) :
+              if ($latestStoryCategory->slug == 'podcast') :
           ?>
 
           <div class="single-story-play-button-wapper">

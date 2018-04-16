@@ -331,6 +331,10 @@ section.front-page__success-stories {
     border-radius: 50px;
   }
 
+  section.front-page__header button:hover {
+    cursor: pointer;
+  }
+
   section.front-page__header a {
     display: none;
   }

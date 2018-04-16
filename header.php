@@ -71,5 +71,9 @@
 				</div>
 			</div>
 		</section><!-- #site-navigation -->
+
+		<?php
+		get_template_part( 'template-parts/content', 'form' );
+		?>
 	</header><!-- #masthead -->
 	<div id="content" class="site-content">

@@ -203,6 +203,13 @@ jQuery(document).ready(function($){
     })
 
     // loved one's name
+    $('#loved-one-name').on('change keyup paste', function () {
+      $('.loved-one-name__next-button').css({
+        'opacity' : '1',
+        'pointer-events' : 'unset'
+      })
+    })
+
     $('.loved-one-name__next-button').on('click', function () {
       $('.question__loved-one-name').css('left', '-100%');
       // loading screen
@@ -458,6 +465,13 @@ jQuery(document).ready(function($){
     })
 
     // personal info
+    $('.form__dob').on('touchend', function (e) {
+      e.preventDefault();
+      $(this).attr('type', 'date');
+      if ($(this).attr('type') === 'date'){
+        $(this).focus();
+      }
+    })
     $('.personal-info__back').on('click', function () {
       $('.form__personal-info').css('left', '100%');
       $('.question__drug-effects-life').css('left', 0);

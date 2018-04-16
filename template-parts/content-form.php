@@ -340,7 +340,7 @@
         <div class="personal-info-1">
           <input name="personal-info" class="form__email personal-infor-input" type="email" placeHolder="Email*">
           <input name="personal-info" class="form__state personal-infor-input" type="text" placeHolder="State*">
-          <input name="personal-info" class="form__dob personal-infor-input" type="date" placeHolder="Date of Birth">
+          <input name="personal-info" class="form__dob personal-infor-input" type="text" placeHolder="DoB">
         </div>
         
         <div class="insurance-wrapper">

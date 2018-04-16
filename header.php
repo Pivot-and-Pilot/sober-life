@@ -51,6 +51,7 @@
 				</div>
 			</div>
 		</section><!-- .site-branding -->
+
 		<a href="tel:18003230585" class="header__fixed-call-button">Give Us a Call</a>
 
 		<section id="header__menu-overlay" class="main-navigation">
@@ -75,5 +76,4 @@
 		get_template_part( 'template-parts/content', 'form' );
 		?>
 	</header><!-- #masthead -->
-
 	<div id="content" class="site-content">

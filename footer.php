@@ -57,6 +57,7 @@
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+<div id="soberlife__jplayer"><?php get_template_part( 'template-parts/content', 'jplayer' ); ?></div>
 
 <?php wp_footer(); ?>
 

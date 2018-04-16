@@ -12,7 +12,7 @@ header {
     right: 0;
     // overflow: hidden;
     z-index: 5;
-    transform : translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     .header__top-bar {
       display: none;
     }
@@ -325,12 +325,53 @@ header {
               text-decoration: none;
               color: inherit;
             }
-            a:hover {
-              text-decoration: underline;
+            // li {
+            //   // position: relative;
+            //   a:before {
+            //     content: '';
+            //     background: url(../../img/src/SBL_11-11.svg) center no-repeat;
+            //     width: 100px;
+            //     height: 30px;
+            //     // position: absolute;
+            //     // top: -5px;
+            //     // left: -4px;
+            //     right: 0;
+            //     left: 0;
+            //     margin-left: auto;
+            //     margin-right: auto;
+            //     z-index: -1;
+            //   }
+            // }
+            li {
+              a {
+                position: relative;
+                img {
+                  position: absolute;
+                  width: 100px;
+                  left: 0;
+                  right: 0;
+                  top: 2px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  z-index: -1;
+                  display: none;
+                }
+                &:hover {
+                  img {
+                    display: block;
+                  }
+                }
+                img.active {
+                  display: block;
+                }
+              }
             }
             li:nth-child(3) {
               a {
                 cursor: default;
+                img {
+                  left: 8px;
+                }
               }
               .sub-menu {
                 // display: none;
@@ -372,16 +413,39 @@ header {
                   padding: 3px 0;
                   a {
                     cursor: pointer;
+                    img {
+                      // display: none;
+                    }
                   }
                 }
               }
               &:hover {
+                img:nth-child(1) {
+                  display: block;
+                }
                 .sub-menu {
                   visibility: visible;
                   opacity: 1;
                   z-index: 1;
                   transform: translateY(0);
                   transition-delay: 0s, 0s, 0.3s;
+                  li {
+                    a {
+                      img {
+                        display: none;
+                      }
+                      img.active {
+                        display: block;
+                      }
+                    }
+                    &:hover {
+                      a {
+                        img{ 
+                          display: block;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

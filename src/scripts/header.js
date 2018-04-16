@@ -33,4 +33,27 @@ jQuery(document).ready(function($) {
   $('#header__menu-nav-bar #primary-menu > li:eq(2) > a').click(function(e) {
     e.preventDefault();
   });
+  
+  (function setPrimaryMenuIcons() {
+    $('#header__menu-nav-bar #primary-menu li a').each(function() {
+      $(this).append(`<img src="http://localhost:3000/soberlife/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`);
+    });
+  })();
+
+  (function setCurrentPrimaryMenuIcon() {
+    let locationSplit = window.location.href.split('/');
+    let location = locationSplit[locationSplit.length - 2];
+    $('#header__menu-nav-bar #primary-menu li a').each(function() {
+      let hrefSplit = ($(this).attr('href')).split('/');
+      let href = hrefSplit[hrefSplit.length - 2];
+      if (href == location) {
+        let target = $(this).children()[0];
+        // $(target).css('display', 'block');
+        $(target).addClass('active')
+      }
+    })
+    if ($('#header__menu-nav-bar #primary-menu li a img.active').parent().parent().parent().hasClass('sub-menu')) {
+      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').css('display', 'block');
+    }
+  })();
 });

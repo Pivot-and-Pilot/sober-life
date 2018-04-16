@@ -130,27 +130,32 @@ function sober_life_scripts() {
 	wp_enqueue_style( 'sober-life-fonts', get_template_directory_uri() . '/fonts/MyFontsWebfontsKit.css');	
 	wp_enqueue_style( 'sober-life-style', get_stylesheet_uri() );
 
-
 	// final css
 	wp_enqueue_style( 'sober-life-css', get_template_directory_uri() . '/build/styles/final-styles.css', true );
 	// wp_enqueue_style( 'sober-life-slick-theme-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', true );
 	// wp_enqueue_style( 'sober-life-slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', true );
 	// js files
-	wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );
-	wp_enqueue_script( 'sober-life-success-stories-js', get_template_directory_uri() . '/src/scripts/success-stories.js', array(), true );
+
+  if ( is_front_page() ) {
+	  wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );
+  }
+  if ( !is_page('sober-collective') ) {
+	  wp_enqueue_script( 'sober-life-success-stories-js', get_template_directory_uri() . '/src/scripts/success-stories.js', array(), true );
+  }
 	wp_enqueue_script( 'sober-life-single-post-js', get_template_directory_uri() . '/src/scripts/single-post.js', array(), true );
 	wp_enqueue_script( 'sober-life-form-js', get_template_directory_uri() . '/src/scripts/form.js', array(), true );
 	// wp_enqueue_script( 'sober-life-slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), true );
+  wp_enqueue_script( 'sober-life-jplayer-min-js', get_template_directory_uri() . '/js/jPlayer-2.9.2/dist/jplayer/jquery.jplayer.min.js', array(), true );
+	wp_enqueue_script( 'sober-life-jplayer-js', get_template_directory_uri() . '/src/scripts/jplayer.js', array(), true );	
+
 
 	wp_enqueue_style( 'sober-life-style', get_template_directory_uri() . '/build/styles/final-styles.css' );
 	// wp_enqueue_script( 'sober-life-js', get_template_directory_uri() . '/build/scripts/final-script.js', array(), true );	
-	wp_enqueue_script( 'sober-life-googlemaps-js', get_template_directory_uri() . '/src/scripts/googlemaps.js', array(), true );					
-	wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );		
+	wp_enqueue_script( 'sober-life-googlemaps-js', get_template_directory_uri() . '/src/scripts/googlemaps.js', array(), true );		
 	wp_enqueue_script( 'sober-life-header-js', get_template_directory_uri() . '/src/scripts/header.js', array(), true );
 	wp_enqueue_script( 'sober-life-about-js', get_template_directory_uri() . '/src/scripts/about.js', array(), true );
 	wp_enqueue_script( 'sober-life-service-js', get_template_directory_uri() . '/src/scripts/service.js', array(), true );
-	
-
+	wp_enqueue_script( 'sober-life-sober-collective-js', get_template_directory_uri() . '/src/scripts/sober-collective.js', array(), true );	
 
 	wp_enqueue_script( 'sober-life-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -194,3 +199,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+require_once('api.php');

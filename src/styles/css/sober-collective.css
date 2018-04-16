@@ -1,0 +1,451 @@
+#sobercollective-page {
+  position: relative;
+  margin: 0 6% 0 6%;
+}
+
+#sobercollective-page .sobercollective__top-bar {
+  padding-top: 110px;
+}
+
+#sobercollective-page .sobercollective__top-bar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#sobercollective-page .sobercollective__top-bar ul li a {
+  font-family: "FFBauWebMedium";
+  color: black;
+  text-decoration: none;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__searchbar {
+  padding-bottom: 20px;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile {
+  padding: 10px 0;
+  position: relative;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #e9e2d6;
+  border-radius: 0;
+  border: none;
+  font-family: "FFBauWebMedium";
+  font-size: 18px;
+  height: 50px;
+  outline: none;
+  padding-left: 15px;
+  width: 100%;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile:after {
+  content: '>';
+  font-family: "FFBauWeb", sans-serif;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 35px;
+  color: #aca79f;
+  right: 15px;
+  top: 10px;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop {
+  display: none;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons {
+  display: none;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
+  position: relative;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile .sobercollective__tags-mobile-dropdown {
+  position: relative;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile .sobercollective__tags-mobile-dropdown select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #e9e2d6;
+  border-radius: 0;
+  border: none;
+  font-family: "FFBauWebMedium";
+  font-size: 18px;
+  height: 50px;
+  outline: none;
+  padding-left: 15px;
+  width: 100%;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile .sobercollective__tags-mobile-dropdown:after {
+  content: '>';
+  font-family: "FFBauWeb", sans-serif;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  font-size: 35px;
+  color: #aca79f;
+  right: 15px;
+  top: 0px;
+}
+
+#sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop {
+  display: none;
+}
+
+#sobercollective-page #sobercollective__query {
+  font-size: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#sobercollective-page #sobercollective__query div strong {
+  font-family: "FFBauWebMedium";
+  font-size: 22px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper {
+  padding-top: 20px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper #sobercollective__noresults {
+  font-family: "FFBauWebMedium";
+  font-size: 24px;
+  color: black;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  line-height: 25px;
+  font-family: "FFBauWebMedium";
+  display: block;
+  width: 48%;
+  padding: 10px 0;
+  position: relative;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:focus,
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:visited,
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) {
+  width: 100%;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__play-btn {
+  top: 20%;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__post--image {
+  height: 160px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image {
+  height: 130px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--cat-name {
+  background: #80ff73;
+  height: 25px;
+  font-size: 14px;
+  padding: 1px 0 0 10px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--title {
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+#sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--date {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#sobercollective-page #sobercollective__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#sobercollective-page #sobercollective__pagination #prev {
+  border: none;
+  outline: none;
+}
+
+#sobercollective-page #sobercollective__pagination #prev img {
+  width: 25px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages {
+  padding-top: 8px;
+  margin: 0 10px;
+  color: #aca79f;
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button {
+  border: none;
+  color: #aca79f;
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  outline: none;
+  padding: 0 2px;
+}
+
+#sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button.current {
+  color: black;
+}
+
+#sobercollective-page #sobercollective__pagination #next {
+  border: none;
+  outline: none;
+}
+
+#sobercollective-page #sobercollective__pagination #next img {
+  width: 25px;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+@media screen and (min-width: 1025px) {
+  #sobercollective-page .sobercollective__top-bar {
+    margin-top: 50px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #sobercollective-page .sobercollective__top-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #sobercollective-page .sobercollective__top-bar ul li a {
+    font-family: "FFBauWebMedium";
+    color: black;
+    text-decoration: none;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__searchbar {
+    position: absolute;
+    right: 0;
+    width: 30%;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-mobile {
+    display: none;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%;
+    z-index: 1;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.cat-item {
+    position: relative;
+    font-size: 22px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop li.cat-item:nth-child(2) {
+    padding-left: 10px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper {
+    width: 50%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-left: -40px;
+    margin-right: -30px;
+    right: 50%;
+    left: -40px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons img {
+    width: 115px;
+    opacity: 0.4;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__cats-desktop-icons-wrapper .sobercollective__cats-desktop-icons img:nth-child(1) {
+    opacity: 1;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-mobile {
+    display: none;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 60px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li.current {
+    text-decoration: underline;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li:not(.current):hover {
+    text-decoration: underline;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post {
+    width: 32%;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image {
+    height: 300px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--image img {
+    width: 100%;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--cat-name {
+    height: 35px;
+    font-size: 16px;
+    line-height: 35px;
+    padding: 3px 0 0 15px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--title {
+    padding-top: 15px;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post .sobercollective__post--date {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__post--image {
+    height: 450px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(1) .sobercollective__post--image img {
+    width: 100%;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(8),
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(9) {
+    width: 49%;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(8) .sobercollective__post--image,
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(9) .sobercollective__post--image {
+    height: 450px;
+  }
+
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(8) .sobercollective__post--image img,
+  #sobercollective-page .sobercollective__posts-wrapper .sobercollective__post:nth-child(9) .sobercollective__post--image img {
+    width: 100%;
+  }
+
+  #sobercollective-page #sobercollective__pagination #prev img {
+    width: 25px;
+  }
+
+  #sobercollective-page #sobercollective__pagination #prev img.active:hover {
+    -webkit-filter: brightness(65%);
+    filter: brightness(65%);
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages {
+    margin: 0 30px;
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button {
+    font-size: 20px;
+    padding: 2px 4px;
+  }
+
+  #sobercollective-page #sobercollective__pagination .pagecount #sobercollective__pages button:not(.current):hover {
+    color: #79756f;
+  }
+
+  #sobercollective-page #sobercollective__pagination #next img {
+    width: 25px;
+  }
+
+  #sobercollective-page #sobercollective__pagination #next img.active:hover {
+    -webkit-filter: brightness(65%);
+    filter: brightness(65%);
+  }
+}

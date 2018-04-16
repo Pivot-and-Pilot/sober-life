@@ -371,12 +371,36 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     color: inherit;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a:hover {
-    text-decoration: underline;
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li a {
+    position: relative;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li a img {
+    position: absolute;
+    width: 100px;
+    left: 0;
+    right: 0;
+    top: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    display: none;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li a:hover img {
+    display: block;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li a img.active {
+    display: block;
   }
 
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) a {
     cursor: default;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) a img {
+    left: 8px;
   }
 
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu {
@@ -428,6 +452,10 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     cursor: pointer;
   }
 
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover img:nth-child(1) {
+    display: block;
+  }
+
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu {
     visibility: visible;
     opacity: 1;
@@ -436,6 +464,18 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     transform: translateY(0);
     -webkit-transition-delay: 0s, 0s, 0.3s;
     transition-delay: 0s, 0s, 0.3s;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li a img {
+    display: none;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li a img.active {
+    display: block;
+  }
+
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li:hover a img {
+    display: block;
   }
 
   header .site-branding .header__bottom-bar #header__menu-nav-bar .header__menu-nav-bar-get-started {

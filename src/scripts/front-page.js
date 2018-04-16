@@ -57,4 +57,9 @@ jQuery(document).ready(function($){
 
   })();
 
+  (function toggleForm () {
+    $('.get-started').on('click', function () {
+      $('#soberlife-form-wrapper').css('left', '0');
+    })
+  })();
 })

@@ -77,8 +77,7 @@ get_header();
 						?>
 					</ul>					
 				</div>
-				<div id="sobercollective__query"></div>
-
+				<div id="sobercollective__query" value=""></div>
 				<div class="sobercollective__posts-wrapper">
 
 				</div>

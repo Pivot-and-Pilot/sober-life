@@ -1,27 +1,44 @@
 jQuery(document).ready(function($) {
-  // ************************************************** AJAX FUNCTIONS **************************************************** //
+  // Get window size
   let windowSize = $(window).width();
   // Prevent multiple clicks
   let ajaxLock = false;
+  // let isSearch = false;  
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
 
-  // Add Initial Settings (classnames/values)
-  if (windowSize > 1025) {
-    // Add value attribute to each category li on DESKTOP
-    $('.sobercollective__cats-desktop li').each(function() {
-      let catId = $(this).attr('class').match(/\d+/)[0];
-      $(this).attr('value', catId);
-    });
-    // Set first category li to current on DESKTOP
-    $('.sobercollective__cats-desktop li').eq(0).addClass('current');
-    // Set first tag li to current on DESKTOP
-    $('.sobercollective__tags-desktop li').eq(0).addClass('current');
-  } else {
-    // Set first category option to current on MOBILE
-    $('.sobercollective__cats-mobile select option').eq(0).addClass('current');
+  // Set Initial Settings (classnames/values)
+  function setInitialSettings() {
+    if (windowSize > 1025) {
+      // Add value attribute to each category li on DESKTOP
+      $('.sobercollective__cats-desktop li').each(function() {
+        let catId = $(this).attr('class').match(/\d+/)[0];
+        $(this).attr('value', catId);
+      });
+      $('.sobercollective__cats-desktop li').each(function() {
+        $(this).removeClass('current');
+      });
+      // Set first category li to current on DESKTOP
+      $('.sobercollective__cats-desktop li').eq(0).addClass('current');
+      updateActiveCatIcon(0);
+      $('.sobercollective__tags-desktop li').each(function() {
+        $(this).removeClass('current');
+      })
+      // Set first tag li to current on DESKTOP
+      $('.sobercollective__tags-desktop li').eq(0).addClass('current');
+    } else {
+      // Set first category option to current on MOBILE
+      $('.sobercollective__cats-mobile select option').each(function() {
+        $(this).removeClass('current');
+      })
+      $('.sobercollective__tags-mobile select option').each(function() {
+        $(this).removeClass('current');
+      })
+      $('.sobercollective__cats-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
+      $('.sobercollective__tags-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
+    }
   }
-
+  setInitialSettings();
 
   function updatePagination(currPage) {
     let maxPage = $('#maxpage').text();
@@ -73,6 +90,30 @@ jQuery(document).ready(function($) {
   }
   updatePagination();
 
+  // Connect desktop nav bar li.current to corresponding icon
+  function updateActiveCatIcon(pos) {
+    // let pos = $('.sobercollective__cats-desktop li.current').index();
+    console.log(pos);
+    $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
+    $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
+  }
+
+  // Desktop nav bar hover over effect
+  (function hoverCatIcon() {
+    $('.sobercollective__cats-desktop li').hover(function() {
+      if (!$(this).hasClass('current')) {
+        let position = $(this).index();
+        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 1);
+      }
+    }, function() {
+      if (!$(this).hasClass('current')) {      
+        let position = $(this).index();    
+        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 0.4);    
+      }
+    }); 
+  })();
+
+  // ************************************************** AJAX FUNCTIONS **************************************************** //
   // ********************************************** //
   //  AJAX_GET_INITIAL_POSTS for initial pages
   // ********************************************** // 
@@ -181,6 +222,8 @@ jQuery(document).ready(function($) {
         $('.sobercollective__posts-wrapper').empty();
         // Update max number of pages
         $('#maxpage').text(res.post_meta.total_pages);
+        $('#sobercollective__query').hide();        
+        $('#sobercollective__pagination').show();
         // Hide/Show pagination arrows based on number of pages
         if (res.post_meta.total_pages <= 1) {
           $('#prev, #next').hide();
@@ -207,28 +250,61 @@ jQuery(document).ready(function($) {
     });
   }
 
-  // ********************************************** //
-  //  AJAX_GET_SEARCH_RESULTS for search results
-  // ********************************************** // 
+  // ***************************************************** //
+  //  AJAX_GET_SEARCH_RESULTS for initial search results
+  // ***************************************************** // 
   function ajax_get_search_results(query) {
     let $input = $('#search-input');
+    let currPage = $('#curpage').text();
     ajaxLock = true;
+    let postsPerPage;
+    // , offset;
+    // let currentPageTotal = $('.sobercollective__post').length;
+    // let direction = 'next';
     
+    if (windowSize > 1025) {
+      postsPerPage = 12;
+    } else {
+      postsPerPage = 11;
+    }
+
+    // if (direction == 'next') {
+    //   offset = currentPageTotal + (postsPerPage * (currPage - 1));
+    //   console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
+    // } else if (direction == 'prev') {
+    //     offset = (postsPerPage * (currPage - 1));        
+    //     console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
+    // }
+
     $.ajax({
       type: 'get',
       url: ajaxUrl,
-      data: `&query=${query}&action=ajax_get_search_results`,
+      data: `&posts_per_page=${postsPerPage}&query=${query}&action=ajax_get_search_results`,
       dataType: 'json',
       beforeSend: function() {
-        $input.prop('disabled', true);
+        $input.prop('disabled', true);   
       },
       success: function(res) {
-        ajaxLock = false;
         $input.prop('disabled', false);
+        ajaxLock = false;
         $('.sobercollective__posts-wrapper').empty();
+        // $('#maxpage').text(`${Math.ceil(res.post_meta.total_posts / postsPerPage)}`);
+        $('#sobercollective__pagination').hide();
+        $('#search-input').val('');
+        setInitialSettings();
+        // if (res.post_meta.total_posts <= 1) {
+        //   $('#prev, #next').hide();
+          if (res.post_meta.total_posts == 0) {
+            $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
+          }
+        // } else {
+        //   $('#prev, #next').show();          
+        // }
         $(res[0]).appendTo('.sobercollective__posts-wrapper');
-        $('#sobercollective__query').empty();
-        $('#sobercollective__query').append(`<div>Search results for: ${query}</div>`);
+        $('#sobercollective__query').empty().show().append(`<div>Search results for: <strong>${query}</strong></div>`);
+        // $('#sobercollective__query').append(`<div>Search results for: <strong>${query}</strong></div>`);
+        $('#sobercollective__query').val(`${query}`)
+        // updatePagination();      
       },
       error: function() {
         ajaxLock = false;
@@ -237,7 +313,62 @@ jQuery(document).ready(function($) {
     });
   }
 
+  // ****************************************************************** //
+  //  AJAX_GET_SEARCH_RESULT_PAGES for next, prev search result pages
+  // ****************************************************************** // 
+  // function ajax_get_search_result_pages(direction, currPage, maxPage) {
+  //   ajaxLock = true;
+  //   let offset, postsPerPage;
+  //   let currentPageTotal = $('.sobercollective__post').length;
+  //   let query = $('#sobercollective__query').val();
+
+  //   if (windowSize > 1025) {
+  //     postsPerPage = 12;
+  //     // console.log(postsPerPage);
+  //   } else {
+  //     postsPerPage = 11;
+  //     // console.log(postsPerPage);
+  //   }
+      
+  //   if (direction == 'next') {
+  //     offset = currentPageTotal + (postsPerPage * (currPage - 1));
+  //     console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
+  //   } else if (direction == 'prev') {
+  //     offset = (postsPerPage * (currPage - 1));        
+  //     console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
+  //   }
+
+  //   $.ajax({
+  //     type: 'get',
+  //     url: ajaxUrl,
+  //     data: `&query=${query}&curr_page=${currPage}&offset=${offset}&posts_per_page=${postsPerPage}&action=ajax_get_search_result_pages`,
+  //     dataType: 'json',
+  //     success: function(res) {
+  //       ajaxLock = false;
+  //     },
+  //     error: function() {
+  //       ajaxLock = false;
+  //       console.log('error');
+  //     }
+  //   })
+  // }
+
   // *************************************************** EVENT HANDLERS ****************************************************** //
+  // ********************** //
+  //         SEARCH
+  // ********************** // 
+  (function search() {
+    $('#search-form').on('keypress', function(e) {
+      let $input = $(this).find('input[name="s"]');
+      let query = $input.val();
+  
+      if (e.which === 13) {
+        // isSearch = true;
+        console.log('ENTERED');
+        ajax_get_search_results(query);
+      }    
+    });
+  })();
 
   // ************** //
   //  PAGINATION
@@ -262,7 +393,11 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage + 1;
         // Update current page
         $('#curpage').text(newPageNum);
-        ajax_get_posts('next', currentPage, currCat, currTag);
+        // if (!isSearch) {
+          ajax_get_posts('next', currentPage, currCat, currTag);
+        // } else {
+        //   ajax_get_search_result_pages('next', currentPage)          
+        // }
         updatePagination(newPageNum);                
       }
     });
@@ -286,7 +421,11 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage - 1;
         // Update current page
         $('#curpage').text(newPageNum);
-        ajax_get_posts('prev', newPageNum, currCat, currTag, max);
+        // if (!isSearch) {        
+          ajax_get_posts('prev', newPageNum, currCat, currTag, max);
+        // } else {
+        //   ajax_get_search_result_pages('prev', newPageNum, max);          
+        // }
         updatePagination(newPageNum);        
       }
     });
@@ -310,11 +449,19 @@ jQuery(document).ready(function($) {
       $('#curpage').text(pageNum);
       let isNext = ((pageNum - currentPage) >= 0 ); 
       console.log(isNext);
-      if (isNext) {
-        ajax_get_posts('next', pageNum - 1, currCat, currTag);
-      } else {
-        ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
-      }
+      // if (!isSearch) {    
+        if (isNext) {
+          ajax_get_posts('next', pageNum - 1, currCat, currTag);
+        } else {
+          ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
+        }
+      // } else {
+      //   if (isNext) {
+      //     ajax_get_search_result_pages('next', pageNum - 1);
+      //   } else {
+      //     ajax_get_search_result_pages('prev', pageNum, maxPage);
+      //   }
+      // }
       updatePagination(pageNum)
     });
   })();
@@ -330,6 +477,7 @@ jQuery(document).ready(function($) {
       // On Category Click
       $('.sobercollective__cats-desktop li a').click(function(e) {
         e.preventDefault();
+        // isSearch = false;
         $('#curpage').text('1');
         let newCat = $(this).parent().val();
         $(this).parent().siblings().removeClass('current');
@@ -342,6 +490,7 @@ jQuery(document).ready(function($) {
       // On Tag Click
       $('.sobercollective__tags-desktop li a').click(function(e) {
         e.preventDefault();        
+        isSearch = false;        
         $('#curpage').text('1');
         let newTag = $(this).parent().val();
         $(this).parent().siblings().removeClass('current');
@@ -355,6 +504,7 @@ jQuery(document).ready(function($) {
 
       // On Category Change
       $('.sobercollective__cats-mobile > select').on('change', function() {
+        isSearch = false;        
         $('#curpage').text('1');      
         let newCat = $(this).val();
         $(this)
@@ -371,6 +521,7 @@ jQuery(document).ready(function($) {
 
       // On Tag Change
       $('.sobercollective__tags-mobile-dropdown > select').on('change', function() {
+        isSearch = false;        
         $('#curpage').text('1');            
         let newTag = $(this).val();
         $(this)
@@ -386,20 +537,6 @@ jQuery(document).ready(function($) {
       });
     }
   })();
-
-  // ********************** //
-  //         SEARCH
-  // ********************** // 
-
-  $('#search-form').on('keypress', function(e) {
-    let $input = $(this).find('input[name="s"]');
-    let query = $input.val();
-
-    if (e.which === 13) {
-      console.log('ENTERED');
-      ajax_get_search_results(query);
-    }    
-  });
 
   // ************************************************** JPLAYER ***************************************************** //
   // JPlayer
@@ -417,30 +554,5 @@ jQuery(document).ready(function($) {
         );
       }
     });
-  })();
-
-  // OTHER
-
-  // Connect desktop nav bar li.current to corresponding icon
-  function updateActiveCatIcon(pos) {
-    // let pos = $('.sobercollective__cats-desktop li.current').index();
-    console.log(pos);
-    $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
-    $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
-  }
-
-  // Desktop nav bar hover over effect
-  (function hoverCatIcon() {
-    $('.sobercollective__cats-desktop li').hover(function() {
-      if (!$(this).hasClass('current')) {
-        let position = $(this).index();
-        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 1);
-      }
-    }, function() {
-      if (!$(this).hasClass('current')) {      
-        let position = $(this).index();    
-        $('.sobercollective__cats-desktop-icons img').eq(position).css('opacity', 0.4);    
-      }
-    }); 
   })();
 });

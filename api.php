@@ -121,24 +121,23 @@ add_action('wp_ajax_nopriv_ajax_filter_posts', 'ajax_filter_posts');
 // Get Search Results
 // ****************** //
 function ajax_get_search_results() {
-  $paged = isset( $request['paged'] ) ? intval($request['paged']) : 1;
+  $paged = isset( $request['paged'] ) ? intval($request['paged']) : 1;  
+  // Search query string
   $query = $_GET['query'];
 
   // Build Query
   $args = array(
-    // 'paged'         => $paged,
-    // 'tax_query'     => array(
-    //   ''
-    // ),
+    // 'posts_per_page'=> $_GET['posts_per_page'],
+    'posts_per_page'=> -1,
+    // 'offset'        => '11',
     'post_type'     => 'post',
     'post_status'   => 'publish', 
-    // 'category__and' => 'category',
-    // 'tag__in'       => 'post_tag',
-    // 'post__in'      => array(10, 11, 12, 13, 14, 15, 16, 17, 18),
     's'=> $query
   );
 
   $search = new WP_Query($args);
+  // Relevanssi plugin to add cat/tag search 
+  relevanssi_do_query($search);
 
   if ( $search->have_posts() ) {
     $results_html = '';
@@ -154,33 +153,55 @@ function ajax_get_search_results() {
   $response = array(
     'post_meta' => array(
       'paged'       => $paged,
-      'total_pages' => $search->max_num_pages
+      'total_posts' => $search->found_posts
     )
   );
-	array_push ( $response, $results_html );
+	array_push( $response, $results_html );
 	echo json_encode( $response );
 	die();  
 }
 add_action('wp_ajax_ajax_get_search_results', 'ajax_get_search_results');
 add_action('wp_ajax_nopriv_ajax_get_search_results', 'ajax_get_search_results');
 
-// CHANGE THISSSSSSSSSSSSSSSSSSs
-// function wds_cpt_search($query) {
-//   if ( is_search() && $query->is_main_query() && $query->get( 's' ) ) {
-//     $query->set(
-//       'post_type', array('post'),
-//       'meta_query', array(
-//         array(
-//           'key' => '',
-//           'value' => '%s',
-//           'comapre' => 'LIKE',
-//         )
-//       )
-//     );
+// ********************************** //
+// Get Search Result Next/Prev Pages
+// ********************************** //
+// PAGINATION FOR SEARCH RESULTS
+// function ajax_get_search_result_pages() {
+//   $query = $_GET['query'];
+//   $paged = $_GET['curr_page'];
+//   $offset = $_GET['offset'];
 
-//     return $query;
 
+//   $args = array (
+//     // 'paged'         => $paged,
+//     'post_type'     => 'post',
+//     'post_status'   => 'publish',
+//     's'             => $query,
+//     // 'offset'        => $offset,
+//     'posts_per_page'=> $_GET['posts_per_page'],
+//   );
+
+//   $search = new WP_Query($args);
+//   relevanssi_do_query($search);
+
+//   if ( $search->have_posts() ) {
+//     $results_html = '';
+//     ob_start();
+//     while ( $search->have_posts() ) {
+//       $search->the_post();
+//       get_template_part( 'template-parts/content-sober-collective', get_post_format() );
+//     }
+//     $results_html = ob_get_clean();
 //   }
+
+//   // Build Response
+//   $response = array();
+// 	array_push ( $response, $results_html );
+// 	echo json_encode( $response );
+// 	die();  
 // }
-// add_action( 'pre_get_posts', 'wds_cpt_search' );
+// add_action('wp_ajax_ajax_get_search_result_pages', 'ajax_get_search_result_pages');
+// add_action('wp_ajax_nopriv_ajax_get_search_result_pages', 'ajax_get_search_result_pages');
+
 ?>

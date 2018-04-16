@@ -333,13 +333,13 @@
     <section class="form__personal-info">
       <div class="content-wrapper">
         <div class="personal-info-0">
-          <input name="personal info" class="form__phone-number personal-infor-input" type="tel" placeHolder="Phone Number">
-          <input name="personal info" class="form__city personal-infor-input" type="text" placeHolder="City">
+          <input name="personal info" class="form__phone-number personal-infor-input" type="tel" placeHolder="Phone Number*">
+          <input name="personal info" class="form__city personal-infor-input" type="text" placeHolder="City*">
         </div>
 
         <div class="personal-info-1">
-          <input name="personal-info" class="form__email personal-infor-input" type="email" placeHolder="Email">
-          <input name="personal-info" class="form__state personal-infor-input" type="text" placeHolder="State">
+          <input name="personal-info" class="form__email personal-infor-input" type="email" placeHolder="Email*">
+          <input name="personal-info" class="form__state personal-infor-input" type="text" placeHolder="State*">
           <input name="personal-info" class="form__dob personal-infor-input" type="date" placeHolder="Date of Birth">
         </div>
         
@@ -361,8 +361,8 @@
           </div>
 
           <div class="insurance-company-wrapper">
-            <p>If unsure please wirte 'unsure'</p>
             <input class="personal-infor-input" type="text" name="insurance-company" placeHolder="Insurance Company">
+            <p>If unsure please wirte 'unsure'</p>
           </div>
         </div>
 

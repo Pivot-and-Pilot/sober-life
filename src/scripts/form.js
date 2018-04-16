@@ -87,22 +87,28 @@ jQuery(document).ready(function($){
     // get client personal info
     $('.form__phone-number').on('change keyup paste', function () {
       $('.form__phone-number--hidden').val($(this).val());
+      $(this).css('border', '5px solid rgb(225, 218, 210)')
     })
     $('.form__city').on('change keyup paste', function () {
       $('.form__city--hidden').val($(this).val());
+      $(this).css('border', '5px solid rgb(225, 218, 210)')
     })
     $('.form__email').on('change keyup paste', function () {
       $('.form__email--hidden').val($(this).val());
+      $(this).css('border', '5px solid rgb(225, 218, 210)')
     })
     $('.form__state').on('change keyup paste', function () {
       $('.form__state--hidden').val($(this).val());
+      $(this).css('border', '5px solid rgb(225, 218, 210)')
     })
     $('.form__dob').on('change keyup paste', function () {
       $('.form__dob--hidden').val($(this).val());
+      $(this).css('border', '5px solid rgb(225, 218, 210)')
     })
     $('.insurance-check-box').on('click', function (e) {
       $('.insurance-check-box').each( function () {
         $($(this)[0].children[1]).removeClass('checked-box');
+        $($(this)[0].children[1]).css('border', '3px solid rgb(225, 218, 210)');
         $($(this)[0].children[2]).removeClass('ticked');
       })
       $($(e.currentTarget)[0].children[1]).toggleClass('checked-box');
@@ -119,12 +125,6 @@ jQuery(document).ready(function($){
 
   })();
 
-  (function submit () {
-    $('#form__submit').on('click', function () {
-      $('#form__submit--hidden').click();
-    })
-  })();
-
   function loadingGreating1 () {
     let fullName, firstName, spacePosition;
     fullName = $('#client-name-hidden').val();
@@ -135,6 +135,13 @@ jQuery(document).ready(function($){
 
   (function navigation () {
     // client name
+    $('#client-name').on('change keyup paste', function () {
+      $('.your-name__next-button').css({
+        'opacity' : '1',
+        'pointer-events' : 'unset'
+      })
+    })
+
     $('.your-name__next-button').on('click', function () {
       loadingGreating1();
       // loading screen
@@ -192,7 +199,7 @@ jQuery(document).ready(function($){
         $('.question__your-name').css('left', '0');
       },1000)
       // process bar
-      $('.process').css('width', '0')
+      $('.process').css('width', '12.5%')
     })
 
     // loved one's name
@@ -451,20 +458,55 @@ jQuery(document).ready(function($){
     })
 
     // personal info
-    $('.personal-info__back').on('click', function(){
+    $('.personal-info__back').on('click', function () {
       $('.form__personal-info').css('left', '100%');
       $('.question__drug-effects-life').css('left', 0);
       // process bar
       $('.process').css('width', '75%')
     })
-    $('#form__submit').on('click', function(){
+    $('#form__submit').on('click', function () {
       // process bar
       $('.process').css('width', '100%')
+    })
+    $('.insurance-check-box').on('click', function () {
+      if ( $('input[name="insurance-hidden"][value="yes"]').is(':checked') ) {
+        $('.insurance-company-wrapper').css('display', 'block')
+      }
+      if ( $('input[name="insurance-hidden"][value="no"]').is(':checked') ) {
+        $('.insurance-company-wrapper').css('display', 'none')
+      }
     })
 
     // x button
     $('.form__x-button').on('click', function () {
       $('#soberlife-form-wrapper').css('left', '100%');
+    })
+  })();
+
+  (function submit () {
+    // check required fields
+    $('#form__submit').on('click', function () {
+      if ( !$('.form__phone-number--hidden').val() ) {
+        $('.form__phone-number').css('border', '5px solid #F31431')
+      }
+      if ( !$('.form__city--hidden').val() ) {
+        $('.form__city').css('border', '5px solid #F31431')
+      }
+      if ( !$('.form__email--hidden').val() ) {
+        $('.form__email').css('border', '5px solid #F31431')
+      }
+      if ( !$('.form__state--hidden').val() ) {
+        $('.form__state').css('border', '5px solid #F31431')
+      }
+      if ( !$('.form__dob--hidden').val() ) {
+        $('.form__dob').css('border', '5px solid #F31431')
+      }
+      if ( !$('input[name="insurance-hidden"][value="yes"]').is(':checked') && !$('input[name="insurance-hidden"][value="no"]').is(':checked') ) {
+        $('.check-box').css('border', '3px solid #F31431')
+      }
+      if ( $('.form__phone-number--hidden').val() && $('.form__city--hidden').val()&& $('.form__email--hidden').val() && $('.form__state--hidden').val() && $('.form__dob--hidden').val() && $('input[name="insurance-hidden"][value="yes"]').is(':checked') || $('input[name="insurance-hidden"][value="no"]').is(':checked') ) {
+        $('#form__submit--hidden').click();
+      }
     })
   })();
 

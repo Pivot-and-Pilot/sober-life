@@ -136,7 +136,7 @@ function ajax_get_search_results() {
   );
 
   $search = new WP_Query($args);
-  // Relevanssi plugin to add cat/tag search 
+  // Relevanssi plugin to add cat/tag search  
   relevanssi_do_query($search);
 
   if ( $search->have_posts() ) {

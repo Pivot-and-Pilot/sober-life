@@ -1,9 +1,10 @@
 jQuery(document).ready(function($) {
   // Get window size
   let windowSize = $(window).width();
-  // Prevent multiple clicks
-  let ajaxLock = false;
-  // let isSearch = false;  
+  // Set to false to prevent multiple clicks
+  let ajaxLock = false; 
+  // let isSearch = false; 
+   
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
 
@@ -306,9 +307,9 @@ jQuery(document).ready(function($) {
         $('#sobercollective__query').val(`${query}`)
         // updatePagination();      
       },
-      error: function() {
+      error: function(res) {
         ajaxLock = false;
-        console.log('error');
+        console.log('error', res);
       }
     });
   }
@@ -366,6 +367,7 @@ jQuery(document).ready(function($) {
         // isSearch = true;
         console.log('ENTERED');
         ajax_get_search_results(query);
+        return false;
       }    
     });
   })();

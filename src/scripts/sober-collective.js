@@ -39,11 +39,16 @@ jQuery(document).ready(function($) {
       $('.sobercollective__tags-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
     }
   }
+  // Invoke setInitialSettings() on initial load
   setInitialSettings();
 
+  // Update pagination 
   function updatePagination(currPage) {
+    // Get max page number
     let maxPage = $('#maxpage').text();
+    // Get current page number
     currPage = currPage ? currPage : 1;
+    // Reset page numbers
     let pagesContainer = $('#sobercollective__pages');
     $(pagesContainer).empty();
     if (maxPage > 4) {
@@ -539,22 +544,4 @@ jQuery(document).ready(function($) {
       });
     }
   })();
-
-  // ************************************************** JPLAYER ***************************************************** //
-  // JPlayer
-  // display play(add?) button on every podcast category post
-  setTimeout(function() {
-  
-    (function podcastPlayButton() {
-      $('.sobercollective__post').each(function() {
-        if ($(this).find('.sobercollective__post--cat-name').text() == 'Podcast') {
-          // ********** CHANGE IMG SRC  ***********
-          console.log('$(this)');
-          // $(this).prepend(
-          //   `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
-          // );
-        }
-      });
-    })();
-  }, 1500);
 });

@@ -11,7 +11,6 @@
  *
  * @package sober-life
  */
-
 get_header();
 ?>
 
@@ -59,8 +58,7 @@ get_header();
 											echo '<option value="'. $tag->term_id .'">' . $tag->name ;
 										} ?>
 									</select>
-
-							<?php	}
+								<?php	}
 							?>
 						</div>
 					</div>
@@ -68,8 +66,6 @@ get_header();
 						<?php 
 							$tagsDesktop = get_tags(array(
 								'hide_empty'	=> 0,
-								// 'orderby' 		=> 'include', 
-								// 'include' 		=> array(13, 10, 11, 12))
 							));
 							foreach($tagsDesktop as $tag) :
 								echo '<li value="'. $tag->term_id .'"><a href="'. get_term_link($tag) .'"> '.$tag->name.'</a></li>';
@@ -78,13 +74,9 @@ get_header();
 					</ul>					
 				</div>
 				<div id="sobercollective__query" value=""></div>
-				<div class="sobercollective__posts-wrapper">
+				<div class="sobercollective__posts-wrapper"></div><!-- sobercollective posts wrapper -->
+			<?php	endif; ?>
 
-				</div>
-
-				<!-- PAGINATION -->
-			
-				<?php	endif; ?>
 				<div id="sobercollective__pagination">
 					<button id="prev"><img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg"></button>					
 					<div class="pagecount" style="">
@@ -93,7 +85,7 @@ get_header();
 						<div id="sobercollective__pages"></div>
 					</div>
 					<button id="next"><img class="active" src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--white.svg"></button>
-				</div>
+				</div><!-- sobercollective pagination -->
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

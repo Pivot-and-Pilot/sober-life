@@ -93,7 +93,6 @@ jQuery(document).ready(function($) {
   // Connect desktop nav bar li.current to corresponding icon
   function updateActiveCatIcon(pos) {
     // let pos = $('.sobercollective__cats-desktop li.current').index();
-    console.log(pos);
     $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
     $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
   }
@@ -132,7 +131,6 @@ jQuery(document).ready(function($) {
       dataType: 'json',
       success: function(res) {
         ajaxLock = false;
-        console.log(res);
         $('.sobercollective__posts-wrapper').empty();
         $(res[0])
           // .hide()

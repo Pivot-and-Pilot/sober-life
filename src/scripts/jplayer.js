@@ -1,21 +1,20 @@
 $(document).ready(function(){
 
-  let link;
-
+  let link, currentPodcastTitle;
+  document.cookie = `currentPodcast=${getCookie('currentPodcast')}; max-age=60*60; path=/`;
+  document.cookie = `currentPodcastTitleCookie=${getCookie('currentPodcastTitleCookie')}; max-age=60*60; path=/`;
   (function getPodcastURL () {
     $('.single-post__podcast-player').on('click', 'button[title="Play"]', function () {
       link = $($(this).parentsUntil('.single-post__podcast-player')[4]).siblings('.powerpress_links_mp3')[0].children[0].href;
-      document.cookie = `currentPodcast=${link}`;
-      // let slashPos = link.lastIndexOf('/');
-      // link = `http://specialtyproducenetwork.blob.core.windows.net/podcasts/SoberLife${link.slice(slashPos)}`
-      // console.log(link.slice(slashPos));
-      // console.log(link);
+      currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[6]).siblings('.single-post__title')[0].innerText;
+      $('.jp-title').html(`${currentPodcastTitle}`);
+      document.cookie = `currentPodcast=${link}; max-age=60*60; path=/`;
+      document.cookie = `currentPodcastTitleCookie=${currentPodcastTitle}; max-age=60*60; path=/`;
+
       $("#jquery_jplayer_1").jPlayer({
         ready: function () {
           $(this).jPlayer("setMedia", {
-            title: "Bubble",
-            // m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-            // oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg",
+            title: `${currentPodcastTitle}`,
             mp3: `${link}`,
           });
         },
@@ -48,30 +47,31 @@ $(document).ready(function(){
     return "";
   }
 
-  // $(window).on('load', function(){
-  //   var x = document.cookie;
-  //   console.log(x);
-  //   let currentLink = getCookie();
-  //   $("#jquery_jplayer_1").jPlayer({
-  //     ready: function () {
-  //       $(this).jPlayer("setMedia", {
-  //         title: "Bubble",
-  //         // m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-  //         // oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg",
-  //         mp3: `${currentLink}`,
-  //       });
-  //     },
-  //     cssSelectorAncestor: "#jp_container_1",
-  //     swfPath: "/js",
-  //     supplied: "mp3",
-  //     useStateClassSkin: false,
-  //     autoBlur: false,
-  //     smoothPlayBar: true,
-  //     keyEnabled: true,
-  //     remainingDuration: true,
-  //     toggleDuration: true,
-  //   });
-  // })
+  $(window).on('load', function(){
+    var x = document.cookie;
+    console.log(x);
+    let currentLink = getCookie('currentPodcast');
+    let currentPodcastTitle = getCookie('currentPodcastTitleCookie');
+    console.log('this is current link ',currentLink);
+
+    $("#jquery_jplayer_1").jPlayer({
+      ready: function () {
+        $(this).jPlayer("setMedia", {
+          title: `${currentPodcastTitle}`,
+          mp3: `${currentLink}`,
+        });
+      },
+      cssSelectorAncestor: "#jp_container_1",
+      swfPath: "/js",
+      supplied: "mp3",
+      useStateClassSkin: false,
+      autoBlur: false,
+      smoothPlayBar: true,
+      keyEnabled: true,
+      remainingDuration: true,
+      toggleDuration: true,
+    });
+  })
 
 
 

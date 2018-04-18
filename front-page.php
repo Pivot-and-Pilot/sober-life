@@ -43,7 +43,7 @@ get_header();
 					</div>
 					
 				</div>
-				<button class="get-started">Get Started</button>
+				<button class="get-started" onclick="toggleForm()">Get Started</button>
 			</section>
 
 			<section class="front-page__moving-forward">

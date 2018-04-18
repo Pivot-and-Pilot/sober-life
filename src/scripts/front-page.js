@@ -1,15 +1,4 @@
 jQuery(document).ready(function($){
-
-  (function toggleForm () {
-    $('.get-started').on('click', function () {
-      $('#soberlife-form-wrapper').css('left', '0');
-    });
-
-    $('a.header__menu-nav-bar-get-started').on('click', function() {
-      console.log('clikc');
-      $('#soberlife-form-wrapper').css('left', '0');      
-    });
-  })();
   
   (function sloganAnimation() {
     for (let i = 0; i < $('.front-page__header__changing-slogans-wrapper')[0].children.length - 1; i = i + 2) {

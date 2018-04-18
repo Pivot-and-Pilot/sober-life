@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
   // Set to false to prevent multiple clicks
   let ajaxLock = false; 
   // let isSearch = false; 
-   
+
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
 
@@ -543,18 +543,18 @@ jQuery(document).ready(function($) {
   // ************************************************** JPLAYER ***************************************************** //
   // JPlayer
   // display play(add?) button on every podcast category post
-  (function podcastPlayButton() {
-    $('.sobercollective__post').each(function() {
-      if (
-        $(this)
-          .find('.sobercollective__post--cat-name')
-          .text() == 'Podcast'
-      ) {
-        // ********** CHANGE IMG SRC  ***********
-        $(this).prepend(
-          `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
-        );
-      }
-    });
-  })();
+  setTimeout(function() {
+  
+    (function podcastPlayButton() {
+      $('.sobercollective__post').each(function() {
+        if ($(this).find('.sobercollective__post--cat-name').text() == 'Podcast') {
+          // ********** CHANGE IMG SRC  ***********
+          console.log('$(this)');
+          // $(this).prepend(
+          //   `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
+          // );
+        }
+      });
+    })();
+  }, 1500);
 });

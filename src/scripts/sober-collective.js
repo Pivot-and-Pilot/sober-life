@@ -1,9 +1,10 @@
 jQuery(document).ready(function($) {
   // Get window size
   let windowSize = $(window).width();
-  // Prevent multiple clicks
-  let ajaxLock = false;
-  // let isSearch = false;  
+  // Set to false to prevent multiple clicks
+  let ajaxLock = false; 
+  // let isSearch = false; 
+
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
 
@@ -38,11 +39,16 @@ jQuery(document).ready(function($) {
       $('.sobercollective__tags-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
     }
   }
+  // Invoke setInitialSettings() on initial load
   setInitialSettings();
 
+  // Update pagination 
   function updatePagination(currPage) {
+    // Get max page number
     let maxPage = $('#maxpage').text();
+    // Get current page number
     currPage = currPage ? currPage : 1;
+    // Reset page numbers
     let pagesContainer = $('#sobercollective__pages');
     $(pagesContainer).empty();
     if (maxPage > 4) {
@@ -306,9 +312,9 @@ jQuery(document).ready(function($) {
         $('#sobercollective__query').val(`${query}`)
         // updatePagination();      
       },
-      error: function() {
+      error: function(res) {
         ajaxLock = false;
-        console.log('error');
+        console.log('error', res);
       }
     });
   }
@@ -366,6 +372,7 @@ jQuery(document).ready(function($) {
         // isSearch = true;
         console.log('ENTERED');
         ajax_get_search_results(query);
+        return false;
       }    
     });
   })();
@@ -536,23 +543,5 @@ jQuery(document).ready(function($) {
         ajax_filter_posts(currCat, currTag);
       });
     }
-  })();
-
-  // ************************************************** JPLAYER ***************************************************** //
-  // JPlayer
-  // display play(add?) button on every podcast category post
-  (function podcastPlayButton() {
-    $('.sobercollective__post').each(function() {
-      if (
-        $(this)
-          .find('.sobercollective__post--cat-name')
-          .text() == 'Podcast'
-      ) {
-        // ********** CHANGE IMG SRC  ***********
-        $(this).prepend(
-          `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
-        );
-      }
-    });
   })();
 });

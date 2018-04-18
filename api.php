@@ -52,11 +52,9 @@ function ajax_get_posts() {
     'posts_per_page' => $_GET['posts_per_page'],
   );
 
-  // $count_results = '0';
   $query_results = new WP_Query( $args );
   
   if( $query_results->have_posts() ) {
-    // $count_results = $query_results->found_posts;
     $results_html = '';
     ob_start();
     while ( $query_results->have_posts() ) {
@@ -136,7 +134,7 @@ function ajax_get_search_results() {
   );
 
   $search = new WP_Query($args);
-  // Relevanssi plugin to add cat/tag search 
+  // Relevanssi plugin to add cat/tag search   
   relevanssi_do_query($search);
 
   if ( $search->have_posts() ) {

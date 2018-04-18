@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $("#jquery_jplayer_1").jPlayer({
     ready: function () {
       $(this).jPlayer("setMedia", {
@@ -15,6 +16,23 @@ $(document).ready(function(){
     smoothPlayBar: true,
     keyEnabled: true,
     remainingDuration: true,
-    toggleDuration: true
+    toggleDuration: true,
   });
+
+  (function counter () {
+
+    let secCount = 0;
+    let counting;
+    $('.single-post__podcast-player').on('click', 'button[title="Play"]', function () {
+      counting = setInterval ( () => {
+        secCount += 0.1;
+      }, 100 )
+    })
+    $('.single-post__podcast-player').on('click', 'button[title="Pause"]', function () {
+      clearInterval( counting );
+      console.log(secCount);
+    })
+
+  })();
+
 });

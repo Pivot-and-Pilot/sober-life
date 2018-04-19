@@ -51,9 +51,9 @@
           display: flex;
           align-items: center;
           padding-left: 10px;
-          font-family: $font__main--bold;
+          font-family: $font__main--med;
           color: #000;
-          font-size: 0.7em;
+          font-size: 14px;
         }
       }
       .latest-story-track-title {
@@ -64,12 +64,13 @@
       .latest-story-track-date {
         color: #000;
         font-family: $font__main--med;
-        font-size: 0.6em;
+        font-size: 12px;
+        line-height: 16px;
       }
     }
   }
 
-  .other-success-stories {
+  .other-success-stories { 
     overflow: hidden;
     padding-top: 30px;
     .slick-list {
@@ -80,7 +81,7 @@
             text-decoration: none;
             .single-story-player-wapper {
               position: relative;
-              height: 150px;
+              height: 170px;
               .single-story-thumbnail-wrapper {
                 width: 100%;
                 height: 100%;
@@ -117,9 +118,9 @@
                 display: flex;
                 align-items: center;
                 padding-left: 10px;
-                font-family: $font__main--bold;
+                font-family: $font__main--med;
                 color: #000;
-                font-size: 0.7em;
+                font-size: 14px;
               }
             }
             .single-story-track-title {
@@ -130,7 +131,8 @@
             .single-story-track-date {
               color: #000;
               font-family: $font__main--med;
-              font-size: 0.6em;
+              font-size: 12px;
+              line-height: 16px;
             }
           }
         }
@@ -138,21 +140,21 @@
     }
   }
   a.go-to-sober-collective {
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
-    height: 50px;
-    width: 300px;
-    margin-top: 20px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    color: $color__white;
     background-color: #000;
     border-radius: 25px;
-    font-size: 1em;
-    font-family: $font__main;
+    color: $color__white;
+    display: block;
+    font-family: $font__main--med;
+    font-size: 20px;
+    height: 50px;
+    left: 50%;
+    line-height: 50px;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translateX(-50%);
+    width: 88%;
     span {
       font-family: $font__main--bold;
     }

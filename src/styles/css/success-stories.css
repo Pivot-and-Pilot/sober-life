@@ -74,9 +74,9 @@
   -ms-flex-align: center;
   align-items: center;
   padding-left: 10px;
-  font-family: "FFBauWebBold";
+  font-family: "FFBauWebMedium";
   color: #000;
-  font-size: 0.7em;
+  font-size: 14px;
 }
 
 #success-stories .success-stories__latest a .latest-story-track-title {
@@ -88,7 +88,8 @@
 #success-stories .success-stories__latest a .latest-story-track-date {
   color: #000;
   font-family: "FFBauWebMedium";
-  font-size: 0.6em;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 #success-stories .other-success-stories {
@@ -106,7 +107,7 @@
 
 #success-stories .other-success-stories .slick-list .slick-track .single-success-story a .single-story-player-wapper {
   position: relative;
-  height: 150px;
+  height: 170px;
 }
 
 #success-stories .other-success-stories .slick-list .slick-track .single-success-story a .single-story-player-wapper .single-story-thumbnail-wrapper {
@@ -161,9 +162,9 @@
   -ms-flex-align: center;
   align-items: center;
   padding-left: 10px;
-  font-family: "FFBauWebBold";
+  font-family: "FFBauWebMedium";
   color: #000;
-  font-size: 0.7em;
+  font-size: 14px;
 }
 
 #success-stories .other-success-stories .slick-list .slick-track .single-success-story a .single-story-track-title {
@@ -175,26 +176,27 @@
 #success-stories .other-success-stories .slick-list .slick-track .single-success-story a .single-story-track-date {
   color: #000;
   font-family: "FFBauWebMedium";
-  font-size: 0.6em;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 #success-stories a.go-to-sober-collective {
-  display: block;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  height: 50px;
-  width: 300px;
-  margin-top: 20px;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  color: #f5f0e8;
   background-color: #000;
   border-radius: 25px;
-  font-size: 1em;
-  font-family: "FFBauWeb", sans-serif;
+  color: #f5f0e8;
+  display: block;
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  height: 50px;
+  left: 50%;
+  line-height: 50px;
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 88%;
 }
 
 #success-stories a.go-to-sober-collective span {

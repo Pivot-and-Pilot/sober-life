@@ -74,6 +74,7 @@ get_header();
 					</ul>					
 				</div>
 				<div id="sobercollective__query" value=""></div>
+				<div id="sobercollective__noresults"></div>
 				<div class="sobercollective__posts-wrapper"></div><!-- sobercollective posts wrapper -->
 			<?php	endif; ?>
 

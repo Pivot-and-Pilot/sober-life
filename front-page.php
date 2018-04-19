@@ -72,19 +72,19 @@ get_header();
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/php.svg" alt="" />
 						<div class="service__title"><?php echo $services['php_title']?></div>
 						<div class="service__description"><?php echo $services['php_description']?></div>
-						<button>Learn More</button>
+						<a class="front-page__button" href="<?php echo site_url('/services/partial-hospital-program'); ?>">Learn More</a>
 					</div>
 					<div class="service">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/iop.svg" alt="" />
 						<div class="service__title"><?php echo $services['iop_title']?></div>
 						<div class="service__description"><?php echo $services['iop_description']?></div>
-						<button>Learn More</button>
+						<a class="front-page__button" href="<?php echo site_url('/services/intensive-outpatient-program'); ?>">Learn More</a>						
 					</div>
 					<div class="service">
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/op.svg" alt="" />
 						<div class="service__title"><?php echo $services['op_title']?></div>
 						<div class="service__description"><?php echo $services['op_description']?></div>
-						<button>Learn More</button>
+						<a class="front-page__button" href="<?php echo site_url('/services/outpatient-program'); ?>">Learn More</a>						
 					</div>
 				<?php 
 				endif; 
@@ -103,7 +103,7 @@ get_header();
 				<div class="our-story__text">
 					<div class="our-story__header"><?php echo $ourStory['our_story_header'];?></div>
 					<div class="our-story__description"><?php echo $ourStory['our_story_description'];?></div>
-					<button>About Us</button>
+					<a class="front-page__button" href="<?php echo site_url('/about'); ?>">About Us</a>
 				</div>
 			<?php 
 			endif; 

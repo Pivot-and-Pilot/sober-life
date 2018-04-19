@@ -94,7 +94,7 @@
           <div class="services-child__our-team-wrapper">
             <div class="services-child__our-team-title">Our Team</div>
             <div class="services-child__our-team-description"><?php echo get_sub_field('team_description'); ?></div>
-            <a href="/soberlife/about" class="services-child__our-team-learn-more">About Us</a>  
+            <a href="<?php echo site_url('/about'); ?>" class="services-child__our-team-learn-more">About Us</a>  
           </div>
         <?php endwhile;
       endif; ?>  

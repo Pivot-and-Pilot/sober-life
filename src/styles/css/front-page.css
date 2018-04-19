@@ -219,7 +219,7 @@ section.front-page__services .services-wapper .service .service__description p {
   margin: 20px 0;
 }
 
-section.front-page__services .services-wapper .service button {
+section.front-page__services .services-wapper .service .front-page__button {
   height: 50px;
   width: 200px;
   border-radius: 25px;
@@ -229,7 +229,7 @@ section.front-page__services .services-wapper .service button {
   padding: 0;
 }
 
-section.front-page__services .services-wapper .service button:hover {
+section.front-page__services .services-wapper .service .front-page__button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;
@@ -270,7 +270,7 @@ section.front-page__our-story .our-story__text .our-story__description p {
   margin: 0;
 }
 
-section.front-page__our-story .our-story__text button {
+section.front-page__our-story .our-story__text .front-page__button {
   height: 50px;
   width: 200px;
   border-radius: 25px;
@@ -281,7 +281,7 @@ section.front-page__our-story .our-story__text button {
   margin-top: 20px;
 }
 
-section.front-page__our-story .our-story__text button:hover {
+section.front-page__our-story .our-story__text .front-page__button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;

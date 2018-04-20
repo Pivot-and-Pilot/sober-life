@@ -4,7 +4,7 @@ footer {
 }
 
 footer .footer__wrap {
-  padding-top: 100px;
+  padding-top: 60px;
   padding-bottom: 100px;
   margin: 0 6% 0 6%;
 }
@@ -196,6 +196,13 @@ footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg {
     width: 60px;
     border-radius: 10px;
+  }
+
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-instagram svg:hover,
+  footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-facebook svg:hover {
+    border: 1.2px solid black;
+    fill: #80ff73;
+    background-color: black;
   }
 
   footer .footer__wrap .footer__desktop-wrap .footer__contact-desktop {

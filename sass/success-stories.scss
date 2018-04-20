@@ -5,8 +5,8 @@
   padding: 25px 0;
   .success-stories-header {
     font-family: $font__main--bold;
-    padding: 0 6vw;
-    font-size: 2em;
+    padding: 0 6vw 10px 6vw;
+    font-size: 30px;
     color: #000;
   }
   .success-stories__latest {
@@ -149,7 +149,7 @@
     height: 50px;
     left: 50%;
     line-height: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -230,10 +230,15 @@
     a.go-to-sober-collective {
       margin-top: 80px;
       width: 40vw;
-      height: 70px;
+      height: 60px;
       border-radius: 35px;
-      line-height: 70px;
+      line-height: 60px;
       font-size: 1.5em;
+      &:hover {
+        border: 1px solid black;
+        background-color: $color__green;
+        color: black;
+      }
     }
   }
 

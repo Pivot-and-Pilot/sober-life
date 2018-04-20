@@ -343,8 +343,8 @@ section.front-page__success-stories {
   section.front-page__header button {
     bottom: 25%;
     margin-left: 4vw;
-    padding: 20px 50px;
     border-radius: 50px;
+    height: 60px;
   }
 
   section.front-page__header button:hover {

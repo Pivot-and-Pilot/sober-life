@@ -279,8 +279,11 @@ section.front-page__success-stories {
     button {
       bottom: 25%;
       margin-left: 4vw;
-      padding: 20px 50px;
+      // padding: 20px 50px;
       border-radius: 50px;
+      // width: 300px;
+      height: 60px;
+      // border-radius: 35px;
       &:hover {
         cursor: pointer;
       }

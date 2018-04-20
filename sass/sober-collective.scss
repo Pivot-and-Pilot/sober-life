@@ -15,6 +15,7 @@
           font-family: $font__main--med;
           color: black;
           text-decoration: none;
+          cursor: pointer;
         }
       }
     }
@@ -275,6 +276,7 @@
             font-family: $font__main--med;
             color: black;
             text-decoration: none;
+            cursor: pointer;            
           }
         }
       }
@@ -330,8 +332,12 @@
         width: 50%;
         padding-top: 60px;
         li {
+          cursor: pointer;
+          
           a {
             // font-family: $font__main;
+            cursor: pointer;
+            
           }
         }
         li.current {

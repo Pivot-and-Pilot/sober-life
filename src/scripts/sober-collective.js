@@ -8,6 +8,14 @@ jQuery(document).ready(function($) {
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
   // const rootUrl = window.location.href;
 
+  // Remove a href of CATS and TAGS on desktop  
+  $('.sobercollective__cats-desktop > li > a').each( function(){
+    $(this).removeAttr('href');
+  })
+  $('.sobercollective__tags-desktop > li > a').each(function() {
+    $(this).removeAttr('href');
+  });
+
   // Set Initial Settings (classnames/values)
   function setInitialSettings() {
     if (windowSize > 1025) {

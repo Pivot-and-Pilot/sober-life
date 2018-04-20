@@ -17,6 +17,7 @@
   font-family: "FFBauWebMedium";
   color: black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #sobercollective-page .sobercollective__top-bar .sobercollective__searchbar {
@@ -293,6 +294,7 @@
     font-family: "FFBauWebMedium";
     color: black;
     text-decoration: none;
+    cursor: pointer;
   }
 
   #sobercollective-page .sobercollective__top-bar .sobercollective__searchbar {
@@ -367,6 +369,14 @@
     justify-content: space-between;
     width: 50%;
     padding-top: 60px;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li {
+    cursor: pointer;
+  }
+
+  #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li a {
+    cursor: pointer;
   }
 
   #sobercollective-page .sobercollective__top-bar .sobercollective__tags-desktop li.current {

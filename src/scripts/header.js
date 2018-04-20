@@ -21,11 +21,24 @@ function toggleMenu() {
     document.getElementById('header__menu-overlay-content').style.opacity = '1';       
     document.documentElement.style.overflow = 'hidden'; 
     // document.documentElement.style.position = 'fixed';    
-      
+
   }
 };
 
 jQuery(document).ready(function($) {
+
+  // Remove a href of SERVICES button on desktop and mobile
+  $('#header__menu-nav-bar #primary-menu > li:eq(2) > a, #header__menu-nav #primary-menu > li:eq(2) > a').removeAttr('href');
+
+  // On click of link in mobile menu, close menu
+  $('#header__menu-nav #primary-menu > li:not(li:eq(2)) > a, #header__menu-nav #primary-menu > li:eq(2) > .sub-menu > li > a').click(function() {
+    document.getElementById('header__menu-overlay').style.width = '0%';    
+    document.getElementById('header__hamburger').classList.remove('open');      
+    document.getElementById('header__menu-overlay-content').style.right = '-1000px';
+    document.getElementById('header__menu-overlay-content').style.opacity = '0';   
+    document.documentElement.style.overflow = ''; 
+    document.getElementById('header__menu-nav').childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display = 'none';    
+  });
 
   // Show submenu of services on MOBILE
   $('#header__menu-nav #primary-menu > li:eq(2) > a').click(function(e) {
@@ -38,19 +51,30 @@ jQuery(document).ready(function($) {
     e.preventDefault();
   });
   
+  // Add desktop icon behind each page link on DESKTOP nav bar
   (function setPrimaryMenuIcons() {
     $('#header__menu-nav-bar #primary-menu li a').each(function() {
       $(this).append(`<img src="http://localhost:3000/soberlife/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`);
     });
   })();
 
+  // Update menu to show icon of active page ******************* CHANGE FOR ADVANCED AJAX *************************
   (function setCurrentPrimaryMenuIcon() {
     let locationSplit = window.location.href.split('/');
+    console.log(locationSplit);
     let location = locationSplit[locationSplit.length - 2];
+    console.log('location', location);
     $('#header__menu-nav-bar #primary-menu li a').each(function() {
-      let hrefSplit = ($(this).attr('href')).split('/');
-      let href = hrefSplit[hrefSplit.length - 2];
+      // Remove class 'active' from all menu options
+      $(this).children()[0].removeClass('active');
+      // Get slug 
+      console.log($(this).text());
+      let slug = slugify($(this).text());
+      console.log('sluggified', slug);
+      // let hrefSplit = ($(this).attr('href')).split('/'); // LEFT OFF HEREEEEEEEEEEEEEEEEEEE*********************************************c
+      // let href = hrefSplit[hrefSplit.length - 2];
       if (href == location) {
+        console.log('YUP');
         let target = $(this).children()[0];
         // $(target).css('display', 'block');
         $(target).addClass('active')
@@ -60,4 +84,15 @@ jQuery(document).ready(function($) {
       $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').css('display', 'block');
     }
   })();
+
+  function slugify(text) {
+    return text
+      .toString()
+      .toLowerCase()
+      .replace(/\s+/g, '-') // Replace spaces with -
+      .replace(/[^\w\-]+/g, '') // Remove all non-word chars
+      .replace(/\-\-+/g, '-') // Replace multiple - with single -
+      .replace(/^-+/, '') // Trim - from start of text
+      .replace(/-+$/, ''); // Trim - from end of text
+  }
 });

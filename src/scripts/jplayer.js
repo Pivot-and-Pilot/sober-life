@@ -1,22 +1,24 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
+  let currentPodcastLink, currentPodcastTitle;
+  // document.cookie = `currentPodcast=${getCookie('currentPodcast')}; max-age=60*60; path=/`;
+  // document.cookie = `currentPodcastTitleCookie=${getCookie('currentPodcastTitleCookie')}; max-age=60*60; path=/`;
+  (function getPodcastURL(){
+    $('#page').on('click', '.single-post__play-button', function () {
+      currentPodcastLink = $(this).siblings('.powerpress_links_mp3')[0].children[0].href;
+      currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[1]).siblings('.single-post__title')[0].innerText;
 
-  let link, currentPodcastTitle;
-  document.cookie = `currentPodcast=${getCookie('currentPodcast')}; max-age=60*60; path=/`;
-  document.cookie = `currentPodcastTitleCookie=${getCookie('currentPodcastTitleCookie')}; max-age=60*60; path=/`;
-  (function getPodcastURL () {
-    $('.single-post__podcast-player').on('click', 'button[title="Play"]', function () {
-      link = $($(this).parentsUntil('.single-post__podcast-player')[4]).siblings('.powerpress_links_mp3')[0].children[0].href;
-      currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[6]).siblings('.single-post__title')[0].innerText;
-      $('.jp-title').html(`${currentPodcastTitle}`);
-      document.cookie = `currentPodcast=${link}; max-age=60*60; path=/`;
-      document.cookie = `currentPodcastTitleCookie=${currentPodcastTitle}; max-age=60*60; path=/`;
+      // $('.jp-title').html(`${currentPodcastTitle}`);
+
+      $("#jquery_jplayer_1").jPlayer("destroy");
+
 
       $("#jquery_jplayer_1").jPlayer({
         ready: function () {
+          console.log('dddddd')
           $(this).jPlayer("setMedia", {
             title: `${currentPodcastTitle}`,
-            mp3: `${link}`,
-          });
+            mp3: `${currentPodcastLink}`,
+          }).jPlayer("play");
         },
         cssSelectorAncestor: "#jp_container_1",
         swfPath: "/js",
@@ -28,8 +30,36 @@ $(document).ready(function(){
         remainingDuration: true,
         toggleDuration: true,
       });
+
+
+
+
+
+
+      $("#jquery_jplayer_1").prepend('<div class="jp-title-loading">Loading...</div>');
+
+      $("#jquery_jplayer_1").bind($.jPlayer.event.progress, function (event){
+        
+        // If media loading is complete
+        if (event.jPlayer.status.seekPercent === 0){        
+          $("#jquery_jplayer_1 .jp-title-loading").remove();
+     
+        // Otherwise, if media is still loading
+        } else {
+            if($(".jp-title .jp-title-loading").length == 0){
+              //  $(".jp-title").prepend('<div class="jp-title-loading">Loading...</div>');
+              // $(".jp-title .jp-title-loading").remove();
+            }
+        }
+      });
+
     })
   })();
+
+
+  $('#page').on('click','.single-post__thumbnail', function(){
+    console.log('asdasd');
+  })
 
   function getCookie(cname) {
     var name = cname + "=";
@@ -47,47 +77,59 @@ $(document).ready(function(){
     return "";
   }
 
-  $(window).on('load', function(){
-    var x = document.cookie;
-    console.log(x);
-    let currentLink = getCookie('currentPodcast');
-    let currentPodcastTitle = getCookie('currentPodcastTitleCookie');
-    console.log('this is current link ',currentLink);
 
-    $("#jquery_jplayer_1").jPlayer({
-      ready: function () {
-        $(this).jPlayer("setMedia", {
-          title: `${currentPodcastTitle}`,
-          mp3: `${currentLink}`,
-        });
-      },
-      cssSelectorAncestor: "#jp_container_1",
-      swfPath: "/js",
-      supplied: "mp3",
-      useStateClassSkin: false,
-      autoBlur: false,
-      smoothPlayBar: true,
-      keyEnabled: true,
-      remainingDuration: true,
-      toggleDuration: true,
-    });
-  })
-
-
-
-  // (function counter () {
+  // (function counter(){
 
   //   let secCount = 0;
   //   let counting;
   //   $('.single-post__podcast-player').on('click', 'button[title="Play"]', function () {
   //     counting = setInterval ( () => {
   //       secCount += 0.1;
+  //       document.cookie = `counting=${secCount}; max-age=60*60; path=/`;
   //     }, 100 )
   //   })
   //   $('.single-post__podcast-player').on('click', 'button[title="Pause"]', function () {
   //     clearInterval( counting );
+  //     console.log(      getCookie('counting') );
   //   })
 
   // })();
 
-});
+  // $(window).on('load', function(){
+  //   var x = document.cookie;
+  //   // console.log(x);
+  //   let currentLink = getCookie('currentPodcast');
+  //   let currentPodcastTitle = getCookie('currentPodcastTitleCookie');
+  //   let currentCounting = getCookie('counting');
+  //   console.log('current counting ',currentCounting);
+    
+  //   $("#jquery_jplayer_1").jPlayer({
+  //     ready: function () {
+  //       $(this).jPlayer("setMedia", {
+  //         title: `${currentPodcastTitle}`,
+  //         mp3: `${currentLink}`,
+  //       });
+  //     },
+  //     // cssSelectorAncestor: "#jp_container_1",
+  //     swfPath: "/js",
+  //     supplied: "mp3",
+  //     // useStateClassSkin: false,
+  //     // autoBlur: false,
+  //     // smoothPlayBar: true,
+  //     // keyEnabled: true,
+  //     // remainingDuration: true,
+  //     // toggleDuration: true,
+  //   });
+
+  //   $('#skipTime').on('click', function(){
+  //     // setTimeout(function(){
+  //       $("#jquery_jplayer_1").jPlayer("play", 40000);
+  //     // }, 100)
+      
+  //   })
+
+   
+
+  // })
+
+})

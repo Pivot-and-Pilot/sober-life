@@ -26,6 +26,7 @@ get_header();
 						<?php the_post_thumbnail(); ?>
 					</div>
 					<div class="single-post__podcast-player">
+						<div class="single-post__play-button">PLAY</div>
 						<?php	the_content(); ?>
 					</div>
 				</div>

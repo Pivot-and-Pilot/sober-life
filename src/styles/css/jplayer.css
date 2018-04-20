@@ -69,6 +69,11 @@
   border: none;
 }
 
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-pause img {
+  width: 20px;
+  height: 20px;
+}
+
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-stop {
   border: none;
 }

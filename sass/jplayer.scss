@@ -50,6 +50,10 @@
           }
           .jp-pause {
             border: none;
+            img {
+              width: 20px;
+              height: 20px;         
+            }
           }
           .jp-stop {
             border: none;

@@ -16,7 +16,7 @@
       <div class="jp-controls-holder">
         <div class="jp-controls">
           <button class="jp-play" role="button" tabindex="0"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="Play"/></button>
-          <button class="jp-pause" role="button" tabindex="0">PAUSE</button>
+          <button class="jp-pause" role="button" tabindex="0"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/pause-button.svg" alt="Pause"/></button>
           <button class="jp-stop" role="button" tabindex="0">STOP</button>
         </div>
         <div class="jp-progress">

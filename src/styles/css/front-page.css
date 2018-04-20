@@ -80,14 +80,17 @@ section.front-page__header .front-page__header__slogans .front-page__header__cha
 }
 
 section.front-page__header button {
-  position: absolute;
-  bottom: 20%;
-  margin-left: 6vw;
-  border-radius: 25px;
-  font-size: 1.5em;
-  padding: 10px 25px;
   background-color: #000;
+  border-radius: 25px;
+  bottom: 20%;
   color: #f5f0e8;
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  height: 50px;
+  margin-left: 6vw;
+  position: absolute;
+  width: 200px;
+  cursor: pointer;
 }
 
 section.front-page__header button:hover {
@@ -219,17 +222,24 @@ section.front-page__services .services-wapper .service .service__description p {
   margin: 20px 0;
 }
 
-section.front-page__services .services-wapper .service button {
-  height: 50px;
-  width: 200px;
-  border-radius: 25px;
+section.front-page__services .services-wapper .service .front-page__button {
   background-color: #000;
+  border-radius: 25px;
   color: #f5f0e8;
-  font-size: 1.3em;
+  display: block;
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 20px;
+  outline: none;
   padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
 }
 
-section.front-page__services .services-wapper .service button:hover {
+section.front-page__services .services-wapper .service .front-page__button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;
@@ -270,18 +280,24 @@ section.front-page__our-story .our-story__text .our-story__description p {
   margin: 0;
 }
 
-section.front-page__our-story .our-story__text button {
-  height: 50px;
-  width: 200px;
-  border-radius: 25px;
+section.front-page__our-story .our-story__text .front-page__button {
   background-color: #000;
+  border-radius: 25px;
   color: #f5f0e8;
-  font-size: 1.5em;
-  padding: 0;
+  display: block;
+  font-family: "FFBauWebMedium";
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
   margin-top: 20px;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
 }
 
-section.front-page__our-story .our-story__text button:hover {
+section.front-page__our-story .our-story__text .front-page__button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;
@@ -327,8 +343,8 @@ section.front-page__success-stories {
   section.front-page__header button {
     bottom: 25%;
     margin-left: 4vw;
-    padding: 20px 50px;
     border-radius: 50px;
+    height: 60px;
   }
 
   section.front-page__header button:hover {
@@ -414,7 +430,7 @@ section.front-page__success-stories {
     padding-right: 0;
   }
 
-  section.front-page__services .services-wapper .service button {
+  section.front-page__services .services-wapper .service .front-page__button {
     position: absolute;
     bottom: 0;
   }

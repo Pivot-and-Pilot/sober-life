@@ -4,7 +4,7 @@ footer {
   color: black;
   background-color: $color__white;
   .footer__wrap {
-    padding-top: 100px;
+    padding-top:60px;
     padding-bottom: 100px;
     margin: $margin__mobile;
     .footer__desktop-wrap {
@@ -166,11 +166,11 @@ footer {
             svg {
               width: 60px;
               border-radius: 10px;
-              // border: 1.2px solid black;
-              // &:hover {
-              //   fill: $color__green;
-              //   background-color: black;
-              // }
+              &:hover {
+                border: 1.2px solid black;
+                fill: $color__green;
+                background-color: black;
+              }
             }
           }
         }

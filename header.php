@@ -47,7 +47,7 @@
 							'menu_id'        => 'primary-menu',
 						) );
 					?>
-					<a href="#" class="header__menu-nav-bar-get-started">Get Started</a>
+					<a href="#" class="header__menu-nav-bar-get-started" onclick="toggleForm()">Get Started</a>
 				</div>
 			</div>
 		</section><!-- .site-branding -->
@@ -65,7 +65,7 @@
 					?>
 				</div>
 				<div class="header__menu-buttons">
-					<a href="#" class="header__menu-button-get-started">Get Started</a>
+					<a href="#" class="header__menu-button-get-started" onclick="toggleForm()">Get Started</a>
 					<a href="tel:18003230585" class="header__menu-button-phone">1.800.323.0585</a>
 					<a href="mailto:info@soberlifesd.com" class="header__menu-button-email">info@soberlifesd.com</a>
 				</div>

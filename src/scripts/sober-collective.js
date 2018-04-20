@@ -228,7 +228,7 @@ jQuery(document).ready(function($) {
         $('.sobercollective__posts-wrapper').empty();
         // Update max number of pages
         $('#maxpage').text(res.post_meta.total_pages);
-        $('#sobercollective__query').hide();        
+        $('#sobercollective__query').css('display', 'none');        
         $('#sobercollective__pagination').show();
         // Hide/Show pagination arrows based on number of pages
         if (res.post_meta.total_pages <= 1) {
@@ -307,9 +307,9 @@ jQuery(document).ready(function($) {
         //   $('#prev, #next').show();          
         // }
         $(res[0]).appendTo('.sobercollective__posts-wrapper');
-        $('#sobercollective__query').empty().show().append(`<div>Search results for: <strong>${query}</strong></div>`);
+        $('#sobercollective__query').empty().css('display', 'flex').append(`<div>Search results for: <strong>${query}</strong></div>`);
         // $('#sobercollective__query').append(`<div>Search results for: <strong>${query}</strong></div>`);
-        $('#sobercollective__query').val(`${query}`)
+        $('#sobercollective__query').val(`${query}`);
         // updatePagination();      
       },
       error: function(res) {
@@ -545,3 +545,4 @@ jQuery(document).ready(function($) {
     }
   })();
 });
+

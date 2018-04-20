@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($){ 
 
   (function reformatSuccessStoriesName () {
     let latestStoryTitle = $('.latest-story-track-number')[0].innerHTML;

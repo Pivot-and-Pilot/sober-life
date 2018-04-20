@@ -1,3 +1,7 @@
+// Open Form
+function toggleForm() {
+  document.getElementById('soberlife-form-wrapper').style.left = '0';
+};
 
 // Open/Close Nav Menu
 function toggleMenu() {

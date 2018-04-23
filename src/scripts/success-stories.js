@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
   })();
 
   (function successStoriesSlick () {
-    if ($(window).width() < 768) {
+    if ($(window).width() < 1025) {
       $('.other-success-stories').slick({
         centerMode: true,
         centerPadding: '6%',

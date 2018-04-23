@@ -157,6 +157,7 @@
   background-color: #80ff73;
   padding-top: 20px;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
 #services-child .services-child__content-wrap .services-child__our-approach .services-child__our-approach-logo {

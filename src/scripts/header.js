@@ -59,31 +59,34 @@ jQuery(document).ready(function($) {
   })();
 
   // Update menu to show icon of active page ******************* CHANGE FOR ADVANCED AJAX *************************
-  (function setCurrentPrimaryMenuIcon() {
+  function setCurrentPrimaryMenuIcon() {
     let locationSplit = window.location.href.split('/');
-    console.log(locationSplit);
     let location = locationSplit[locationSplit.length - 2];
-    console.log('location', location);
     $('#header__menu-nav-bar #primary-menu li a').each(function() {
       // Remove class 'active' from all menu options
-      $(this).children()[0].removeClass('active');
+      // let icons = $(this).children()[0];
+      // $(icons).removeClass('active');
       // Get slug 
-      console.log($(this).text());
       let slug = slugify($(this).text());
-      console.log('sluggified', slug);
-      // let hrefSplit = ($(this).attr('href')).split('/'); // LEFT OFF HEREEEEEEEEEEEEEEEEEEE*********************************************c
-      // let href = hrefSplit[hrefSplit.length - 2];
-      if (href == location) {
-        console.log('YUP');
+      if (slug == location) {
+        console.log('YUP, slug is', slug);
         let target = $(this).children()[0];
         // $(target).css('display', 'block');
         $(target).addClass('active')
+      } else {
+        console.log('NOPE');
+        let icons = $(this).children()[0];
+        $(icons).removeClass('active');
       }
     })
+    // If Services sub-menu item is 'active', make 'Services' 'active' as well.
     if ($('#header__menu-nav-bar #primary-menu li a img.active').parent().parent().parent().hasClass('sub-menu')) {
-      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').css('display', 'block');
+      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').addClass('active');
+    } else {
+      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').removeClass('active');      
     }
-  })();
+  };
+  setCurrentPrimaryMenuIcon();
 
   function slugify(text) {
     return text

@@ -7,14 +7,12 @@ jQuery(document).ready(function($){
       currentPodcastLink = $(this).siblings('.powerpress_links_mp3')[0].children[0].href;
       currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[1]).siblings('.single-post__title')[0].innerText;
 
-      // $('.jp-title').html(`${currentPodcastTitle}`);
+
 
       $("#jquery_jplayer_1").jPlayer("destroy");
 
-
       $("#jquery_jplayer_1").jPlayer({
         ready: function () {
-          console.log('dddddd')
           $(this).jPlayer("setMedia", {
             title: `${currentPodcastTitle}`,
             mp3: `${currentPodcastLink}`,
@@ -23,7 +21,7 @@ jQuery(document).ready(function($){
         cssSelectorAncestor: "#jp_container_1",
         swfPath: "/js",
         supplied: "mp3",
-        useStateClassSkin: false,
+        useStateClassSkin: true,
         autoBlur: false,
         smoothPlayBar: true,
         keyEnabled: true,
@@ -31,18 +29,15 @@ jQuery(document).ready(function($){
         toggleDuration: true,
       });
 
-
-
-
-
-
-      $("#jquery_jplayer_1").prepend('<div class="jp-title-loading">Loading...</div>');
+      // $("#jquery_jplayer_1").prepend('<div class="jp-title-loading">Loading...</div>');
+      $('.jp-title').html('Loading...');
 
       $("#jquery_jplayer_1").bind($.jPlayer.event.progress, function (event){
         
         // If media loading is complete
         if (event.jPlayer.status.seekPercent === 0){        
-          $("#jquery_jplayer_1 .jp-title-loading").remove();
+          // $("#jquery_jplayer_1 .jp-title-loading").remove();
+          $('.jp-title').html(`${currentPodcastTitle}`);
      
         // Otherwise, if media is still loading
         } else {
@@ -56,10 +51,6 @@ jQuery(document).ready(function($){
     })
   })();
 
-
-  $('#page').on('click','.single-post__thumbnail', function(){
-    console.log('asdasd');
-  })
 
   function getCookie(cname) {
     var name = cname + "=";

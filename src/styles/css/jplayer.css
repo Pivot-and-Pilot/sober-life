@@ -157,6 +157,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  #soberlife__jplayer {
+    bottom: 0;
+  }
+
   #soberlife__jplayer .jp-type-single {
     margin: 0 4vw;
   }

@@ -35,6 +35,7 @@
     .jp-details {
       .jp-title {
         padding-left: 55px;
+        font-family: $font__main--bold;
       }
     }
     .jp-interface {
@@ -110,8 +111,10 @@
             font-size: 14px;
             justify-content: space-between;
             .jp-current-time {
+              font-family: $font__main--med;
             }
             .jp-duration {
+              font-family: $font__main--med;
             }
           }
         }

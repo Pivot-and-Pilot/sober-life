@@ -36,6 +36,7 @@
 
 #soberlife__jplayer .jp-type-single .jp-details .jp-title {
   padding-left: 55px;
+  font-family: "FFBauWebBold";
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface {
@@ -145,6 +146,14 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar .jp-current-time {
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar .jp-duration {
+  font-family: "FFBauWebMedium";
 }
 
 @media only screen and (min-width: 768px) {

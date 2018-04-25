@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
   let windowSize = $(window).width();
 
-  if (windowSize < 1024) {
+  if (windowSize < 768) {
     (function aboutPageMobileCarousels() {
       $('#about__our-team-wrapper').slick({
         arrows: false,

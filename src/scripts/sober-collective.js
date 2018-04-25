@@ -42,8 +42,8 @@ jQuery(document).ready(function($) {
       $('.sobercollective__tags-mobile select option').each(function() {
         $(this).removeClass('current');
       })
-      $('.sobercollective__cats-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
-      $('.sobercollective__tags-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
+      $('.sobercollective__cats-mobile select option').eq(0).addClass('current').prop('selected', true);
+      $('.sobercollective__tags-mobile select option').eq(0).addClass('current').prop('selected', true);
     }
   }
   // Invoke setInitialSettings() on initial load
@@ -145,7 +145,6 @@ jQuery(document).ready(function($) {
       dataType: 'json',
       success: function(res) {
         ajaxLock = false;
-        console.log(res);
         $('.sobercollective__posts-wrapper').empty();
         $(res[0])
           // .hide()
@@ -271,23 +270,12 @@ jQuery(document).ready(function($) {
     let currPage = $('#curpage').text();
     ajaxLock = true;
     let postsPerPage;
-    // , offset;
-    // let currentPageTotal = $('.sobercollective__post').length;
-    // let direction = 'next';
-    
+
     if (windowSize > 1025) {
       postsPerPage = 12;
     } else {
       postsPerPage = 11;
     }
-
-    // if (direction == 'next') {
-    //   offset = currentPageTotal + (postsPerPage * (currPage - 1));
-    //   console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
-    // } else if (direction == 'prev') {
-    //     offset = (postsPerPage * (currPage - 1));        
-    //     console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
-    // }
 
     $.ajax({
       type: 'get',
@@ -301,23 +289,17 @@ jQuery(document).ready(function($) {
         $input.prop('disabled', false);
         ajaxLock = false;
         $('.sobercollective__posts-wrapper').empty();
-        // $('#maxpage').text(`${Math.ceil(res.post_meta.total_posts / postsPerPage)}`);
         $('#sobercollective__pagination').hide();
         $('#search-input').val('');
         setInitialSettings();
-        // if (res.post_meta.total_posts <= 1) {
-        //   $('#prev, #next').hide();
-          if (res.post_meta.total_posts == 0) {
-            $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
-          }
-        // } else {
-        //   $('#prev, #next').show();          
-        // }
+        if (res.post_meta.total_posts == 0) {
+          $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
+        }
+        $('.sobercollective__clear-query').empty();
+        $('.sobercollective__clear-query').append(`<button>Clear Results</button>`);
         $(res[0]).appendTo('.sobercollective__posts-wrapper');
         $('#sobercollective__query').empty().css('display', 'flex').append(`<div>Search results for: <strong>${query}</strong></div>`);
-        // $('#sobercollective__query').append(`<div>Search results for: <strong>${query}</strong></div>`);
         $('#sobercollective__query').val(`${query}`);
-        // updatePagination();      
       },
       error: function(res) {
         ajaxLock = false;
@@ -338,11 +320,25 @@ jQuery(document).ready(function($) {
       if (e.which === 13) {
         console.log('ENTERED');
         ajax_get_search_results(query);
+        // $('.sobercollective__clear-query').css('display', 'flex');
         return false;
       }    
     });
   })();
 
+  // ********************** //
+  //     SEARCH CLEAR
+  // ********************** // 
+  (function clearSearch() {
+    $(document).on('click', '.sobercollective__clear-query button', function() {
+      // On click, clear current search query results
+      console.log('PRESSED BUTTON');
+      ajax_filter_posts();
+      // destroy CLEAR SEARCH button
+      $(this).remove();
+    });
+  })();
+  
   // ************** //
   //  PAGINATION
   // ************** // 
@@ -464,7 +460,7 @@ jQuery(document).ready(function($) {
         $(this)
           .children()
           .each(function() {
-            $(this).removeClass('current');
+            $(this).removeClass('current'); 
             if ($(this).val() == newCat) {
               $(this).addClass('current');
             }

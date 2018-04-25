@@ -58,7 +58,7 @@ jQuery(document).ready(function($) {
     });
   })();
 
-  // Update menu to show icon of active page ******************* CHANGE FOR ADVANCED AJAX *************************
+  // Update menu to show icon of active page 
   function setCurrentPrimaryMenuIcon() {
     let locationSplit = window.location.href.split('/');
     let location = locationSplit[locationSplit.length - 2];

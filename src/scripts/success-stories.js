@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 2,
-        arrows: true,
+        arrows: false,
       })
     }
 

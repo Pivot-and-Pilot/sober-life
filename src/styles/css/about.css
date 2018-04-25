@@ -375,8 +375,20 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #about-page .about__our-team #about__our-team-wrapper .slick-list .slick-track .about__our-team-member img {
-    height: 500px;
+  #about-page .about__our-team #about__our-team-wrapper {
+    margin: 0 6% 0 6%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+
+  #about-page .about__our-team #about__our-team-wrapper .about__our-team-member img {
+    height: 300px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
   }
 
   #about-page .about__certifications #about__certification-logo-wrapper {

@@ -48,7 +48,7 @@
       </div>
       
       <div class="latest-story-track-title"><?php the_title(); ?></div>
-      <div class="latest-story-track-date"><?php the_date(); ?></div>
+      <div class="latest-story-track-date"><?php the_date('m/d/y'); ?></div>
     </a>
   <?php
     }
@@ -107,7 +107,7 @@
         </div> 
 
         <div class="single-story-track-date">
-          <?php the_date() ?>
+          <?php the_date('m/d/y'); ?>
         </div> 
       </a>
     </div>
@@ -119,6 +119,6 @@
   ?>
   </div>
 
-  <a href="" class="go-to-sober-collective">Go to <span>Sober Collective</span></a>
+  <a href="<?php echo site_url('/sober-collective'); ?>" class="go-to-sober-collective">Go to <span>Sober Collective</span></a>
   
 </section>

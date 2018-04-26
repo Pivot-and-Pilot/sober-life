@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($){ 
 
   (function reformatSuccessStoriesName () {
     let latestStoryTitle = $('.latest-story-track-number')[0].innerHTML;
@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
   })();
 
   (function successStoriesSlick () {
-    if ($(window).width() < 768) {
+    if ($(window).width() < 1025) {
       $('.other-success-stories').slick({
         centerMode: true,
         centerPadding: '6%',

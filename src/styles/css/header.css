@@ -297,7 +297,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     text-decoration: none;
     border-left: 1px solid black;
     height: 100%;
-    padding: 10px 4%;
+    padding: 8px 4%;
   }
 
   header .site-branding .header__top-bar a:hover {
@@ -306,7 +306,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
   }
 
   header .site-branding .header__top-bar a:nth-child(1) {
-    padding: 10px 4%;
+    padding: 8px 4%;
   }
 
   header .site-branding .header__bottom-bar {
@@ -513,8 +513,15 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     margin-left: -11.5%;
   }
 
+  header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu {
+    font-size: 45px;
+    line-height: 55px;
+  }
+
   header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu {
     width: 100vw;
+    font-size: 25px;
+    line-height: 45px;
   }
 
   header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu li {

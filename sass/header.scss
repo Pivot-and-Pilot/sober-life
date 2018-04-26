@@ -231,8 +231,12 @@ header {
       #header__menu-overlay-content {
         #header__menu-nav {
           #primary-menu {
+            font-size: 45px;
+            line-height: 55px;
             .sub-menu {
               width: 100vw;
+              font-size: 25px;
+              line-height: 45px;
               li {
                 width: 100%;
               }
@@ -274,14 +278,14 @@ header {
           text-decoration: none;
           border-left: 1px solid black;
           height: 100%;
-          padding: 10px 4%;
+          padding: 8px 4%;
         }
         a:hover {
           color: $color__white;
           background-color: black;
         }
         a:nth-child(1) {
-          padding: 10px 4%;
+          padding: 8px 4%;
         }
       }
       .header__bottom-bar {

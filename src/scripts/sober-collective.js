@@ -1,11 +1,20 @@
 jQuery(document).ready(function($) {
   // Get window size
   let windowSize = $(window).width();
-  // Prevent multiple clicks
-  let ajaxLock = false;
-  // let isSearch = false;  
+
+  // Set to false to prevent multiple clicks
+  let ajaxLock = false; 
+
+  // Get ajax URL admin ajax
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
-  // const rootUrl = window.location.href;
+
+  // Remove a href of CATS and TAGS on desktop  
+  $('.sobercollective__cats-desktop > li > a').each( function(){
+    $(this).removeAttr('href');
+  })
+  $('.sobercollective__tags-desktop > li > a').each(function() {
+    $(this).removeAttr('href');
+  });
 
   // Set Initial Settings (classnames/values)
   function setInitialSettings() {
@@ -34,15 +43,20 @@ jQuery(document).ready(function($) {
       $('.sobercollective__tags-mobile select option').each(function() {
         $(this).removeClass('current');
       })
-      $('.sobercollective__cats-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
-      $('.sobercollective__tags-mobile select option').eq(0).addClass('current').attr('selected', 'selected');
+      $('.sobercollective__cats-mobile select option').eq(0).addClass('current').prop('selected', true);
+      $('.sobercollective__tags-mobile select option').eq(0).addClass('current').prop('selected', true);
     }
   }
+  // Invoke setInitialSettings() on initial load
   setInitialSettings();
 
+  // Update pagination 
   function updatePagination(currPage) {
+    // Get max page number
     let maxPage = $('#maxpage').text();
+    // Get current page number
     currPage = currPage ? currPage : 1;
+    // Reset page numbers
     let pagesContainer = $('#sobercollective__pages');
     $(pagesContainer).empty();
     if (maxPage > 4) {
@@ -92,7 +106,6 @@ jQuery(document).ready(function($) {
 
   // Connect desktop nav bar li.current to corresponding icon
   function updateActiveCatIcon(pos) {
-    // let pos = $('.sobercollective__cats-desktop li.current').index();
     $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
     $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
   }
@@ -154,27 +167,22 @@ jQuery(document).ready(function($) {
     let offset, postsPerPage;
     let currentPageTotal = $('.sobercollective__post').length;
 
+    // Posts Per Page (layout) dependent on screen size
     if (windowSize > 1025) {
       postsPerPage = 12;
-      // console.log(postsPerPage);
     } else {
       postsPerPage = 11;
-      // console.log(postsPerPage);
     }
       
+    // Update offset based on direction clicked
     if (direction == 'next') {
       offset = currentPageTotal + (postsPerPage * (currPage - 1));
-      console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
+      // console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
     } else if (direction == 'prev') {
-      // if (maxPage - currPage == 1) {
-        offset = (postsPerPage * (currPage - 1));        
-        console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
-      // } 
-      // else {
-      //   offset = currentPageTotal + postsPerPage * (currPage - 2);
-      //   console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 2`);
-      // }
+      offset = (postsPerPage * (currPage - 1));        
+      // console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
     }
+
     $.ajax({
       type: 'get',
       url: ajaxUrl,
@@ -200,15 +208,19 @@ jQuery(document).ready(function($) {
   //  AJAX_FILTER_POSTS for filtering by category/tag
   // ************************************************* // 
   function ajax_filter_posts(catID, tagID) {
+    // Set catID and tagID to default post IDs (All) if none passed into function
     catID = catID ? catID : 13;
     tagID = tagID ? tagID : 14;
+
     ajaxLock = true;
+
     let postsPerPage;
     if (windowSize > 1025) {
       postsPerPage = 12;
     } else {
       postsPerPage = 11;
     }
+
     $.ajax({
       type: 'get',
       url: ajaxUrl,
@@ -220,11 +232,12 @@ jQuery(document).ready(function($) {
         $('.sobercollective__posts-wrapper').empty();
         // Update max number of pages
         $('#maxpage').text(res.post_meta.total_pages);
-        $('#sobercollective__query').hide();        
+        $('#sobercollective__query').css('display', 'none');        
         $('#sobercollective__pagination').show();
         // Hide/Show pagination arrows based on number of pages
         if (res.post_meta.total_pages <= 1) {
           $('#prev, #next').hide();
+          // If no results, display message
           if (res.post_meta.total_pages == 0) {
             $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
           }
@@ -236,8 +249,9 @@ jQuery(document).ready(function($) {
           .hide()
           .appendTo('.sobercollective__posts-wrapper')
           .fadeIn(500);
-        // updatePagination();
         updatePagination();
+        // Remove 'Clear Results' button (appears for search results)
+        $('.sobercollective__clear-query button').remove();
         // AJAX pushstate??
         // window.history.pushState('object','Category ' + catID, rootUrl + 'category-' + catID)
       },
@@ -255,101 +269,55 @@ jQuery(document).ready(function($) {
     let $input = $('#search-input');
     let currPage = $('#curpage').text();
     ajaxLock = true;
+
     let postsPerPage;
-    // , offset;
-    // let currentPageTotal = $('.sobercollective__post').length;
-    // let direction = 'next';
-    
     if (windowSize > 1025) {
       postsPerPage = 12;
     } else {
       postsPerPage = 11;
     }
 
-    // if (direction == 'next') {
-    //   offset = currentPageTotal + (postsPerPage * (currPage - 1));
-    //   console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
-    // } else if (direction == 'prev') {
-    //     offset = (postsPerPage * (currPage - 1));        
-    //     console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
-    // }
-
     $.ajax({
       type: 'get',
       url: ajaxUrl,
       data: `&posts_per_page=${postsPerPage}&query=${query}&action=ajax_get_search_results`,
       dataType: 'json',
+      // Before sending, disable clicking (event.preventDefault)
       beforeSend: function() {
         $input.prop('disabled', true);   
       },
       success: function(res) {
+        // On success, enable clicking for future searches
         $input.prop('disabled', false);
         ajaxLock = false;
+        // Empty posts wrapper for new results
         $('.sobercollective__posts-wrapper').empty();
-        // $('#maxpage').text(`${Math.ceil(res.post_meta.total_posts / postsPerPage)}`);
+        // Hide pagination for SEARCH queries
         $('#sobercollective__pagination').hide();
+        // Reset search input to default 
         $('#search-input').val('');
+        // Set current categories to default settings
         setInitialSettings();
-        // if (res.post_meta.total_posts <= 1) {
-        //   $('#prev, #next').hide();
-          if (res.post_meta.total_posts == 0) {
-            $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
-          }
-        // } else {
-        //   $('#prev, #next').show();          
-        // }
+        // If no results found, display message
+        if (res.post_meta.total_posts == 0) {
+          $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
+        }
+        // Empty previous and show Clear Results button 
+        $('.sobercollective__clear-query').empty();
+        $('.sobercollective__clear-query').append(`<button>Clear Results</button>`);
+        // Add found results into posts wrapper
         $(res[0]).appendTo('.sobercollective__posts-wrapper');
-        $('#sobercollective__query').empty().show().append(`<div>Search results for: <strong>${query}</strong></div>`);
-        // $('#sobercollective__query').append(`<div>Search results for: <strong>${query}</strong></div>`);
-        $('#sobercollective__query').val(`${query}`)
-        // updatePagination();      
+        // Empty previous and show current search query
+        $('#sobercollective__query').empty().css('display', 'flex').append(`<div>Search results for: <strong>${query}</strong></div>`);
+        // Update current query value as well
+        $('#sobercollective__query').val(`${query}`);
       },
-      error: function() {
+      error: function(res) {
         ajaxLock = false;
-        console.log('error');
+        console.log('error', res);
       }
     });
   }
-
-  // ****************************************************************** //
-  //  AJAX_GET_SEARCH_RESULT_PAGES for next, prev search result pages
-  // ****************************************************************** // 
-  // function ajax_get_search_result_pages(direction, currPage, maxPage) {
-  //   ajaxLock = true;
-  //   let offset, postsPerPage;
-  //   let currentPageTotal = $('.sobercollective__post').length;
-  //   let query = $('#sobercollective__query').val();
-
-  //   if (windowSize > 1025) {
-  //     postsPerPage = 12;
-  //     // console.log(postsPerPage);
-  //   } else {
-  //     postsPerPage = 11;
-  //     // console.log(postsPerPage);
-  //   }
-      
-  //   if (direction == 'next') {
-  //     offset = currentPageTotal + (postsPerPage * (currPage - 1));
-  //     console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
-  //   } else if (direction == 'prev') {
-  //     offset = (postsPerPage * (currPage - 1));        
-  //     console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
-  //   }
-
-  //   $.ajax({
-  //     type: 'get',
-  //     url: ajaxUrl,
-  //     data: `&query=${query}&curr_page=${currPage}&offset=${offset}&posts_per_page=${postsPerPage}&action=ajax_get_search_result_pages`,
-  //     dataType: 'json',
-  //     success: function(res) {
-  //       ajaxLock = false;
-  //     },
-  //     error: function() {
-  //       ajaxLock = false;
-  //       console.log('error');
-  //     }
-  //   })
-  // }
 
   // *************************************************** EVENT HANDLERS ****************************************************** //
   // ********************** //
@@ -361,13 +329,22 @@ jQuery(document).ready(function($) {
       let query = $input.val();
   
       if (e.which === 13) {
-        // isSearch = true;
-        console.log('ENTERED');
         ajax_get_search_results(query);
+        return false;
       }    
     });
   })();
 
+  // ********************** //
+  //     SEARCH CLEAR
+  // ********************** // 
+  (function clearSearch() {
+    $(document).on('click', '.sobercollective__clear-query button', function() {
+      // On click, clear search results and display default (ALL TAGS and CATS) posts
+      ajax_filter_posts();
+    });
+  })();
+  
   // ************** //
   //  PAGINATION
   // ************** // 
@@ -391,11 +368,7 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage + 1;
         // Update current page
         $('#curpage').text(newPageNum);
-        // if (!isSearch) {
-          ajax_get_posts('next', currentPage, currCat, currTag);
-        // } else {
-        //   ajax_get_search_result_pages('next', currentPage)          
-        // }
+        ajax_get_posts('next', currentPage, currCat, currTag);
         updatePagination(newPageNum);                
       }
     });
@@ -419,16 +392,12 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage - 1;
         // Update current page
         $('#curpage').text(newPageNum);
-        // if (!isSearch) {        
-          ajax_get_posts('prev', newPageNum, currCat, currTag, max);
-        // } else {
-        //   ajax_get_search_result_pages('prev', newPageNum, max);          
-        // }
+        ajax_get_posts('prev', newPageNum, currCat, currTag, max);
         updatePagination(newPageNum);        
       }
     });
 
-    // On Page Number Button Click ******************
+    // On Page Number Button Click 
     $(document).on('click', '#sobercollective__pages button', function() {
       let pageNum = Number($(this).val());
       let currentPage = Number($('#curpage').text());  
@@ -446,20 +415,11 @@ jQuery(document).ready(function($) {
       // Update current page
       $('#curpage').text(pageNum);
       let isNext = ((pageNum - currentPage) >= 0 ); 
-      console.log(isNext);
-      // if (!isSearch) {    
-        if (isNext) {
-          ajax_get_posts('next', pageNum - 1, currCat, currTag);
-        } else {
-          ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
-        }
-      // } else {
-      //   if (isNext) {
-      //     ajax_get_search_result_pages('next', pageNum - 1);
-      //   } else {
-      //     ajax_get_search_result_pages('prev', pageNum, maxPage);
-      //   }
-      // }
+      if (isNext) {
+        ajax_get_posts('next', pageNum - 1, currCat, currTag);
+      } else {
+        ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
+      }
       updatePagination(pageNum)
     });
   })();
@@ -475,7 +435,6 @@ jQuery(document).ready(function($) {
       // On Category Click
       $('.sobercollective__cats-desktop li a').click(function(e) {
         e.preventDefault();
-        // isSearch = false;
         $('#curpage').text('1');
         let newCat = $(this).parent().val();
         $(this).parent().siblings().removeClass('current');
@@ -488,7 +447,6 @@ jQuery(document).ready(function($) {
       // On Tag Click
       $('.sobercollective__tags-desktop li a').click(function(e) {
         e.preventDefault();        
-        isSearch = false;        
         $('#curpage').text('1');
         let newTag = $(this).parent().val();
         $(this).parent().siblings().removeClass('current');
@@ -502,13 +460,12 @@ jQuery(document).ready(function($) {
 
       // On Category Change
       $('.sobercollective__cats-mobile > select').on('change', function() {
-        isSearch = false;        
         $('#curpage').text('1');      
         let newCat = $(this).val();
         $(this)
           .children()
           .each(function() {
-            $(this).removeClass('current');
+            $(this).removeClass('current'); 
             if ($(this).val() == newCat) {
               $(this).addClass('current');
             }
@@ -519,7 +476,6 @@ jQuery(document).ready(function($) {
 
       // On Tag Change
       $('.sobercollective__tags-mobile-dropdown > select').on('change', function() {
-        isSearch = false;        
         $('#curpage').text('1');            
         let newTag = $(this).val();
         $(this)
@@ -535,22 +491,5 @@ jQuery(document).ready(function($) {
       });
     }
   })();
-
-  // ************************************************** JPLAYER ***************************************************** //
-  // JPlayer
-  // display play(add?) button on every podcast category post
-  (function podcastPlayButton() {
-    $('.sobercollective__post').each(function() {
-      if (
-        $(this)
-          .find('.sobercollective__post--cat-name')
-          .text() == 'Podcast'
-      ) {
-        // ********** CHANGE IMG SRC  ***********
-        $(this).prepend(
-          `<a class="sobercollective__play-btn" href="#"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"/></a>`
-        );
-      }
-    });
-  })();
 });
+

@@ -8,9 +8,6 @@
     position: relative;
     .about__opening-image-wrapper {
       position: fixed;
-      // margin: $margin__mobile;
-      margin: 0 -7%;
-
       overflow: hidden;
       z-index: -1;
       height: 60vh;
@@ -174,19 +171,11 @@
   #about-page {
     .about__our-team {
       #about__our-team-wrapper {
-        // .slick-list {
-        //   .slick-track {
-        //     .about__our-team-member {
-        //       img {
-        //         height: 500px;
-        //       }
-        //     }
-        //   }
-        // }
         margin: $margin__mobile;        
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
+        padding-top: 25px;
         .about__our-team-member {
           img {
             height: 300px;
@@ -196,13 +185,18 @@
             
           }
           .about__our-team-member-name {
-
+            font-family: $font__main--bold;
+            font-size: 22px;
+            line-height: 24px;
           }
           .about__our-team-member-title {
+            font-family: $font__main--med;
 
           }
           .about__our-team-member-about {
-
+            font-family: $font__main;
+            font-size: 18px;
+            line-height: 22px;
           }
         }
       }

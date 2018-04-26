@@ -1,11 +1,12 @@
 jQuery(document).ready(function($) {
   // Get window size
   let windowSize = $(window).width();
+
   // Set to false to prevent multiple clicks
   let ajaxLock = false; 
 
+  // Get ajax URL admin ajax
   const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
-  // const rootUrl = window.location.href;
 
   // Remove a href of CATS and TAGS on desktop  
   $('.sobercollective__cats-desktop > li > a').each( function(){
@@ -105,8 +106,6 @@ jQuery(document).ready(function($) {
 
   // Connect desktop nav bar li.current to corresponding icon
   function updateActiveCatIcon(pos) {
-    // let pos = $('.sobercollective__cats-desktop li.current').index();
-    console.log(pos);
     $('.sobercollective__cats-desktop-icons').children().css('opacity', 0.4);    
     $(`.sobercollective__cats-desktop-icons img:eq(${pos})`).css('opacity', 1);    
   }
@@ -168,27 +167,22 @@ jQuery(document).ready(function($) {
     let offset, postsPerPage;
     let currentPageTotal = $('.sobercollective__post').length;
 
+    // Posts Per Page (layout) dependent on screen size
     if (windowSize > 1025) {
       postsPerPage = 12;
-      // console.log(postsPerPage);
     } else {
       postsPerPage = 11;
-      // console.log(postsPerPage);
     }
       
+    // Update offset based on direction clicked
     if (direction == 'next') {
       offset = currentPageTotal + (postsPerPage * (currPage - 1));
-      console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
+      // console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);      
     } else if (direction == 'prev') {
-      // if (maxPage - currPage == 1) {
-        offset = (postsPerPage * (currPage - 1));        
-        console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
-      // } 
-      // else {
-      //   offset = currentPageTotal + postsPerPage * (currPage - 2);
-      //   console.log(`Offset is ${offset} = currentPageTotal ${currentPageTotal} + postsPerPage ${postsPerPage} * currPage ${currPage} - 2`);
-      // }
+      offset = (postsPerPage * (currPage - 1));        
+      // console.log(`Offset is ${offset} = postsPerPage ${postsPerPage} * currPage ${currPage} - 1`);
     }
+
     $.ajax({
       type: 'get',
       url: ajaxUrl,
@@ -214,15 +208,19 @@ jQuery(document).ready(function($) {
   //  AJAX_FILTER_POSTS for filtering by category/tag
   // ************************************************* // 
   function ajax_filter_posts(catID, tagID) {
+    // Set catID and tagID to default post IDs (All) if none passed into function
     catID = catID ? catID : 13;
     tagID = tagID ? tagID : 14;
+
     ajaxLock = true;
+
     let postsPerPage;
     if (windowSize > 1025) {
       postsPerPage = 12;
     } else {
       postsPerPage = 11;
     }
+
     $.ajax({
       type: 'get',
       url: ajaxUrl,
@@ -239,6 +237,7 @@ jQuery(document).ready(function($) {
         // Hide/Show pagination arrows based on number of pages
         if (res.post_meta.total_pages <= 1) {
           $('#prev, #next').hide();
+          // If no results, display message
           if (res.post_meta.total_pages == 0) {
             $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
           }
@@ -250,8 +249,9 @@ jQuery(document).ready(function($) {
           .hide()
           .appendTo('.sobercollective__posts-wrapper')
           .fadeIn(500);
-        // updatePagination();
         updatePagination();
+        // Remove 'Clear Results' button (appears for search results)
+        $('.sobercollective__clear-query button').remove();
         // AJAX pushstate??
         // window.history.pushState('object','Category ' + catID, rootUrl + 'category-' + catID)
       },
@@ -269,8 +269,8 @@ jQuery(document).ready(function($) {
     let $input = $('#search-input');
     let currPage = $('#curpage').text();
     ajaxLock = true;
-    let postsPerPage;
 
+    let postsPerPage;
     if (windowSize > 1025) {
       postsPerPage = 12;
     } else {
@@ -282,23 +282,34 @@ jQuery(document).ready(function($) {
       url: ajaxUrl,
       data: `&posts_per_page=${postsPerPage}&query=${query}&action=ajax_get_search_results`,
       dataType: 'json',
+      // Before sending, disable clicking (event.preventDefault)
       beforeSend: function() {
         $input.prop('disabled', true);   
       },
       success: function(res) {
+        // On success, enable clicking for future searches
         $input.prop('disabled', false);
         ajaxLock = false;
+        // Empty posts wrapper for new results
         $('.sobercollective__posts-wrapper').empty();
+        // Hide pagination for SEARCH queries
         $('#sobercollective__pagination').hide();
+        // Reset search input to default 
         $('#search-input').val('');
+        // Set current categories to default settings
         setInitialSettings();
+        // If no results found, display message
         if (res.post_meta.total_posts == 0) {
           $('.sobercollective__posts-wrapper').append(`<div id="sobercollective__noresults">Sorry, No Results Found</div>`);
         }
+        // Empty previous and show Clear Results button 
         $('.sobercollective__clear-query').empty();
         $('.sobercollective__clear-query').append(`<button>Clear Results</button>`);
+        // Add found results into posts wrapper
         $(res[0]).appendTo('.sobercollective__posts-wrapper');
+        // Empty previous and show current search query
         $('#sobercollective__query').empty().css('display', 'flex').append(`<div>Search results for: <strong>${query}</strong></div>`);
+        // Update current query value as well
         $('#sobercollective__query').val(`${query}`);
       },
       error: function(res) {
@@ -318,9 +329,7 @@ jQuery(document).ready(function($) {
       let query = $input.val();
   
       if (e.which === 13) {
-        console.log('ENTERED');
         ajax_get_search_results(query);
-        // $('.sobercollective__clear-query').css('display', 'flex');
         return false;
       }    
     });
@@ -331,11 +340,8 @@ jQuery(document).ready(function($) {
   // ********************** // 
   (function clearSearch() {
     $(document).on('click', '.sobercollective__clear-query button', function() {
-      // On click, clear current search query results
-      console.log('PRESSED BUTTON');
+      // On click, clear search results and display default (ALL TAGS and CATS) posts
       ajax_filter_posts();
-      // destroy CLEAR SEARCH button
-      $(this).remove();
     });
   })();
   
@@ -362,7 +368,7 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage + 1;
         // Update current page
         $('#curpage').text(newPageNum);
-          ajax_get_posts('next', currentPage, currCat, currTag);
+        ajax_get_posts('next', currentPage, currCat, currTag);
         updatePagination(newPageNum);                
       }
     });
@@ -386,12 +392,12 @@ jQuery(document).ready(function($) {
         let newPageNum = currentPage - 1;
         // Update current page
         $('#curpage').text(newPageNum);
-          ajax_get_posts('prev', newPageNum, currCat, currTag, max);
+        ajax_get_posts('prev', newPageNum, currCat, currTag, max);
         updatePagination(newPageNum);        
       }
     });
 
-    // On Page Number Button Click ******************
+    // On Page Number Button Click 
     $(document).on('click', '#sobercollective__pages button', function() {
       let pageNum = Number($(this).val());
       let currentPage = Number($('#curpage').text());  
@@ -409,12 +415,11 @@ jQuery(document).ready(function($) {
       // Update current page
       $('#curpage').text(pageNum);
       let isNext = ((pageNum - currentPage) >= 0 ); 
-      console.log(isNext);
-        if (isNext) {
-          ajax_get_posts('next', pageNum - 1, currCat, currTag);
-        } else {
-          ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
-        }
+      if (isNext) {
+        ajax_get_posts('next', pageNum - 1, currCat, currTag);
+      } else {
+        ajax_get_posts('prev', pageNum, currCat, currTag, maxPage);
+      }
       updatePagination(pageNum)
     });
   })();

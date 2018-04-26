@@ -424,9 +424,12 @@
     justify-content: space-between;
   }
 
+  #sobercollective-page .sobercollective__query-bar .sobercollective__clear-query button {
+    cursor: pointer;
+  }
+
   #sobercollective-page .sobercollective__query-bar .sobercollective__clear-query:hover {
     text-decoration: underline;
-    cursor: pointer;
   }
 
   #sobercollective-page .sobercollective__posts-wrapper {

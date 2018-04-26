@@ -1,6 +1,15 @@
 // Open Form
 function toggleForm() {
   document.getElementById('soberlife-form-wrapper').style.left = '0';
+  let isOpen = document.getElementById('header__hamburger').classList.contains('open');  
+  if (isOpen) {
+    document.getElementById('header__menu-overlay').style.width = '0%';
+    document.getElementById('header__hamburger').classList.remove('open');  
+    document.getElementById('header__menu-overlay-content').style.right = '-1000px';
+    document.getElementById('header__menu-overlay-content').style.opacity = '0';           
+    document.documentElement.style.overflow = ''; 
+    document.getElementById('header__menu-nav').childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display = 'none';
+  }
 };
 
 // Open/Close Nav Menu
@@ -21,12 +30,10 @@ function toggleMenu() {
     document.getElementById('header__menu-overlay-content').style.opacity = '1';       
     document.documentElement.style.overflow = 'hidden'; 
     // document.documentElement.style.position = 'fixed';    
-
   }
 };
 
 jQuery(document).ready(function($) {
-
   // Remove a href of SERVICES button on desktop and mobile
   $('#header__menu-nav-bar #primary-menu > li:eq(2) > a, #header__menu-nav #primary-menu > li:eq(2) > a').removeAttr('href');
 
@@ -69,12 +76,9 @@ jQuery(document).ready(function($) {
       // Get slug 
       let slug = slugify($(this).text());
       if (slug == location) {
-        console.log('YUP, slug is', slug);
         let target = $(this).children()[0];
-        // $(target).css('display', 'block');
         $(target).addClass('active')
       } else {
-        console.log('NOPE');
         let icons = $(this).children()[0];
         $(icons).removeClass('active');
       }

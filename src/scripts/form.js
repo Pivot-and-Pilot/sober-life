@@ -465,13 +465,23 @@ jQuery(document).ready(function($){
     })
 
     // personal info
-    $('.form__dob').on('touchend', function (e) {
-      e.preventDefault();
-      $(this).attr('type', 'date');
-      if ($(this).attr('type') === 'date'){
-        $(this).focus();
-      }
-    })
+    if ( $(window).width() < 768 ) {
+      $('.form__dob').on('touchend', function (e) {
+        e.preventDefault();
+        $(this).attr('type', 'date');
+        if ($(this).attr('type') === 'date'){
+          $(this).focus();
+        }
+      })
+    }
+    if ( $(window).width() > 768 ) {
+      $('.form__dob').on('focus', function (e) {
+        $(this).attr('type', 'date');
+        // if ($(this).attr('type') === 'date'){
+        //   $(this).focus();
+        // }
+      })
+    }
     $('.personal-info__back').on('click', function () {
       $('.form__personal-info').css('left', '100%');
       $('.question__drug-effects-life').css('left', 0);
@@ -524,7 +534,4 @@ jQuery(document).ready(function($){
     })
   })();
 
-
-
-  
 })

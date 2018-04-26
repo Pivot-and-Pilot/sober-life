@@ -17,7 +17,7 @@
         $otherSubstances = $_POST["other-substances-hidden"];
 
         $effects = array();
-        for ( $c = 1; $c < 3; $c++) {
+        for ( $c = 1; $c < 4; $c++) {
           if ($_POST['effect-' . $c]) {
             array_push($effects, $_POST['effect-' . $c]);
           }

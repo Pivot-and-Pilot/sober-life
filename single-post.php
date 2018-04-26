@@ -26,7 +26,20 @@ get_header();
 						<?php the_post_thumbnail(); ?>
 					</div>
 					<div class="single-post__podcast-player">
+					<?php
+            // check if the post is podcast 
+            $singlePostCategories = get_the_category();
+            foreach ($singlePostCategories as $singlePostCategory) :
+              if ($singlePostCategory->slug == 'podcast') :
+          ?>
+						<div class="single-post__play-button">
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="Play"/>
+						</div>
 						<?php	the_content(); ?>
+					<?php
+              endif;
+            endforeach;
+          ?>
 					</div>
 				</div>
 				<div class="single-post__flex-box-wrapper">

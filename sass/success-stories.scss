@@ -73,6 +73,13 @@
   .other-success-stories { 
     overflow: hidden;
     padding-top: 30px;
+    .slick-prev {
+      left: 45px;
+      z-index: 111;
+    }
+    .slick-next {
+      right: 45px;
+    }
     .slick-list {
       .slick-track {
         .single-success-story {

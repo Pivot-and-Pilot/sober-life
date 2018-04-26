@@ -2,12 +2,13 @@
 
 #soberlife__jplayer {
   position: fixed;
-  display:none;
+  // display:none;
   bottom: 71px;
   border-top: 1px solid black;
   background-color: $color__white;
   width: 100%;
   z-index: 5;
+  padding-bottom: 20px;
 
   .jp-audio *:focus,
   .jp-audio-stream *:focus,
@@ -31,6 +32,12 @@
 
   .jp-type-single {
     margin: $margin__mobile;
+    .jp-details {
+      .jp-title {
+        padding-left: 55px;
+        font-family: $font__main--bold;
+      }
+    }
     .jp-interface {
       display: flex;
       flex-direction: column;
@@ -38,44 +45,76 @@
       }
       .jp-controls-holder {
         clear: both;
+        display: flex;
         .jp-controls {
           display: flex;
           justify-content: space-between;
+          position: relative;
+          width: 70px;
           .jp-play {
+            position: absolute;
             border: none;
+            height: 50px;
+            width: 50px;
+            padding: 0;
             img {
-              width: 20px;
-              height: 20px;         
+              width: 100%;
+              height: 100%;    
+              &:hover {
+                cursor: pointer;
+              }     
             }
           }
           .jp-pause {
+            position: relative;
             border: none;
+            height: 50px;
+            width: 50px;
+            padding: 0;
+            img {
+              width: 100%;
+              height: 100%;  
+              &:hover {
+                cursor: pointer;
+              }       
+            }
           }
           .jp-stop {
             border: none;
 
           }
         }
-        .jp-progress {
-          height: 5px;
-          background-color: $color__green;
-          // border: 1px solid black;
-          border-radius: 3px;
-          .jp-seek-bar {
-            height: 100%;
-            .jp-play-bar {
+        .jplayer__progress-wrapper {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          .jp-progress {
+            height: 5px;
+            width: 100%;
+            border: 1px solid black;
+            border-radius: 3px;
+            .jp-seek-bar {
               height: 100%;
-              background-color: black;
+              width: 100% !important;
+              .jp-play-bar {
+                height: 100%;
+                background-color: $color__green;
+              }
             }
           }
-        }
-        .jp-time-bar {
-          display: flex;
-          font-size: 14px;
-          justify-content: space-between;
-          .jp-current-time {
-          }
-          .jp-duration {
+          .jp-time-bar {
+            display: flex;
+            width: 100%;
+            font-size: 14px;
+            justify-content: space-between;
+            .jp-current-time {
+              font-family: $font__main--med;
+            }
+            .jp-duration {
+              font-family: $font__main--med;
+            }
           }
         }
         .jp-toggles {
@@ -83,4 +122,20 @@
       }
     }
   }
+}
+
+@media only screen and (min-width: 768px) {
+
+  #soberlife__jplayer {
+    bottom: 0;
+    .jp-type-single {
+      margin: 0 4vw;
+      .jp-details {
+        .jp-title {
+          padding-left: 65px;
+        }
+      }
+    }
+  }
+
 }

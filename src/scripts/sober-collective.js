@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
   let ajaxLock = false; 
 
   // Get ajax URL admin ajax
-  const ajaxUrl = 'https://devpnp.com/wp-admin/admin-ajax.php';
+  // const ajaxUrl = 'https://devpnp.com/wp-admin/admin-ajax.php';
 
   // Remove a href of CATS and TAGS on desktop  
   $('.sobercollective__cats-desktop > li > a').each( function(){
@@ -139,7 +139,7 @@ jQuery(document).ready(function($) {
     }
     $.ajax({
       type: 'get',
-      url: ajaxUrl,
+      url: 'https://devpnp.com/wp-admin/admin-ajax.php',
       data: `&posts_per_page=${postsPerPage}&action=ajax_get_initial_posts`,
       dataType: 'json',
       success: function(res) {
@@ -185,7 +185,7 @@ jQuery(document).ready(function($) {
 
     $.ajax({
       type: 'get',
-      url: ajaxUrl,
+      url: 'https://devpnp.com/wp-admin/admin-ajax.php',
       data: `&category=${catID}&tag=${tagID}&curr_page=${currPage}&offset=${offset}&posts_per_page=${postsPerPage}&action=ajax_get_posts`,
       dataType: 'json',
       success: function(res) {
@@ -223,7 +223,7 @@ jQuery(document).ready(function($) {
 
     $.ajax({
       type: 'get',
-      url: ajaxUrl,
+      url: 'https://devpnp.com/wp-admin/admin-ajax.php',
       data: `&category=${catID}&tag=${tagID}&posts_per_page=${postsPerPage}&action=ajax_filter_posts`,
       dataType: 'json',
       success: function(res) {
@@ -279,7 +279,7 @@ jQuery(document).ready(function($) {
 
     $.ajax({
       type: 'get',
-      url: ajaxUrl,
+      url: 'https://devpnp.com/wp-admin/admin-ajax.php',
       data: `&posts_per_page=${postsPerPage}&query=${query}&action=ajax_get_search_results`,
       dataType: 'json',
       // Before sending, disable clicking (event.preventDefault)

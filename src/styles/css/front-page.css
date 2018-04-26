@@ -40,18 +40,35 @@ section.front-page__header .front-page__header__slogans {
 section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
   font-size: 3em;
   margin: 0;
-  margin-top: -120px;
+  margin-top: 0px;
   font-family: "FFBauWebMedium";
   color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
+section.front-page__header .front-page__header__slogans .front-page__word-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
+  font-size: 2.7em;
+  font-weight: 900;
+  font-family: "FFBauWebBold";
+  color: #000;
+  padding-right: 10px;
+  top: -10px;
+  position: relative;
+}
+
+section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper {
   position: relative;
   top: -10px;
   color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
   font-size: 2.7em;
   font-weight: 900;
   position: absolute;
@@ -61,28 +78,25 @@ section.front-page__header .front-page__header__slogans .front-page__header__cha
   font-family: "FFBauWebBold";
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
+section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
   margin: 0;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail {
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail {
   font-size: 1.5em;
-  position: absolute;
-  top: 60px;
-  opacity: 0;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  position: relative;
   font-family: "FFBauWebMedium";
+  color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail p {
+section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail p {
   margin: 0;
 }
 
 section.front-page__header button {
   background-color: #000;
   border-radius: 25px;
-  bottom: 20%;
+  bottom: 15%;
   color: #f5f0e8;
   font-family: "FFBauWebMedium";
   font-size: 20px;
@@ -323,25 +337,28 @@ section.front-page__success-stories {
   }
 
   section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
-    font-size: 6em;
-    margin-top: -350px;
+    font-size: 6.5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper {
-    margin-top: -20px;
+  section.front-page__header .front-page__header__slogans .front-page__word-wrapper {
+    top: -30px;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
-    font-size: 4em;
+  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
+    font-size: 5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans-detail {
-    top: 100px;
-    font-size: 2em;
+  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+    font-size: 5em;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail {
+    font-size: 2.3em;
+    top: -30px;
   }
 
   section.front-page__header button {
-    bottom: 25%;
+    bottom: 15%;
     margin-left: 4vw;
     border-radius: 50px;
     height: 60px;

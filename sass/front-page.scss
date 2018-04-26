@@ -28,35 +28,46 @@ section.front-page__header {
     .front-page__header__slogans-reclaim {
       font-size: 3em;
       margin: 0;
-      margin-top: -120px;
+      margin-top: 0px;
       font-family: $font__main--med;
       color: #000;
     }
-    .front-page__header__changing-slogans-wrapper {
+    .front-page__word-wrapper {
+      display: flex;
       position: relative;
-      top: -10px;
-      color: #000;
-      .front-page__header__changing-slogans {
+      .front-page__your-word {
         font-size: 2.7em;
         font-weight: 900;
-        position: absolute;
-        opacity: 0;
-        transition: all 1s ease-in-out;
         font-family: $font__main--bold;
-        p {
-          margin: 0;
+        color: #000;
+        padding-right: 10px;
+        top: -10px;
+        position: relative;
+      }
+      .front-page__header__changing-slogans-wrapper {
+        position: relative;
+        top: -10px;
+        color: #000;
+        .front-page__header__changing-slogans {
+          font-size: 2.7em;
+          font-weight: 900;
+          position: absolute;
+          opacity: 0;
+          transition: all 1s ease-in-out;
+          font-family: $font__main--bold;
+          p {
+            margin: 0;
+          }
         }
       }
-      .front-page__header__changing-slogans-detail {
-        font-size: 1.5em;
-        position: absolute;
-        top: 60px;
-        opacity: 0;
-        transition: all 1s ease-in-out;
-        font-family: $font__main--med;
-        p {
-          margin: 0;
-        }
+    } 
+    .front-page__header__changing-slogans-detail {
+      font-size: 1.5em;
+      position: relative;
+      font-family: $font__main--med;
+      color: #000;
+      p {
+        margin: 0;
       }
     }
   }
@@ -64,7 +75,7 @@ section.front-page__header {
     // padding: 10px 25px;
     background-color: #000;
     border-radius: 25px;
-    bottom: 20%;
+    bottom: 15%;
     color: $color__white;
     font-family: $font__main--med;
     font-size: 20px;
@@ -262,22 +273,30 @@ section.front-page__success-stories {
     .front-page__header__slogans {
       padding-left: 4vw;
       .front-page__header__slogans-reclaim {
-        font-size: 6em;
-        margin-top: -350px;
+        font-size: 6.5em;
       }
-      .front-page__header__changing-slogans-wrapper {
-        margin-top: -20px;
-        .front-page__header__changing-slogans {
-          font-size: 4em;
+      .front-page__word-wrapper {
+        top: -30px;
+        .front-page__your-word {
+          font-size: 5em;
         }
-        .front-page__header__changing-slogans-detail {
-          top: 100px;
-          font-size: 2em;
+        .front-page__header__changing-slogans-wrapper {
+          .front-page__header__changing-slogans {
+            font-size: 5em;
+            p {
+            }
+          }
+        }
+      } 
+      .front-page__header__changing-slogans-detail {
+        font-size: 2.3em;
+        top: -30px;
+        p {
         }
       }
     }
     button {
-      bottom: 25%;
+      bottom: 15%;
       margin-left: 4vw;
       // padding: 20px 50px;
       border-radius: 50px;

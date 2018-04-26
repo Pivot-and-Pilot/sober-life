@@ -136,7 +136,7 @@ function sober_life_scripts() {
 	// wp_enqueue_style( 'sober-life-slick-css', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', true );
 	// js files
 
-  if ( is_home() ) {
+  if ( is_front_page() ) {
 	  wp_enqueue_script( 'sober-life-front-page-js', get_template_directory_uri() . '/src/scripts/front-page.js', array(), true );
   }
   if ( !is_page('sober-collective') ) {

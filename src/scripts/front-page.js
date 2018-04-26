@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
   
   (function sloganAnimation() {
-    if ($('.front-page__header__changing-slogans-wrapper').length != 0) {
+    if ($('.front-page__header__slogans').length != 0) {
       console.log($('.front-page__header__changing-slogans-wrapper'))
       for (let i = 0; i < $('.front-page__header__changing-slogans-wrapper')[0].children.length; i++) {
         setTimeout(() => {
@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
   })();
 
   (function movingForwardAnimation () { 
-    if ($('.moving-forward__content__arrows > img').length != 0){
+    if ($('.moving-forward__content__arrows').length != 0){
       setTimeout(() => {
         $('.moving-forward__content__arrows > img')[0].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
         $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";

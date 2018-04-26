@@ -161,11 +161,44 @@
   }
 }
 
+
+// IPAD
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #success-stories {
+    .success-stories__latest {
+      a {
+        .player-wapper {
+          .latest-podcast-thumbnail-wrapper {
+            height: 400px;
+          }
+        }
+      }
+    }
+    .other-success-stories {
+      .slick-list {
+        .slick-track {
+          .single-success-story {
+            a {
+              .single-story-player-wapper {
+                height: 270px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// IPAD PRO 10.5"
+@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+
+}
 /* ====================================================== */
 /* ======================= DESKTOP ====================== */
 /* ====================================================== */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
 
   #success-stories {
     .success-stories-header {

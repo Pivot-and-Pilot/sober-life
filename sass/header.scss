@@ -231,8 +231,12 @@ header {
       #header__menu-overlay-content {
         #header__menu-nav {
           #primary-menu {
+            font-size: 45px;
+            line-height: 55px;
             .sub-menu {
               width: 100vw;
+              font-size: 25px;
+              line-height: 45px;
               li {
                 width: 100%;
               }

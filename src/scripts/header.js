@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
   // Add desktop icon behind each page link on DESKTOP nav bar
   (function setPrimaryMenuIcons() {
     $('#header__menu-nav-bar #primary-menu li a').each(function() {
-      $(this).append(`<img src="http://localhost:3000/soberlife/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`);
+      $(this).append(`<img src="https://devpnp.com/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`);
     });
   })();
 

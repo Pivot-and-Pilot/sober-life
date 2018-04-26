@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
   let ajaxLock = false; 
 
   // Get ajax URL admin ajax
-  const ajaxUrl = 'http://localhost:3000/soberlife/wp-admin/admin-ajax.php';
+  const ajaxUrl = 'https://devpnp.com/wp-admin/admin-ajax.php';
 
   // Remove a href of CATS and TAGS on desktop  
   $('.sobercollective__cats-desktop > li > a').each( function(){
@@ -209,8 +209,8 @@ jQuery(document).ready(function($) {
   // ************************************************* // 
   function ajax_filter_posts(catID, tagID) {
     // Set catID and tagID to default post IDs (All) if none passed into function
-    catID = catID ? catID : 13;
-    tagID = tagID ? tagID : 14;
+    catID = catID ? catID : 26;
+    tagID = tagID ? tagID : 30;
 
     ajaxLock = true;
 
@@ -328,7 +328,7 @@ jQuery(document).ready(function($) {
       let $input = $(this).find('input[name="s"]');
       let query = $input.val();
   
-      if (e.which === 13) {
+      if (e.which === 26) {
         ajax_get_search_results(query);
         return false;
       }    

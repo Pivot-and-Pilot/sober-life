@@ -10,7 +10,7 @@
 				$catsubstr = substr($substr, 0, $pos); // Category substring ('##')
 				$catname = 'Podcast ' . $catsubstr; // Concatenate Podcast with ##
 		?>
-				<div class="sobercollective__play-btn"><img src="http://localhost:8888/soberlife/wp-content/themes/sober-life/img/src/play-button.svg"></div>		
+				<div class="sobercollective__play-btn"><img src="https://devpnp.com/wp-content/themes/sober-life/img/src/play-button.svg"></div>		
 				<div class="sobercollective__post--image"><?php the_post_thumbnail(); ?></div>
 				<div class="sobercollective__post--cat-name"><?php echo $catname; ?></div>
 				<div class="sobercollective__post--title"><?php echo $newtitle; ?></div>

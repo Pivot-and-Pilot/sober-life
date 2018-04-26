@@ -6,19 +6,19 @@ jQuery(document).ready(function($){
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
       })
       $('.single-post__second-gallery').slick({
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 1,
-        arrows: false,
+        arrows: true,
       })
       $('.related-posts').slick({
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 2,
-        arrows: false,
+        arrows: true,
       })
     }
 
@@ -27,11 +27,9 @@ jQuery(document).ready(function($){
         centerMode: true,
         centerPadding: '4%',
         slidesToShow: 3,
-        arrows: false,
+        arrows: true,
       })
     }
-
-   
   })();
 
   (function renameRelatedPosts() {

@@ -1,11 +1,11 @@
 #soberlife__jplayer {
   position: fixed;
-  display: none;
   bottom: 71px;
   border-top: 1px solid black;
   background-color: #f5f0e8;
   width: 100%;
   z-index: 5;
+  padding-bottom: 20px;
 }
 
 #soberlife__jplayer .jp-audio *:focus,
@@ -34,6 +34,11 @@
   margin: 0 6% 0 6%;
 }
 
+#soberlife__jplayer .jp-type-single .jp-details .jp-title {
+  padding-left: 55px;
+  font-family: "FFBauWebBold";
+}
+
 #soberlife__jplayer .jp-type-single .jp-interface {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,6 +51,9 @@
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls {
@@ -55,46 +63,109 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: relative;
+  width: 70px;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-play {
+  position: absolute;
   border: none;
+  height: 50px;
+  width: 50px;
+  padding: 0;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-play img {
-  width: 20px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-play img:hover {
+  cursor: pointer;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-pause {
+  position: relative;
   border: none;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-pause img {
+  width: 100%;
+  height: 100%;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-pause img:hover {
+  cursor: pointer;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-controls .jp-stop {
   border: none;
 }
 
-#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress {
-  height: 5px;
-  background-color: #80ff73;
-  border-radius: 3px;
-}
-
-#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress .jp-seek-bar {
-  height: 100%;
-}
-
-#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-progress .jp-seek-bar .jp-play-bar {
-  height: 100%;
-  background-color: black;
-}
-
-#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jp-time-bar {
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper {
+  width: 100%;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-progress {
+  height: 5px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-progress .jp-seek-bar {
+  height: 100%;
+  width: 100% !important;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-progress .jp-seek-bar .jp-play-bar {
+  height: 100%;
+  background-color: #80ff73;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   font-size: 14px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar .jp-current-time {
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar .jp-duration {
+  font-family: "FFBauWebMedium";
+}
+
+@media only screen and (min-width: 768px) {
+  #soberlife__jplayer {
+    bottom: 0;
+  }
+
+  #soberlife__jplayer .jp-type-single {
+    margin: 0 4vw;
+  }
+
+  #soberlife__jplayer .jp-type-single .jp-details .jp-title {
+    padding-left: 65px;
+  }
 }

@@ -31,7 +31,6 @@ jQuery(document).ready(function($){
       let colonePosition = singleStoryTitle.indexOf(':');
       $(this)[0].innerHTML = `${singleStoryTitle.slice(colonePosition + 1, singleStoryTitle.length)}`;
     })
-
   })();
 
   (function successStoriesSlick () {
@@ -48,7 +47,7 @@ jQuery(document).ready(function($){
       centerMode: true,
       centerPadding: '4%',
       slidesToShow: 3,
-      arrows: false,
+      arrows: true,
     })
    
   })();

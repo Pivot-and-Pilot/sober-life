@@ -97,6 +97,15 @@
   padding-top: 30px;
 }
 
+#success-stories .other-success-stories .slick-prev {
+  left: 45px;
+  z-index: 111;
+}
+
+#success-stories .other-success-stories .slick-next {
+  right: 45px;
+}
+
 #success-stories .other-success-stories .slick-list .slick-track .single-success-story {
   padding: 0 5px;
 }

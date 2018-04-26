@@ -192,6 +192,7 @@
   #about-page .about__opening .about__opening-image-wrapper {
     height: 80vh;
     margin: 0;
+    width: 100%;
   }
 
   #about-page .about__opening .about__opening-image-wrapper .about__opening-image {

@@ -151,7 +151,7 @@ jQuery(document).ready(function($) {
           // .fadeIn(100);
         $('#maxpage').text(res[1]);
         updatePagination();        
-      },
+      }, 
       error: function() {
         ajaxLock = false;
         console.log('error');
@@ -328,7 +328,7 @@ jQuery(document).ready(function($) {
       let $input = $(this).find('input[name="s"]');
       let query = $input.val();
   
-      if (e.which === 26) {
+      if (e.which === 13) {
         ajax_get_search_results(query);
         return false;
       }    

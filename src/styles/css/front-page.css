@@ -163,8 +163,7 @@ section.front-page__moving-forward .moving-forward__content .moving-forward__con
 }
 
 section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows img {
-  width: calc(100% / 3);
-  padding-right: 30px;
+  width: calc(70% / 3);
 }
 
 section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {
@@ -341,7 +340,8 @@ section.front-page__success-stories {
   }
 
   section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
-    font-size: 6.5em;
+    font-size: 4.5em;
+    line-height: 1.5em;
   }
 
   section.front-page__header .front-page__header__slogans .front-page__word-wrapper {
@@ -349,11 +349,16 @@ section.front-page__success-stories {
   }
 
   section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
-    font-size: 5em;
+    font-size: 4.5em;
+    line-height: 1.5em;
   }
 
   section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
-    font-size: 5em;
+    font-size: 4.5em;
+  }
+
+  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
+    line-height: 1.5em;
   }
 
   section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail {

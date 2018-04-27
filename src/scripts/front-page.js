@@ -30,12 +30,12 @@ jQuery(document).ready(function($){
         $('.moving-forward__content__arrows > img')[0].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
         $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
         $('.moving-forward__content__arrows > img')[2].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
-      }, 1000);
+      }, 500);
       setTimeout(() => {
         $('.moving-forward__content__arrows > img')[0].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
         $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
         $('.moving-forward__content__arrows > img')[2].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
-      }, 2000);
+      }, 1000);
   
       setInterval(() => {
         setTimeout(() => {
@@ -47,13 +47,13 @@ jQuery(document).ready(function($){
           $('.moving-forward__content__arrows > img')[0].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
           $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
           $('.moving-forward__content__arrows > img')[2].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
-        }, 1000);
+        }, 500);
         setTimeout(() => {
           $('.moving-forward__content__arrows > img')[0].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
           $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
           $('.moving-forward__content__arrows > img')[2].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
-        }, 2000);
-      }, 3000)
+        }, 1000);
+      }, 1500)
     })();
   // }
 

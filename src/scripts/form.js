@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
       fullName = $(this).val();
       spacePosition = fullName.indexOf(' ');
       firstName = fullName.slice(0, spacePosition);
-      $('.question__client-gender h1').html(`What does ${firstName} identify as?`);
+      $('.question__client-gender h1').html(`What does ${fullName} identify as?`);
     })
     $('div.client-target').on('click', function () {
       if ( $(this).data('value') === 'myself' ) {
@@ -130,7 +130,7 @@ jQuery(document).ready(function($){
     fullName = $('#client-name-hidden').val();
     spacePosition = fullName.indexOf(' ');
     firstName = fullName.slice(0, spacePosition);
-    $('.loading-screen > div').html(`Hi ${firstName}, tell us more about your situation.`);
+    $('.loading-screen > div').html(`Hi ${fullName}, tell us more about your situation.`);
   }
 
   (function navigation () {
@@ -197,7 +197,7 @@ jQuery(document).ready(function($){
       $('.question__client-target').css('left', '100%');
       setTimeout( function () {
         $('.question__your-name').css('left', '0');
-      },1000)
+      },500)
       // process bar
       $('.process').css('width', '12.5%')
     })
@@ -217,7 +217,7 @@ jQuery(document).ready(function($){
       fullName = $('#loved-one-name-hidden').val();
       spacePosition = fullName.indexOf(' ');
       firstName = fullName.slice(0, spacePosition);
-      $('.loading-screen > div').html(`With the right support ${firstName} will be well equipt to get on the right track`);
+      $('.loading-screen > div').html(`With the right support ${fullName} will be well equipt to get on the right track`);
       setTimeout( function(){
         $('.loading-screen').css({
           'opacity': '1',
@@ -237,7 +237,7 @@ jQuery(document).ready(function($){
       $('.question__loved-one-name').css('left', '100%');
       setTimeout( function () {
         $('.question__client-target').css('left', '0');
-      }, 1000)
+      }, 500)
     })
 
     // gender
@@ -246,12 +246,12 @@ jQuery(document).ready(function($){
       if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
         setTimeout( function () {
           $('.question__client-feeling').css('left', '0');
-        }, 1000)
+        }, 500)
       }
       if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
         setTimeout( function () {
           $('.question__loved-one-feeling').css('left', '0');
-        }, 1000)
+        }, 500)
       }
       // process bar
       $('.process').css('width', '50%')
@@ -261,12 +261,12 @@ jQuery(document).ready(function($){
       if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked') ) {
         setTimeout( function () {
           $('.question__client-target').css('left', '0');
-        }, 1000)
+        }, 500)
       }
       if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked') ) {
         setTimeout( function () {
           $('.question__loved-one-name').css('left', '0');
-        }, 1000)
+        }, 500)
       }
       // process bar
       $('.process').css('width', '25%')
@@ -282,7 +282,7 @@ jQuery(document).ready(function($){
       $('.question__client-feeling').css('left', '-100%');
       // loading screen
       if ( $(this).data('value') === 'hesitant') {
-        $('.loading-screen > div').html(`We understand your hesitation, ${firstName}. Rest assured, you will have all the necessary resources avaiable you on this journey.`);
+        $('.loading-screen > div').html(`We understand your hesitation, ${fullName}. Rest assured, you will have all the necessary resources avaiable you on this journey.`);
       }
       if ( $(this).data('value') === 'moderate') {
         $('.loading-screen > div').html(`No worries, we have every resource avaiable and will answer all the questions you might have`);
@@ -309,9 +309,9 @@ jQuery(document).ready(function($){
     })
     $('.client-feeling__back').on('click', function () {
       $('.question__client-feeling').css('left', '100%');
-      setTimeout( function(){
+      // setTimeout( function(){
         $('.question__client-gender').css('left', '0');
-      }, 1000)
+      // }, 500)
       // process bar
       $('.process').css('width', '37.5%')
     })
@@ -325,16 +325,16 @@ jQuery(document).ready(function($){
       $('.question__loved-one-feeling').css('left', '-100%');
       // loading screen
       if ( $(this).data('value') === 'hesitant') {
-        $('.loading-screen > div').html(`Hesitation is totally normal. We're here to help ${firstName} discover the different possibilities that change can bring.`);
+        $('.loading-screen > div').html(`Hesitation is totally normal. We're here to help ${fullName} discover the different possibilities that change can bring.`);
       }
       if ( $(this).data('value') === 'moderate') {
-        $('.loading-screen > div').html(`No worries, we have every resource avaiable so that ${firstName} can make an informed decision.`);
+        $('.loading-screen > div').html(`No worries, we have every resource avaiable so that ${fullName} can make an informed decision.`);
       }
       if ( $(this).data('value') === 'it is time for change') {
-        $('.loading-screen > div').html(`That's great! Just a few more questions and we can get ${firstName} started on this new chapter.`);
+        $('.loading-screen > div').html(`That's great! Just a few more questions and we can get ${fullName} started on this new chapter.`);
       }
       if ( $(this).data('value') === 'dont know') {
-        $('.loading-screen > div').html(`No worries, just a few more questions and we can talk about starting ${firstName} on the journey to recovery!`);
+        $('.loading-screen > div').html(`No worries, just a few more questions and we can talk about starting ${fullName} on the journey to recovery!`);
       }
       setTimeout ( function () {
         $('.loading-screen').css({
@@ -355,9 +355,9 @@ jQuery(document).ready(function($){
     })
     $('.loved-one-feeling__back').on('click', function () {
       $('.question__loved-one-feeling').css('left', '100%');
-      setTimeout( function(){
+      // setTimeout( function(){
         $('.question__client-gender').css('left', '0');
-      }, 1000)
+      // }, 500)
       // process bar
       $('.process').css('width', '37.5%')
     })
@@ -381,7 +381,7 @@ jQuery(document).ready(function($){
       $('.question__client-substances-used').css('left', '-100%');
       setTimeout( function(){
         $('.question__drug-effects-life').css('left', '0');
-      }, 1000)
+      }, 500)
       // process bar
       $('.process').css('width', '75%')
     })
@@ -390,7 +390,7 @@ jQuery(document).ready(function($){
       $('.question__client-substances-used').css('left', '-100%');
       setTimeout( function(){
         $('.question__drug-effects-life').css('left', '0');
-      }, 1000)
+      }, 500)
       // process bar
       $('.process').css('width', '75%')
     })
@@ -399,7 +399,7 @@ jQuery(document).ready(function($){
       $('.question__client-substances-used').css('left', '100%');
       setTimeout( function(){
         $('.question__client-feeling').css('left', '0');
-      }, 1000)
+      }, 500)
       // process bar
       $('.process').css('width', '50%')
     })
@@ -407,9 +407,9 @@ jQuery(document).ready(function($){
       // loved one
     $('.loved-one-substances-used__back').on('click', function(){
       $('.question__loved-one-substances-used').css('left', '100%');
-      setTimeout( function(){
+      // setTimeout( function(){
         $('.question__loved-one-feeling').css('left', '0');
-      }, 1000)
+      // }, 500)
       // process bar
       $('.process').css('width', '50%')
     })
@@ -418,7 +418,7 @@ jQuery(document).ready(function($){
       $('.question__loved-one-substances-used').css('left', '-100%');
       setTimeout( function(){
         $('.question__drug-effects-life').css('left', '0');
-      }, 1000)
+      }, 500)
       // process bar
       $('.process').css('width', '75%')
     })
@@ -427,7 +427,7 @@ jQuery(document).ready(function($){
       $('.question__loved-one-substances-used').css('left', '-100%');
       setTimeout( function(){
         $('.question__drug-effects-life').css('left', '0');
-      }, 1000)
+      }, 500)
       // process bar
       $('.process').css('width', '75%')
     })
@@ -440,14 +440,20 @@ jQuery(document).ready(function($){
 
     $('.effects__next').on('click', function () {
       $('.question__drug-effects-life').css('left', '-100%');
-      $('.form__personal-info').css('left', '0');
+      setTimeout( () => {
+        $('.form__personal-info').css('left', '0');
+      }, 500)
       // process bar
       $('.process').css('width', '87.5%')
     })
 
     $('.effects__skip').on('click', function () {
       $('.question__drug-effects-life').css('left', '-100%');
-      $('.form__personal-info').css('left', '0');
+
+      setTimeout( () => {
+        $('.form__personal-info').css('left', '0');
+      }, 500)
+      
       // process bar
       $('.process').css('width', '87.5%')
     })
@@ -455,10 +461,14 @@ jQuery(document).ready(function($){
     $('.effects__back').on('click', function () {
       $('.question__drug-effects-life').css('left', '100%');
       if ( $('input[name="client-target-hidden"][value="myself"]').is(':checked')) {
-        $('.question__client-substances-used').css('left', '0');
+        setTimeout( () => {
+          $('.question__client-substances-used').css('left', '0');
+        }, 500)
       }
       if ( $('input[name="client-target-hidden"][value="a loved one"]').is(':checked')) {
-        $('.question__loved-one-substances-used').css('left', '0');
+        setTimeout( () => {
+          $('.question__loved-one-substances-used').css('left', '0');
+        }, 500)
       }
       // process bar
       $('.process').css('width', '62.5%')
@@ -484,7 +494,9 @@ jQuery(document).ready(function($){
     }
     $('.personal-info__back').on('click', function () {
       $('.form__personal-info').css('left', '100%');
-      $('.question__drug-effects-life').css('left', 0);
+      setTimeout( () => {
+        $('.question__drug-effects-life').css('left', 0);
+      }, 500)
       // process bar
       $('.process').css('width', '75%')
     })

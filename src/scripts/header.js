@@ -42,12 +42,12 @@ function toggleMenu() {
 jQuery(document).ready(function($) {
   // Remove a href of SERVICES button on desktop and mobile
   $(
-    '#header__menu-nav-bar #primary-menu > li:eq(2) > a, #header__menu-nav #primary-menu > li:eq(2) > a'
+    '#header__menu-nav-bar #primary-menu > li:eq(0) > a, #header__menu-nav #primary-menu > li:eq(0) > a'
   ).removeAttr('href');
 
   // On click of link in mobile menu, close menu
   $(
-    '#header__menu-nav #primary-menu > li:not(li:eq(2)) > a, #header__menu-nav #primary-menu > li:eq(2) > .sub-menu > li > a'
+    '#header__menu-nav #primary-menu > li:not(li:eq(0)) > a, #header__menu-nav #primary-menu > li:eq(0) > .sub-menu > li > a'
   ).click(function() {
     document.getElementById('header__menu-overlay').style.width = '0%';
     document.getElementById('header__hamburger').classList.remove('open');
@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
   });
 
   // Show submenu of services on MOBILE
-  $('#header__menu-nav #primary-menu > li:eq(2) > a').click(function(e) {
+  $('#header__menu-nav #primary-menu > li:eq(0) > a').click(function(e) {
     e.preventDefault();
     $('#header__menu-nav #primary-menu .sub-menu').slideToggle();
   });
@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
   let windowSize = $(window).width();
   if (windowSize > 768) {
     // Show submenu of services on DESKTOP
-    $('#header__menu-nav-bar #primary-menu > li:eq(2) > a').click(function(e) {
+    $('#header__menu-nav-bar #primary-menu > li:eq(0) > a').click(function(e) {
       e.preventDefault();
     });
 
@@ -109,9 +109,9 @@ jQuery(document).ready(function($) {
         .parent()
         .hasClass('sub-menu')
     ) {
-      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').addClass('active');
+      $('#header__menu-nav-bar #primary-menu > li:first-of-type > a > img').addClass('active');
     } else {
-      $('#header__menu-nav-bar #primary-menu > li:last-of-type > a > img').removeClass('active');
+      $('#header__menu-nav-bar #primary-menu > li:first-of-type > a > img').removeClass('active');
     }
   }
   setCurrentPrimaryMenuIcon();
@@ -126,4 +126,9 @@ jQuery(document).ready(function($) {
       .replace(/^-+/, '') // Trim - from start of text
       .replace(/-+$/, ''); // Trim - from end of text
   }
+
+  // $('.front-page__button, .go-to-sober-collective, .services-child__our-team-learn-more').click(function() {
+  //   console.log('CLICKED');
+  //   setCurrentPrimaryMenuIcon();    
+  // });
 });

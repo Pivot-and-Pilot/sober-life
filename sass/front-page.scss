@@ -7,13 +7,18 @@ body {
 section.front-page__header {
   position: relative;
   font-family: $font__main;
+  height: calc(90vh - 80px);
   .front-page__header__image {
     height: calc(90vh - 80px);
     width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: -1;
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+
     }
   }
   .front-page__header__slogans {
@@ -376,7 +381,6 @@ section.front-page__success-stories {
 
   section.front-page__our-story {
     position: relative;
-    margin-top: 50px;
     .our-story__image {
       height: 80vh;
       img {

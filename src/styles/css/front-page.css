@@ -5,11 +5,15 @@ body {
 section.front-page__header {
   position: relative;
   font-family: "FFBauWeb", sans-serif;
+  height: calc(90vh - 80px);
 }
 
 section.front-page__header .front-page__header__image {
   height: calc(90vh - 80px);
   width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
 section.front-page__header .front-page__header__image img {
@@ -454,7 +458,6 @@ section.front-page__success-stories {
 
   section.front-page__our-story {
     position: relative;
-    margin-top: 50px;
   }
 
   section.front-page__our-story .our-story__image {

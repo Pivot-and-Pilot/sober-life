@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
-  
-  if ( window.location.pathname == '/' ) {
+
+  // if ( window.location.pathname == '/' ) {
     (function sloganAnimation() {
       for (let i = 0; i < $('.front-page__header__changing-slogans-wrapper')[0].children.length; i++) {
         setTimeout(() => {
@@ -55,6 +55,6 @@ jQuery(document).ready(function($){
         }, 2000);
       }, 3000)
     })();
-  }
+  // }
 
 })

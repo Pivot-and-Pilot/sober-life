@@ -126,8 +126,7 @@ section.front-page__moving-forward {
       width: 50vw;
       height: 50px;
       img {
-        width: calc(100% / 3);
-        padding-right: 30px;
+        width: calc(70% / 3);
       }
     }
     .moving-forward__content__header {
@@ -278,17 +277,20 @@ section.front-page__success-stories {
     .front-page__header__slogans {
       padding-left: 4vw;
       .front-page__header__slogans-reclaim {
-        font-size: 6.5em;
+        font-size: 4.5em;
+        line-height: 1.5em;
       }
       .front-page__word-wrapper {
         top: -30px;
         .front-page__your-word {
-          font-size: 5em;
+          font-size: 4.5em;
+          line-height: 1.5em;
         }
         .front-page__header__changing-slogans-wrapper {
           .front-page__header__changing-slogans {
-            font-size: 5em;
+            font-size: 4.5em;
             p {
+              line-height: 1.5em;
             }
           }
         }

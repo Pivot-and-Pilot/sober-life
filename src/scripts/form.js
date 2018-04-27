@@ -309,9 +309,9 @@ jQuery(document).ready(function($){
     })
     $('.client-feeling__back').on('click', function () {
       $('.question__client-feeling').css('left', '100%');
-      // setTimeout( function(){
+      setTimeout( function(){
         $('.question__client-gender').css('left', '0');
-      // }, 500)
+      }, 500)
       // process bar
       $('.process').css('width', '37.5%')
     })
@@ -355,9 +355,9 @@ jQuery(document).ready(function($){
     })
     $('.loved-one-feeling__back').on('click', function () {
       $('.question__loved-one-feeling').css('left', '100%');
-      // setTimeout( function(){
+      setTimeout( function(){
         $('.question__client-gender').css('left', '0');
-      // }, 500)
+      }, 500)
       // process bar
       $('.process').css('width', '37.5%')
     })
@@ -407,9 +407,9 @@ jQuery(document).ready(function($){
       // loved one
     $('.loved-one-substances-used__back').on('click', function(){
       $('.question__loved-one-substances-used').css('left', '100%');
-      // setTimeout( function(){
+      setTimeout( function(){
         $('.question__loved-one-feeling').css('left', '0');
-      // }, 500)
+      }, 500)
       // process bar
       $('.process').css('width', '50%')
     })

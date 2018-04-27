@@ -2,6 +2,10 @@ body {
   background: #f5f0e8 !important;
 }
 
+#content {
+  min-height: 100vh;
+}
+
 section.front-page__header {
   position: relative;
   font-family: "FFBauWeb", sans-serif;

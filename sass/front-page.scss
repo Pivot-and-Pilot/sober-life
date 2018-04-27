@@ -4,6 +4,10 @@ body {
   background: $color__white !important;
 }
 
+#content {
+  min-height: 100vh;
+}
+
 section.front-page__header {
   position: relative;
   font-family: $font__main;

@@ -53,7 +53,7 @@ jQuery(document).ready(function($){
           $('.moving-forward__content__arrows > img')[1].src = "./wp-content/themes/sober-life/img/src/arrow--white.svg";
           $('.moving-forward__content__arrows > img')[2].src = "./wp-content/themes/sober-life/img/src/arrow--black.svg";
         }, 1000);
-      }, 1500)
+      }, 1800)
     })();
   // }
 

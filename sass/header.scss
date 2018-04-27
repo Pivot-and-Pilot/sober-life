@@ -160,8 +160,11 @@ header {
           a:visited,
           a:hover,
           a:focus {
-            color: inherit;
+            color: black;
             padding: 5px 0;
+          }
+          li:nth-child(1) {
+            cursor: pointer;
           }
           .sub-menu {
             // display: block;
@@ -329,23 +332,6 @@ header {
               text-decoration: none;
               color: inherit;
             }
-            // li {
-            //   // position: relative;
-            //   a:before {
-            //     content: '';
-            //     background: url(../../img/src/SBL_11-11.svg) center no-repeat;
-            //     width: 100px;
-            //     height: 30px;
-            //     // position: absolute;
-            //     // top: -5px;
-            //     // left: -4px;
-            //     right: 0;
-            //     left: 0;
-            //     margin-left: auto;
-            //     margin-right: auto;
-            //     z-index: -1;
-            //   }
-            // }
             li {
               a {
                 position: relative;
@@ -370,7 +356,7 @@ header {
                 }
               }
             }
-            li:nth-child(3) {
+            li:nth-child(1) {
               a {
                 cursor: default;
                 img {
@@ -387,7 +373,7 @@ header {
                 margin: 0;
                 padding: 15px 5px;
                 z-index: 5;
-                right: 76px;
+                right: 375px;
                 top: 60px;
                 transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s,
                   z-index 0s linear 0.01s;
@@ -459,7 +445,7 @@ header {
             background-color: black;
             font-size: 16px;
             font-family: $font__main--med;
-            padding: 5px 20px;
+            padding: 6px 40px;
             border: 1px solid black;
             border-radius: 22px;
             text-align: center;

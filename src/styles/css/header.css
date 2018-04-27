@@ -203,8 +203,12 @@ header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #pr
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:visited,
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:hover,
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu a:focus {
-  color: inherit;
+  color: black;
   padding: 5px 0;
+}
+
+header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu li:nth-child(1) {
+  cursor: pointer;
 }
 
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav #primary-menu .sub-menu {
@@ -395,15 +399,15 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     display: block;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) a {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) a {
     cursor: default;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) a img {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) a img {
     left: 8px;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu {
     -webkit-transform: translateY(-2em);
     transform: translateY(-2em);
     visibility: hidden;
@@ -413,14 +417,14 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     margin: 0;
     padding: 15px 5px;
     z-index: 5;
-    right: 76px;
+    right: 375px;
     top: 60px;
     -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu:after,
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu:before {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu:after,
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu:before {
     bottom: 100%;
     left: 50%;
     border: solid transparent;
@@ -431,32 +435,32 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     pointer-events: none;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu:after {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu:after {
     border-bottom-color: #e9e2d6;
     border-width: 15px;
     margin-left: -15px;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu:before {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu:before {
     border-bottom-color: #e9e2d6;
     border-width: 21px;
     margin-left: -21px;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu li {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu li {
     list-style: none;
     padding: 3px 0;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3) .sub-menu li a {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1) .sub-menu li a {
     cursor: pointer;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover img:nth-child(1) {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1):hover img:nth-child(1) {
     display: block;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1):hover .sub-menu {
     visibility: visible;
     opacity: 1;
     z-index: 1;
@@ -466,15 +470,15 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     transition-delay: 0s, 0s, 0.3s;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li a img {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1):hover .sub-menu li a img {
     display: none;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li a img.active {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1):hover .sub-menu li a img.active {
     display: block;
   }
 
-  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(3):hover .sub-menu li:hover a img {
+  header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li:nth-child(1):hover .sub-menu li:hover a img {
     display: block;
   }
 
@@ -483,7 +487,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     background-color: black;
     font-size: 16px;
     font-family: "FFBauWebMedium";
-    padding: 5px 20px;
+    padding: 6px 40px;
     border: 1px solid black;
     border-radius: 22px;
     text-align: center;

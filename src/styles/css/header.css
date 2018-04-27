@@ -372,7 +372,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu a:focus {
     padding: 0 20px;
     text-decoration: none;
-    color: inherit;
+    color: black;
   }
 
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu li a {

@@ -63,9 +63,9 @@ get_header();
 					<?php endwhile;
 				endif; ?>
 			</div><!-- Our Team Section -->
-			<div class="about__get-in-touch-wrapper">
+			<!-- <div class="about__get-in-touch-wrapper">
 				<a href="#" class="about__get-in-touch">Get In Touch</a>
-			</div>
+			</div> -->
 			<div class="about__certifications">
 				<?php if( have_rows('certifications_section') ):
 					while( have_rows('certifications_section') ): the_row(); ?>

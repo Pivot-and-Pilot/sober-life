@@ -23,15 +23,19 @@
           <!-- <button class="jp-stop" role="button" tabindex="0">STOP</button> -->
         </div>
         <div class="jplayer__progress-wrapper">
+          <div class="jp-time-bar">
+            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+            <div class="time-separator">/</div>
+            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+          </div>
           <div class="jp-progress">
             <div class="jp-seek-bar">
               <div class="jp-play-bar"></div>
             </div>
           </div>
-          <div class="jp-time-bar">
-            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-          </div>
+        </div>
+        <div class="jplayer__x-button">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/x--black.svg" alt="">
         </div>
       </div>
     </div>

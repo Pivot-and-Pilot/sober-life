@@ -3,12 +3,13 @@
 #soberlife__jplayer {
   position: fixed;
   // display:none;
-  bottom: 71px;
+  bottom: 0;
+  left: 0;
   border-top: 1px solid black;
   background-color: $color__white;
-  width: 100%;
+  width: 100vw;
   z-index: 5;
-  padding-bottom: 20px;
+  height: 70px;
 
   .jp-audio *:focus,
   .jp-audio-stream *:focus,
@@ -31,31 +32,34 @@
   }
 
   .jp-type-single {
-    margin: $margin__mobile;
+    margin: 0;
+    position: relative;
     .jp-details {
+      position: absolute;
       .jp-title {
-        padding-left: 55px;
+        padding-left: 70px;
         font-family: $font__main--bold;
       }
     }
     .jp-interface {
-      display: flex;
-      flex-direction: column;
       .jp-volume-controls {
       }
       .jp-controls-holder {
         clear: both;
         display: flex;
         .jp-controls {
-          display: flex;
-          justify-content: space-between;
           position: relative;
-          width: 70px;
+          width: 90px;
+          height: 70px;
+          border-right: 1px solid #000;
           .jp-play {
             position: absolute;
             border: none;
             height: 50px;
             width: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 0;
             img {
               width: 100%;
@@ -66,10 +70,13 @@
             }
           }
           .jp-pause {
-            position: relative;
+            position: absolute;
             border: none;
             height: 50px;
             width: 50px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 0;
             img {
               width: 100%;
@@ -79,10 +86,6 @@
               }       
             }
           }
-          .jp-stop {
-            border: none;
-
-          }
         }
         .jplayer__progress-wrapper {
           width: 100%;
@@ -90,17 +93,20 @@
           display: flex;
           justify-content: center;
           flex-direction: column;
+          background-color: transparent;
           .jp-progress {
-            height: 5px;
+            height: 100%;
             width: 100%;
-            border: 1px solid black;
             border-radius: 3px;
+            background-color: transparent;
             .jp-seek-bar {
-              height: 100%;
+              height: 70px;
               width: 100% !important;
+              background-color: transparent;
               .jp-play-bar {
                 height: 100%;
                 background-color: $color__green;
+                background-blend-mode: multiply;
               }
             }
           }
@@ -109,6 +115,7 @@
             width: 100%;
             font-size: 14px;
             justify-content: space-between;
+            z-index: -11;
             .jp-current-time {
               font-family: $font__main--med;
             }
@@ -117,7 +124,19 @@
             }
           }
         }
-        .jp-toggles {
+        .jplayer__x-button {
+          width: 90px;
+          position: relative;
+          border-left: 1px solid #000;
+          img {
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+          }
         }
       }
     }
@@ -129,10 +148,51 @@
   #soberlife__jplayer {
     bottom: 0;
     .jp-type-single {
-      margin: 0 4vw;
+      margin: 0;
       .jp-details {
         .jp-title {
-          padding-left: 65px;
+          padding-left: 100px;
+          padding-top: 15px;
+        }
+      }
+      .jp-interface {
+        .jp-controls-holder {
+          clear: both;
+          display: flex;
+          .jplayer__progress-wrapper {
+            .jp-time-bar {
+              position: absolute;
+              width: 20px;
+              font-size: 14px;
+              padding-left: 20px;
+              bottom: 10px;
+              .jp-current-time {
+                font-family: $font__main--med;
+                display: inline-block;
+              }
+              .time-separator {
+                display: inline-block;
+              }
+              .jp-duration {
+                font-family: $font__main--med;
+                display: inline-block;
+              }
+            }
+          }
+          .jplayer__x-button {
+            width: 90px;
+            position: relative;
+            border-left: 1px solid #000;
+            img {
+              height: 30px;
+              width: 30px;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              object-fit: cover;
+            }
+          }
         }
       }
     }

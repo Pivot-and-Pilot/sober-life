@@ -417,8 +417,8 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     margin: 0;
     padding: 15px 5px;
     z-index: 5;
-    right: 375px;
-    top: 60px;
+    right: 445px;
+    top: 67px;
     -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
   }

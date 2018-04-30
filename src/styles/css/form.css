@@ -12,12 +12,12 @@ textarea {
 }
 
 #soberlife-form-wrapper {
-  height: 100vh;
+  height: calc(100% - 33px);
   width: 100vw;
   overflow: hidden;
   position: fixed;
   display: block;
-  top: 0;
+  top: 33px;
   left: 100%;
   z-index: 101;
   -webkit-transition: left 0.5s ease-in-out;
@@ -32,46 +32,7 @@ textarea {
 }
 
 #soberlife-form-wrapper .form__relative-layer section.form__contact-info {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  border: 1px solid #000;
-  background-color: #80ff73;
-}
-
-#soberlife-form-wrapper .form__relative-layer section.form__contact-info .phone-number {
-  height: 100%;
-  padding: 0 40px;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
-  line-height: 50px;
-}
-
-#soberlife-form-wrapper .form__relative-layer section.form__contact-info .phone-number a {
-  text-decoration: none;
-  color: #000;
-  font-family: "FFBauWeb", sans-serif;
-}
-
-#soberlife-form-wrapper .form__relative-layer section.form__contact-info .email {
-  padding: 0 40px;
-  line-height: 50px;
-  height: 100%;
-}
-
-#soberlife-form-wrapper .form__relative-layer section.form__contact-info .email a {
-  text-decoration: none;
-  color: #000;
-  font-family: "FFBauWeb", sans-serif;
+  display: none;
 }
 
 #soberlife-form-wrapper .form__relative-layer section.form__progress-bar {
@@ -93,7 +54,7 @@ textarea {
 #soberlife-form-wrapper .form__relative-layer .form__x-button {
   position: absolute;
   display: block;
-  top: 100px;
+  top: 50px;
   right: 50px;
   height: 40px;
   width: 40px;
@@ -1487,9 +1448,55 @@ textarea {
   font-family: "FFBauWebMedium";
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1025px) {
+  #soberlife-form-wrapper {
+    top: 0;
+    height: 100%;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-right: 7%;
+    height: 40px;
+    width: 100%;
+    font-family: "FFBauWebMedium";
+    font-size: 14px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    border-bottom: 1px solid #000;
+    background-color: #80ff73;
+    z-index: 102;
+  }
+
   #soberlife-form-wrapper .form__relative-layer section.form__contact-info .phone-number {
-    padding: 0 10px;
+    height: 100%;
+    padding: 0 6%;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    line-height: 40px;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info .phone-number a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info .email {
+    padding-left: 6%;
+    line-height: 40px;
+    height: 100%;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info .email a {
+    display: block;
+    text-decoration: none;
+    color: #000;
   }
 
   #soberlife-form-wrapper .form__relative-layer .form__x-button {
@@ -2061,5 +2068,17 @@ textarea {
   #soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back {
     bottom: 65px;
     left: 6vw;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer section.form__contact-info .phone-number {
+    border-left: none;
   }
 }

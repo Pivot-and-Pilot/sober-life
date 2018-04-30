@@ -23,9 +23,11 @@ get_header();
 						<div class="about__opening-image-wrapper">
 							<img src="<?php echo get_sub_field('opening_image'); ?>" alt="opening_image" class="about__opening-image"/>
 						</div>
-						<div class="about__opening-text-wrapper">
-							<div class="about__opening-title"><?php echo get_sub_field('section_title'); ?></div>
-							<div class="about__opening-text"><?php echo get_sub_field('opening_text'); ?></div>		
+						<div class="about__opening-left">
+							<div class="about__opening-text-wrapper">
+								<div class="about__opening-title"><?php echo get_sub_field('section_title'); ?></div>
+								<div class="about__opening-text"><?php echo get_sub_field('opening_text'); ?></div>		
+							</div>
 						</div>
 					<?php endwhile;
 				endif; ?>

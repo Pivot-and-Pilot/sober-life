@@ -3,6 +3,7 @@ jQuery(document).ready(function($){
   
   (function getPodcastURL(){
     $('#page').on('click', '.single-post__play-button', function () {
+      $('#soberlife__jplayer').css('bottom', '0');
       currentPodcastLink = $(this).siblings('.powerpress_links_mp3')[0].children[0].href;
       currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[1]).siblings('.single-post__title')[0].innerText;
 
@@ -38,6 +39,12 @@ jQuery(document).ready(function($){
         } 
       });
 
+    })
+  })();
+
+  (function closePlayer () {
+    $('.jplayer__x-button').on('click', function () {
+      $('#soberlife__jplayer').css('bottom', '-70px');
     })
   })();
 

@@ -325,6 +325,14 @@
         padding: 0 4vw 30px;
         font-size: 2em;
       }
+      .single-post__carousel-navigation {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 4vw;
+        top: calc((92vw - 120px)/ 6);
+        z-index: 111;
+      }
       .related-posts {
         .related-post {
           padding: 0 15px;

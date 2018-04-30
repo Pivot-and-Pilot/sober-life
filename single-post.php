@@ -155,6 +155,10 @@ get_header();
 				if ($tags) {
 				?>
 					<div class="related-post__header">Related Posts</div>
+					<div class="single-post__carousel-navigation">
+						<div class="single-post__prev-arrow">prev</div>
+						<div class="single-post__next-arrow">next</div>   
+					</div>
 					<div class="related-posts">
 
 					<?php

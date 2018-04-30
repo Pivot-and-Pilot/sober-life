@@ -419,6 +419,19 @@
     font-size: 2em;
   }
 
+  .single-post__wrapper .single-post__related-posts .single-post__carousel-navigation {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 4vw;
+    top: calc((92vw - 120px)/ 6);
+    z-index: 111;
+  }
+
   .single-post__wrapper .single-post__related-posts .related-posts .related-post {
     padding: 0 15px;
   }

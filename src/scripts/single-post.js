@@ -6,19 +6,19 @@ jQuery(document).ready(function($){
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 1,
-        arrows: true,
+        arrows: false,
       })
       $('.single-post__second-gallery').slick({
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 1,
-        arrows: true,
+        arrows: false,
       })
       $('.related-posts').slick({
         centerMode: true,
         centerPadding: '6%',
         slidesToShow: 2,
-        arrows: true,
+        arrows: false,
       })
     }
 
@@ -28,6 +28,10 @@ jQuery(document).ready(function($){
         centerPadding: '4%',
         slidesToShow: 3,
         arrows: true,
+        draggable: false,
+        appendArrows: "$('.single-post__carousel-navigation')",
+        prevArrow: $('.single-post__prev-arrow'),
+        nextArrow: $('.single-post__next-arrow')
       })
     }
   })();

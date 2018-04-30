@@ -10,6 +10,7 @@
   width: 100vw;
   z-index: 5;
   height: 70px;
+  transition: all 0.5s ease-in-out;
 
   .jp-audio *:focus,
   .jp-audio-stream *:focus,
@@ -128,6 +129,7 @@
           width: 90px;
           position: relative;
           border-left: 1px solid #000;
+          cursor: pointer;
           img {
             height: 30px;
             width: 30px;

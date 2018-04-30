@@ -52,7 +52,7 @@
   line-height: 50px;
   text-align: center;
   text-decoration: none;
-  width: 50%;
+  width: 280px;
   margin: 0 6% 0 6%;
   margin-top: 25px;
 }
@@ -212,6 +212,7 @@
 
 #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper {
   padding: 0;
+  padding-bottom: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,7 +247,9 @@
 }
 
 #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
-  opacity: 0;
+  -webkit-transform: rotate(-90deg) translate(-14px, 0);
+  transform: rotate(-90deg) translate(-14px, 0);
+  opacity: 1;
 }
 
 #services-child .services-child__content-wrap .services-child__our-approach ul li .services-child__our-approach-list-description {
@@ -261,9 +264,7 @@
 }
 
 #services-child .services-child__content-wrap .services-child__our-approach ul li.open .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
-  -webkit-transform: rotate(-90deg) translate(-14px, 0);
-  transform: rotate(-90deg) translate(-14px, 0);
-  opacity: 1;
+  opacity: 0;
 }
 
 #services-child .services-child__content-wrap .services-child__our-team {

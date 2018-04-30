@@ -89,11 +89,11 @@
 
     <!-- visible form start -->
     <section class="form__contact-info">
-      <div class="email">
-        <a href="">info@soberlifesd.com</a>
-      </div>
       <div class="phone-number">
-        <a href="">604.123.4567</a>  
+        <a href="tel:18003230585">1.800.323.0585</a>  
+      </div>
+      <div class="email">
+        <a href="mailto:info@soberlifesd.com">info@soberlifesd.com</a>
       </div>
     </section>
 

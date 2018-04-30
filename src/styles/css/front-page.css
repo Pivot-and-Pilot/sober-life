@@ -108,6 +108,7 @@ section.front-page__header .front-page__header__wrapper button {
   font-family: "FFBauWebMedium";
   font-size: 20px;
   height: 50px;
+  margin-top: 20px;
   margin-left: 6vw;
   width: 280px;
   cursor: pointer;
@@ -376,6 +377,7 @@ section.front-page__success-stories {
     bottom: 15%;
     margin-left: 4vw;
     border-radius: 50px;
+    margin-top: 0;
     width: 300px;
     height: 60px;
   }

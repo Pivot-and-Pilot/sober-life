@@ -135,7 +135,28 @@ jQuery(document).ready(function($){
 
   (function navigation () {
     // client name
-    $('#client-name').on('change keyup paste', function () {
+    $('#client-name').on('change keyup paste', function (e) {
+      e.preventDefault();
+      if (e.keyCode === 13) {
+        loadingGreating1();
+        // loading screen
+        setTimeout( function () {
+          $('.loading-screen').css({
+            'opacity': '1',
+            'background-image': "url('wp-content/themes/sober-life/img/src/hand--green.svg')"
+          });
+        }, 1000)
+  
+        $('.question__your-name').css('left', '-100%');
+        setTimeout( function () {
+          $('.loading-screen').css('opacity', '0');
+        }, 3000 )
+        setTimeout( function () {
+          $('.question__client-target').css('left', '0');
+        }, 4000 )
+        // process bar
+        $('.process').css('width', '25%')
+      }
       $('.your-name__next-button').css({
         'opacity' : '1',
         'pointer-events' : 'unset'
@@ -203,7 +224,31 @@ jQuery(document).ready(function($){
     })
 
     // loved one's name
-    $('#loved-one-name').on('change keyup paste', function () {
+    $('#loved-one-name').on('change keyup paste', function (e) {
+      e.preventDefault();
+      if (e.keyCode === 13) {
+        $('.question__loved-one-name').css('left', '-100%');
+        // loading screen
+        let fullName, firstName, spacePosition;
+        fullName = $('#loved-one-name-hidden').val();
+        spacePosition = fullName.indexOf(' ');
+        firstName = fullName.slice(0, spacePosition);
+        $('.loading-screen > div').html(`With the right support ${fullName} will be well equipt to get on the right track`);
+        setTimeout( function(){
+          $('.loading-screen').css({
+            'opacity': '1',
+            'background-image': "url('wp-content/themes/sober-life/img/src/sun-symbol--green.svg')"
+          });
+        }, 1000)
+        setTimeout( function () {
+          $('.loading-screen').css('opacity', '0');
+        }, 3000)
+        setTimeout( function () {
+          $('.question__client-gender').css('left', '0');
+        }, 4000)
+        // process bar
+        $('.process').css('width', '37.5%')
+      }
       $('.loved-one-name__next-button').css({
         'opacity' : '1',
         'pointer-events' : 'unset'
@@ -233,6 +278,7 @@ jQuery(document).ready(function($){
       // process bar
       $('.process').css('width', '37.5%')
     })
+
     $('.loved-one-name__back').on('click', function () {
       $('.question__loved-one-name').css('left', '100%');
       setTimeout( function () {

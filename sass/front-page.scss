@@ -4,9 +4,9 @@ body {
   background: $color__white !important;
 }
 
-#content {
-  min-height: 100vh;
-}
+// #content {
+// min-height: 100vh;
+// }
 
 section.front-page__header {
   position: relative;
@@ -22,81 +22,83 @@ section.front-page__header {
       height: 100%;
       width: 100%;
       object-fit: cover;
-
     }
   }
-  .front-page__header__slogans {
-    height: 100%;
+  .front-page__header__wrapper {
+    // height: 100%;
     width: 100%;
-    position: absolute;
-    top: 0;
-    padding-left: 6vw;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .front-page__header__slogans-reclaim {
-      font-size: 3em;
-      margin: 0;
-      margin-top: 0px;
-      font-family: $font__main--med;
-      color: #000;
-    }
-    .front-page__word-wrapper {
-      display: flex;
-      position: relative;
-      .front-page__your-word {
-        font-size: 2.7em;
-        font-weight: 900;
-        font-family: $font__main--bold;
+    .front-page__header__slogans {
+      padding-left: 6vw;
+      .front-page__header__slogans-reclaim {
+        font-size: 3em;
+        margin: 0;
+        // margin-top: 0px;
+        font-family: $font__main--med;
         color: #000;
-        padding-right: 10px;
-        top: -10px;
-        position: relative;
       }
-      .front-page__header__changing-slogans-wrapper {
+      .front-page__word-wrapper {
+        display: flex;
         position: relative;
-        top: -10px;
-        color: #000;
-        .front-page__header__changing-slogans {
+        .front-page__your-word {
           font-size: 2.7em;
           font-weight: 900;
-          position: absolute;
-          opacity: 0;
-          transition: all 1s ease-in-out;
           font-family: $font__main--bold;
-          p {
-            margin: 0;
+          color: #000;
+          padding-right: 10px;
+          top: -10px;
+          position: relative;
+        }
+        .front-page__header__changing-slogans-wrapper {
+          position: relative;
+          top: -10px;
+          color: #000;
+          .front-page__header__changing-slogans {
+            font-size: 2.7em;
+            font-weight: 900;
+            position: absolute;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            font-family: $font__main--bold;
+            p {
+              margin: 0;
+            }
           }
         }
       }
-    } 
-    .front-page__header__changing-slogans-detail {
-      font-size: 1.5em;
-      position: relative;
-      font-family: $font__main--med;
-      color: #000;
-      p {
-        margin: 0;
+      .front-page__header__changing-slogans-detail {
+        font-size: 1.5em;
+        position: relative;
+        font-family: $font__main--med;
+        color: #000;
+        p {
+          margin: 0;
+        }
       }
     }
-  }
-  button {
-    // padding: 10px 25px;
-    background-color: #000;
-    border-radius: 25px;
-    bottom: 15%;
-    color: $color__white;
-    font-family: $font__main--med;
-    font-size: 20px;
-    height: 50px;
-    margin-left: 6vw;
-    position: absolute;
-    width: 200px;
-    cursor: pointer;
-    &:hover {
-      color: #000;
-      background-color: $color__green;
-      border: 1px solid #000;
+    button {
+      // padding: 10px 25px;
+      background-color: #000;
+      border-radius: 25px;
+      bottom: 15%;
+      color: $color__white;
+      font-family: $font__main--med;
+      font-size: 20px;
+      height: 50px;
+      margin-left: 6vw;
+      // position: absolute;
+      width: 280px;
+      cursor: pointer;
+      &:hover {
+        color: #000;
+        background-color: $color__green;
+        border: 1px solid #000;
+      }
     }
   }
   a {
@@ -183,7 +185,7 @@ section.front-page__services {
         position: relative;
         font-family: $font__main;
         font-size: 1.1em;
-        z-index: 1;        
+        z-index: 1;
         p {
           margin: 20px 0;
         }
@@ -273,49 +275,51 @@ section.front-page__success-stories {
 /* ====================================================== */
 
 @media only screen and (min-width: 768px) {
-
   section.front-page__header {
+    min-height: 625px;
     .front-page__header__image {
       height: calc(100vh - 100px);
     }
-    .front-page__header__slogans {
-      padding-left: 4vw;
-      .front-page__header__slogans-reclaim {
-        font-size: 4.5em;
-        line-height: 1.5em;
-      }
-      .front-page__word-wrapper {
-        top: -30px;
-        .front-page__your-word {
+    .front-page__header__wrapper {
+      .front-page__header__slogans {
+        padding-left: 4vw;
+        .front-page__header__slogans-reclaim {
           font-size: 4.5em;
           line-height: 1.5em;
         }
-        .front-page__header__changing-slogans-wrapper {
-          .front-page__header__changing-slogans {
+        .front-page__word-wrapper {
+          top: -30px;
+          .front-page__your-word {
             font-size: 4.5em;
-            p {
-              line-height: 1.5em;
+            line-height: 1.5em;
+          }
+          .front-page__header__changing-slogans-wrapper {
+            .front-page__header__changing-slogans {
+              font-size: 4.5em;
+              p {
+                line-height: 1.5em;
+              }
             }
           }
         }
-      } 
-      .front-page__header__changing-slogans-detail {
-        font-size: 2.3em;
-        top: -30px;
-        p {
+        .front-page__header__changing-slogans-detail {
+          font-size: 2.3em;
+          top: -30px;
+          p {
+          }
         }
       }
-    }
-    button {
-      bottom: 15%;
-      margin-left: 4vw;
-      // padding: 20px 50px;
-      border-radius: 50px;
-      // width: 300px;
-      height: 60px;
-      // border-radius: 35px;
-      &:hover {
-        cursor: pointer;
+      button {
+        bottom: 15%;
+        margin-left: 4vw;
+        // padding: 20px 50px;
+        border-radius: 50px;
+        width: 300px;
+        height: 60px;
+        // border-radius: 35px;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
     a {
@@ -407,6 +411,9 @@ section.front-page__success-stories {
       justify-content: center;
       .our-story__description {
         font-size: 1.4em;
+      }
+      .front-page__button {
+        width: 300px;
       }
     }
   }

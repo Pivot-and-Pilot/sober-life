@@ -2,10 +2,6 @@ body {
   background: #f5f0e8 !important;
 }
 
-#content {
-  min-height: 100vh;
-}
-
 section.front-page__header {
   position: relative;
   font-family: "FFBauWeb", sans-serif;
@@ -27,12 +23,12 @@ section.front-page__header .front-page__header__image img {
   object-fit: cover;
 }
 
-section.front-page__header .front-page__header__slogans {
-  height: 100%;
+section.front-page__header .front-page__header__wrapper {
   width: 100%;
-  position: absolute;
-  top: 0;
-  padding-left: 6vw;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,22 +41,25 @@ section.front-page__header .front-page__header__slogans {
   justify-content: center;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans {
+  padding-left: 6vw;
+}
+
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__header__slogans-reclaim {
   font-size: 3em;
   margin: 0;
-  margin-top: 0px;
   font-family: "FFBauWebMedium";
   color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__word-wrapper {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
   font-size: 2.7em;
   font-weight: 900;
   font-family: "FFBauWebBold";
@@ -70,13 +69,13 @@ section.front-page__header .front-page__header__slogans .front-page__word-wrappe
   position: relative;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper {
   position: relative;
   top: -10px;
   color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
   font-size: 2.7em;
   font-weight: 900;
   position: absolute;
@@ -86,22 +85,22 @@ section.front-page__header .front-page__header__slogans .front-page__word-wrappe
   font-family: "FFBauWebBold";
 }
 
-section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
   margin: 0;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__header__changing-slogans-detail {
   font-size: 1.5em;
   position: relative;
   font-family: "FFBauWebMedium";
   color: #000;
 }
 
-section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail p {
+section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__header__changing-slogans-detail p {
   margin: 0;
 }
 
-section.front-page__header button {
+section.front-page__header .front-page__header__wrapper button {
   background-color: #000;
   border-radius: 25px;
   bottom: 15%;
@@ -110,12 +109,11 @@ section.front-page__header button {
   font-size: 20px;
   height: 50px;
   margin-left: 6vw;
-  position: absolute;
-  width: 200px;
+  width: 280px;
   cursor: pointer;
 }
 
-section.front-page__header button:hover {
+section.front-page__header .front-page__header__wrapper button:hover {
   color: #000;
   background-color: #80ff73;
   border: 1px solid #000;
@@ -335,49 +333,54 @@ section.front-page__success-stories {
 /* ====================================================== */
 
 @media only screen and (min-width: 768px) {
+  section.front-page__header {
+    min-height: 625px;
+  }
+
   section.front-page__header .front-page__header__image {
     height: calc(100vh - 100px);
   }
 
-  section.front-page__header .front-page__header__slogans {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans {
     padding-left: 4vw;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__header__slogans-reclaim {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__header__slogans-reclaim {
     font-size: 4.5em;
     line-height: 1.5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__word-wrapper {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper {
     top: -30px;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__your-word {
     font-size: 4.5em;
     line-height: 1.5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans {
     font-size: 4.5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__word-wrapper .front-page__header__changing-slogans-wrapper .front-page__header__changing-slogans p {
     line-height: 1.5em;
   }
 
-  section.front-page__header .front-page__header__slogans .front-page__header__changing-slogans-detail {
+  section.front-page__header .front-page__header__wrapper .front-page__header__slogans .front-page__header__changing-slogans-detail {
     font-size: 2.3em;
     top: -30px;
   }
 
-  section.front-page__header button {
+  section.front-page__header .front-page__header__wrapper button {
     bottom: 15%;
     margin-left: 4vw;
     border-radius: 50px;
+    width: 300px;
     height: 60px;
   }
 
-  section.front-page__header button:hover {
+  section.front-page__header .front-page__header__wrapper button:hover {
     cursor: pointer;
   }
 
@@ -501,6 +504,10 @@ section.front-page__success-stories {
 
   section.front-page__our-story .our-story__text .our-story__description {
     font-size: 1.4em;
+  }
+
+  section.front-page__our-story .our-story__text .front-page__button {
+    width: 300px;
   }
 
   section.front-page__success-stories {

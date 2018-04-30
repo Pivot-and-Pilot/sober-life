@@ -22,32 +22,34 @@ get_header();
 				<div class="front-page__header__image">
 					<img src="<?php the_field('header_image');?>" alt="">
 				</div>
-				<div class="front-page__header__slogans">
-					<p class="front-page__header__slogans-reclaim">Reclaim</p>
-					<div class="front-page__word-wrapper">
-						<div class="front-page__your-word">your</div>
-						<div class="front-page__header__changing-slogans-wrapper">
-						<?php
-						// check if the repeater field has rows of data
-						if( have_rows('header_changing_slogans') ):
-							// loop through the rows of data
-							while ( have_rows('header_changing_slogans') ) : the_row();
-								// display a sub field value
-						?>
-							
-							<div class="front-page__header__changing-slogans"><?php the_sub_field('slogan'); ?></div>
-							
+				<div class="front-page__header__wrapper">
+					<div class="front-page__header__slogans">
+						<p class="front-page__header__slogans-reclaim">Reclaim</p>
+						<div class="front-page__word-wrapper">
+							<div class="front-page__your-word">your</div>
+							<div class="front-page__header__changing-slogans-wrapper">
+							<?php
+							// check if the repeater field has rows of data
+							if( have_rows('header_changing_slogans') ):
+								// loop through the rows of data
+								while ( have_rows('header_changing_slogans') ) : the_row();
+									// display a sub field value
+							?>
+								
+								<div class="front-page__header__changing-slogans"><?php the_sub_field('slogan'); ?></div>
+								
 
-						<?php
-							endwhile;
-						endif;
-						?>
+							<?php
+								endwhile;
+							endif;
+							?>
+							</div>
 						</div>
+						<div class="front-page__header__changing-slogans-detail">The strength is in you. <br> We'll help you find it</div>
+						
 					</div>
-					<div class="front-page__header__changing-slogans-detail">The strength is in you. <br> We'll help you find it</div>
-					
+					<button class="get-started" onclick="toggleForm()">Join Our Community</button>
 				</div>
-				<button class="get-started" onclick="toggleForm()">Get Started</button>
 			</section>
 
 			<section class="front-page__moving-forward">

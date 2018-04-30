@@ -19,7 +19,7 @@
         <div class="services-child__service-initial"><?php echo $serviceInitials; ?></div>
         <div class="services-child__service-name"><?php echo get_sub_field('service_name'); ?></div>
         <div class="services-child__service-description"><?php echo get_sub_field('service_description'); ?></div>
-        <a href="#" class="services-child__opening-get-started" onclick="toggleForm()">Get Started</a>
+        <a href="#" class="services-child__opening-get-started" onclick="toggleForm()">Join Our Community</a>
       <?php endwhile;
     endif; ?>
   </section>

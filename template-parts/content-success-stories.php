@@ -55,7 +55,10 @@
     wp_reset_query();
   ?>
   </div>
-
+  <div class="carousel-navigation">
+    <div class="prev-arrow">prev</div>
+    <div class="next-arrow">next</div>   
+  </div>
   <div class="other-success-stories">
   <?php
     $podcasts = new WP_Query(array(

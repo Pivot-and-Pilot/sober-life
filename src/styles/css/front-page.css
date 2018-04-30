@@ -405,7 +405,7 @@ section.front-page__success-stories {
   }
 
   section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows img {
-    padding-right: 15px;
+    padding-right: 0;
   }
 
   section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {

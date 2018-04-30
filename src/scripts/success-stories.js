@@ -48,7 +48,10 @@ jQuery(document).ready(function($){
       centerPadding: '4%',
       slidesToShow: 3,
       arrows: true,
-      draggable: false
+      draggable: false,
+      appendArrows: "$('.carousel-navigation')",
+      prevArrow: $('.prev-arrow'),
+      nextArrow: $('.next-arrow')
     })
    
   })();

@@ -123,7 +123,8 @@
   height: 50px;
   width: 300px;
   border-radius: 25px;
-  background-color: #80ff73;
+  border: 1px solid black;
+  background-color: #f5f0e8;
   text-align: center;
   line-height: 50px;
   margin: 0 auto;
@@ -132,6 +133,10 @@
   font-family: "FFBauWebMedium";
   font-size: 1.1em;
   padding: 0;
+}
+
+.single-post__wrapper a.link-out-blog:hover {
+  background-color: #80ff73;
 }
 
 .single-post__wrapper .single-post__second-gallery {
@@ -412,6 +417,19 @@
   .single-post__wrapper .single-post__related-posts .related-post__header {
     padding: 0 4vw 30px;
     font-size: 2em;
+  }
+
+  .single-post__wrapper .single-post__related-posts .single-post__carousel-navigation {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 4vw;
+    top: calc((92vw - 120px)/ 6);
+    z-index: 111;
   }
 
   .single-post__wrapper .single-post__related-posts .related-posts .related-post {

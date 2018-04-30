@@ -242,6 +242,14 @@
       }
     }
 
+    .carousel-navigation {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4vw;
+      top: calc((92vw - 120px)/ 6);
+    }
+
     .other-success-stories {
       .slick-list {
         .slick-track { 

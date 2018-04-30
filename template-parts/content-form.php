@@ -114,7 +114,7 @@
       <div class="content-wrapper">
         <h1>What is your name?</h1>
         <div class="inputWrapper">
-          <input id="client-name" type="text" placeholder="First & Last Name">
+          <input id="client-name" autocomplete="off" type="text" placeholder="First & Last Name">
           <div class="your-name__next-button">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
           </div>
@@ -142,7 +142,7 @@
       <div class="content-wrapper">
         <h1>What is your loved one's name?</h1>
         <div class="inputWrapper">
-          <input id="loved-one-name" type="text" placeholder="First & Last Name">
+          <input id="loved-one-name" autocomplete="off" type="text" placeholder="First & Last Name">
           <div class="loved-one-name__next-button">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/arrow--black.svg" alt="">
           </div>

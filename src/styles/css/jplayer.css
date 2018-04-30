@@ -7,6 +7,8 @@
   width: 100vw;
   z-index: 5;
   height: 70px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #soberlife__jplayer .jp-audio *:focus,
@@ -160,6 +162,7 @@
   width: 90px;
   position: relative;
   border-left: 1px solid #000;
+  cursor: pointer;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__x-button img {

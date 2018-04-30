@@ -137,6 +137,7 @@ section.front-page__moving-forward {
       height: 50px;
       img {
         width: calc(70% / 3);
+        padding-right: 15px;
       }
     }
     .moving-forward__content__header {
@@ -342,6 +343,9 @@ section.front-page__success-stories {
         width: 50%;
         height: 30px;
         margin-left: -20px;
+        img {
+          padding-right: 0;
+        }
       }
       .moving-forward__content__header {
         margin-top: 50px;

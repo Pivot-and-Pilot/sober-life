@@ -168,6 +168,7 @@ section.front-page__moving-forward .moving-forward__content .moving-forward__con
 
 section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows img {
   width: calc(70% / 3);
+  padding-right: 15px;
 }
 
 section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {
@@ -401,6 +402,10 @@ section.front-page__success-stories {
     width: 50%;
     height: 30px;
     margin-left: -20px;
+  }
+
+  section.front-page__moving-forward .moving-forward__content .moving-forward__content__arrows img {
+    padding-right: 15px;
   }
 
   section.front-page__moving-forward .moving-forward__content .moving-forward__content__header {

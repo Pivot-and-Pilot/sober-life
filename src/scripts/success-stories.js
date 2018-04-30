@@ -48,6 +48,7 @@ jQuery(document).ready(function($){
       centerPadding: '4%',
       slidesToShow: 3,
       arrows: true,
+      draggable: false
     })
    
   })();

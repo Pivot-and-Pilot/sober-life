@@ -97,7 +97,8 @@
     height: 50px;
     width: 300px;
     border-radius: 25px;
-    background-color: $color__green;
+    border: 1px solid black;
+    background-color: $color__white;
     text-align: center;
     line-height: 50px;
     margin: 0 auto;
@@ -106,6 +107,9 @@
     font-family: $font__main--med;
     font-size: 1.1em;
     padding: 0;
+    &:hover {
+      background-color: $color__green;
+    }
   }
   .single-post__second-gallery {
     padding-top: 30px;

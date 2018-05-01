@@ -339,7 +339,7 @@ section.front-page__success-stories {
 
 /* ====================================================== */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
   section.front-page__header {
     min-height: 625px;
   }

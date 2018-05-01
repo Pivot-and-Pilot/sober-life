@@ -104,6 +104,7 @@
 }
 
 #sobercollective-page .sobercollective__query-bar {
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

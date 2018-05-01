@@ -7,6 +7,8 @@ footer .footer__wrap {
   padding-top: 60px;
   padding-bottom: 100px;
   margin: 0 6% 0 6%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 footer .footer__wrap .footer__desktop-wrap .footer__social-media .footer__social-media-title {

@@ -1,9 +1,13 @@
 jQuery(document).ready(function($){
   let currentPodcastLink, currentPodcastTitle;
-  
+  let windowSize = $(window).width();
+
   (function getPodcastURL(){
     $('#page').on('click', '.single-post__play-button', function () {
       $('#soberlife__jplayer').css('bottom', '0');
+      if (windowSize > 769) {      
+        $('footer .footer__wrap').css('padding-bottom', '60px');
+      }
       currentPodcastLink = $(this).siblings('.powerpress_links_mp3')[0].children[0].href;
       currentPodcastTitle = $($(this).parentsUntil('.single-post__wrapper')[1]).siblings('.single-post__title')[0].innerText;
 
@@ -45,6 +49,9 @@ jQuery(document).ready(function($){
   (function closePlayer () {
     $('.jplayer__x-button').on('click', function () {
       $('#soberlife__jplayer').css('bottom', '-70px');
+      if (windowSize > 769) {
+        $('footer .footer__wrap').css('padding-bottom', '10px');
+      }
     })
   })();
 

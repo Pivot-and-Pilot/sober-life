@@ -186,6 +186,10 @@
   font-size: 1.5em;
 }
 
+.single-post__wrapper .single-post__related-posts .single-post__carousel-navigation {
+  display: none;
+}
+
 .single-post__wrapper .single-post__related-posts .related-posts .related-post {
   padding: 0 5px;
 }
@@ -428,8 +432,9 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 4vw;
-    top: calc(((92vw - 120px)/6) + 30px);
+    top: calc((92vw - 120px)/6);
     z-index: 111;
+    height: 0;
   }
 
   .single-post__wrapper .single-post__related-posts .single-post__carousel-navigation .single-post__prev-arrow,

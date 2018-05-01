@@ -70,15 +70,16 @@
     }
   }
 
+  .carousel-navigation {
+    display: none;
+  }
+
   .other-success-stories { 
     overflow: hidden;
     padding-top: 30px;
     .slick-prev {
       left: 45px;
       z-index: 111;
-    }
-    .slick-next {
-      right: 45px;
     }
     .slick-list {
       .slick-track {
@@ -247,8 +248,9 @@
       display: flex;
       justify-content: space-between;
       padding: 0 4vw;
-      top: calc(((92vw - 120px)/6) + 50px);
+      top: calc((92vw - 120px)/6);
       z-index: 11;
+      height: 0;
       .prev-arrow, .next-arrow  {
         height: 50px;
         width: 50px;

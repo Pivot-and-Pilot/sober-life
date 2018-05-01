@@ -56,8 +56,25 @@
   ?>
   </div>
   <div class="carousel-navigation">
-    <div class="prev-arrow">prev</div>
-    <div class="next-arrow">next</div>   
+    <div class="prev-arrow navigation-arrow">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.36 336.36"><defs>
+        <style>
+        .cls-1{
+          fill:#f5f0e8;
+        }
+        </style>
+        </defs><title>SBL_svg-ARROWS</title><circle cx="168.18" cy="168.18" r="165"/><polygon class="cls-1" points="237.9 177.98 129.86 177.98 165.53 211.13 156.11 221.24 155.75 220.9 99.05 168.18 156.11 115.12 165.53 125.23 129.87 158.37 237.9 158.37 237.9 177.98"/>
+      </svg>
+    </div>
+    <div class="next-arrow navigation-arrow">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.44 341.44"><defs>
+        <style>
+        .cls-1{
+          fill:#f5f0e8;
+        }
+        </style></defs><title>SBL_svg-ARROWS</title><circle cx="170.72" cy="170.72" r="165"/><polygon class="cls-1" points="239.84 170.72 182.78 223.78 173.37 213.67 209.03 180.53 101 180.53 101 160.92 209.04 160.92 173.37 127.77 182.78 117.66 183.15 118 239.84 170.72"/>
+      </svg>
+    </div>   
   </div>
   <div class="other-success-stories">
   <?php

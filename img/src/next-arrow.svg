@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.44 341.44"><defs>
+<style>
+<!-- polygon{
+  fill:#f5f0e8;
+} -->
+.cls-1{
+  fill:#80ff73;
+  stroke:#000;
+  stroke-miterlimit:10;
+  stroke-width:6px;
+}
+<!-- .cls-1:hover polygon {
+  fill:#000;
+} -->
+</style></defs><title>SBL_svg-ARROWS</title><circle class="cls-1" cx="170.72" cy="170.72" r="165"/><polygon points="239.84 170.72 182.78 223.78 173.37 213.67 209.03 180.53 101 180.53 101 160.92 209.04 160.92 173.37 127.77 182.78 117.66 183.15 118 239.84 170.72"/></svg>

@@ -247,7 +247,33 @@
       display: flex;
       justify-content: space-between;
       padding: 0 4vw;
-      top: calc((92vw - 120px)/ 6);
+      top: calc(((92vw - 120px)/6) + 50px);
+      z-index: 11;
+      .prev-arrow, .next-arrow  {
+        height: 50px;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+        &:hover circle {
+          fill:#80ff73;
+          stroke:#000;
+          stroke-miterlimit:10;
+          stroke-width:6px;
+        }
+        &:hover polygon {
+          fill:#000
+        }
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .next-arrow {
+        height: 50px;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+      }
     }
 
     .other-success-stories {

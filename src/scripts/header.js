@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
     document.getElementById('header__menu-overlay-content').style.opacity = '0';
     document.documentElement.style.overflow = '';
     document
-      .getElementById('header__menu-nav')
+      .getElementById('header__menu-nav') 
       .childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display =
       'none';
   });

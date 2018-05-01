@@ -133,7 +133,7 @@ footer .footer__wrap .footer__desktop-wrap .footer__contact .footer__contact-ema
 }
 
 footer .footer__wrap .footer__map {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 footer .footer__wrap .footer__map .footer__map-address {
@@ -267,7 +267,7 @@ footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
   }
 
   footer .footer__wrap .footer__map {
-    margin: 20px -4% 0 -4%;
+    margin: 40px -4% 0 -4%;
   }
 
   footer .footer__wrap .footer__map .footer__map-address {

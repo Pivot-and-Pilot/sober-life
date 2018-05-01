@@ -40,6 +40,7 @@
       .jp-title {
         padding-left: 70px;
         font-family: $font__main--bold;
+        padding-top: 15px;
       }
     }
     .jp-interface {
@@ -115,8 +116,10 @@
             display: flex;
             width: 100%;
             font-size: 14px;
-            justify-content: space-between;
             z-index: -11;
+            position: absolute;
+            bottom: 10px;
+            padding-left: 10px;
             .jp-current-time {
               font-family: $font__main--med;
             }

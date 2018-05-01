@@ -45,6 +45,7 @@
 #soberlife__jplayer .jp-type-single .jp-details .jp-title {
   padding-left: 70px;
   font-family: "FFBauWebBold";
+  padding-top: 15px;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder {
@@ -144,10 +145,10 @@
   display: flex;
   width: 100%;
   font-size: 14px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   z-index: -11;
+  position: absolute;
+  bottom: 10px;
+  padding-left: 10px;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar .jp-current-time {

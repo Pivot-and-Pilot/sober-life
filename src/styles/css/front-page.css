@@ -109,6 +109,7 @@ section.front-page__header .front-page__header__wrapper button {
   border-radius: 25px;
   bottom: 15%;
   color: #f5f0e8;
+  outline: none;
   font-family: "FFBauWebMedium";
   font-size: 20px;
   height: 50px;

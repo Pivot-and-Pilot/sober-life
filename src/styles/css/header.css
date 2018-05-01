@@ -349,7 +349,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    width: 60%;
+    width: 80%;
   }
 
   header .site-branding .header__bottom-bar #header__menu-nav-bar #primary-menu {

@@ -265,7 +265,42 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 4vw;
-    top: calc((92vw - 120px)/ 6);
+    top: calc(((92vw - 120px)/6) + 50px);
+    z-index: 11;
+  }
+
+  #success-stories .carousel-navigation .prev-arrow,
+  #success-stories .carousel-navigation .next-arrow {
+    height: 50px;
+    width: 50px;
+    display: block;
+    cursor: pointer;
+  }
+
+  #success-stories .carousel-navigation .prev-arrow:hover circle,
+  #success-stories .carousel-navigation .next-arrow:hover circle {
+    fill: #80ff73;
+    stroke: #000;
+    stroke-miterlimit: 10;
+    stroke-width: 6px;
+  }
+
+  #success-stories .carousel-navigation .prev-arrow:hover polygon,
+  #success-stories .carousel-navigation .next-arrow:hover polygon {
+    fill: #000;
+  }
+
+  #success-stories .carousel-navigation .prev-arrow svg,
+  #success-stories .carousel-navigation .next-arrow svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  #success-stories .carousel-navigation .next-arrow {
+    height: 50px;
+    width: 50px;
+    display: block;
+    cursor: pointer;
   }
 
   #success-stories .other-success-stories .slick-list .slick-track .single-success-story {

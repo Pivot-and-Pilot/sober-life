@@ -259,10 +259,6 @@
   padding-bottom: 15px;
 }
 
-#services-child .services-child__content-wrap .services-child__our-approach ul li:first-of-type .services-child__our-approach-list-description {
-  display: block;
-}
-
 #services-child .services-child__content-wrap .services-child__our-approach ul li.open .services-child__our-approach-list-title-wrapper .services-child__our-approach-list-icon-wrapper .services-child__our-approach-list-icon span:nth-child(2) {
   opacity: 0;
 }

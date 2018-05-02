@@ -206,11 +206,11 @@
             display: none;
             padding-bottom: 15px;
           }
-          &:first-of-type {
-            .services-child__our-approach-list-description {
-              display: block;
-            }
-          }
+          // &:first-of-type {
+          //   .services-child__our-approach-list-description {
+          //     display: block;
+          //   }
+          // }
         }
         li.open {
           .services-child__our-approach-list-title-wrapper {

@@ -328,10 +328,10 @@ jQuery(document).ready(function($){
       $('.question__client-feeling').css('left', '-100%');
       // loading screen
       if ( $(this).data('value') === 'hesitant') {
-        $('.loading-screen > div').html(`We understand your hesitation, ${fullName}. Rest assured, you will have all the necessary resources avaiable you on this journey.`);
+        $('.loading-screen > div').html(`We understand your hesitation, ${fullName}. Rest assured, you will have all the necessary resources available to you on this journey.`);
       }
       if ( $(this).data('value') === 'moderate') {
-        $('.loading-screen > div').html(`No worries, we have every resource avaiable and will answer all the questions you might have`);
+        $('.loading-screen > div').html(`No worries, we have every resource available and will answer all the questions you might have`);
       }
       if ( $(this).data('value') === 'i am ready for change') {
         $('.loading-screen > div').html(`Amazing! Just a few more questions and we'll get you started on this new chapter of life!`);
@@ -374,7 +374,7 @@ jQuery(document).ready(function($){
         $('.loading-screen > div').html(`Hesitation is totally normal. We're here to help ${fullName} discover the different possibilities that change can bring.`);
       }
       if ( $(this).data('value') === 'moderate') {
-        $('.loading-screen > div').html(`No worries, we have every resource avaiable so that ${fullName} can make an informed decision.`);
+        $('.loading-screen > div').html(`No worries, we have every resource available so that ${fullName} can make an informed decision.`);
       }
       if ( $(this).data('value') === 'it is time for change') {
         $('.loading-screen > div').html(`That's great! Just a few more questions and we can get ${fullName} started on this new chapter.`);

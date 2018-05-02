@@ -77,7 +77,7 @@ jQuery(document).ready(function($) {
     (function setPrimaryMenuIcons() {
       $('#header__menu-nav-bar #primary-menu li a').each(function() {
         $(this).append(
-          `<img src="https://devpnp.com/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`
+          `<img src="https://soberlifesd.com/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`
         );
       });
     })();

@@ -30,7 +30,7 @@
 				</div>
 				<div class="footer__newsletter-signup">
 					<div class="footer__newsletter-signup-title">Join Our Newsletter</div>
-					<?php echo do_shortcode('[mc4wp_form id="120"]'); ?>
+					<?php echo do_shortcode('[mc4wp_form id="137"]'); ?>
 				</div>
 				<div class="footer__contact">
 					<div class="footer__contact-title">Contact Us</div>

@@ -290,7 +290,7 @@ input, textarea {
           margin-top: 20px;
           .gender-choice {
             width: 20%;
-            height: 370px;
+            height: 40vh;
             border: 5px solid rgb(172, 168, 162);
             border-radius: 40px;
             display: flex;
@@ -352,7 +352,7 @@ input, textarea {
           margin-top: 20px;
           .feeling-choice {
             width: 20%;
-            height: 370px;
+            height: 40vh;
             border: 5px solid rgb(172, 168, 162);
             border-radius: 40px;
             display: flex;
@@ -415,7 +415,7 @@ input, textarea {
           margin-top: 20px;
           .loved-one-feeling-choice {
             width: 20%;
-            height: 370px;
+            height: 40vh;
             border: 5px solid rgb(172, 168, 162);
             border-radius: 40px;
             display: flex;
@@ -713,7 +713,7 @@ input, textarea {
       .content-wrapper {
         width: 100%;
         h1 {
-          font-size: 4em;
+          font-size: 3em;
           margin: 0;
           width: 100%;
           text-align: center;
@@ -729,7 +729,7 @@ input, textarea {
           .effect-choice {
             padding: 30px;
             width: 25%;
-            height: 400px;
+            height: 40vh;
             border: 5px solid rgb(172, 168, 162);
             border-radius: 40px;
             display: flex;
@@ -741,11 +741,11 @@ input, textarea {
             color: #000;
             text-align: center;
             img {
-              height: 35%;
+              height: 25%;
             }
             h3 {
               font-family: $font__main--med;
-              font-size: 1em;
+              font-size: 0.7em;
               margin: 0;
               margin-top: 30px;
             }

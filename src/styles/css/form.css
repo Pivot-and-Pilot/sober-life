@@ -380,7 +380,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice {
   width: 20%;
-  height: 370px;
+  height: 40vh;
   border: 5px solid #aca8a2;
   border-radius: 40px;
   display: -webkit-box;
@@ -473,7 +473,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper .feeling-choice {
   width: 20%;
-  height: 370px;
+  height: 40vh;
   border: 5px solid #aca8a2;
   border-radius: 40px;
   display: -webkit-box;
@@ -567,7 +567,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice {
   width: 20%;
-  height: 370px;
+  height: 40vh;
   border: 5px solid #aca8a2;
   border-radius: 40px;
   display: -webkit-box;
@@ -989,7 +989,7 @@ textarea {
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper h1 {
-  font-size: 4em;
+  font-size: 3em;
   margin: 0;
   width: 100%;
   text-align: center;
@@ -1015,7 +1015,7 @@ textarea {
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice {
   padding: 30px;
   width: 25%;
-  height: 400px;
+  height: 40vh;
   border: 5px solid #aca8a2;
   border-radius: 40px;
   display: -webkit-box;
@@ -1038,12 +1038,12 @@ textarea {
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice img {
-  height: 35%;
+  height: 25%;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice h3 {
   font-family: "FFBauWebMedium";
-  font-size: 1em;
+  font-size: 0.7em;
   margin: 0;
   margin-top: 30px;
 }

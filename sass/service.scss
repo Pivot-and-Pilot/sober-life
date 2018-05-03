@@ -300,12 +300,19 @@
   #services-child {
     .services-child__service {
       height: 80vh;
+      min-height: 600px;
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      flex-direction: column;
       .services-child__service-image {
         height: 80vh;
+        min-height: 600px;        
       }
       .services-child__service-initial {
         margin: $margin__desktop;
-        padding-top: 20vh;
+        // padding-top: 20vh;
+        padding-top: 0;
         font-size: 70px;
         line-height: 60px;
       }

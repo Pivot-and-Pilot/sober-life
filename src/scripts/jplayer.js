@@ -52,6 +52,7 @@ jQuery(document).ready(function($){
       if (windowSize > 769) {
         $('footer .footer__wrap').css('padding-bottom', '10px');
       }
+      $('.jp-pause').click();
     })
   })();
 

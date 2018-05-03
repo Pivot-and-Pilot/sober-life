@@ -1,5 +1,11 @@
 @import 'variables-site/variables-site';
 
+#page {
+  // width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
 header {
   .site-branding {
     height: 80px;

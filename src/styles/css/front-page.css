@@ -1,12 +1,5 @@
-html {
-  width: 100vw;
-  overflow-x: hidden;
-}
-
 body {
   background: #f5f0e8 !important;
-  width: 100%;
-  overflow-x: hidden;
 }
 
 #content {

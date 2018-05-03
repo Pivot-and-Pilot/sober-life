@@ -1,15 +1,11 @@
 @import 'variables-site/variables-site';
 
-html {
-  width: 100vw;
-  overflow-x: hidden;
+body {
+  background: $color__white !important; 
+  // width: 100vw;
+  // overflow-x: hidden !important;
 }
 
-body {
-  background: $color__white !important;
-  width: 100%;
-  overflow-x: hidden;  
-}
 #content {
   min-height: 100vh;
 }

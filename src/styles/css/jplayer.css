@@ -179,7 +179,7 @@
 
 @media only screen and (min-width: 768px) {
   #soberlife__jplayer {
-    bottom: -70;
+    bottom: -70px;
   }
 
   #soberlife__jplayer .jp-type-single {

@@ -181,7 +181,7 @@ footer .footer__wrap .footer__copyright .footer__copyright-pnp a:hover {
   footer .footer__wrap {
     margin: 0 4% 0 4%;
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
   }
 
   footer .footer__wrap .footer__desktop-wrap {

@@ -21,15 +21,15 @@ get_header();
 				$argsCatsMobile = array(
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
-					'option_none_value'	=> 26,
+					'option_none_value'	=> 25,
 					'show_option_none'	=> 'All Media',
 					'orderby' 		=> 'include', 
-					'include' 		=> array(28, 29, 27));
+					'include' 		=> array(27, 28, 26));
 				$argsCatsDesktop = array(
 					'hide_empty' 	=> 0, 
 					'title_li' 		=> 0, 
 					'orderby' 		=> 'include', 
-					'include' 		=> array(26, 28, 29, 27),
+					'include' 		=> array(25, 27, 28, 26),
 				);
 			?>	
 				<div class="sobercollective__top-bar">
@@ -49,11 +49,11 @@ get_header();
 							<?php 
 								$tagsMobile = get_tags(array(
 									'hide_empty' 	=> 0,
-									'exclude'			=> 30
+									'exclude'			=> 29
 								));
 								if ($tagsMobile) { ?>
 									<select name="tag" id="tag">
-										<option value="30" class="current">All Topics</option>
+										<option value="29" class="current">All Topics</option>
 										<?php foreach($tagsMobile as $tag) {
 											echo '<option value="'. $tag->term_id .'">' . $tag->name ;
 										} ?>

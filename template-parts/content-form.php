@@ -71,7 +71,7 @@
         if ( wp_mail($to, $subject, $message, $headers) ) {
           echo '<section class="thank-you">
                   <div class="content-wrapper">
-                    <p>Thank you for submittin your form, one of us will give you a call soon!</p>
+                    <p>Thank you for submitting your form, one of us will give you a call soon!</p>
                     <a href="">Return Home</a>
                   </div>
                 </section>';
@@ -302,7 +302,7 @@
           <div class="effect-choice" name="effect-life" data-value="career and personal life">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/house--black.svg" alt=""> 
             <h3>Career & Personal Life</h3>
-            <p>Lost your job, a special someone, your hame, etc.</p>
+            <p>Lost your job, a special someone, your home, etc.</p>
           </div>
           <div class="effect-choice" name="effect-life" data-value="physical health">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/heart-bandaid--black.svg" alt=""> 
@@ -362,7 +362,7 @@
 
           <div class="insurance-company-wrapper">
             <input class="personal-infor-input" type="text" name="insurance-company" placeHolder="Insurance Company">
-            <p>If unsure please wirte 'unsure'</p>
+            <p>If unsure, please write 'unsure'</p>
           </div>
         </div>
 

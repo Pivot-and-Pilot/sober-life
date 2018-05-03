@@ -6,11 +6,19 @@
 
   .services-child__service {
     position: relative;
-    height: 60vh;
+    // display: block;
+    // height: 60vh;
+    padding: 10% 0;
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    min-height: 60vh;
     .services-child__service-image {
       position: fixed;
       z-index: -1;
-      height: 60vh;
+      height: 100%;
       width: 100%;
       object-fit: cover;
       top: 80px;
@@ -20,7 +28,7 @@
       font-size: 60px;
       margin: $margin__mobile;
       line-height: 48px;
-      padding-top: 20%;
+      // padding-top: 20%;
     }
     .services-child__service-name {
       font-family: $font__main--bold;

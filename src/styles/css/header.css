@@ -176,9 +176,9 @@ header #header__menu-overlay #header__menu-overlay-content {
   color: black;
   width: 88%;
   margin: 0 6% 0 6%;
-  right: -1000px;
-  -webkit-transition: right 0.5s ease-in-out;
-  transition: right 0.5s ease-in-out;
+  right: -400px;
+  -webkit-transition: right .8s ease-in-out;
+  transition: right .8s ease-in-out;
 }
 
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav {

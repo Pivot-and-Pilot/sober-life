@@ -338,6 +338,8 @@ section.front-page__our-story .our-story__text .front-page__button:hover {
 
 section.front-page__success-stories {
   background-color: #f5f0e8;
+  position: relative;
+  margin-top: -100px;
 }
 
 /* ====================================================== */

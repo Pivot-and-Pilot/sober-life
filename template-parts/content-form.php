@@ -370,7 +370,7 @@
         </div>
 
         <div class="comments-and-submit">
-          <textarea name="comments" id="" cols="30" rows="5" placeHolder="Comments"></textarea>
+          <textarea name="comments" id="" cols="30" rows="3" placeHolder="Comments"></textarea>
           <div id="form__submit">Submit</div>
         </div>
       </div>

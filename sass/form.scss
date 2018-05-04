@@ -557,7 +557,7 @@ input, textarea {
       .substances-used__next {
         display: none;
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         height: 50px;
         width: 150px;
@@ -605,7 +605,7 @@ input, textarea {
             border-radius: 35px; 
             text-align: center;
             line-height: 70px;
-            margin: 20px;
+            margin: 10px 20px;
             font-family: $font__main--med;
             font-size: 1.7em;
             color: #000;
@@ -637,7 +637,7 @@ input, textarea {
             font-size: 1.5em;
             padding-left: 25px;
             font-family: $font__main--med;
-            margin: 20px;
+            margin: 10px 20px;
             &::placeholder {
               color: #000;
             }
@@ -646,7 +646,7 @@ input, textarea {
             }
           }
           .substances-used-unsure {
-            margin: 20px;
+            margin: 10px 20px;
             height: 70px;
             width: 20%;
             border: 5px solid #000;
@@ -701,7 +701,7 @@ input, textarea {
       .loved-one-substances-used__next {
         display: none;
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         height: 50px;
         width: 150px;
@@ -729,6 +729,11 @@ input, textarea {
           width: 100%;
           text-align: center;
           color: #000;
+          font-family: $font__main--med;
+        }
+        p.select-one-or-more {
+          margin: 0;
+          text-align: center;
           font-family: $font__main--med;
         }
         .effects-wrapper {
@@ -810,7 +815,7 @@ input, textarea {
       .effects__next {
         display: none;
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         height: 50px;
         width: 150px;
@@ -862,7 +867,7 @@ input, textarea {
             margin-right: 20px;
             p {
               font-family: $font__main--med;
-              margin: 40px 0 15px 0;
+              margin: 0 0 10px 0;
               font-size: 1.2em;
               color: #000;
             }
@@ -921,7 +926,7 @@ input, textarea {
               padding-left: 25px;
               color: #000;
               font-size: 1.2em;
-              margin: 40px 0 15px 0;
+              margin: 0 0 5px 0;
               font-family: $font__main--med;
               &::placeholder {
                 color: #000;
@@ -934,7 +939,7 @@ input, textarea {
         }
         .comments-and-submit {
           display: flex;
-          margin-top: 40px;
+          margin-top: 10px;
           justify-content: space-between;
           textarea {
             width: 70%;
@@ -1315,7 +1320,7 @@ input, textarea {
         }
         .substances-used__next {
           right: 6vw;
-          bottom: 60px;
+          bottom: 50px;
           height: 40px;
           line-height: 35px;
           width: 100px;

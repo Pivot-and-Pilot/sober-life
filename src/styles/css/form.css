@@ -772,7 +772,7 @@ textarea {
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__next {
   display: none;
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   height: 50px;
   width: 150px;
@@ -837,7 +837,7 @@ textarea {
   border-radius: 35px;
   text-align: center;
   line-height: 70px;
-  margin: 20px;
+  margin: 10px 20px;
   font-family: "FFBauWebMedium";
   font-size: 1.7em;
   color: #000;
@@ -880,7 +880,7 @@ textarea {
   font-size: 1.5em;
   padding-left: 25px;
   font-family: "FFBauWebMedium";
-  margin: 20px;
+  margin: 10px 20px;
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used::-webkit-input-placeholder {
@@ -904,7 +904,7 @@ textarea {
 }
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .substances-used-unsure {
-  margin: 20px;
+  margin: 10px 20px;
   height: 70px;
   width: 20%;
   border: 5px solid #000;
@@ -974,7 +974,7 @@ textarea {
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__next {
   display: none;
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   height: 50px;
   width: 150px;
@@ -1007,6 +1007,12 @@ textarea {
   width: 100%;
   text-align: center;
   color: #000;
+  font-family: "FFBauWebMedium";
+}
+
+#soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper p.select-one-or-more {
+  margin: 0;
+  text-align: center;
   font-family: "FFBauWebMedium";
 }
 
@@ -1125,7 +1131,7 @@ textarea {
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__next {
   display: none;
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   height: 50px;
   width: 150px;
@@ -1213,7 +1219,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper p {
   font-family: "FFBauWebMedium";
-  margin: 40px 0 15px 0;
+  margin: 0 0 10px 0;
   font-size: 1.2em;
   color: #000;
 }
@@ -1288,7 +1294,7 @@ textarea {
   padding-left: 25px;
   color: #000;
   font-size: 1.2em;
-  margin: 40px 0 15px 0;
+  margin: 0 0 5px 0;
   font-family: "FFBauWebMedium";
 }
 
@@ -1316,7 +1322,7 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 40px;
+  margin-top: 10px;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1771,7 +1777,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__next {
     right: 6vw;
-    bottom: 60px;
+    bottom: 50px;
     height: 40px;
     line-height: 35px;
     width: 100px;

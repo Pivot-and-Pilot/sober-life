@@ -161,45 +161,4 @@ function ajax_get_search_results() {
 add_action('wp_ajax_ajax_get_search_results', 'ajax_get_search_results');
 add_action('wp_ajax_nopriv_ajax_get_search_results', 'ajax_get_search_results');
 
-// ********************************** //
-// Get Search Result Next/Prev Pages
-// ********************************** //
-// PAGINATION FOR SEARCH RESULTS
-// function ajax_get_search_result_pages() {
-//   $query = $_GET['query'];
-//   $paged = $_GET['curr_page'];
-//   $offset = $_GET['offset'];
-
-
-//   $args = array (
-//     // 'paged'         => $paged,
-//     'post_type'     => 'post',
-//     'post_status'   => 'publish',
-//     's'             => $query,
-//     // 'offset'        => $offset,
-//     'posts_per_page'=> $_GET['posts_per_page'],
-//   );
-
-//   $search = new WP_Query($args);
-//   relevanssi_do_query($search);
-
-//   if ( $search->have_posts() ) {
-//     $results_html = '';
-//     ob_start();
-//     while ( $search->have_posts() ) {
-//       $search->the_post();
-//       get_template_part( 'template-parts/content-sober-collective', get_post_format() );
-//     }
-//     $results_html = ob_get_clean();
-//   }
-
-//   // Build Response
-//   $response = array();
-// 	array_push ( $response, $results_html );
-// 	echo json_encode( $response );
-// 	die();  
-// }
-// add_action('wp_ajax_ajax_get_search_result_pages', 'ajax_get_search_result_pages');
-// add_action('wp_ajax_nopriv_ajax_get_search_result_pages', 'ajax_get_search_result_pages');
-
 ?>

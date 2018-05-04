@@ -20,10 +20,6 @@ function toggleForm() {
 function toggleMenu() {
   let isOpen = document.getElementById('header__hamburger').classList.contains('open');
   if (isOpen) {
-    // document.documentElement.style.position = 'initial';
-    // document.getElementById('header__menu-overlay-content').style.opacity = '0';
-    document.body.style.overflow = 'auto';
-    document.documentElement.style.overflow = 'auto';
     document.getElementById('header__menu-overlay-content').style.right = '-400px';
     document.getElementById('header__menu-overlay').style.width = '0%';
     document.getElementById('header__hamburger').classList.remove('open');
@@ -31,15 +27,15 @@ function toggleMenu() {
     .getElementById('header__menu-nav')
     .childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display =
     'none';
-    // document.documentElement.style.overflow = '';
+    document.body.style.overflow = 'auto';
+    document.documentElement.style.overflow = 'auto';
   } else {
-    // document.documentElement.style.overflow = 'fixed';
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
     document.getElementById('header__menu-overlay-content').style.opacity = '1';        
     document.getElementById('header__menu-overlay-content').style.right = '0';
     document.getElementById('header__menu-overlay').style.width = '100%';
     document.getElementById('header__hamburger').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
   }
 }
 

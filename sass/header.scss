@@ -3,14 +3,12 @@
 header {
   .site-branding {
     height: 80px;
-    // border-bottom: 2px solid #c6c6c6;
     border-bottom: 1px solid black;
     background-color: $color__white;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    // overflow: hidden;
     z-index: 5;
     transform: translate3d(0, 0, 0);
     .header__top-bar {
@@ -169,10 +167,8 @@ header {
             cursor: pointer;
           }
           .sub-menu {
-            // display: block;
             left: 0;
             position: relative;
-            // transition: 0.3s ease-in-out;
             box-shadow: none;
             background-color: #e9e2d6;
             font-size: 20px;
@@ -182,7 +178,6 @@ header {
             li {
               margin: $margin__mobile;
               a {
-                // display: inline-block;
                 width: 100%;
               }
             }
@@ -196,7 +191,6 @@ header {
           text-align: center;
           border: 1px solid black;
           border-radius: 25px;
-          // width: 100%;
           margin: 10px 0;
           line-height: 50px;
           padding-top: 2px;

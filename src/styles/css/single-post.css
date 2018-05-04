@@ -275,7 +275,7 @@
   }
 
   .single-post__wrapper .single-post__date {
-    padding: 0 4vw;
+    padding: 2px 4vw 8px;
   }
 
   .single-post__wrapper .single-post__player-wrapper {

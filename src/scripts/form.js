@@ -18,11 +18,11 @@ jQuery(document).ready(function($){
   (function customizedText () {
     $('div.client-target').on('click', function () {
       if ( $(this).data('value') === 'myself' ) {
-        $('.question__drug-effects-life h1').html('How is drug usage effecting your life?')
+        $('.question__drug-effects-life h1').html('How is drug usage affecting your life?')
         $('.insurance-yes-no-wrapper > p').html('Do you have insurance?');
       }
       if ( $(this).data('value') === 'a loved one' ) {
-        $('.question__drug-effects-life h1').html('How is drug usage effecting their life?');
+        $('.question__drug-effects-life h1').html('How is drug usage affecting their life?');
         $('.insurance-yes-no-wrapper > p').html('Do they have insurance?');
       }
     })

@@ -1,11 +1,5 @@
 @import 'variables-site/variables-site';
 
-#page {
-  // width: 100vw;
-  position: relative;
-  overflow: hidden;
-}
-
 header {
   .site-branding {
     height: 80px;
@@ -138,7 +132,8 @@ header {
     position: fixed;
     // height: calc(100vh - 80px);
     overflow-x: hidden;
-    overflow-y: scroll;
+    // overflow-y: scroll;
+    display: block;
     top: 80px;
     right: 0;
     // left: 0;

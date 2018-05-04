@@ -22,7 +22,8 @@ function toggleMenu() {
   if (isOpen) {
     // document.documentElement.style.position = 'initial';
     // document.getElementById('header__menu-overlay-content').style.opacity = '0';
-    document.getElementById('page').style.overflow = '';
+    document.body.style.overflow = 'auto';
+    document.documentElement.style.overflow = 'auto';
     document.getElementById('header__menu-overlay-content').style.right = '-400px';
     document.getElementById('header__menu-overlay').style.width = '0%';
     document.getElementById('header__hamburger').classList.remove('open');
@@ -33,8 +34,8 @@ function toggleMenu() {
     // document.documentElement.style.overflow = '';
   } else {
     // document.documentElement.style.overflow = 'fixed';
-    // document.documentElement.style.overflow = 'hidden';
-    document.getElementById('page').style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
     document.getElementById('header__menu-overlay-content').style.opacity = '1';        
     document.getElementById('header__menu-overlay-content').style.right = '0';
     document.getElementById('header__menu-overlay').style.width = '100%';

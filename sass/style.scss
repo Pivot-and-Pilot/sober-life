@@ -105,18 +105,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "media/media";
 
-// html {
-// 	// width: 100vw;
-// 	overflow-x: hidden;
-// }
+html {
+	// width: 100vw;
+	overflow-x: hidden;
+	// height: 100vh;
+	
+}
 
-// body {
-// 	width: 100%;
-// 	overflow-x: hidden;
-// }
+body {
+	// width: 100%;
+	// height: 100%;	
+	overflow-x: hidden;
+	position: relative;
+	// touch-action: none;
+}
 
-// html, body {
+// #page {
 // 	overflow: hidden;
-// 	position: relative;
-// 	// height: 100%;
+// 	// // width: 100%;
+// 	// // height: 100%;
+// 	// position: relative;
+// 	// display: block;
 // }

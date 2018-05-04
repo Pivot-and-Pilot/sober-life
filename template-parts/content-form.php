@@ -72,7 +72,7 @@
           echo '<section class="thank-you">
                   <div class="content-wrapper">
                     <p>Thank you for submitting your form, one of us will give you a call soon!</p>
-                    <a href="">Return Home</a>
+                    <a href="http://soberlifesd.com/">Return Home</a>
                   </div>
                 </section>';
         } else {
@@ -236,6 +236,7 @@
     <section class="question__client-substances-used">
       <div class="content-wrapper">
         <h1>Substances used</h1>
+        <p class='select-one-or-more'>Select one or more</p>
         <div class="substances-wrapper">
           <div class="substance-choice" name="substances-used" data-value="alcohol">Alcohol</div>
           <div class="substance-choice" name="substances-used" data-value="cocaine">Cocaine</div>
@@ -263,7 +264,8 @@
     <!-- loved one substances used -->
     <section class="question__loved-one-substances-used">
       <div class="content-wrapper">
-      <h1>Substances used</h1>
+        <h1>Substances used</h1>
+        <p class='select-one-or-more'>Select one or more</p>
         <div class="substances-wrapper">
           <div class="substance-choice" name="substances-used" data-value="alcohol">Alcohol</div>
           <div class="substance-choice" name="substances-used" data-value="cocaine">Cocaine</div>

@@ -86,6 +86,7 @@ input, textarea {
         font-family: $font__main--med;
         font-size: 4em;
         text-align: center;
+        width: 88vw;
       }
     }
 
@@ -470,6 +471,11 @@ input, textarea {
           color: #000;
           font-family: $font__main--med;
         }
+        p.select-one-or-more {
+          margin: 0;
+          text-align: center;
+          font-family: $font__main--med;
+        }
         .substances-wrapper {
           display: flex;
           flex-direction: row;
@@ -579,6 +585,11 @@ input, textarea {
           width: 100%;
           text-align: center;
           color: #000;
+          font-family: $font__main--med;
+        }
+        p.select-one-or-more {
+          margin: 0;
+          text-align: center;
           font-family: $font__main--med;
         }
         .substances-wrapper {
@@ -978,7 +989,6 @@ input, textarea {
           margin-right: 10px;
         }
       }
-
     }
 
     .thank-you {
@@ -1016,8 +1026,9 @@ input, textarea {
           text-decoration: none;
           font-size: 1.5em;
           &:hover {
-            border: 5px solid $color__green;
             cursor: pointer;
+            background-color: #000;
+            color: $color__white;
           }
         }
       }
@@ -1131,6 +1142,11 @@ input, textarea {
         .content-wrapper {
           width: 88vw;
           text-align: center;
+          .target-wrapper{
+            .client-target {
+              margin: 20px 30px 0;
+            }
+          }
           h1 {
             font-size: 2em;
           }
@@ -1259,6 +1275,11 @@ input, textarea {
           h1 {
             font-size: 2em;
           }
+          p.select-one-or-more {
+            margin: 0;
+            text-align: center;
+            font-family: $font__main--med;
+          }
           .substances-wrapper {
             display: flex;
             flex-direction: row;
@@ -1304,6 +1325,11 @@ input, textarea {
           width: 88vw;
           h1 {
             font-size: 2em;
+          }
+          p.select-one-or-more {
+            margin: 0;
+            text-align: center;
+            font-family: $font__main--med;
           }
           .substances-wrapper {
             display: flex;
@@ -1541,9 +1567,14 @@ input, textarea {
           bottom: 65px;
           left: 6vw;
         }
-  
       }
-
+      .thank-you {
+        .content-wrapper {
+          p {
+            font-size: 2em;
+          }
+        }
+      }
     }
   }
 

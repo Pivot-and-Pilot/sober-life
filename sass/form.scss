@@ -29,9 +29,9 @@ input, textarea {
 
     section.form__progress-bar {
       position: absolute;
-      top: calc(100% - 50px);
+      top: calc(100% - 40px);
       left: 0;
-      height: 50px;
+      height: 40px;
       width: 100%;
       .process {
         height: 100%;
@@ -180,7 +180,7 @@ input, textarea {
       }
       .client-target__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -252,7 +252,7 @@ input, textarea {
       }
       .loved-one-name__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -314,7 +314,7 @@ input, textarea {
       }
       .client-gender__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -377,7 +377,7 @@ input, textarea {
       }
       .client-feeling__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -440,7 +440,7 @@ input, textarea {
       }
       .loved-one-feeling__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -521,7 +521,7 @@ input, textarea {
       }
       .substances-used__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -539,7 +539,7 @@ input, textarea {
       }
       .substances-used__skip {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         display: flex;
         font-size: 20px;
@@ -665,7 +665,7 @@ input, textarea {
       }
       .loved-one-substances-used__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -683,7 +683,7 @@ input, textarea {
       }
       .loved-one-substances-used__skip {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         display: flex;
         font-size: 20px;
@@ -774,7 +774,7 @@ input, textarea {
       }
       .effects__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 50px;
         display: flex;
         font-size: 20px;
@@ -792,7 +792,7 @@ input, textarea {
       }
       .effects__skip {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         right: 50px;
         display: flex;
         font-size: 20px;
@@ -973,7 +973,7 @@ input, textarea {
       }
       .personal-info__back {
         position: absolute;
-        bottom: 80px;
+        bottom: 70px;
         left: 4vw;
         display: flex;
         font-size: 20px;
@@ -1061,7 +1061,13 @@ input, textarea {
     top: 0;
     height: 100%;
     .form__relative-layer {
-
+      .form__x-button {
+        top: 60px;
+        right: 6vw;
+        height: 30px;
+        width: 30px;
+        z-index: 11111;
+      }
       section.form__contact-info {
         display: flex;
         position: absolute;
@@ -1107,12 +1113,6 @@ input, textarea {
           }
         }
       }
-
-      .form__x-button {
-        top: 70px;
-        right: 6vw;
-      }
-
       .loading-screen {
         .content-wrapper {
           font-size: 2em;
@@ -1156,7 +1156,7 @@ input, textarea {
         }
         .client-target__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
       }
 
@@ -1179,7 +1179,7 @@ input, textarea {
         }
         .loved-one-name__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
       }
 
@@ -1187,16 +1187,17 @@ input, textarea {
         .content-wrapper {
           width: 88vw;
           h1 {
-            font-size: 2em;
+            font-size: 1.8em;
           }
           .genders-wrapper {
             flex-direction: column;
             margin-top: 0;
             .gender-choice {
-              margin-top: 20px;
+              margin-top: 10px;
               width: 100%;
-              height: 80px;
+              height: 60px;
               flex-direction: row;
+              font-size: 1.5em;
               img {
                 height: 80%;
                 margin-bottom: 0;
@@ -1207,7 +1208,7 @@ input, textarea {
         }
         .client-gender__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
       }
 
@@ -1215,16 +1216,16 @@ input, textarea {
         .content-wrapper {
           width: 88vw;
           h1 {
-            font-size: 2em;
+            font-size: 1.8em;
           }
           .feelings-wrapper {
             flex-direction: column;
             margin-top: 0;
             .feeling-choice {
               width: 100%;
-              height: 80px;
+              height: 60px;
               flex-direction: row;
-              margin-top: 20px;
+              margin-top: 10px;
               font-size: 1.5em;
               img {
                 display: none;
@@ -1234,7 +1235,7 @@ input, textarea {
         }
         .client-feeling__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
       }
 
@@ -1242,7 +1243,7 @@ input, textarea {
         .content-wrapper {
           width: 88vw;
           h1 {
-            font-size: 2em;
+            font-size: 1.8em;
           }
           .loved-one-feelings-wrapper {
             display: flex;
@@ -1250,9 +1251,9 @@ input, textarea {
             margin-top: 0;
             .loved-one-feeling-choice {
               width: 100%;
-              height: 60px;
+              height: 50px;
               font-size: 1.5em;
-              margin-top: 20px;
+              margin-top: 10px;
               img {
                 display: none;
               }
@@ -1265,7 +1266,7 @@ input, textarea {
         }
         .loved-one-feeling__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
       }
 
@@ -1289,10 +1290,10 @@ input, textarea {
             .substance-choice {
               width: 45%;
               margin: 10px 0 0 0;
-              height: 50px;
+              height: 40px;
               border-radius: 25px;
-              font-size: 1.5em;
-              line-height: 45px;
+              font-size: 1em;
+              line-height: 35px;
               &:hover {
                 border: 5px solid #000;
               }
@@ -1300,16 +1301,17 @@ input, textarea {
           }
           .other-substances-used {
             margin-top: 10px;
+            height: 50px;
             width: calc(90% + 10px);
           }
         }
         .substances-used__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .substances-used__skip {
           right: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .substances-used__next {
           right: 6vw;
@@ -1336,10 +1338,11 @@ input, textarea {
             flex-direction: row;
             .substance-choice {
               width: 45%;
-              height: 50px;
+              height: 40px;
               margin: 0;
               margin-top: 10px;
-              line-height: 45px;
+              line-height: 35px;
+              font-size: 1.2em;
               &:hover {
                 border: 5px solid #000;
               }
@@ -1354,14 +1357,15 @@ input, textarea {
             .other-substances-used {
               width: 45%;
               margin: 10px 0 0 0;
-              height: 50px;
+              height: 40px;
             }
             .substances-used-unsure {
               margin: 0;
-              height: 50px;
+              height: 40px;
               width: 45%;
               margin-top: 10px;
-              line-height: 45px;
+              line-height: 35px;
+              font-size: 1.2em;
               &:hover {
                 border: 5px solid #000;
               }
@@ -1370,15 +1374,15 @@ input, textarea {
         }
         .loved-one-substances-used__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .loved-one-substances-used__skip {
           right: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .loved-one-substances-used__next {
           right: 6vw;
-          bottom: 60px;
+          bottom: 50px;
           height: 40px;
           line-height: 35px;
           width: 100px;
@@ -1389,7 +1393,13 @@ input, textarea {
         .content-wrapper {
           width: 88vw;
           h1 {
-            font-size: 2em;
+            font-size: 1.8em;
+            line-height: 1.1em;
+          }
+          p.select-one-or-more {
+            margin: 0;
+            text-align: center;
+            font-family: $font__main--med;
           }
           .effects-wrapper {
             display: flex;
@@ -1398,9 +1408,9 @@ input, textarea {
             justify-content: space-evenly;
             margin-top: 0;
             .effect-choice {
-              padding: 0;
+              padding: 0 5px;
               width: 100%;
-              height: 110px;
+              height: 80px;
               margin-top: 10px;
               &:hover {
                 border: 5px solid #aca8a2;
@@ -1410,13 +1420,13 @@ input, textarea {
               }
               h3 {
                 font-family: $font__main--med;
-                font-size: 0.7em;
+                font-size: 0.5em;
                 margin: 0;
                 margin-top: 0;
               }
               p {
                 margin: 0;
-                font-size: 0.6em;
+                font-size: 0.5em;
                 font-family: $font__main;
               }
             }
@@ -1424,15 +1434,15 @@ input, textarea {
         }
         .effects__back {
           left: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .effects__skip {
           right: 6vw;
-          bottom: 65px;
+          bottom: 55px;
         }
         .effects__next {
           right: 6vw;
-          bottom: 60px;
+          bottom: 50px;
           height: 40px;
           line-height: 35px;
           width: 100px;
@@ -1484,7 +1494,7 @@ input, textarea {
               margin-right: 20px;
               p {
                 font-family: $font__main--med;
-                margin: 20px 0 0 0;
+                margin: 0;
                 font-size: 1.2em;
                 color: #000;
               }
@@ -1540,13 +1550,13 @@ input, textarea {
                 width: 100%;
                 padding-left: 10px;
                 font-size: 0.7em;
-                margin: 20px 0 0 0;
+                margin: 0;
               }
             }
           }
           .comments-and-submit {
             display: flex;
-            margin-top: 20px;
+            margin-top: 0;
             justify-content: space-between;
             textarea {
               width: 70%;
@@ -1564,7 +1574,7 @@ input, textarea {
           }
         }
         .personal-info__back {
-          bottom: 65px;
+          bottom: 55px;
           left: 6vw;
         }
       }

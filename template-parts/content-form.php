@@ -300,6 +300,7 @@
     <section class="question__drug-effects-life">
       <div class="content-wrapper">
         <h1></h1>
+        <p class='select-one-or-more'>Select one or more</p>
         <div class="effects-wrapper">
           <div class="effect-choice" name="effect-life" data-value="career and personal life">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/house--black.svg" alt=""> 

@@ -37,9 +37,9 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer section.form__progress-bar {
   position: absolute;
-  top: calc(100% - 50px);
+  top: calc(100% - 40px);
   left: 0;
-  height: 50px;
+  height: 40px;
   width: 100%;
 }
 
@@ -227,7 +227,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-target .client-target__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -321,7 +321,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-name .loved-one-name__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,7 +414,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-gender .client-gender__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -508,7 +508,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-feeling .client-feeling__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,7 +602,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .loved-one-feeling__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -721,7 +721,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +747,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__skip {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -923,7 +923,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -949,7 +949,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__skip {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1074,7 +1074,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1100,7 +1100,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__skip {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   right: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1375,7 +1375,7 @@ textarea {
 
 #soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back {
   position: absolute;
-  bottom: 80px;
+  bottom: 70px;
   left: 4vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1468,6 +1468,14 @@ textarea {
     height: 100%;
   }
 
+  #soberlife-form-wrapper .form__relative-layer .form__x-button {
+    top: 60px;
+    right: 6vw;
+    height: 30px;
+    width: 30px;
+    z-index: 11111;
+  }
+
   #soberlife-form-wrapper .form__relative-layer section.form__contact-info {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1511,11 +1519,6 @@ textarea {
     display: block;
     text-decoration: none;
     color: #000;
-  }
-
-  #soberlife-form-wrapper .form__relative-layer .form__x-button {
-    top: 70px;
-    right: 6vw;
   }
 
   #soberlife-form-wrapper .form__relative-layer .loading-screen .content-wrapper {
@@ -1564,7 +1567,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-target .client-target__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-name .content-wrapper {
@@ -1590,7 +1593,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-name .loved-one-name__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper {
@@ -1598,7 +1601,7 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper {
@@ -1610,13 +1613,14 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice {
-    margin-top: 20px;
+    margin-top: 10px;
     width: 100%;
-    height: 80px;
+    height: 60px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    font-size: 1.5em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .content-wrapper .genders-wrapper .gender-choice img {
@@ -1627,7 +1631,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-gender .client-gender__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper {
@@ -1635,7 +1639,7 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper {
@@ -1648,12 +1652,12 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-feeling .content-wrapper .feelings-wrapper .feeling-choice {
     width: 100%;
-    height: 80px;
+    height: 60px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 1.5em;
   }
 
@@ -1663,7 +1667,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-feeling .client-feeling__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper {
@@ -1671,7 +1675,7 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper {
@@ -1687,9 +1691,9 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice {
     width: 100%;
-    height: 60px;
+    height: 50px;
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .content-wrapper .loved-one-feelings-wrapper .loved-one-feeling-choice img {
@@ -1703,7 +1707,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-feeling .loved-one-feeling__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper {
@@ -1739,10 +1743,10 @@ textarea {
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-choice {
     width: 45%;
     margin: 10px 0 0 0;
-    height: 50px;
+    height: 40px;
     border-radius: 25px;
-    font-size: 1.5em;
-    line-height: 45px;
+    font-size: 1em;
+    line-height: 35px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .substances-wrapper .substance-choice:hover {
@@ -1751,17 +1755,18 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .content-wrapper .other-substances-used {
     margin-top: 10px;
+    height: 50px;
     width: calc(90% + 10px);
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__skip {
     right: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__client-substances-used .substances-used__next {
@@ -1798,10 +1803,11 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper .substance-choice {
     width: 45%;
-    height: 50px;
+    height: 40px;
     margin: 0;
     margin-top: 10px;
-    line-height: 45px;
+    line-height: 35px;
+    font-size: 1.2em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper .substance-choice:hover {
@@ -1825,15 +1831,16 @@ textarea {
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .other-substances-used {
     width: 45%;
     margin: 10px 0 0 0;
-    height: 50px;
+    height: 40px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .substances-used-unsure {
     margin: 0;
-    height: 50px;
+    height: 40px;
     width: 45%;
     margin-top: 10px;
-    line-height: 45px;
+    line-height: 35px;
+    font-size: 1.2em;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .content-wrapper .substances-wrapper-1 .substances-used-unsure:hover {
@@ -1842,17 +1849,17 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__skip {
     right: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__loved-one-substances-used .loved-one-substances-used__next {
     right: 6vw;
-    bottom: 60px;
+    bottom: 50px;
     height: 40px;
     line-height: 35px;
     width: 100px;
@@ -1863,7 +1870,14 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+    line-height: 1.1em;
+  }
+
+  #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper p.select-one-or-more {
+    margin: 0;
+    text-align: center;
+    font-family: "FFBauWebMedium";
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper {
@@ -1882,9 +1896,9 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice {
-    padding: 0;
+    padding: 0 5px;
     width: 100%;
-    height: 110px;
+    height: 80px;
     margin-top: 10px;
   }
 
@@ -1898,30 +1912,30 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice h3 {
     font-family: "FFBauWebMedium";
-    font-size: 0.7em;
+    font-size: 0.5em;
     margin: 0;
     margin-top: 0;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .content-wrapper .effects-wrapper .effect-choice p {
     margin: 0;
-    font-size: 0.6em;
+    font-size: 0.5em;
     font-family: "FFBauWeb", sans-serif;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__back {
     left: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__skip {
     right: 6vw;
-    bottom: 65px;
+    bottom: 55px;
   }
 
   #soberlife-form-wrapper .form__relative-layer .question__drug-effects-life .effects__next {
     right: 6vw;
-    bottom: 60px;
+    bottom: 50px;
     height: 40px;
     line-height: 35px;
     width: 100px;
@@ -1990,7 +2004,7 @@ textarea {
 
   #soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .insurance-wrapper .insurance-yes-no-wrapper p {
     font-family: "FFBauWebMedium";
-    margin: 20px 0 0 0;
+    margin: 0;
     font-size: 1.2em;
     color: #000;
   }
@@ -2067,14 +2081,14 @@ textarea {
     width: 100%;
     padding-left: 10px;
     font-size: 0.7em;
-    margin: 20px 0 0 0;
+    margin: 0;
   }
 
   #soberlife-form-wrapper .form__relative-layer .form__personal-info .content-wrapper .comments-and-submit {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 20px;
+    margin-top: 0;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -2096,7 +2110,7 @@ textarea {
   }
 
   #soberlife-form-wrapper .form__relative-layer .form__personal-info .personal-info__back {
-    bottom: 65px;
+    bottom: 55px;
     left: 6vw;
   }
 

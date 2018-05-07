@@ -1,4 +1,4 @@
-@import 'variables-site/variables-site';
+@import "variables-site/variables-site";
 
 #soberlife__jplayer {
   position: fixed;
@@ -65,10 +65,10 @@
             padding: 0;
             img {
               width: 60%;
-              height: 60%;    
+              height: 60%;
               &:hover {
                 cursor: pointer;
-              }     
+              }
             }
           }
           .jp-pause {
@@ -82,10 +82,10 @@
             padding: 0;
             img {
               width: 60%;
-              height: 60%;  
+              height: 60%;
               &:hover {
                 cursor: pointer;
-              }       
+              }
             }
           }
         }
@@ -105,10 +105,11 @@
               height: 70px;
               width: 100% !important;
               background-color: transparent;
+              position: relative;
               .jp-play-bar {
                 height: 100%;
                 background-color: $color__green;
-                background-blend-mode: multiply;
+                opacity: 0.5;
               }
             }
           }
@@ -149,7 +150,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-
   #soberlife__jplayer {
     bottom: -70px;
     .jp-type-single {
@@ -202,5 +202,4 @@
       }
     }
   }
-
 }

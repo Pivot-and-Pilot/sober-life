@@ -131,12 +131,13 @@
   height: 70px;
   width: 100% !important;
   background-color: transparent;
+  position: relative;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-progress .jp-seek-bar .jp-play-bar {
   height: 100%;
   background-color: #80ff73;
-  background-blend-mode: multiply;
+  opacity: 0.5;
 }
 
 #soberlife__jplayer .jp-type-single .jp-interface .jp-controls-holder .jplayer__progress-wrapper .jp-time-bar {

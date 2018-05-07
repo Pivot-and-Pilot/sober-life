@@ -163,9 +163,9 @@ header #header__menu-overlay {
   overflow-x: hidden;
   display: block;
   top: 80px;
-  right: 0;
+  right: -100vw;
   height: 100vh;
-  width: 0%;
+  width: 100vw;
   z-index: 99;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
@@ -176,9 +176,8 @@ header #header__menu-overlay #header__menu-overlay-content {
   color: black;
   width: 88%;
   margin: 0 6% 0 6%;
-  right: -400px;
-  -webkit-transition: right .8s ease-in-out;
-  transition: right .8s ease-in-out;
+  -webkit-transition: right 0.8s ease-in-out;
+  transition: right 0.8s ease-in-out;
 }
 
 header #header__menu-overlay #header__menu-overlay-content #header__menu-nav {
@@ -428,7 +427,7 @@ header #header__menu-overlay #header__menu-overlay-content .header__menu-buttons
     bottom: 100%;
     left: 50%;
     border: solid transparent;
-    content: ' ';
+    content: " ";
     height: 0;
     width: 0;
     position: absolute;

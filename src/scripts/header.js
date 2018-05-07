@@ -1,81 +1,93 @@
 // Open Form
 function toggleForm() {
-  document.getElementById('soberlife-form-wrapper').style.left = '0';
-  let isOpen = document.getElementById('header__hamburger').classList.contains('open');
+  document.getElementById("soberlife-form-wrapper").style.left = "0";
+  let isOpen = document
+    .getElementById("header__hamburger")
+    .classList.contains("open");
   if (isOpen) {
-    document.getElementById('header__menu-overlay').style.width = '0%';
-    document.getElementById('header__hamburger').classList.remove('open');
-    document.getElementById('header__menu-overlay-content').style.right = '-1000px';
-    document.getElementById('header__menu-overlay-content').style.opacity = '0';
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
+    document.getElementById("header__menu-overlay").style.width = "0%";
+    document.getElementById("header__hamburger").classList.remove("open");
+    document.getElementById("header__menu-overlay-content").style.right =
+      "-1000px";
+    document.getElementById("header__menu-overlay-content").style.opacity = "0";
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
     document
-      .getElementById('header__menu-nav')
-      .childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display =
-      'none';
+      .getElementById("header__menu-nav")
+      .childNodes[1].firstChild.getElementsByClassName(
+        "sub-menu"
+      )[0].style.display =
+      "none";
   }
 }
 
 // Open/Close Nav Menu
 function toggleMenu() {
-  let isOpen = document.getElementById('header__hamburger').classList.contains('open');
+  let isOpen = document
+    .getElementById("header__hamburger")
+    .classList.contains("open");
   if (isOpen) {
-    document.getElementById('header__menu-overlay-content').style.right = '-400px';
-    document.getElementById('header__menu-overlay').style.width = '0%';
-    document.getElementById('header__hamburger').classList.remove('open');
+    // document.getElementById("header__menu-overlay-content").style.right = "-400px";
+    document.getElementById("header__menu-overlay").style.right = "-100vw";
+    document.getElementById("header__hamburger").classList.remove("open");
     document
-    .getElementById('header__menu-nav')
-    .childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display =
-    'none';
-    document.body.style.overflow = 'auto';
-    document.documentElement.style.overflow = 'auto';
+      .getElementById("header__menu-nav")
+      .childNodes[1].firstChild.getElementsByClassName(
+        "sub-menu"
+      )[0].style.display =
+      "none";
+    document.body.style.overflow = "auto";
+    document.documentElement.style.overflow = "auto";
   } else {
-    document.getElementById('header__menu-overlay-content').style.opacity = '1';        
-    document.getElementById('header__menu-overlay-content').style.right = '0';
-    document.getElementById('header__menu-overlay').style.width = '100%';
-    document.getElementById('header__hamburger').classList.add('open');
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
+    document.getElementById("header__menu-overlay-content").style.opacity = "1";
+    document.getElementById("header__menu-overlay-content").style.right = "0";
+    document.getElementById("header__menu-overlay").style.right = "0";
+    document.getElementById("header__hamburger").classList.add("open");
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
   }
 }
 
 jQuery(document).ready(function($) {
   // Remove a href of SERVICES button on desktop and mobile
   $(
-    '#header__menu-nav-bar #primary-menu > li:eq(0) > a, #header__menu-nav #primary-menu > li:eq(0) > a'
-  ).removeAttr('href');
+    "#header__menu-nav-bar #primary-menu > li:eq(0) > a, #header__menu-nav #primary-menu > li:eq(0) > a"
+  ).removeAttr("href");
 
   // On click of link in mobile menu, close menu
   $(
-    '#header__menu-nav #primary-menu > li:not(li:eq(0)) > a, #header__menu-nav #primary-menu > li:eq(0) > .sub-menu > li > a'
+    "#header__menu-nav #primary-menu > li:not(li:eq(0)) > a, #header__menu-nav #primary-menu > li:eq(0) > .sub-menu > li > a"
   ).click(function() {
-    document.getElementById('header__menu-overlay').style.width = '0%';
-    document.getElementById('header__hamburger').classList.remove('open');
-    document.getElementById('header__menu-overlay-content').style.right = '-1000px';
-    document.getElementById('header__menu-overlay-content').style.opacity = '0';
-    document.documentElement.style.overflow = '';
+    document.getElementById("header__menu-overlay").style.width = "0%";
+    document.getElementById("header__hamburger").classList.remove("open");
+    document.getElementById("header__menu-overlay-content").style.right =
+      "-1000px";
+    document.getElementById("header__menu-overlay-content").style.opacity = "0";
+    document.documentElement.style.overflow = "";
     document
-      .getElementById('header__menu-nav') 
-      .childNodes[1].firstChild.getElementsByClassName('sub-menu')[0].style.display =
-      'none';
+      .getElementById("header__menu-nav")
+      .childNodes[1].firstChild.getElementsByClassName(
+        "sub-menu"
+      )[0].style.display =
+      "none";
   });
 
   // Show submenu of services on MOBILE
-  $('#header__menu-nav #primary-menu > li:eq(0) > a').click(function(e) {
+  $("#header__menu-nav #primary-menu > li:eq(0) > a").click(function(e) {
     e.preventDefault();
-    $('#header__menu-nav #primary-menu .sub-menu').slideToggle();
+    $("#header__menu-nav #primary-menu .sub-menu").slideToggle();
   });
 
   let windowSize = $(window).width();
   if (windowSize > 768) {
     // Show submenu of services on DESKTOP
-    $('#header__menu-nav-bar #primary-menu > li:eq(0) > a').click(function(e) {
+    $("#header__menu-nav-bar #primary-menu > li:eq(0) > a").click(function(e) {
       e.preventDefault();
     });
 
     // Add desktop icon behind each page link on DESKTOP nav bar
     (function setPrimaryMenuIcons() {
-      $('#header__menu-nav-bar #primary-menu li a').each(function() {
+      $("#header__menu-nav-bar #primary-menu li a").each(function() {
         $(this).append(
           `<img src="https://soberlifesd.com/wp-content/themes/sober-life/img/src/SBL_11-11.svg"/>`
         );
@@ -85,9 +97,9 @@ jQuery(document).ready(function($) {
 
   // Update menu to show icon of active page
   function setCurrentPrimaryMenuIcon() {
-    let locationSplit = window.location.href.split('/');
+    let locationSplit = window.location.href.split("/");
     let location = locationSplit[locationSplit.length - 2];
-    $('#header__menu-nav-bar #primary-menu li a').each(function() {
+    $("#header__menu-nav-bar #primary-menu li a").each(function() {
       // Remove class 'active' from all menu options
       // let icons = $(this).children()[0];
       // $(icons).removeClass('active');
@@ -95,23 +107,27 @@ jQuery(document).ready(function($) {
       let slug = slugify($(this).text());
       if (slug == location) {
         let target = $(this).children()[0];
-        $(target).addClass('active');
+        $(target).addClass("active");
       } else {
         let icons = $(this).children()[0];
-        $(icons).removeClass('active');
+        $(icons).removeClass("active");
       }
     });
     // If Services sub-menu item is 'active', make 'Services' 'active' as well.
     if (
-      $('#header__menu-nav-bar #primary-menu li a img.active')
+      $("#header__menu-nav-bar #primary-menu li a img.active")
         .parent()
         .parent()
         .parent()
-        .hasClass('sub-menu')
+        .hasClass("sub-menu")
     ) {
-      $('#header__menu-nav-bar #primary-menu > li:first-of-type > a > img').addClass('active');
+      $(
+        "#header__menu-nav-bar #primary-menu > li:first-of-type > a > img"
+      ).addClass("active");
     } else {
-      $('#header__menu-nav-bar #primary-menu > li:first-of-type > a > img').removeClass('active');
+      $(
+        "#header__menu-nav-bar #primary-menu > li:first-of-type > a > img"
+      ).removeClass("active");
     }
   }
   setCurrentPrimaryMenuIcon();
@@ -120,15 +136,15 @@ jQuery(document).ready(function($) {
     return text
       .toString()
       .toLowerCase()
-      .replace(/\s+/g, '-') // Replace spaces with -
-      .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-      .replace(/\-\-+/g, '-') // Replace multiple - with single -
-      .replace(/^-+/, '') // Trim - from start of text
-      .replace(/-+$/, ''); // Trim - from end of text
+      .replace(/\s+/g, "-") // Replace spaces with -
+      .replace(/[^\w\-]+/g, "") // Remove all non-word chars
+      .replace(/\-\-+/g, "-") // Replace multiple - with single -
+      .replace(/^-+/, "") // Trim - from start of text
+      .replace(/-+$/, ""); // Trim - from end of text
   }
 
   // $('.front-page__button, .go-to-sober-collective, .services-child__our-team-learn-more').click(function() {
   //   console.log('CLICKED');
-  //   setCurrentPrimaryMenuIcon();    
+  //   setCurrentPrimaryMenuIcon();
   // });
 });

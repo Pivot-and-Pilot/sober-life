@@ -1,11 +1,11 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
   let currentPodcastLink, currentPodcastTitle;
   let windowSize = $(window).width();
 
-  (function getPodcastURL(){
+  (function getPodcastURL() {
     $('#page').on('click', '.single-post__play-button', function () {
       $('#soberlife__jplayer').css('bottom', '0');
-      if (windowSize > 769) {      
+      if (windowSize > 769) {
         $('footer .footer__wrap').css('padding-bottom', '60px');
       }
       currentPodcastLink = $(this).siblings('.powerpress_links_mp3')[0].children[0].href;
@@ -36,17 +36,17 @@ jQuery(document).ready(function($){
       // insert loading into title
       $('.jp-title').html('Loading...');
 
-      $("#jquery_jplayer_1").bind($.jPlayer.event.progress, function (event){
+      $("#jquery_jplayer_1").bind($.jPlayer.event.progress, function (event) {
         // If media loading is complete
-        if (event.jPlayer.status.seekPercent === 0){        
+        if (event.jPlayer.status.seekPercent === 0) {
           $('.jp-title').html(`${currentPodcastTitle}`);
-        } 
+        }
       });
 
     })
   })();
 
-  (function closePlayer () {
+  (function closePlayer() {
     $('.jplayer__x-button').on('click', function () {
       $('#soberlife__jplayer').css('bottom', '-70px');
       if (windowSize > 769) {

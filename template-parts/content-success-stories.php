@@ -104,12 +104,18 @@
             $latestStoryCategories = get_the_category();
             foreach ($latestStoryCategories as $latestStoryCategory) :
               if ($latestStoryCategory->slug == 'podcast') :
+                $title = get_the_title(); 
+                $pos = strpos($title, ':'); // Get index of ':' in the title
+                $substr = substr($title, 0, $pos + 1); // Get substring using found index of ': + space'
+                $newtitle = str_replace($substr, "", $title); // New title (without the '##: ')
+                $catsubstr = substr($substr, 0, $pos); // Category substring ('##')
+                $catname = 'Podcast ' . $catsubstr; // Concatenate Podcast with ##
           ?>
 
           <div class="single-story-play-button-wapper">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
           </div>
-          <div class="single-story-track-number single-story-podcast-track-number"><?php the_title(); ?></div>
+          <div class="single-story-track-number single-story-podcast-track-number"><?php echo $catname; ?></div>
 
           <?php else :?>
 
@@ -123,7 +129,7 @@
         </div>
 
         <div class="single-story-track-title">
-          <?php the_title(); ?>
+          <?php echo $newtitle; ?>
         </div> 
 
         <div class="single-story-track-date">

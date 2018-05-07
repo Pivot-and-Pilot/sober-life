@@ -204,12 +204,18 @@ get_header();
 										$relatedPostCategories = get_the_category();
 										foreach ($relatedPostCategories as $relatedPostCategory) :
 											if ($relatedPostCategory->slug == 'podcast') :
+												$title = get_the_title(); 
+												$pos = strpos($title, ':'); // Get index of ':' in the title
+												$substr = substr($title, 0, $pos + 1); // Get substring using found index of ': + space'
+												$newtitle = str_replace($substr, "", $title); // New title (without the '##: ')
+												$catsubstr = substr($substr, 0, $pos); // Category substring ('##')
+												$catname = 'Podcast ' . $catsubstr; // Concatenate Podcast with ##
 									?>
 
 									<div class="related-post-play-button-wapper">
 										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
 									</div>
-									<div class="related-post-track-number related-post-podcast-track-number"><?php the_title(); ?></div>
+									<div class="related-post-track-number related-post-podcast-track-number"><?php echo $catname; ?></div>
 
 									<?php else :?>
 
@@ -223,7 +229,7 @@ get_header();
 								</div>
 
 								<div class="related-post-track-title">
-									<?php the_title(); ?>
+									<?php echo $newtitle; ?>
 								</div>
 
 								<div class="related-post-track-date">

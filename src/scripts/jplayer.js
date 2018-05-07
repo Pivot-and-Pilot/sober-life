@@ -33,9 +33,7 @@ jQuery(document).ready(function($) {
         smoothPlayBar: true,
         keyEnabled: true,
         remainingDuration: false,
-        toggleDuration: true,
-        solution: "html, flash",
-        preload: "metadata"
+        toggleDuration: true
       });
 
       // insert loading into title

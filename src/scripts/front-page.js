@@ -1,45 +1,21 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   // if ( window.location.pathname == '/' ) {
   (function sloganAnimation() {
-    if (
-      !$(".front-page__header__changing-slogans-wrapper").hasClass("running")
-    ) {
-      $(".front-page__header__changing-slogans-wrapper").addClass("running");
-      for (
-        let i = 0;
-        i <
-        $(".front-page__header__changing-slogans-wrapper")[0].children.length;
-        i++
-      ) {
+    $(".front-page__header__changing-slogans-wrapper").addClass("running");
+    if ($(".front-page__header__changing-slogans-wrapper").hasClass("running")) {
+      for (let i = 0; i < $(".front-page__header__changing-slogans-wrapper")[0].children.length; i++) {
         setTimeout(() => {
-          $($(".front-page__header__changing-slogans-wrapper")[0].children).css(
-            "opacity",
-            "0"
-          );
-          $(
-            $(".front-page__header__changing-slogans-wrapper")[0].children[i]
-          ).css("opacity", "1");
+          $($(".front-page__header__changing-slogans-wrapper")[0].children).css("opacity", "0");
+          $($(".front-page__header__changing-slogans-wrapper")[0].children[i]).css("opacity", "1");
           // $($('.front-page__header__changing-slogans-wrapper')[0].children[1 + i]).css('opacity', '1');
         }, 1500 * i);
       }
       let changingSlogans = setInterval(() => {
         if ($(".front-page__header__changing-slogans-wrapper").length != 0) {
-          for (
-            let i = 0;
-            i <
-            $(".front-page__header__changing-slogans-wrapper")[0].children
-              .length;
-            i++
-          ) {
+          for (let i = 0; i < $(".front-page__header__changing-slogans-wrapper")[0].children.length; i++) {
             setTimeout(() => {
-              $(
-                $(".front-page__header__changing-slogans-wrapper")[0].children
-              ).css("opacity", "0");
-              $(
-                $(".front-page__header__changing-slogans-wrapper")[0].children[
-                  i
-                ]
-              ).css("opacity", "1");
+              $($(".front-page__header__changing-slogans-wrapper")[0].children).css("opacity", "0");
+              $($(".front-page__header__changing-slogans-wrapper")[0].children[i]).css("opacity", "1");
               // $($('.front-page__header__changing-slogans-wrapper')[0].children[1 + i]).css('opacity', '1');
             }, 1500 * i);
           }

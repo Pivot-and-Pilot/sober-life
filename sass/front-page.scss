@@ -1,7 +1,7 @@
-@import 'variables-site/variables-site';
+@import "variables-site/variables-site";
 
 body {
-  background: $color__white !important; 
+  background: $color__white !important;
   // width: 100vw;
   // overflow-x: hidden !important;
 }
@@ -293,7 +293,6 @@ section.front-page__success-stories {
       height: 100vh;
     }
     .front-page__header__wrapper {
-
       .front-page__header__slogans {
         padding-left: 4vw;
         .front-page__header__slogans-reclaim {
@@ -437,5 +436,6 @@ section.front-page__success-stories {
 
   section.front-page__success-stories {
     padding-top: 100px;
+    margin-top: 0;
   }
 }

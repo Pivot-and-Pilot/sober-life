@@ -526,5 +526,6 @@ section.front-page__success-stories {
 
   section.front-page__success-stories {
     padding-top: 100px;
+    margin-top: 0;
   }
 }

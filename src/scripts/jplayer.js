@@ -8,8 +8,9 @@ jQuery(document).ready(function($) {
       if (windowSize > 769) {
         $("footer .footer__wrap").css("padding-bottom", "60px");
       }
-      currentPodcastLink = $(this).siblings(".powerpress_links_mp3")[0]
-        .children[0].href;
+      console.log($(this));
+      currentPodcastLink = $(this).siblings(".powerpress_links")[0].children[0]
+        .href;
       currentPodcastTitle = $(
         $(this).parentsUntil(".single-post__wrapper")[1]
       ).siblings(".single-post__title")[0].innerText;

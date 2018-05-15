@@ -418,6 +418,10 @@
     font-size: 2em;
   }
 
+  .single-post__wrapper .single-post__related-posts {
+    padding-top: 40px;
+  }
+
   .single-post__wrapper .single-post__related-posts .related-post__header {
     padding: 0 4vw 30px;
     font-size: 2em;
@@ -432,7 +436,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 4vw;
-    top: calc((92vw - 120px)/6);
+    top: calc((92vw - 120px) / 6);
     z-index: 1;
     height: 0;
   }

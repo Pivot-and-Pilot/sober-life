@@ -1,4 +1,4 @@
-@import 'variables-site/variables-site';
+@import "variables-site/variables-site";
 
 #sobercollective-page {
   position: relative;
@@ -37,7 +37,7 @@
         width: 100%;
       }
       &:after {
-        content: '>';
+        content: ">";
         font-family: $font__main;
         transform: rotate(90deg);
         position: absolute;
@@ -70,7 +70,7 @@
           width: 100%;
         }
         &:after {
-          content: '>';
+          content: ">";
           font-family: $font__main;
           transform: rotate(90deg);
           position: absolute;
@@ -88,15 +88,15 @@
   .sobercollective__query-bar {
     color: black;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     width: 100%;
-    margin-top: 20px;    
+    margin-top: 20px;
     align-items: center;
     #sobercollective__query {
       font-size: 20px;
       // width: 100%;
       display: none;
-      // justify-content: flex-start; 
+      // justify-content: flex-start;
       div {
         // width: 500px;
         strong {
@@ -242,13 +242,11 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #sobercollective-page {
     .sobercollective__top-bar {
-
     }
     .sobercollective__query-bar {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      
     }
     .sobercollective__posts-wrapper {
       #sobercollective__noresults {
@@ -341,7 +339,7 @@
       .sobercollective__cats-desktop {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 40%;
         z-index: 1;
         li.cat-item {
           // width: 30%;
@@ -354,7 +352,7 @@
         }
       }
       .sobercollective__cats-desktop-icons-wrapper {
-        width: 50%;
+        width: 40%;
         position: absolute;
         top: 50px;
         left: 0;
@@ -381,8 +379,8 @@
       .sobercollective__tags-desktop {
         display: flex;
         justify-content: space-between;
-        width: 50%;
-        padding-top: 60px;
+        width: 40%;
+        padding-top: 80px;
         li {
           cursor: pointer;
 
@@ -392,10 +390,10 @@
           }
         }
         li.current {
-          text-decoration: underline;
+          border-bottom: 2px solid #000;
         }
         li:not(.current):hover {
-          text-decoration: underline;
+          border-bottom: 2px solid #000;
         }
       }
     }
@@ -404,13 +402,12 @@
       justify-content: space-between;
       .sobercollective__clear-query {
         button {
-          cursor: pointer;     
+          cursor: pointer;
         }
         &:hover {
           text-decoration: underline;
         }
       }
-    
     }
     .sobercollective__posts-wrapper {
       display: grid;
@@ -422,7 +419,7 @@
         grid-column: 2 / 6;
         width: 100%;
         text-align: center;
-        margin-top: -30px;        
+        margin-top: -30px;
       }
       .sobercollective__post {
         // width: 32%;

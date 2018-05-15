@@ -148,6 +148,89 @@ get_header();
 					<div class="quote-content"><?php the_field('content_quote') ?></div>
 				</div>
 
+
+
+
+				<?php
+				// check if the flexible content field has rows of data
+				if( have_rows('flexible_contents') ):
+					// loop through the rows of data
+					while ( have_rows('flexible_contents') ) : the_row();
+						if( get_row_layout() == 'short_image_galary' ):
+				?>
+				<div class="single-post__first-gallery">
+				<?php 
+				$images1 = get_sub_field('short_image_galary_content');
+				$size1 = 'full'; // (thumbnail, medium, large, full or custom size)
+
+				if( $images1 ):
+					foreach( $images1 as $image1 ): 
+				?>
+
+					<div class="first-gallery__image-wrapper">
+					<?php echo wp_get_attachment_image( $image1['ID'], $size1 ); ?>
+					</div>
+
+				<?php 
+					endforeach; 
+				endif; 
+				?>
+				</div>
+
+				<?php
+					elseif( get_row_layout() == 'tall_image_galary' ): 
+				?>
+				<div class="single-post__second-gallery">
+				<?php 
+				$images2 = get_sub_field('tall_image_galary_content');
+				$size2 = 'full'; // (thumbnail, medium, large, full or custom size)
+
+				if( $images2 ):
+					foreach( $images2 as $image2 ): 
+				?>
+
+					<div class="second-gallery-image-wrapper">
+					<?php echo wp_get_attachment_image( $image2['ID'], $size2 ); ?>
+					</div>
+
+				<?php 
+					endforeach; 
+				endif; 
+				?>
+				</div>
+
+				<?php
+					elseif( get_row_layout() == 'paragraph' ): 
+				?>
+
+				<div class="single-post__second-paragraph">
+					<?php the_sub_field('paragraph_content');?>
+				</div>
+
+				<?php
+					elseif( get_row_layout() == 'quote' ): 
+				?>
+			
+				<div class="single-post__quote">
+					<div class="quotation-mark">
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/quotemarks.svg" alt="" />
+					</div>
+					<div class="quote-content"><?php the_sub_field('quote_content') ?></div>
+				</div>
+
+				<?php
+					elseif( get_row_layout() == 'button' ): 
+				?>
+
+				<a href="<?php the_sub_field('button_link') ?>" class="link-out-blog"><?php the_sub_field('button_content') ?></a>		
+
+				<?php
+						endif;
+					endwhile;
+				endif;
+
+				?>
+
 				<div class="single-post__related-posts">
 				<?php
 				//for use in the loop, list 5 post titles related to first tag on current post

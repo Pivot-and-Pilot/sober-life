@@ -1,7 +1,7 @@
-@import 'variables-site/variables-site';
+@import "variables-site/variables-site";
 
 .single-post__wrapper {
-  padding-top: 120px; 
+  padding-top: 120px;
   .single-post__title {
     padding: 0 6vw;
     font-family: $font__main--bold;
@@ -163,7 +163,7 @@
               img {
                 height: 100%;
                 width: 100%;
-                object-fit: cover
+                object-fit: cover;
               }
             }
             .related-post-play-button-wapper {
@@ -216,7 +216,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-
   .single-post__wrapper {
     .single-post__title {
       padding: 0 4vw;
@@ -324,6 +323,7 @@
       }
     }
     .single-post__related-posts {
+      padding-top: 40px;
       .related-post__header {
         padding: 0 4vw 30px;
         font-size: 2em;
@@ -333,21 +333,22 @@
         display: flex;
         justify-content: space-between;
         padding: 0 4vw;
-        top: calc((92vw - 120px)/6);
+        top: calc((92vw - 120px) / 6);
         z-index: 1;
         height: 0;
-        .single-post__prev-arrow, .single-post__next-arrow {
+        .single-post__prev-arrow,
+        .single-post__next-arrow {
           height: 50px;
           width: 50px;
           cursor: pointer;
           &:hover circle {
-            fill:#80ff73;
-            stroke:#000;
-            stroke-miterlimit:10;
-            stroke-width:6px;
+            fill: #80ff73;
+            stroke: #000;
+            stroke-miterlimit: 10;
+            stroke-width: 6px;
           }
           &:hover polygon {
-            fill:#000
+            fill: #000;
           }
           svg {
             height: 100%;
@@ -367,5 +368,4 @@
       }
     }
   }
-
 }

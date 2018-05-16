@@ -42,115 +42,7 @@ get_header();
           ?>
 					</div>
 				</div>
-				<div class="single-post__flex-box-wrapper">
-					<div class="single-post__first-paragraph">
-						<div class="first-paragraph__title"><?php the_field('content_title') ?></div>
-						<div class="first-paragraph__content"><?php the_field('content_1')?></div>
-					</div>
-
-				<!-- you might also like part -->
-				<?php
-				//for use in the loop, list 5 post titles related to first tag on current post
-				$tagNames = wp_get_post_tags($post->ID);
-				if ($tagNames) {
-				$first_tagName = $tagNames[0]->term_id;
-				$feturedPosts=array(
-				'tag__in' => array($first_tagName),
-				'post__not_in' => array($post->ID),
-				'posts_per_page'=>1,
-				'caller_get_posts'=>1
-				);
-				$my_feturedPosts = new WP_Query($feturedPosts);
-				if( $my_feturedPosts->have_posts() ) {
-				while ($my_feturedPosts->have_posts()) : $my_feturedPosts->the_post();
-				?>
-
-					<div class="featured-post">
-						<div class="featured-post__title">You might also like:</div>
-						<a href="<?php the_permalink();?>">
-
-							<div class="featured-post__thumbnail-wrapper">
-								<?php the_post_thumbnail(); ?>
-							</div>
-
-							<div class="featured-post__title-date-wrapper">
-								<div>
-									<div class="featured-post-track-title">
-										<?php the_title(); ?>
-									</div>
-
-									<div class="featured-post-track-date">
-										<?php the_date() ?>
-									</div> 
-								</div>
-							</div>
-							
-						</a>
-					</div>
-
-				<?php
-				endwhile;
-				}
-				wp_reset_query();
-				}
-				?>
-
-				</div>
 				
-				<div class="single-post__first-gallery">
-				<?php 
-				$images1 = get_field('content_images_1');
-				$size1 = 'full'; // (thumbnail, medium, large, full or custom size)
-
-				if( $images1 ):
-					foreach( $images1 as $image1 ): 
-				?>
-
-					<div class="first-gallery__image-wrapper">
-					<?php echo wp_get_attachment_image( $image1['ID'], $size1 ); ?>
-					</div>
-
-				<?php 
-					endforeach; 
-				endif; 
-				?>
-				</div>
-
-				<div class="single-post__second-paragraph">
-					<?php the_field('content_2');?>
-				</div>
-
-				<a href="" class="link-out-blog">Link Out of Blog Post</a>
-				
-				<div class="single-post__second-gallery">
-				<?php 
-				$images2 = get_field('content_images_2');
-				$size2 = 'full'; // (thumbnail, medium, large, full or custom size)
-
-				if( $images2 ):
-					foreach( $images2 as $image2 ): 
-				?>
-
-					<div class="second-gallery-image-wrapper">
-					<?php echo wp_get_attachment_image( $image2['ID'], $size2 ); ?>
-					</div>
-
-				<?php 
-					endforeach; 
-				endif; 
-				?>
-				</div>
-
-				<div class="single-post__quote">
-					<div class="quotation-mark">
-						<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/quotemarks.svg" alt="" />
-					</div>
-					<div class="quote-content"><?php the_field('content_quote') ?></div>
-				</div>
-
-
-
-
 				<?php
 				// check if the flexible content field has rows of data
 				if( have_rows('flexible_contents') ):
@@ -224,6 +116,62 @@ get_header();
 
 				<a href="<?php the_sub_field('button_link') ?>" class="link-out-blog"><?php the_sub_field('button_content') ?></a>		
 
+				<?php
+					elseif( get_row_layout() == 'paragraph_and_you_might_like' ): 
+				?>
+				<div class="single-post__flex-box-wrapper">
+					<div class="single-post__first-paragraph">
+						<div class="first-paragraph__title"><?php the_sub_field('paragraph_title') ?></div>
+						<div class="first-paragraph__content"><?php the_sub_field('paragraph_content')?></div>
+					</div>
+
+				<!-- you might also like part -->
+				<?php
+				//for use in the loop, list 5 post titles related to first tag on current post
+				$tagNames = wp_get_post_tags($post->ID);
+				if ($tagNames) {
+				$first_tagName = $tagNames[0]->term_id;
+				$feturedPosts=array(
+				'tag__in' => array($first_tagName),
+				'post__not_in' => array($post->ID),
+				'posts_per_page'=>1,
+				'caller_get_posts'=>1
+				);
+				$my_feturedPosts = new WP_Query($feturedPosts);
+				if( $my_feturedPosts->have_posts() ) {
+				while ($my_feturedPosts->have_posts()) : $my_feturedPosts->the_post();
+				?>
+
+					<div class="featured-post">
+						<div class="featured-post__title">You might also like:</div>
+						<a href="<?php the_permalink();?>">
+
+							<div class="featured-post__thumbnail-wrapper">
+								<?php the_post_thumbnail(); ?>
+							</div>
+
+							<div class="featured-post__title-date-wrapper">
+								<div>
+									<div class="featured-post-track-title">
+										<?php the_title(); ?>
+									</div>
+
+									<div class="featured-post-track-date">
+										<?php the_date() ?>
+									</div> 
+								</div>
+							</div>
+							
+						</a>
+					</div>
+
+				<?php
+				endwhile;
+				}
+				wp_reset_query();
+				}
+				?>
+				</div>
 				<?php
 						endif;
 					endwhile;

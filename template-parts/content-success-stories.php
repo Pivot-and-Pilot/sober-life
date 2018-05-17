@@ -121,7 +121,7 @@
 
           <div class="single-story-track-number">Article</div>
 
-          <?php
+          <?php 
               endif;
             endforeach;
           ?>

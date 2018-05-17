@@ -322,6 +322,13 @@
         font-size: 2em;
       }
     }
+    .single-post__video-container {
+      padding: 0 4vw;
+      iframe {
+        height: 80vh;
+        width: 100%;
+      }
+    }
     .single-post__related-posts {
       padding-top: 40px;
       .related-post__header {

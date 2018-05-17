@@ -21,10 +21,13 @@ get_header();
 					<?php echo get_the_date(); ?>
 				</div>
 
+				<?php if( get_field('show_featured_image') ): ?>
 				<div class="single-post__player-wrapper">
+				
 					<div class="single-post__thumbnail">
 						<?php the_post_thumbnail(); ?>
 					</div>
+				
 					<div class="single-post__podcast-player">
 					<?php
             // check if the post is podcast 
@@ -42,6 +45,7 @@ get_header();
           ?>
 					</div>
 				</div>
+				<?php endif; ?>
 				
 				<?php
 				// check if the flexible content field has rows of data
@@ -115,6 +119,14 @@ get_header();
 				?>
 
 				<a href="<?php the_sub_field('button_link') ?>" class="link-out-blog"><?php the_sub_field('button_content') ?></a>		
+
+				<?php
+					elseif( get_row_layout() == 'video' ): 
+				?>
+
+				<div class="single-post__video-container">
+					<?php the_sub_field('video_content'); ?>
+				</div>
 
 				<?php
 					elseif( get_row_layout() == 'paragraph_and_you_might_like' ): 

@@ -37,7 +37,7 @@
             if ($latestStoryCategorie->slug == 'podcast') :
         ?>
         <div class="play-button-wapper">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/sound-wave__black.svg" alt="">
         </div>
         <?php
             endif;
@@ -113,11 +113,18 @@
           ?>
 
           <div class="single-story-play-button-wapper">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/sound-wave__black.svg" alt="">
           </div>
           <div class="single-story-track-number single-story-podcast-track-number"><?php echo $catname; ?></div>
 
-          <?php else :?>
+          <?php elseif ($latestStoryCategory->slug == 'video') :?>
+
+          <div class="single-story-play-button-wapper">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+          </div>
+          <div class="single-story-track-number single-story-podcast-track-number">Video</div>
+
+          <?php elseif ($latestStoryCategory->slug == 'article') :?>
 
           <div class="single-story-track-number">Article</div>
 
@@ -129,7 +136,7 @@
         </div>
 
         <div class="single-story-track-title">
-          <?php echo $newtitle; ?>
+          <?php the_title(); ?>
         </div> 
 
         <div class="single-story-track-date">

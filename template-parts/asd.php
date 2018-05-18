@@ -1,32 +1,31 @@
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
-  <div class="jp-type-single">
-    <div class="jp-details">
-      <div class="jp-title" aria-label="title">&nbsp;</div>
-    </div>
-    <div class="jp-gui jp-interface">
-      <div class="jp-controls-holder">
-        <div class="jp-controls">
-          <button class="jp-pause" role="button" tabindex="0"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/pause-button.svg" alt="Pause"/></button>
-          <button class="jp-play" role="button" tabindex="0"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="Play"/></button>
-          <!-- <button class="jp-stop" role="button" tabindex="0">STOP</button> -->
-        </div>
-        <div class="jplayer__progress-wrapper">
-          <div class="jp-time-bar">
-            <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
-            <div class="time-separator">/</div>
-            <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
-          </div>
-          <div class="jp-progress">
-            <div class="jp-seek-bar">
-              <div class="jp-play-bar"></div>
-            </div>
-          </div>
-        </div>
-        <div class="jplayer__x-button">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/x--black.svg" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<a class="sobercollective__post" href="<?php the_permalink(); ?>">
+		<?php
+			$category = get_the_category(); $cat_name =  $category[1]->cat_name;
+			// If category is Podcast, split title and update category/title accordingly, show PLAY button
+			foreach ($category as $cate) {
+			if( $cate->cat_name == 'Podcast' ) {
+				$title = get_the_title(); 
+				$pos = strpos($title, ':'); // Get index of ':' in the title
+				$substr = substr($title, 0, $pos + 1); // Get substring using found index of ': + space'
+				$newtitle = str_replace($substr, "", $title); // New title (without the '##: ')
+				$catsubstr = substr($substr, 0, $pos); // Category substring ('##')
+				$catname = 'Podcast ' . $catsubstr; // Concatenate Podcast with ##
+		?>
+				<div class="sobercollective__play-btn"><img src="https://soberlifesd.com/wp-content/themes/sober-life/img/src/sound-wave__black.svg"></div>		
+				<div class="sobercollective__post--image"><?php the_post_thumbnail(); ?></div>
+				<div class="sobercollective__post--cat-name"><?php echo $catname; ?></div>
+				<div class="sobercollective__post--title"><?php echo $newtitle; ?></div>
+				<div class="sobercollective__post--date"><?php the_date('m/d/y'); ?></div>
+			<?php }	elseif ($cate->cat_name == 'Video') { ?>
+				<div class="sobercollective__play-btn"><img src="https://soberlifesd.com/wp-content/themes/sober-life/img/src/play-button.svg"></div>		
+				<div class="sobercollective__post--image"><?php the_post_thumbnail(); ?></div>
+				<div class="sobercollective__post--cat-name">Video</div>
+				<div class="sobercollective__post--title"><?php the_title(); ?></div>
+				<div class="sobercollective__post--date"><?php the_date('m/d/y'); ?></div>
+			<?php } elseif ($cate->cat_name == 'Article') { // No PLAY button ?>
+				<div class="sobercollective__post--image"><?php the_post_thumbnail(); ?></div>
+				<div class="sobercollective__post--cat-name">Article</div>
+				<div class="sobercollective__post--title"><?php the_title(); ?></div>
+				<div class="sobercollective__post--date"><?php the_date('m/d/y'); ?></div>
+			<?php }} ?>
+</a>

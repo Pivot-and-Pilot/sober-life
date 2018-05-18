@@ -36,7 +36,7 @@ get_header();
               if ($singlePostCategory->slug == 'podcast') :
           ?>
 						<div class="single-post__play-button">
-							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="Play"/>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/sound-wave__black.svg" alt="Play"/>
 						</div>
 						<?php	the_content(); ?>
 					<?php
@@ -219,6 +219,7 @@ get_header();
 							</svg>
 						</div>   
 					</div>
+
 					<div class="related-posts">
 
 					<?php
@@ -256,13 +257,20 @@ get_header();
 									?>
 
 									<div class="related-post-play-button-wapper">
-										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+										<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/sound-wave__black.svg" alt="">
 									</div>
 									<div class="related-post-track-number related-post-podcast-track-number"><?php echo $catname; ?></div>
 
-									<?php else :?>
+									<?php elseif ($relatedPostCategory->slug == 'article') :?>
 
 									<div class="related-post-track-number">Article</div>
+
+									<?php elseif ($relatedPostCategory->slug == 'video') :?>
+
+										<div class="related-post-play-button-wapper">
+											<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/src/play-button.svg" alt="">
+										</div>
+										<div class="related-post-track-number related-post-podcast-track-number">Video</div>
 
 									<?php
 											endif;
@@ -272,7 +280,7 @@ get_header();
 								</div>
 
 								<div class="related-post-track-title">
-									<?php echo $newtitle; ?>
+									<?php the_title(); ?>
 								</div>
 
 								<div class="related-post-track-date">

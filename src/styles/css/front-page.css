@@ -189,6 +189,10 @@ section.front-page__moving-forward .moving-forward__content .moving-forward__con
   margin: 0;
 }
 
+section.front-page__moving-forward .moving-forward__content .moving-forward__content__detail p strong {
+  background-color: #7fff72;
+}
+
 section.front-page__moving-forward .moving-forward__image {
   display: none;
 }
@@ -429,6 +433,10 @@ section.front-page__success-stories {
     margin-top: 40px;
     padding-right: 4vw;
     font-size: 2em;
+  }
+
+  section.front-page__moving-forward .moving-forward__content .moving-forward__content__detail strong {
+    background-color: #7fff72;
   }
 
   section.front-page__moving-forward .moving-forward__image {

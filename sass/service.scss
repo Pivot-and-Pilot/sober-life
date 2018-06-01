@@ -1,4 +1,4 @@
-@import 'variables-site/variables-site';
+@import "variables-site/variables-site";
 
 #services-child {
   color: black;
@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
+
     min-height: 60vh;
     .services-child__service-image {
       position: fixed;
@@ -142,7 +142,7 @@
       background-color: $color__green;
       padding-top: 20px;
       padding-bottom: 50px;
-      overflow:hidden;      
+      overflow: hidden;
       .services-child__our-approach-logo {
         position: absolute;
         top: 0;
@@ -236,6 +236,7 @@
     .services-child__our-team {
       position: relative;
       margin-top: 50px;
+      padding-bottom: 100px;
       .services-child__our-team-image {
         z-index: -1;
         margin-bottom: 150px;
@@ -245,7 +246,7 @@
         position: absolute;
         top: 150px;
         padding: 20px 0;
-        bottom: 0;        
+        bottom: 0;
         .services-child__our-team-title {
           font-family: $font__main--bold;
           font-size: 30px;
@@ -315,7 +316,7 @@
       flex-direction: column;
       .services-child__service-image {
         height: 80vh;
-        min-height: 600px;        
+        min-height: 600px;
       }
       .services-child__service-initial {
         margin: $margin__desktop;
@@ -450,8 +451,9 @@
       }
       .services-child__our-team {
         width: 100%;
+        padding-bottom: 0;
         .services-child__our-team-image {
-          width: 100%;          
+          width: 100%;
         }
         .services-child__our-team-wrapper {
           top: 0;
@@ -460,7 +462,7 @@
           right: 50%;
           .services-child__our-team-title {
             font-size: 35px;
-            margin-left: calc(100vw * 0.04); 
+            margin-left: calc(100vw * 0.04);
             margin-right: calc(100vw * 0.04);
             padding-top: 40%;
           }

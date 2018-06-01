@@ -276,6 +276,7 @@
 #services-child .services-child__content-wrap .services-child__our-team {
   position: relative;
   margin-top: 50px;
+  padding-bottom: 100px;
 }
 
 #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-image {
@@ -504,6 +505,7 @@
 
   #services-child .services-child__content-wrap .services-child__our-team {
     width: 100%;
+    padding-bottom: 0;
   }
 
   #services-child .services-child__content-wrap .services-child__our-team .services-child__our-team-image {

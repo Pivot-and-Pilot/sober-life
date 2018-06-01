@@ -153,6 +153,9 @@ section.front-page__moving-forward {
       font-size: 1.3em;
       p {
         margin: 0;
+        strong {
+          background-color: #7fff72;
+        }
       }
     }
   }
@@ -362,6 +365,9 @@ section.front-page__success-stories {
         margin-top: 40px;
         padding-right: 4vw;
         font-size: 2em;
+        strong {
+          background-color: #7fff72;
+        }
       }
     }
     .moving-forward__image {

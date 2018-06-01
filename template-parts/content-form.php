@@ -72,7 +72,7 @@
           echo '<section class="thank-you">
                   <div class="content-wrapper">
                     <p>Thank you for submitting your form, one of us will give you a call soon!</p>
-                    <a href="http://soberlifesd.com/">Return Home</a>
+                    <a href="http://soberlifesd.com/" id="return-home">Return Home</a>
                   </div>
                 </section>';
         } else {

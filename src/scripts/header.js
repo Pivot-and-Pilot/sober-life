@@ -28,7 +28,7 @@ function toggleMenu() {
     .classList.contains("open");
   if (isOpen) {
     // document.getElementById("header__menu-overlay-content").style.right = "-400px";
-    document.getElementById("header__menu-git overlay").style.right = "-100vw";
+    document.getElementById("header__menu-overlay").style.right = "-100vw";
     document.getElementById("header__hamburger").classList.remove("open");
     document
       .getElementById("header__menu-nav")
